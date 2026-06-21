@@ -25,8 +25,8 @@ for flux in (sys.stdout, sys.stderr):
         pass
 
 import config
-from app import (analysis, bilan, dashboard, evaluate, evenements, ledger,
-                market, news, report, social)
+from app import (analysis, bilan, dashboard, evaluate, evenements, graphiques,
+                ledger, market, news, report, social)
 
 
 def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
@@ -98,6 +98,14 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
     chemin_mensuel = bilan.ecrire_bilan_mensuel()
     print(bloc_mensuel)
     contenu += "\n" + bloc_mensuel
+
+    # 5) Graphiques (PNG affichables sur GitHub) --------------------------
+    try:
+        graphs = graphiques.generer()
+        if graphs:
+            print(f"Graphiques générés : {len(graphs)}")
+    except Exception as e:  # noqa: BLE001
+        print(f"[Graphiques ignorés] {e}")
 
     chemin = report.ecrire_rapport(jour, contenu)
     print(f"\nRapport écrit : {chemin}")
