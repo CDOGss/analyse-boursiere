@@ -1,0 +1,30 @@
+{
+  "positions": [
+    {
+      "id": "2026-06-21_NEX.PA",
+      "date_achat": "2026-06-21",
+      "ticker": "NEX.PA",
+      "nom": "Nexans",
+      "allocation_eur": 500.0,
+      "conviction": 68,
+      "catalyseur": "Renforcement dans les câbles sous-marins avec l'arrivée du navire-câblier « Electra » pour raccorder éoliennes offshore et interconnexions, sur fond de demande d'électrification.",
+      "raisonnement": "Nexans cumule un catalyseur d'actualité concret (montée en puissance dans les câbles sous-marins, segment à forte visibilité) et un momentum technique solide : +2,85% sur la séance et +8,84% sur 5 jours, avec un volume élevé (1,83x). La thématique électrification/défense européenne soutient le narratif. La probabilité d'une continuation haussière à l'ouverture est favorable.",
+      "prix_decision_17h": 158.8000030517578,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-06-21_RNO.PA",
+      "date_achat": "2026-06-21",
+      "ticker": "RNO.PA",
+      "nom": "Renault",
+      "allocation_eur": 500.0,
+      "conviction": 55,
+      "catalyseur": "Plus forte hausse de l'univers sur la séance (+3,88%) avec volume soutenu (1,87x), signe d'un flux acheteur marqué en clôture.",
+      "raisonnement": "Renault affiche le meilleur gain quotidien de la cote avec un volume nettement supérieur à la moyenne, traduisant un intérêt acheteur réel plutôt qu'un simple rebond technique. Le secteur auto (Stellantis, Valeo) montre un sentiment retail haussier en appoint. Le catalyseur reste davantage technique que fondamental, d'où une conviction modérée.",
+      "prix_decision_17h": 28.079999923706055,
+      "prix_entree": null,
+      "evaluation": null
+    }
+  ]
+}
