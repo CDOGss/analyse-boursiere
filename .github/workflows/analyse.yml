@@ -1,0 +1,53 @@
+name: Analyse boursière quotidienne
+
+on:
+  schedule:
+    # Cron en UTC, sans gestion de l'heure d'été. On met deux horaires ;
+    # le garde-fou --garde-cloture (heure de Paris == 17h) garantit qu'un
+    # seul fait réellement le travail.
+    - cron: "0 15 * * 1-5"   # 17h Paris en heure d'été (CEST)
+    - cron: "0 16 * * 1-5"   # 17h Paris en heure d'hiver (CET)
+  workflow_dispatch:          # bouton « Run workflow » pour tester à la main
+
+permissions:
+  contents: write             # nécessaire pour sauvegarder le portefeuille
+
+concurrency:
+  group: analyse-quotidienne
+  cancel-in-progress: false
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Lancer l'analyse
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONUTF8: "1"
+          TZ: Europe/Paris
+        # Déclenchement manuel = run complet (test) ; cron = avec garde-fou horaire.
+        run: python main.py ${{ github.event_name == 'schedule' && '--garde-cloture' || '' }}
+
+      - name: Sauvegarder le portefeuille et les rapports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/portefeuille.json reports/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Aucune modification à sauvegarder."
+          else
+            git commit -m "Analyse du $(date +%F)"
+            git push
+          fi

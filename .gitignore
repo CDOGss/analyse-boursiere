@@ -1,0 +1,12 @@
+# Secrets — NE JAMAIS versionner
+.env
+
+# Caches Python / environnements virtuels
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Log du lanceur local (le portefeuille et les rapports, eux, SONT versionnés
+# pour persister entre les exécutions GitHub Actions)
+reports/journal.log
