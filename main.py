@@ -25,8 +25,8 @@ for flux in (sys.stdout, sys.stderr):
         pass
 
 import config
-from app import (analysis, bilan, dashboard, evaluate, ledger, market, news,
-                report, social)
+from app import (analysis, bilan, dashboard, evaluate, evenements, ledger,
+                market, news, report, social)
 
 
 def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
@@ -61,9 +61,24 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
         ctx_macro = market.contexte_macro()
         bilan_recent = bilan.historique_recent_texte(10)
 
+        print(f"       Présélection des {config.SHORTLIST_N} meilleurs candidats…")
+        shortlist = market.preselection(instantanes, config.SHORTLIST_N)
+        sentiment_par_ticker = {s.ticker: s for s in sentiments}
+        print("       Calendrier de résultats des candidats…")
+        notes_events = evenements.enrichir([s.ticker for s in shortlist], jour)
+        lignes_sl = []
+        for inst in shortlist:
+            ligne = inst.ligne() + notes_events.get(inst.ticker, "")
+            s = sentiment_par_ticker.get(inst.ticker)
+            if s and s.score is not None:
+                ligne += f" | social {s.score:+.2f}"
+            lignes_sl.append(f"- {ligne}")
+        bloc_shortlist = "\n".join(lignes_sl)
+
         print("       Interrogation de Claude Opus 4.8…")
         analyse = analysis.choisir_actions(
-            instantanes, bloc_actu, jour, bloc_social, ctx_macro, bilan_recent
+            instantanes, bloc_actu, jour, bloc_social, ctx_macro, bilan_recent,
+            bloc_shortlist,
         )
         selection = analyse.get("selection", [])[: config.NB_ACHATS_PAR_SOIR]
 

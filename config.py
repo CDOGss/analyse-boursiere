@@ -14,6 +14,7 @@ RACINE = Path(__file__).resolve().parent
 DOSSIER_DATA = RACINE / "data"
 DOSSIER_RAPPORTS = RACINE / "reports"
 FICHIER_PORTEFEUILLE = DOSSIER_DATA / "portefeuille.json"
+FICHIER_BENCHMARK = DOSSIER_DATA / "benchmark.json"
 
 DOSSIER_DATA.mkdir(exist_ok=True)
 DOSSIER_RAPPORTS.mkdir(exist_ok=True)
@@ -36,6 +37,14 @@ NB_ACHATS_PAR_SOIR = 2
 # l'edge overnight). ~0.20% est réaliste pour de grandes valeurs liquides chez
 # un courtier discount. Mets 0 pour ignorer les frais.
 COUT_TRANSACTION_PCT = float(os.getenv("COUT_TRANSACTION_PCT", "0.20"))
+
+# Présélection : nombre de candidats prioritaires (shortlist) envoyés à Claude
+# avec données enrichies (résultats à venir, momentum de clôture, social).
+SHORTLIST_N = 25
+# Fenêtre d'alerte « résultats imminents » (jours).
+FENETRE_RESULTATS_JOURS = 4
+# Indice de référence (benchmark) : CAC 40.
+INDICE_BENCHMARK = "^FCHI"
 
 # --- Flux d'actualité (RSS, gratuits, sans clé) ----------------------------
 FLUX_ACTU = [

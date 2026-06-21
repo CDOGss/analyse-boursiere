@@ -150,9 +150,25 @@ Pour maximiser la probabilité d'ouverture en hausse le lendemain, le prompt re�
   1 = au plus haut = flux acheteur de fin de séance).
 - **Actualité du jour** (RSS) + **sentiment social** (StockTwits/ADR).
 - **Track record récent** réinjecté pour auto-correction.
+- **Présélection (shortlist)** : l'univers est classé (momentum de clôture +
+  volume + variation) et les ~25 meilleurs candidats sont envoyés avec **données
+  enrichies** ; le reste sert de contexte. Claude privilégie la shortlist mais
+  peut en sortir si un catalyseur le justifie.
+- **Calendrier de résultats** : pour chaque candidat, alerte si la société publie
+  ses résultats d'ici demain (**risque binaire overnight**). *(Les révisions
+  d'analystes ne sont pas disponibles gratuitement pour Euronext — non incluses.)*
 
 Claude peut retenir **1 ou 2 actions** (qualité > quantité) et fournit pour chacune
 un catalyseur, un raisonnement et un **risque** explicite.
+
+## Benchmark & alpha (le vrai juge)
+
+Le bilan mensuel compare la stratégie à **« acheter le CAC 40 chaque soir »**
+(même capital), pour mesurer l'**alpha** : la sur-performance due à la sélection,
+au-delà de la simple exposition au marché. Un alpha durablement positif net de
+frais est le seul signe que la stratégie vaut le coup ; sinon, autant détenir un
+ETF CAC 40. La référence CAC est calculée une fois par jour évalué et mise en
+cache dans `data/benchmark.json`.
 
 ## Sentiment social (StockTwits)
 

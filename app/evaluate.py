@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import datetime as dt
 
-from app import ledger, market
+from app import benchmark, ledger, market
 
 
 def _gain(entree: float | None, sortie: float | None, allocation: float) -> dict | None:
@@ -57,5 +57,8 @@ def evaluer_positions(aujourd_hui: dt.date) -> list[dict]:
             p["id"], {"prix_entree": evaluation["prix_entree"], "evaluation": evaluation}
         )
         resultats.append({**p, "evaluation": evaluation})
+
+        # Benchmark CAC 40 pour ce jour évalué (calculé une fois, mis en cache).
+        benchmark.assurer(aujourd_hui, date_achat)
 
     return resultats

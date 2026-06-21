@@ -84,6 +84,37 @@ def instantane_univers(univers: dict[str, str]) -> list[Instantane]:
     return resultats
 
 
+def preselection(instantanes: list[Instantane], n: int) -> list[Instantane]:
+    """Classe l'univers et retourne les n meilleurs candidats (shortlist).
+
+    Score composite aligné sur le pari overnight :
+      - momentum de clôture (position dans le range) : poids fort (flux acheteur),
+      - variation du jour : momentum,
+      - ratio de volume : conviction / liquidité.
+    Chaque métrique est convertie en rang normalisé [0..1] pour éviter les
+    problèmes d'échelle.
+    """
+    valides = [i for i in instantanes if i.dernier is not None
+               and i.position_range is not None and i.variation_1j is not None]
+    if not valides:
+        return []
+
+    def rangs(valeurs: list[float]) -> dict[int, float]:
+        ordre = sorted(range(len(valeurs)), key=lambda k: valeurs[k])
+        return {idx: pos / (len(valeurs) - 1 or 1) for pos, idx in enumerate(ordre)}
+
+    r_range = rangs([i.position_range for i in valides])
+    r_var = rangs([i.variation_1j for i in valides])
+    r_vol = rangs([(i.volume_ratio or 0) for i in valides])
+
+    notes = []
+    for k, inst in enumerate(valides):
+        score = 0.5 * r_range[k] + 0.3 * r_var[k] + 0.2 * r_vol[k]
+        notes.append((score, inst))
+    notes.sort(key=lambda x: x[0], reverse=True)
+    return [inst for _, inst in notes[:n]]
+
+
 def _prix_le_plus_proche(df: pd.DataFrame, cible: dt.datetime) -> float | None:
     """Retourne le cours de clôture du bar intraday le plus proche de `cible`."""
     if df.empty:

@@ -16,7 +16,7 @@ import datetime as dt
 from collections import OrderedDict
 
 import config
-from app import ledger
+from app import benchmark, ledger
 
 SCENARIOS = ["ouverture", "premiere_demi_heure", "mi_journee", "h17"]
 LIBELLES = {
@@ -86,6 +86,7 @@ def _r(x: float | None) -> str:
 
 # --- Tableau de bord mensuel ----------------------------------------------
 def _bilan_par_mois() -> "OrderedDict[str, dict]":
+    refs = benchmark.references()
     mois: dict[str, dict] = {}
     for date, b in _jours().items():
         cle = date[:7]  # AAAA-MM
@@ -94,6 +95,7 @@ def _bilan_par_mois() -> "OrderedDict[str, dict]":
             "sommes": {s: 0.0 for s in SCENARIOS},
             "frais": 0.0, "jours_gagnants_17h": 0,
             "meilleur": None, "pire": None,
+            "bench_overnight": 0.0, "bench_session": 0.0, "bench_jours": 0,
         })
         m["jours"] += 1
         m["positions"] += b["n"]
@@ -101,6 +103,14 @@ def _bilan_par_mois() -> "OrderedDict[str, dict]":
         for s in SCENARIOS:
             if b["sommes"][s] is not None:
                 m["sommes"][s] += b["sommes"][s]
+
+        # Benchmark CAC 40 sur le même capital déployé ce jour-là
+        ref = refs.get(date)
+        if ref:
+            capital = b["n"] * config.ALLOCATION_PAR_ACTION
+            m["bench_overnight"] += capital * ref["overnight_pct"] / 100
+            m["bench_session"] += capital * ref["session_pct"] / 100
+            m["bench_jours"] += 1
         pnl17 = b["sommes"]["h17"]
         if pnl17 is not None:
             if pnl17 > 0:
@@ -144,6 +154,26 @@ def rendu_mensuel() -> str:
             f"| {taux:.0f}% |"
         )
     lignes.append("")
+
+    # Comparaison vs CAC 40 (alpha = talent au-delà du marché)
+    lignes.append("**Alpha vs CAC 40** (même capital « acheté chaque soir ») :\n")
+    lignes.append("| Mois | Stratégie (ouv.) | CAC overnight | Alpha ouv. | Stratégie (17h) | CAC séance | Alpha 17h |")
+    lignes.append("|---|---:|---:|---:|---:|---:|---:|")
+    for cle, m in mois.items():
+        if m["bench_jours"] == 0:
+            continue
+        s = m["sommes"]
+        a_ouv = s["ouverture"] - m["bench_overnight"]
+        a_17h = s["h17"] - m["bench_session"]
+        lignes.append(
+            f"| {cle} "
+            f"| {s['ouverture']:+.2f}€ | {m['bench_overnight']:+.2f}€ "
+            f"| {_signe(a_ouv)} {a_ouv:+.2f}€ "
+            f"| {s['h17']:+.2f}€ | {m['bench_session']:+.2f}€ "
+            f"| {_signe(a_17h)} {a_17h:+.2f}€ |"
+        )
+    lignes.append("\n_Alpha positif = la sélection bat « acheter le CAC chaque soir ». "
+                  "C'est le vrai juge de la stratégie._\n")
 
     # Détail du mois en cours (calendrier jour par jour)
     cle_courant = next(iter(mois))

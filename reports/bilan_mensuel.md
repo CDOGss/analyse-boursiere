@@ -1,4 +1,4 @@
-# Bilan mensuel — mis à jour le 2026-06-21 10:37
+# Bilan mensuel — mis à jour le 2026-06-21 12:17
 
 ## Tableau de bord mensuel
 

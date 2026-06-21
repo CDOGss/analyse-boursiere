@@ -31,6 +31,11 @@ cherche à prolonger. Une clôture près du plus-bas est un signal contraire.
 
 Règles :
 - Choisis uniquement des tickers présents dans l'univers fourni. N'invente aucun chiffre.
+- Privilégie les CANDIDATS PRIORITAIRES (shortlist enrichie : meilleur momentum de \
+clôture / volume, avec calendrier de résultats). Tu peux choisir hors shortlist \
+seulement si un catalyseur d'actualité fort le justifie.
+- Si une action publie ses RÉSULTATS d'ici demain matin (signalé), c'est un risque \
+binaire : évite-la, sauf si c'est explicitement et solidement ta thèse.
 - Sois SÉLECTIF. Tu peux retenir 2 actions, mais si une seule est vraiment \
 convaincante, n'en retiens qu'UNE. La qualité prime sur la quantité.
 - Chaque choix doit citer un mécanisme concret tiré des données (catalyseur, \
@@ -91,6 +96,7 @@ def choisir_actions(
     bloc_social: str = "",
     contexte_macro: str = "",
     bilan_recent: str = "",
+    bloc_shortlist: str = "",
 ) -> dict:
     """Interroge Claude et renvoie la sélection structurée (dict)."""
     if not config.ANTHROPIC_API_KEY:
@@ -109,8 +115,8 @@ Date du jour : {jour.strftime('%A %d %B %Y')} (~17h, séance Euronext Paris bien
 {section("TON TRACK RECORD RÉCENT (apprends de tes résultats)", bilan_recent)}\
 === FLUX D'ACTUALITÉ DU JOUR ===
 {bloc_actu}
-
-=== INSTANTANÉ DE MARCHÉ (univers CAC 40 + SBF 120 ; clôt@ = position dans le range, 1=plus haut) ===
+{section("CANDIDATS PRIORITAIRES — shortlist enrichie (clôt@=range 1=haut ; résultats à venir signalés)", bloc_shortlist)}\
+=== UNIVERS COMPLET (contexte ; clôt@ = position dans le range, 1=plus haut) ===
 {_bloc_marche(instantanes)}
 {section("SENTIMENT SOCIAL (StockTwits, ADR/US — signal d'appoint)", bloc_social)}\
 Sélectionne 1 ou 2 actions à acheter ce soir (≈5 min avant la clôture) pour

@@ -1,32 +1,3 @@
 {
-  "positions": [
-    {
-      "id": "2026-06-21_RNO.PA",
-      "date_achat": "2026-06-21",
-      "ticker": "RNO.PA",
-      "nom": "Renault",
-      "allocation_eur": 500.0,
-      "conviction": 62,
-      "catalyseur": "Prolongation du momentum acheteur (clôture à 0,94 du range, +3,88% sur la séance) soutenue par une tape US franchement verte ce soir.",
-      "raisonnement": "Renault signe la plus forte hausse de l'univers (+3,88%) avec une clôture quasiment au plus-haut du jour (clôt@0,94) et un volume soutenu (1,87x), trahissant un flux acheteur intact en fin de séance. Avec un Nasdaq/S&P verts et un VIX en chute, le gap d'ouverture est favorisé. Le sentiment cyclique/auto est aussi porté par le rebond US.",
-      "risque": "Valeur cyclique volatile, déjà très étirée sur la journée : risque de prise de bénéfices à l'ouverture si la tape US se retourne en soirée.",
-      "prix_decision_17h": 28.079999923706055,
-      "prix_entree": null,
-      "evaluation": null
-    },
-    {
-      "id": "2026-06-21_STMPA.PA",
-      "date_achat": "2026-06-21",
-      "ticker": "STMPA.PA",
-      "nom": "STMicroelectronics",
-      "allocation_eur": 500.0,
-      "conviction": 52,
-      "catalyseur": "Effet d'entraînement du fort rebond du Nasdaq (+1,91%) sur les semi-conducteurs européens, avec sentiment social US haussier (STM +0,50).",
-      "raisonnement": "STMicro est le proxy parisien direct du rebond des semis US : un Nasdaq à +1,91% ce soir est le catalyseur le plus mécanique pour un gap haussier demain. La clôture en milieu-haut de range (clôt@0,70) et le sentiment StockTwits positif renforcent le biais.",
-      "risque": "Volume faible aujourd'hui (0,93x) et journée quasi plate (+0,04%), donc momentum propre limité : le pari repose presque entièrement sur la tape US, qui peut s'effriter d'ici la clôture de Wall Street.",
-      "prix_decision_17h": 67.91999816894531,
-      "prix_entree": null,
-      "evaluation": null
-    }
-  ]
+  "positions": []
 }
