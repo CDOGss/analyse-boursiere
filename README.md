@@ -121,7 +121,38 @@ app/evaluate.py      Calcul des gains/pertes du lendemain
 app/report.py        Rapports console + markdown
 app/dashboard.py     Statistiques agrégées (P&L cumulé, taux de réussite)
 app/social.py        Sentiment social StockTwits (via ADR/US, optionnel)
+app/bilan.py         Calendrier quotidien (CSV) + tableau de bord mensuel
 ```
+
+## Calendrier quotidien & bilan mensuel
+
+À chaque exécution, l'app met à jour :
+
+- **`reports/journal_quotidien.csv`** — une ligne par jour de résultat, avec la
+  **somme gain/perte** à l'ouverture / 9h30 / midi / 17h, les frais estimés et le
+  **P&L net** au 17h. Séparateur `;` et décimales `,` → s'ouvre directement dans
+  Excel / Google Sheets.
+- **`reports/bilan_mensuel.md`** — récap **par mois** : total par scénario de
+  revente (**brut ET net de frais**), taux de réussite, meilleur/pire jour, et le
+  détail jour par jour du mois en cours. Mis à jour avec les résultats du jour.
+
+Les résultats sont indexés par **date d'évaluation** (le jour où la position
+aurait été revendue). Frais d'aller-retour configurables via `COUT_TRANSACTION_PCT`
+dans `config.py` (défaut 0,20 %).
+
+## Signaux fournis à Claude (étape 2)
+
+Pour maximiser la probabilité d'ouverture en hausse le lendemain, le prompt reçoit :
+
+- **Contexte macro** : CAC 40, S&P 500, Nasdaq, VIX (la tape US en séance à 17h est
+  le 1er prédicteur du gap parisien du lendemain).
+- **Momentum de clôture** : position du cours dans le range du jour (`clôt@`,
+  1 = au plus haut = flux acheteur de fin de séance).
+- **Actualité du jour** (RSS) + **sentiment social** (StockTwits/ADR).
+- **Track record récent** réinjecté pour auto-correction.
+
+Claude peut retenir **1 ou 2 actions** (qualité > quantité) et fournit pour chacune
+un catalyseur, un raisonnement et un **risque** explicite.
 
 ## Sentiment social (StockTwits)
 

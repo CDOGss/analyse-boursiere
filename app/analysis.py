@@ -1,4 +1,4 @@
-"""Analyse générative : Claude Opus 4.8 choisit les 2 meilleures actions."""
+"""Analyse générative : Claude Opus 4.8 choisit la/les meilleure(s) action(s)."""
 from __future__ import annotations
 
 import datetime as dt
@@ -10,54 +10,66 @@ import config
 from app.market import Instantane
 
 SYSTEME = """\
-Tu es un analyste actions spécialisé sur la place de Paris (Euronext, CAC 40 et \
-SBF 120). On t'interroge environ 30 minutes avant la clôture (17h30). \
-Ta mission : à partir du flux d'actualité du jour et d'un instantané de marché, \
-identifier les DEUX actions de l'univers fourni qui ont la meilleure probabilité \
-d'ouvrir en hausse le lendemain matin (effet de continuation haussière, \
-catalyseur d'actualité, momentum, flux acheteur de fin de séance).
+Tu es un gérant actions spécialisé sur la place de Paris (Euronext, CAC 40 et \
+SBF 120). On t'interroge environ 30 minutes avant la clôture (17h30). Objectif : \
+identifier la ou les actions de l'univers fourni qui ont la meilleure probabilité \
+d'OUVRIR EN HAUSSE demain matin, pour un achat ce soir (~5 min avant la clôture) \
+et une revente le lendemain matin.
 
-Contraintes :
-- Choisis uniquement des tickers présents dans l'univers fourni.
-- Sois sélectif et argumente chaque choix par un catalyseur concret et vérifiable \
-dans les données fournies (actualité, momentum, volume, sentiment social).
-- Reste lucide : il s'agit d'une simulation. N'invente pas de chiffres. \
-Si un catalyseur est faible, baisse la conviction.
-- Le sentiment social provient de StockTwits sur la cotation US/ADR (avis retail, \
-différé, partiel) : utilise-le comme signal d'appoint, pas comme preuve. \
-Ne le surpondère pas.
+Mécanisme à exploiter (du plus important au moins important) :
+1. LA TAPE AMÉRICAINE : Paris ferme à 17h30 mais Wall Street tourne jusqu'à 22h. \
+Le gap clôture→ouverture du lendemain est largement piloté par le sens du marché \
+US ce soir (S&P 500, Nasdaq) et le VIX. Une tape US verte favorise une ouverture \
+parisienne en hausse ; une tape rouge est un vent contraire.
+2. CATALYSEUR DATÉ : actualité du jour, et surtout tout événement attendu d'ici \
+demain matin (résultats, guidance, opération). Attention aux résultats publiés \
+avant l'ouverture = risque binaire (ne parie dessus que si c'est explicitement ta thèse).
+3. MOMENTUM DE FIN DE SÉANCE : une clôture près du plus-haut du jour (champ « clôt@ » \
+proche de 1.00) avec volume soutenu trahit un flux acheteur — exactement ce qu'on \
+cherche à prolonger. Une clôture près du plus-bas est un signal contraire.
+4. SENTIMENT SOCIAL (StockTwits via ADR/US) : signal d'appoint retail, à ne pas surpondérer.
+
+Règles :
+- Choisis uniquement des tickers présents dans l'univers fourni. N'invente aucun chiffre.
+- Sois SÉLECTIF. Tu peux retenir 2 actions, mais si une seule est vraiment \
+convaincante, n'en retiens qu'UNE. La qualité prime sur la quantité.
+- Chaque choix doit citer un mécanisme concret tiré des données (catalyseur, \
+momentum de clôture, tape US, sentiment). Si l'argument est faible, baisse la conviction.
+- Tiens compte de ton TRACK RECORD récent fourni : ajuste si un type de pari échoue.
+- Reste lucide : c'est une simulation, l'edge overnight est mince et bruité.
 """
 
-# Schéma de sortie structuré (output_config.format)
 SCHEMA = {
     "type": "object",
     "properties": {
         "synthese_marche": {
             "type": "string",
-            "description": "2-3 phrases sur l'ambiance du marché parisien du jour.",
+            "description": "2-3 phrases : ambiance Paris du jour ET sens de la tape US ce soir.",
         },
         "selection": {
             "type": "array",
-            "description": "Exactement 2 actions retenues, de la plus à la moins convaincante.",
+            "description": "1 OU 2 actions retenues (au moins 1), de la plus à la moins convaincante.",
             "items": {
                 "type": "object",
                 "properties": {
                     "ticker": {"type": "string"},
                     "nom": {"type": "string"},
-                    "conviction": {
-                        "type": "integer",
-                        "description": "Niveau de conviction de 0 à 100.",
-                    },
+                    "conviction": {"type": "integer", "description": "0 à 100."},
                     "catalyseur": {
                         "type": "string",
-                        "description": "Le déclencheur concret attendu pour la hausse du lendemain.",
+                        "description": "Le déclencheur concret attendu pour la hausse de demain matin.",
                     },
                     "raisonnement": {
                         "type": "string",
-                        "description": "Argumentaire court (2-4 phrases).",
+                        "description": "Argumentaire (2-4 phrases) reliant tape US / momentum / catalyseur.",
+                    },
+                    "risque": {
+                        "type": "string",
+                        "description": "Principal risque ou point de vigilance (ex: résultats demain, tape US fragile).",
                     },
                 },
-                "required": ["ticker", "nom", "conviction", "catalyseur", "raisonnement"],
+                "required": ["ticker", "nom", "conviction", "catalyseur",
+                             "raisonnement", "risque"],
                 "additionalProperties": False,
             },
         },
@@ -77,6 +89,8 @@ def choisir_actions(
     bloc_actu: str,
     jour: dt.date,
     bloc_social: str = "",
+    contexte_macro: str = "",
+    bilan_recent: str = "",
 ) -> dict:
     """Interroge Claude et renvoie la sélection structurée (dict)."""
     if not config.ANTHROPIC_API_KEY:
@@ -86,24 +100,22 @@ def choisir_actions(
 
     client = anthropic.Anthropic(api_key=config.ANTHROPIC_API_KEY)
 
-    section_social = ""
-    if bloc_social:
-        section_social = (
-            "\n=== SENTIMENT SOCIAL (StockTwits, ADR/US — signal d'appoint) ===\n"
-            f"{bloc_social}\n"
-        )
+    def section(titre: str, contenu: str) -> str:
+        return f"\n=== {titre} ===\n{contenu}\n" if contenu else ""
 
     invite = f"""\
 Date du jour : {jour.strftime('%A %d %B %Y')} (~17h, séance Euronext Paris bientôt close).
-
+{section("CONTEXTE MACRO (tape US en séance, CAC, VIX)", contexte_macro)}\
+{section("TON TRACK RECORD RÉCENT (apprends de tes résultats)", bilan_recent)}\
 === FLUX D'ACTUALITÉ DU JOUR ===
 {bloc_actu}
 
-=== INSTANTANÉ DE MARCHÉ (univers CAC 40 + SBF 120) ===
+=== INSTANTANÉ DE MARCHÉ (univers CAC 40 + SBF 120 ; clôt@ = position dans le range, 1=plus haut) ===
 {_bloc_marche(instantanes)}
-{section_social}
-Sélectionne les 2 meilleures actions à acheter ce soir (≈5 min avant la clôture)
-pour profiter d'une probable hausse demain matin. Réponds selon le schéma demandé.
+{section("SENTIMENT SOCIAL (StockTwits, ADR/US — signal d'appoint)", bloc_social)}\
+Sélectionne 1 ou 2 actions à acheter ce soir (≈5 min avant la clôture) pour
+profiter d'une probable hausse demain matin. Privilégie la qualité : une seule
+si une seule convainc. Réponds selon le schéma demandé.
 """
 
     reponse = client.messages.create(

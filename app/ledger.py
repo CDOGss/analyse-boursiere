@@ -39,6 +39,7 @@ def enregistrer_achats(jour: dt.date, selection: list[dict], prix_decision: dict
             "conviction": choix.get("conviction"),
             "catalyseur": choix.get("catalyseur", ""),
             "raisonnement": choix.get("raisonnement", ""),
+            "risque": choix.get("risque", ""),
             "prix_decision_17h": prix_decision.get(ticker),
             "prix_entree": None,        # figé à l'évaluation = clôture du jour d'achat
             "evaluation": None,         # rempli le lendemain

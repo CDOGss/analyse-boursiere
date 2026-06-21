@@ -25,7 +25,8 @@ for flux in (sys.stdout, sys.stderr):
         pass
 
 import config
-from app import analysis, dashboard, evaluate, ledger, market, news, report, social
+from app import (analysis, bilan, dashboard, evaluate, ledger, market, news,
+                report, social)
 
 
 def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
@@ -56,8 +57,14 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
         bloc_social = social.bloc_social(sentiments)
         print(f"       {len(sentiments)} valeur(s) avec sentiment social.")
 
+        print("       Contexte macro (tape US, CAC, VIX)…")
+        ctx_macro = market.contexte_macro()
+        bilan_recent = bilan.historique_recent_texte(10)
+
         print("       Interrogation de Claude Opus 4.8…")
-        analyse = analysis.choisir_actions(instantanes, bloc_actu, jour, bloc_social)
+        analyse = analysis.choisir_actions(
+            instantanes, bloc_actu, jour, bloc_social, ctx_macro, bilan_recent
+        )
         selection = analyse.get("selection", [])[: config.NB_ACHATS_PAR_SOIR]
 
         positions = ledger.enregistrer_achats(jour, selection, prix_decision)
@@ -70,8 +77,17 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
     print(bloc_tdb)
     contenu += "\n" + bloc_tdb
 
+    # 4) Calendrier quotidien (CSV) + tableau de bord mensuel -------------
+    chemin_csv = bilan.ecrire_csv()
+    bloc_mensuel = bilan.rendu_mensuel()
+    chemin_mensuel = bilan.ecrire_bilan_mensuel()
+    print(bloc_mensuel)
+    contenu += "\n" + bloc_mensuel
+
     chemin = report.ecrire_rapport(jour, contenu)
     print(f"\nRapport écrit : {chemin}")
+    print(f"Calendrier CSV : {chemin_csv}")
+    print(f"Bilan mensuel : {chemin_mensuel}")
 
 
 def main() -> int:

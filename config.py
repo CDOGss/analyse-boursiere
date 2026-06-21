@@ -31,6 +31,12 @@ MODELE = os.getenv("ANALYSE_MODEL", "claude-opus-4-8")
 ALLOCATION_PAR_ACTION = float(os.getenv("ALLOCATION_PAR_ACTION", "500"))
 NB_ACHATS_PAR_SOIR = 2
 
+# Coût estimé d'un aller-retour (achat + vente) en % du montant investi.
+# Sert à afficher un P&L NET de frais dans le bilan mensuel (les frais rongent
+# l'edge overnight). ~0.20% est réaliste pour de grandes valeurs liquides chez
+# un courtier discount. Mets 0 pour ignorer les frais.
+COUT_TRANSACTION_PCT = float(os.getenv("COUT_TRANSACTION_PCT", "0.20"))
+
 # --- Flux d'actualité (RSS, gratuits, sans clé) ----------------------------
 FLUX_ACTU = [
     "https://www.boursorama.com/bourse/actualites/rss/",

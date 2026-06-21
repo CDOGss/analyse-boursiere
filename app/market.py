@@ -19,6 +19,8 @@ class Instantane:
     variation_1j: float | None   # % sur la séance
     variation_5j: float | None   # % sur 5 séances
     volume_ratio: float | None   # volume du jour / moyenne 20j
+    position_range: float | None = None  # place du cours dans le range du jour [0..1]
+                                          # 1.00 = clôture au plus haut (flux acheteur)
 
     def ligne(self) -> str:
         def pct(x):
@@ -26,9 +28,11 @@ class Instantane:
         def num(x):
             return f"{x:.2f}" if x is not None else "n/d"
         vr = f"{self.volume_ratio:.2f}x" if self.volume_ratio is not None else "n/d"
+        rg = f"{self.position_range:.2f}" if self.position_range is not None else "n/d"
         return (
             f"{self.ticker} ({self.nom}): dernier={num(self.dernier)} "
-            f"1j={pct(self.variation_1j)} 5j={pct(self.variation_5j)} vol={vr}"
+            f"1j={pct(self.variation_1j)} 5j={pct(self.variation_5j)} vol={vr} "
+            f"clôt@{rg}"  # position dans le range du jour (1=plus haut)
         )
 
 
@@ -67,8 +71,12 @@ def instantane_univers(univers: dict[str, str]) -> list[Instantane]:
             vol_moy = float(vol.tail(20).mean())
             vol_ratio = vol_jour / vol_moy if vol_moy else None
 
+            haut = float(df["High"].iloc[-1])
+            bas = float(df["Low"].iloc[-1])
+            pos_range = (dernier - bas) / (haut - bas) if haut > bas else None
+
             resultats.append(
-                Instantane(t, univers[t], dernier, var_1j, var_5j, vol_ratio)
+                Instantane(t, univers[t], dernier, var_1j, var_5j, vol_ratio, pos_range)
             )
         except Exception:
             resultats.append(Instantane(t, univers[t], None, None, None, None))
@@ -132,6 +140,40 @@ def prix_intraday(ticker: str, jour: dt.date) -> dict[str, float | None]:
     resultat["h17"] = _prix_le_plus_proche(df, cible(*config.HEURE_17H))
     resultat["cloture"] = float(df["Close"].iloc[-1])
     return resultat
+
+
+def contexte_macro() -> str:
+    """Contexte de marché à ~17h : CAC 40, S&P 500, Nasdaq, VIX.
+
+    À 17h Paris, Wall Street est ouvert depuis ~1h30 : le sens de la tape US est
+    un signal avancé majeur du gap du lendemain matin sur Paris.
+    """
+    indices = {
+        "^FCHI": "CAC 40",
+        "^GSPC": "S&P 500 (US, en séance)",
+        "^IXIC": "Nasdaq (US, en séance)",
+        "^VIX": "VIX (volatilité US)",
+    }
+    try:
+        data = yf.download(list(indices), period="5d", interval="1d",
+                           group_by="ticker", auto_adjust=False,
+                           progress=False, threads=True)
+    except Exception:
+        return "(Contexte macro indisponible.)"
+
+    lignes = []
+    for t, nom in indices.items():
+        try:
+            df = data[t].dropna()
+            if len(df) < 2:
+                continue
+            dernier = float(df["Close"].iloc[-1])
+            veille = float(df["Close"].iloc[-2])
+            var = (dernier / veille - 1) * 100
+            lignes.append(f"- {nom}: {dernier:.2f} ({var:+.2f}%)")
+        except Exception:
+            continue
+    return "\n".join(lignes) if lignes else "(Contexte macro indisponible.)"
 
 
 def cloture_du_jour(ticker: str, jour: dt.date) -> float | None:

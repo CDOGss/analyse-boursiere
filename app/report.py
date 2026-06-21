@@ -65,6 +65,8 @@ def rapport_selection(analyse: dict, positions: list[dict]) -> str:
                       f"au cours ~17h de {prix_txt}")
         lignes.append(f"- Catalyseur : {p.get('catalyseur', '')}")
         lignes.append(f"- Raisonnement : {p.get('raisonnement', '')}")
+        if p.get("risque"):
+            lignes.append(f"- ⚠️ Risque : {p.get('risque')}")
         lignes.append("")
     lignes.append("_Aucun ordre réel n'a été passé. Simulation uniquement._\n")
     return "\n".join(lignes)
