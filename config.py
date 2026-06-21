@@ -46,6 +46,15 @@ FENETRE_RESULTATS_JOURS = 4
 # Indice de référence (benchmark) : CAC 40.
 INDICE_BENCHMARK = "^FCHI"
 
+# --- Filtre de régime ------------------------------------------------------
+# L'effet overnight s'affaiblit (voire s'inverse) en régime stressé. On module
+# le nombre de paris selon le VIX et la tape US à 17h. Seuils ajustables.
+ACTIVER_FILTRE_REGIME = True
+VIX_PRUDENCE = 25.0       # au-dessus : au plus 1 pari
+VIX_EXTREME = 32.0        # au-dessus : aucun pari (cash)
+SP500_PRUDENCE = -0.5     # tape US sous ce % : au plus 1 pari
+SP500_HOSTILE = -1.5      # tape US sous ce % : aucun pari (cash)
+
 # --- Flux d'actualité (RSS, gratuits, sans clé) ----------------------------
 FLUX_ACTU = [
     "https://www.boursorama.com/bourse/actualites/rss/",

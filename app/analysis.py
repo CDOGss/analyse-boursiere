@@ -97,6 +97,7 @@ def choisir_actions(
     contexte_macro: str = "",
     bilan_recent: str = "",
     bloc_shortlist: str = "",
+    consigne_regime: str = "",
 ) -> dict:
     """Interroge Claude et renvoie la sélection structurée (dict)."""
     if not config.ANTHROPIC_API_KEY:
@@ -119,9 +120,11 @@ Date du jour : {jour.strftime('%A %d %B %Y')} (~17h, séance Euronext Paris bien
 === UNIVERS COMPLET (contexte ; clôt@ = position dans le range, 1=plus haut) ===
 {_bloc_marche(instantanes)}
 {section("SENTIMENT SOCIAL (StockTwits, ADR/US — signal d'appoint)", bloc_social)}\
+{section("RÉGIME DE MARCHÉ", consigne_regime)}\
 Sélectionne 1 ou 2 actions à acheter ce soir (≈5 min avant la clôture) pour
 profiter d'une probable hausse demain matin. Privilégie la qualité : une seule
-si une seule convainc. Réponds selon le schéma demandé.
+si une seule convainc. Respecte la consigne de régime ci-dessus. Réponds selon
+le schéma demandé.
 """
 
     reponse = client.messages.create(

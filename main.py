@@ -26,7 +26,7 @@ for flux in (sys.stdout, sys.stderr):
 
 import config
 from app import (analysis, bilan, dashboard, evaluate, evenements, graphiques,
-                ledger, market, news, report, social)
+                ledger, market, metriques, news, report, social)
 
 
 def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
@@ -61,36 +61,61 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
         ctx_macro = market.contexte_macro()
         bilan_recent = bilan.historique_recent_texte(10)
 
-        print(f"       Présélection des {config.SHORTLIST_N} meilleurs candidats…")
-        shortlist = market.preselection(instantanes, config.SHORTLIST_N)
-        sentiment_par_ticker = {s.ticker: s for s in sentiments}
-        print("       Calendrier de résultats des candidats…")
-        notes_events = evenements.enrichir([s.ticker for s in shortlist], jour)
-        lignes_sl = []
-        for inst in shortlist:
-            ligne = inst.ligne() + notes_events.get(inst.ticker, "")
-            s = sentiment_par_ticker.get(inst.ticker)
-            if s and s.score is not None:
-                ligne += f" | social {s.score:+.2f}"
-            lignes_sl.append(f"- {ligne}")
-        bloc_shortlist = "\n".join(lignes_sl)
+        # Filtre de régime : combien de paris autorisés ce soir ?
+        regime = market.etat_regime() if config.ACTIVER_FILTRE_REGIME else {
+            "nb_max": config.NB_ACHATS_PAR_SOIR, "label": "désactivé", "raison": ""}
+        nb_max = regime["nb_max"]
+        print(f"       Régime : {regime['label']} ({regime['raison']}) → "
+              f"{nb_max} pari(s) max.")
 
-        print("       Interrogation de Claude Opus 4.8…")
-        analyse = analysis.choisir_actions(
-            instantanes, bloc_actu, jour, bloc_social, ctx_macro, bilan_recent,
-            bloc_shortlist,
-        )
-        selection = analyse.get("selection", [])[: config.NB_ACHATS_PAR_SOIR]
+        if nb_max == 0:
+            msg = (f"### Régime de marché hostile — aucun achat ce soir (cash)\n\n"
+                   f"Raison : {regime['raison']}. L'effet overnight est peu fiable "
+                   f"dans ce régime ; ne pas jouer est le meilleur pari.\n")
+            print(msg)
+            contenu += "\n" + msg
+        else:
+            print(f"       Présélection des {config.SHORTLIST_N} meilleurs candidats…")
+            shortlist = market.preselection(instantanes, config.SHORTLIST_N)
+            sentiment_par_ticker = {s.ticker: s for s in sentiments}
+            print("       Calendrier de résultats des candidats…")
+            notes_events = evenements.enrichir([s.ticker for s in shortlist], jour)
+            lignes_sl = []
+            for inst in shortlist:
+                ligne = inst.ligne() + notes_events.get(inst.ticker, "")
+                s = sentiment_par_ticker.get(inst.ticker)
+                if s and s.score is not None:
+                    ligne += f" | social {s.score:+.2f}"
+                lignes_sl.append(f"- {ligne}")
+            bloc_shortlist = "\n".join(lignes_sl)
 
-        positions = ledger.enregistrer_achats(jour, selection, prix_decision)
-        bloc_sel = report.rapport_selection(analyse, positions)
-        print(bloc_sel)
-        contenu += "\n" + bloc_sel
+            consigne = ""
+            if nb_max == 1:
+                consigne = (f"Régime de PRUDENCE ({regime['raison']}). Ne retiens "
+                            f"qu'UNE seule action, la plus convaincante.")
+
+            print("       Interrogation de Claude Opus 4.8…")
+            analyse = analysis.choisir_actions(
+                instantanes, bloc_actu, jour, bloc_social, ctx_macro, bilan_recent,
+                bloc_shortlist, consigne,
+            )
+            selection = analyse.get("selection", [])[:nb_max]
+
+            positions = ledger.enregistrer_achats(jour, selection, prix_decision)
+            bloc_sel = report.rapport_selection(analyse, positions)
+            print(bloc_sel)
+            contenu += "\n" + bloc_sel
 
     # 3) Tableau de bord récapitulatif (tout l'historique) ----------------
     bloc_tdb = dashboard.rendu_texte(dashboard.calculer_stats())
     print(bloc_tdb)
     contenu += "\n" + bloc_tdb
+
+    # 3b) Métriques ajustées du risque (Sharpe, alpha significatif…) ------
+    bloc_metriques = metriques.rendu_texte()
+    metriques.ecrire()
+    print(bloc_metriques)
+    contenu += "\n" + bloc_metriques
 
     # 4) Calendrier quotidien (CSV) + tableau de bord mensuel -------------
     chemin_csv = bilan.ecrire_csv()

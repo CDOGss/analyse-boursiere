@@ -173,38 +173,71 @@ def prix_intraday(ticker: str, jour: dt.date) -> dict[str, float | None]:
     return resultat
 
 
+def _variations_indices(tickers: list[str]) -> dict[str, tuple[float, float]]:
+    """Retourne {ticker: (dernier, variation_%)} pour des indices."""
+    try:
+        data = yf.download(tickers, period="5d", interval="1d", group_by="ticker",
+                           auto_adjust=False, progress=False, threads=True)
+    except Exception:
+        return {}
+    out: dict[str, tuple[float, float]] = {}
+    for t in tickers:
+        try:
+            df = (data[t] if len(tickers) > 1 else data).dropna()
+            if len(df) < 2:
+                continue
+            dernier = float(df["Close"].iloc[-1])
+            veille = float(df["Close"].iloc[-2])
+            out[t] = (dernier, (dernier / veille - 1) * 100)
+        except Exception:
+            continue
+    return out
+
+
 def contexte_macro() -> str:
     """Contexte de marché à ~17h : CAC 40, S&P 500, Nasdaq, VIX.
 
     À 17h Paris, Wall Street est ouvert depuis ~1h30 : le sens de la tape US est
     un signal avancé majeur du gap du lendemain matin sur Paris.
     """
-    indices = {
-        "^FCHI": "CAC 40",
-        "^GSPC": "S&P 500 (US, en séance)",
-        "^IXIC": "Nasdaq (US, en séance)",
-        "^VIX": "VIX (volatilité US)",
-    }
-    try:
-        data = yf.download(list(indices), period="5d", interval="1d",
-                           group_by="ticker", auto_adjust=False,
-                           progress=False, threads=True)
-    except Exception:
+    noms = {"^FCHI": "CAC 40", "^GSPC": "S&P 500 (US, en séance)",
+            "^IXIC": "Nasdaq (US, en séance)", "^VIX": "VIX (volatilité US)"}
+    var = _variations_indices(list(noms))
+    if not var:
         return "(Contexte macro indisponible.)"
+    lignes = [f"- {noms[t]}: {p:.2f} ({v:+.2f}%)" for t, (p, v) in var.items()]
+    return "\n".join(lignes)
 
-    lignes = []
-    for t, nom in indices.items():
-        try:
-            df = data[t].dropna()
-            if len(df) < 2:
-                continue
-            dernier = float(df["Close"].iloc[-1])
-            veille = float(df["Close"].iloc[-2])
-            var = (dernier / veille - 1) * 100
-            lignes.append(f"- {nom}: {dernier:.2f} ({var:+.2f}%)")
-        except Exception:
-            continue
-    return "\n".join(lignes) if lignes else "(Contexte macro indisponible.)"
+
+def etat_regime() -> dict:
+    """Évalue le régime de marché et le nombre de paris autorisé (0/1/2).
+
+    L'effet overnight est plus fiable en régime calme et tape US verte.
+    """
+    var = _variations_indices(["^VIX", "^GSPC", "^IXIC"])
+    vix = var.get("^VIX", (None, None))[0]
+    sp = var.get("^GSPC", (None, None))[1]
+
+    nb_max, label, raisons = config.NB_ACHATS_PAR_SOIR, "normal", []
+
+    if vix is not None and vix >= config.VIX_EXTREME:
+        nb_max, label = 0, "extrême"
+        raisons.append(f"VIX très élevé ({vix:.1f})")
+    elif sp is not None and sp <= config.SP500_HOSTILE:
+        nb_max, label = 0, "hostile"
+        raisons.append(f"tape US fortement rouge ({sp:+.2f}%)")
+    elif (vix is not None and vix >= config.VIX_PRUDENCE) or \
+         (sp is not None and sp <= config.SP500_PRUDENCE):
+        nb_max, label = 1, "prudence"
+        if vix is not None and vix >= config.VIX_PRUDENCE:
+            raisons.append(f"VIX élevé ({vix:.1f})")
+        if sp is not None and sp <= config.SP500_PRUDENCE:
+            raisons.append(f"tape US rouge ({sp:+.2f}%)")
+
+    return {
+        "vix": vix, "sp500_pct": sp, "nb_max": nb_max, "label": label,
+        "raison": ", ".join(raisons) if raisons else "régime favorable",
+    }
 
 
 def cloture_du_jour(ticker: str, jour: dt.date) -> float | None:
