@@ -144,15 +144,19 @@ def main() -> int:
     parseur.add_argument("--eval-seulement", action="store_true",
                          help="N'exécuter que l'évaluation de la veille (pas d'achat).")
     parseur.add_argument("--garde-cloture", action="store_true",
-                         help="Ne s'exécute que si l'heure de Paris est 17h (DST-safe pour "
-                              "les crons UTC de GitHub Actions).")
+                         help="Ne s'exécute que dans la fenêtre du soir (17h–21h Paris), "
+                              "robuste aux retards des crons UTC de GitHub Actions.")
     args = parseur.parse_args()
 
-    # Garde-fou horaire : avec deux crons UTC (été/hiver), un seul tombe à 17h Paris.
+    # Garde-fou horaire : les crons UTC de GitHub étant souvent retardés, on
+    # accepte toute la fenêtre du soir (17h–21h Paris) au lieu de 17h pile. Le
+    # premier cron qui tombe dans la fenêtre fait l'achat ; les suivants sont
+    # neutralisés par l'anti-doublon (a_deja_achete).
     if args.garde_cloture:
         maintenant = dt.datetime.now(config.FUSEAU_PARIS)
-        if maintenant.hour != 17:
-            print(f"Hors fenêtre de clôture (heure de Paris {maintenant:%H:%M}) — arrêt.")
+        if not (config.HEURE_EXEC_MIN <= maintenant.hour <= config.HEURE_EXEC_MAX):
+            print(f"Hors fenêtre d'exécution (heure de Paris {maintenant:%H:%M} ; "
+                  f"fenêtre {config.HEURE_EXEC_MIN}h–{config.HEURE_EXEC_MAX}h) — arrêt.")
             return 0
 
     jour = dt.date.fromisoformat(args.date) if args.date else None

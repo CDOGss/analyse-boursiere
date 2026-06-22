@@ -26,6 +26,15 @@ HEURE_DEMI_HEURE = (9, 30)      # première demi-heure
 HEURE_MI_JOURNEE = (13, 0)      # mi-journée
 HEURE_17H = (17, 0)             # 17h (la séance ferme à 17:30)
 
+# Fenêtre d'exécution autorisée (heure de Paris) pour le garde-fou --garde-cloture.
+# Les crons UTC de GitHub Actions sont souvent RETARDÉS (parfois de plus d'une
+# heure). Plutôt qu'exiger 17h pile (et rater la journée au moindre retard), on
+# accepte toute la soirée : la clôture est figée dès 17h30 et le pari overnight
+# reste valable jusqu'à l'ouverture du lendemain. L'anti-doublon empêche les
+# achats en double si plusieurs crons retardés se déclenchent.
+HEURE_EXEC_MIN = 17            # ne pas acheter avant ~la clôture
+HEURE_EXEC_MAX = 21            # filet de sécurité tardif (Wall Street ouvre jusqu'à 22h)
+
 # --- API / modèle ----------------------------------------------------------
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 MODELE = os.getenv("ANALYSE_MODEL", "claude-opus-4-8")

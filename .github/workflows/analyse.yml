@@ -2,11 +2,15 @@ name: Analyse boursière quotidienne
 
 on:
   schedule:
-    # Cron en UTC, sans gestion de l'heure d'été. On met deux horaires ;
-    # le garde-fou --garde-cloture (heure de Paris == 17h) garantit qu'un
-    # seul fait réellement le travail.
-    - cron: "0 15 * * 1-5"   # 17h Paris en heure d'été (CEST)
-    - cron: "0 16 * * 1-5"   # 17h Paris en heure d'hiver (CET)
+    # Crons en UTC (pas de gestion DST). GitHub RETARDE ou ABANDONNE souvent les
+    # crons « pile à l'heure » (:00) : on décale aux minutes creuses (:07/:37) et
+    # on multiplie les tentatives sur la soirée. Le garde-fou --garde-cloture
+    # (fenêtre 17h–21h Paris) + l'anti-doublon garantissent UN SEUL achat réel,
+    # quel que soit le cron qui finit par passer.
+    - cron: "7 15 * * 1-5"    # été 17:07 Paris            — fenêtre principale (CEST)
+    - cron: "7 16 * * 1-5"    # été 18:07 / hiver 17:07    — principal hiver, secours été
+    - cron: "37 16 * * 1-5"   # été 18:37 / hiver 17:37    — secours
+    - cron: "7 18 * * 1-5"    # été 20:07 / hiver 19:07    — filet de sécurité tardif
   workflow_dispatch:          # bouton « Run workflow » pour tester à la main
 
 permissions:
