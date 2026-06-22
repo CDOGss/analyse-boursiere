@@ -42,9 +42,15 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
     contenu = bloc_eval
 
     # 2) Analyse + sélection du soir --------------------------------------
+    # Exécution en double : un autre déclencheur (cron GitHub + cron externe) a
+    # déjà acheté aujourd'hui. On s'arrête NET pour ne pas réécrire le rapport du
+    # jour (le vider) ni régénérer inutilement les agrégats déjà produits par la
+    # première exécution. C'est un vrai no-op → aucun commit en double.
     if not sans_analyse and ledger.a_deja_achete(jour):
-        print("Des achats existent déjà pour aujourd'hui — analyse ignorée (anti-doublon).")
-    elif not sans_analyse:
+        print("Des achats existent déjà pour aujourd'hui — exécution en double, "
+              "rien à refaire (anti-doublon). Rapports conservés tels quels.")
+        return
+    if not sans_analyse:
         print("[2/2] Récupération de l'actualité et du marché…")
         univers = config.univers()
         articles = news.recuperer_actualites()
