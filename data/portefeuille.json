@@ -11,8 +11,33 @@
       "raisonnement": "SPIE affiche le meilleur profil momentum/volume de la shortlist : +2.94% sur la journée, clôture au plus-haut et volume 1.58x trahissant un vrai flux acheteur. Profil services aux infrastructures défensif et peu corrélé à la tech US chahutée ce soir, ce qui limite l'effet du Nasdaq rouge sur le gap. Le 5j positif (+2.40%) confirme une tendance saine.",
       "risque": "Tape US franchement rouge (Nasdaq -1.24%, VIX en hausse) peut neutraliser le gap, et un titre déjà +2.94% sur la séance est exposé à une prise de bénéfices à l'ouverture.",
       "prix_decision_17h": 51.099998474121094,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 51.1,
+      "evaluation": {
+        "date_evaluation": "2026-06-23",
+        "prix_entree": 51.1,
+        "scenarios": {
+          "ouverture": {
+            "prix": 50.55,
+            "pnl_eur": -5.38,
+            "pnl_pct": -1.08
+          },
+          "premiere_demi_heure": {
+            "prix": 50.95,
+            "pnl_eur": -1.47,
+            "pnl_pct": -0.29
+          },
+          "mi_journee": {
+            "prix": 51.0,
+            "pnl_eur": -0.98,
+            "pnl_pct": -0.2
+          },
+          "h17": {
+            "prix": 51.15,
+            "pnl_eur": 0.49,
+            "pnl_pct": 0.1
+          }
+        }
+      }
     },
     {
       "id": "2026-06-22_BN.PA",
@@ -25,6 +50,45 @@
       "raisonnement": "Dans un contexte de tape US négative et de VIX en hausse, la rotation défensive favorise les valeurs de consommation de base. Danone a clôturé au plus-haut (+2.43%) et son profil agroalimentaire la protège du sell-off tech/luxe parisien. Le faible volume (0.72x) tempère toutefois la conviction.",
       "risque": "Volume sous la moyenne, donc flux acheteur peu confirmé ; un rebond technique des indices US effacerait l'attrait défensif et le gap pourrait rester plat.",
       "prix_decision_17h": 66.63999938964844,
+      "prix_entree": 66.64,
+      "evaluation": {
+        "date_evaluation": "2026-06-23",
+        "prix_entree": 66.64,
+        "scenarios": {
+          "ouverture": {
+            "prix": 66.76,
+            "pnl_eur": 0.9,
+            "pnl_pct": 0.18
+          },
+          "premiere_demi_heure": {
+            "prix": 67.14,
+            "pnl_eur": 3.75,
+            "pnl_pct": 0.75
+          },
+          "mi_journee": {
+            "prix": 67.68,
+            "pnl_eur": 7.8,
+            "pnl_pct": 1.56
+          },
+          "h17": {
+            "prix": 67.76,
+            "pnl_eur": 8.4,
+            "pnl_pct": 1.68
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-06-23_IPN.PA",
+      "date_achat": "2026-06-23",
+      "ticker": "IPN.PA",
+      "nom": "Ipsen",
+      "allocation_eur": 500.0,
+      "conviction": 53,
+      "catalyseur": "Clôture au plus haut du jour (clôt@1.02) sur fort gain +3.56%, profil pharma défensif recherché en cas de tape US rouge prolongée.",
+      "raisonnement": "Avec une tape US nettement négative et un VIX en hausse, on cherche un refuge défensif : Ipsen (pharma) affiche le meilleur momentum de clôture de la shortlist, en sortie de range vers le haut, signe d'un flux acheteur de fin de séance. Le secteur santé tend à mieux résister quand le risque global se vend, ce qui limite le vent contraire du gap.",
+      "risque": "Volume faible (0.19x) qui fragilise la solidité du signal, et une ouverture parisienne possiblement plombée par la faiblesse des indices US ce soir.",
+      "prix_decision_17h": 162.8000030517578,
       "prix_entree": null,
       "evaluation": null
     }
