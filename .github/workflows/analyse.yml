@@ -45,6 +45,9 @@ jobs:
         run: python main.py ${{ github.event_name == 'schedule' && '--garde-cloture' || '' }}
 
       - name: Sauvegarder le portefeuille et les rapports
+        # always() : on sauvegarde même si l'analyse a échoué (ex. API surchargée
+        # après l'évaluation) pour ne pas perdre une évaluation déjà calculée.
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

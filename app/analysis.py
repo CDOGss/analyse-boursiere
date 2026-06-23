@@ -105,7 +105,11 @@ def choisir_actions(
             "ANTHROPIC_API_KEY manquante. Copie .env.example en .env et renseigne ta clé."
         )
 
-    client = anthropic.Anthropic(api_key=config.ANTHROPIC_API_KEY)
+    # Robustesse : aux heures de pointe l'API peut renvoyer un 529 « overloaded »
+    # transitoire (ou un 429/5xx). Le SDK réessaie automatiquement avec un backoff
+    # exponentiel ; on relève la limite à 8 pour encaisser un pic de charge plutôt
+    # que de faire planter tout le run sur un simple à-coup passager.
+    client = anthropic.Anthropic(api_key=config.ANTHROPIC_API_KEY, max_retries=8)
 
     def section(titre: str, contenu: str) -> str:
         return f"\n=== {titre} ===\n{contenu}\n" if contenu else ""
