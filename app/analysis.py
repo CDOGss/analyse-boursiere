@@ -30,10 +30,16 @@ cherche à prolonger. Une clôture près du plus-bas est un signal contraire.
 4. SENTIMENT SOCIAL (StockTwits via ADR/US) : signal d'appoint retail, à ne pas surpondérer.
 
 Règles :
-- Choisis uniquement des tickers présents dans l'univers fourni. N'invente aucun chiffre.
-- Privilégie les CANDIDATS PRIORITAIRES (shortlist enrichie : meilleur momentum de \
-clôture / volume, avec calendrier de résultats). Tu peux choisir hors shortlist \
-seulement si un catalyseur d'actualité fort le justifie.
+- Choisis EXCLUSIVEMENT des tickers de la SHORTLIST « candidats prioritaires » \
+fournie (déjà filtrée : volume confirmé et hausses paraboliques écartées). \
+N'invente aucun chiffre.
+- DIVERSIFICATION OBLIGATOIRE : si tu retiens 2 actions, elles doivent être de \
+SECTEURS NETTEMENT DIFFÉRENTS. Jamais deux valeurs du même secteur ou thème \
+(ex. deux banques, deux aériennes, deux du luxe, deux pétrolières, deux foncières).
+- Évite un titre déjà SUR-ÉTENDU (très forte hausse du jour ou cumulée sur 5 jours) \
+même si le momentum est bon : il est le plus exposé à une prise de bénéfices à \
+l'ouverture. Préfère une force « tranquille » (clôture au plus-haut, volume solide, \
+hausse mesurée) à un titre qui vient d'exploser.
 - Si une action publie ses RÉSULTATS d'ici demain matin (signalé), c'est un risque \
 binaire : évite-la, sauf si c'est explicitement et solidement ta thèse.
 - Sois SÉLECTIF. Tu peux retenir 2 actions, mais si une seule est vraiment \

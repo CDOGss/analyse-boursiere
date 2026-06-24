@@ -99,6 +99,17 @@ def preselection(instantanes: list[Instantane], n: int) -> list[Instantane]:
     if not valides:
         return []
 
+    # Garde-fous : on ne garde que les titres au volume confirmé (≥ moyenne) et
+    # non paraboliques (hausse du jour / 5j sous les plafonds). On relâche si le
+    # filtrage laisse trop peu de candidats (jour exceptionnel) pour ne pas vider
+    # la shortlist.
+    filtres = [i for i in valides
+               if (i.volume_ratio or 0) >= config.VOLUME_MIN_RATIO
+               and i.variation_1j <= config.HAUSSE_MAX_1J_PCT
+               and (i.variation_5j is None or i.variation_5j <= config.HAUSSE_MAX_5J_PCT)]
+    if len(filtres) >= 5:
+        valides = filtres
+
     def rangs(valeurs: list[float]) -> dict[int, float]:
         ordre = sorted(range(len(valeurs)), key=lambda k: valeurs[k])
         return {idx: pos / (len(valeurs) - 1 or 1) for pos, idx in enumerate(ordre)}

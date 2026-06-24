@@ -25,8 +25,8 @@ for flux in (sys.stdout, sys.stderr):
         pass
 
 import config
-from app import (analysis, bilan, dashboard, evaluate, evenements, graphiques,
-                ledger, market, metriques, news, report, social)
+from app import (analysis, bilan, dashboard, evaluate, evenements, garde_fous,
+                graphiques, ledger, market, metriques, news, report, social)
 
 
 def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
@@ -105,10 +105,18 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
                 instantanes, bloc_actu, jour, bloc_social, ctx_macro, bilan_recent,
                 bloc_shortlist, consigne,
             )
-            selection = analyse.get("selection", [])[:nb_max]
+            # Garde-fous : volume confirmé, pas de sur-extension, diversification
+            # sectorielle. Peut réduire la sélection (voire à 1) — c'est voulu.
+            selection, notes_gf = garde_fous.appliquer(
+                analyse.get("selection", []), instantanes, nb_max)
+            for n in notes_gf:
+                print(f"       Garde-fou : {n}")
 
             positions = ledger.enregistrer_achats(jour, selection, prix_decision)
             bloc_sel = report.rapport_selection(analyse, positions)
+            if notes_gf:
+                bloc_sel += ("\n_Garde-fous appliqués :_\n"
+                             + "\n".join(f"- {n}" for n in notes_gf) + "\n")
             print(bloc_sel)
             contenu += "\n" + bloc_sel
 

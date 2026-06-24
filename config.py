@@ -64,6 +64,39 @@ VIX_EXTREME = 32.0        # au-dessus : aucun pari (cash)
 SP500_PRUDENCE = -0.5     # tape US sous ce % : au plus 1 pari
 SP500_HOSTILE = -1.5      # tape US sous ce % : aucun pari (cash)
 
+# --- Garde-fous de sélection -----------------------------------------------
+# Principes de bon sens appliqués AVANT (filtrage de la shortlist) et APRÈS
+# (validation de la sélection de Claude) le choix, pour corriger trois travers
+# classiques du momentum. Indépendants du P&L récent → pas de sur-optimisation.
+VOLUME_MIN_RATIO = 1.0     # volume du jour ≥ moyenne 20j, sinon flux non confirmé
+HAUSSE_MAX_1J_PCT = 6.0    # au-delà : titre sur-étendu sur la séance, écarté
+HAUSSE_MAX_5J_PCT = 15.0   # idem sur 5 séances (montée parabolique)
+
+# Regroupement sectoriel (thèmes à forte corrélation) pour interdire deux paris
+# du même secteur le même soir. Couvre les clusters les plus concentrants ; un
+# ticker absent est considéré « secteur inconnu » → pas de collision (autorisé).
+GROUPES_SECTEURS = {
+    "banque": {"BNP.PA", "ACA.PA", "GLE.PA"},
+    "assurance": {"CS.PA", "SCR.PA", "COFA.PA"},
+    "luxe": {"MC.PA", "RMS.PA", "KER.PA", "EL.PA"},
+    "spiritueux": {"RI.PA", "RCO.PA"},
+    "auto": {"RNO.PA", "STLAP.PA", "ML.PA", "FR.PA", "OPM.PA", "FRVIA.PA"},
+    "aérien": {"AF.PA", "ADP.PA"},
+    "aéronautique-défense": {"AIR.PA", "SAF.PA", "HO.PA", "AM.PA"},
+    "semi-conducteurs": {"STMPA.PA", "SOI.PA"},
+    "tech-logiciels": {"CAP.PA", "SOP.PA", "ATO.PA", "DSY.PA", "WLN.PA", "OVH.PA"},
+    "énergie": {"TTE.PA", "RUI.PA", "MAU.PA", "TE.PA"},
+    "utilities": {"ENGI.PA", "VIE.PA", "VLTSA.PA"},
+    "foncières": {"URW.PA", "GFC.PA", "ICAD.PA", "COV.PA", "LI.PA", "CARM.PA",
+                  "MERY.PA", "ALTA.PA", "NXI.PA"},
+    "construction-concessions": {"DG.PA", "FGR.PA", "SGO.PA", "SPIE.PA", "EN.PA"},
+    "santé-pharma": {"SAN.PA", "IPN.PA", "BIM.PA", "ERF.PA", "DIM.PA", "VLA.PA",
+                     "VIRP.PA", "EAPI.PA"},
+    "conso-base": {"BN.PA", "CA.PA"},
+    "médias-pub": {"PUB.PA", "MMT.PA", "TFI.PA"},
+    "matériaux-chimie": {"AI.PA", "AKE.PA", "MT.AS", "ERA.PA", "NK.PA"},
+}
+
 # --- Flux d'actualité (RSS, gratuits, sans clé) ----------------------------
 FLUX_ACTU = [
     "https://www.boursorama.com/bourse/actualites/rss/",
