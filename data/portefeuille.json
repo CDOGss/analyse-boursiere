@@ -89,6 +89,59 @@
       "raisonnement": "Avec une tape US nettement négative et un VIX en hausse, on cherche un refuge défensif : Ipsen (pharma) affiche le meilleur momentum de clôture de la shortlist, en sortie de range vers le haut, signe d'un flux acheteur de fin de séance. Le secteur santé tend à mieux résister quand le risque global se vend, ce qui limite le vent contraire du gap.",
       "risque": "Volume faible (0.19x) qui fragilise la solidité du signal, et une ouverture parisienne possiblement plombée par la faiblesse des indices US ce soir.",
       "prix_decision_17h": 162.8000030517578,
+      "prix_entree": 162.6,
+      "evaluation": {
+        "date_evaluation": "2026-06-24",
+        "prix_entree": 162.6,
+        "scenarios": {
+          "ouverture": {
+            "prix": 162.7,
+            "pnl_eur": 0.31,
+            "pnl_pct": 0.06
+          },
+          "premiere_demi_heure": {
+            "prix": 163.1,
+            "pnl_eur": 1.54,
+            "pnl_pct": 0.31
+          },
+          "mi_journee": {
+            "prix": 164.1,
+            "pnl_eur": 4.61,
+            "pnl_pct": 0.92
+          },
+          "h17": {
+            "prix": 164.3,
+            "pnl_eur": 5.23,
+            "pnl_pct": 1.05
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-06-24_AF.PA",
+      "date_achat": "2026-06-24",
+      "ticker": "AF.PA",
+      "nom": "Air France-KLM",
+      "allocation_eur": 500.0,
+      "conviction": 62,
+      "catalyseur": "Détente du pétrole (apaisement sur le détroit d'Ormuz) qui allège la facture carburant des compagnies, dans le sillage d'une tape US verte.",
+      "raisonnement": "Plus forte hausse de la shortlist (+7.82% sur 1j, +12.26% sur 5j) avec un volume nettement au-dessus de la moyenne (1.47x) et une clôture quasiment sur le plus-haut du jour (0.98) : flux acheteur franc et soutenu. Le recul du brut et une tape US bien orientée maximisent la probabilité d'une ouverture en gap haussier demain.",
+      "risque": "Valeur volatile et déjà très tendue après +12% sur 5 jours : risque de prise de bénéfices, et tout rebond du pétrole inverserait la thèse.",
+      "prix_decision_17h": 13.505000114440918,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-06-24_ADP.PA",
+      "date_achat": "2026-06-24",
+      "ticker": "ADP.PA",
+      "nom": "Aéroports de Paris (ADP)",
+      "allocation_eur": 500.0,
+      "conviction": 55,
+      "catalyseur": "Même tailwind aérien (baisse du pétrole, trafic estival) avec tape US verte ce soir.",
+      "raisonnement": "Beau mouvement du jour (+4.17%) avec clôture proche du haut de séance (0.93) et volume correct (0.52x), porté par le même thème aérien/voyage que la tape positive américaine. Momentum de fin de séance compatible avec un prolongement à l'ouverture.",
+      "risque": "Corrélation sectorielle avec Air France (pas de réelle diversification) et momentum qui peut s'essouffler si le pétrole rebondit ou si la tape US tourne en fin de séance.",
+      "prix_decision_17h": 114.80000305175781,
       "prix_entree": null,
       "evaluation": null
     }
