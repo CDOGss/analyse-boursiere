@@ -1,17 +1,12 @@
 name: Analyse boursière quotidienne
 
 on:
-  schedule:
-    # Crons en UTC (pas de gestion DST). GitHub RETARDE ou ABANDONNE souvent les
-    # crons « pile à l'heure » (:00) : on décale aux minutes creuses (:07/:37) et
-    # on multiplie les tentatives sur la soirée. Le garde-fou --garde-cloture
-    # (fenêtre 17h–21h Paris) + l'anti-doublon garantissent UN SEUL achat réel,
-    # quel que soit le cron qui finit par passer.
-    - cron: "7 15 * * 1-5"    # été 17:07 Paris            — fenêtre principale (CEST)
-    - cron: "7 16 * * 1-5"    # été 18:07 / hiver 17:07    — principal hiver, secours été
-    - cron: "37 16 * * 1-5"   # été 18:37 / hiver 17:37    — secours
-    - cron: "7 18 * * 1-5"    # été 20:07 / hiver 19:07    — filet de sécurité tardif
-  workflow_dispatch:          # bouton « Run workflow » pour tester à la main
+  # Déclenchement piloté par cron-job.org (externe, ponctuel) qui appelle l'API
+  # workflow_dispatch chaque jour ouvré à 17h05 Paris. Le cron interne de GitHub
+  # a été retiré : il se déclenchait avec des heures de retard (plus nuisance que
+  # secours) et, après une remise à zéro, pouvait racheter pour une journée déjà
+  # clôturée. cron-job.org est le déclencheur fiable (voir docs/declenchement-externe.md).
+  workflow_dispatch:          # appelé par cron-job.org (et bouton « Run workflow » manuel)
 
 permissions:
   contents: write             # nécessaire pour sauvegarder le portefeuille
@@ -41,8 +36,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PYTHONUTF8: "1"
           TZ: Europe/Paris
-        # Déclenchement manuel = run complet (test) ; cron = avec garde-fou horaire.
-        run: python main.py ${{ github.event_name == 'schedule' && '--garde-cloture' || '' }}
+        # Déclenché par cron-job.org à 17h05 Paris : run complet (pas de garde-fou
+        # horaire, qui ne servait qu'aux crons internes désormais retirés).
+        run: python main.py
 
       - name: Sauvegarder le portefeuille et les rapports
         # always() : on sauvegarde même si l'analyse a échoué (ex. API surchargée
