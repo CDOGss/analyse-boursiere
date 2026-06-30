@@ -68,7 +68,15 @@ SP500_HOSTILE = -1.5      # tape US sous ce % : aucun pari (cash)
 # Principes de bon sens appliqués AVANT (filtrage de la shortlist) et APRÈS
 # (validation de la sélection de Claude) le choix, pour corriger trois travers
 # classiques du momentum. Indépendants du P&L récent → pas de sur-optimisation.
-VOLUME_MIN_RATIO = 1.0     # volume du jour ≥ moyenne 20j, sinon flux non confirmé
+#
+# VOLUME : on écarte uniquement les titres DÉSERTÉS, pas ceux « sous la moyenne ».
+# Exiger ≥ 1.0× (volume au-dessus de la moyenne 20j) s'est révélé trop strict et
+# bloquait TOUS les soirs calmes : (1) en saison creuse (été) la moyenne 20j reste
+# gonflée par les séances chargées passées, donc presque tout le marché paraît
+# « sous sa moyenne » ; (2) la stratégie privilégie des valeurs « tranquilles » qui,
+# par nature, n'ont pas de pic de volume. 0.5× = « au moins la moitié du volume
+# habituel » : garde le sens (pas de titre mort, ex. 0.30×) sans tuer chaque séance.
+VOLUME_MIN_RATIO = 0.5     # volume du jour ≥ 50% de la moyenne 20j (sinon : déserté)
 HAUSSE_MAX_1J_PCT = 6.0    # au-delà : titre sur-étendu sur la séance, écarté
 HAUSSE_MAX_5J_PCT = 15.0   # idem sur 5 séances (montée parabolique)
 

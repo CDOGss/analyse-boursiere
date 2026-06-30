@@ -46,7 +46,7 @@ def appliquer(selection: list[dict], instantanes: list[Instantane],
             if (vr or 0) < config.VOLUME_MIN_RATIO:
                 vr_txt = f"{vr:.2f}x" if vr is not None else "n/d"
                 notes.append(f"{t} écarté : volume {vr_txt} < "
-                             f"{config.VOLUME_MIN_RATIO:.2f}x (flux acheteur non confirmé).")
+                             f"{config.VOLUME_MIN_RATIO:.2f}x (titre délaissé, volume anormalement faible).")
                 continue
             if inst.variation_1j is not None and inst.variation_1j > config.HAUSSE_MAX_1J_PCT:
                 notes.append(f"{t} écarté : +{inst.variation_1j:.1f}% sur la séance "
