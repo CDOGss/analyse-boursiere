@@ -11,8 +11,33 @@
       "raisonnement": "Stellantis clôt à clôt@0.83 (près du haut) sur un gain mesuré de +2.32%, avec un volume correct (0.64x) et un sentiment StockTwits nettement haussier (+0.82). Le repli cumulé sur 5j (-5.10%) limite le risque de sur-extension, et une tape US verte (Nasdaq +0.85%) soutient les cycliques auto pour le gap de demain.",
       "risque": "Valeur auto sensible au flux macro/tarifs ; un retournement de la tape US en soirée effacerait facilement l'avantage sur un titre volatil.",
       "prix_decision_17h": 5.004000186920166,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 4.982,
+      "evaluation": {
+        "date_evaluation": "2026-07-01",
+        "prix_entree": 4.982,
+        "scenarios": {
+          "ouverture": {
+            "prix": 5.063,
+            "pnl_eur": 8.13,
+            "pnl_pct": 1.63
+          },
+          "premiere_demi_heure": {
+            "prix": 4.9955,
+            "pnl_eur": 1.35,
+            "pnl_pct": 0.27
+          },
+          "mi_journee": {
+            "prix": 5.071,
+            "pnl_eur": 8.93,
+            "pnl_pct": 1.79
+          },
+          "h17": {
+            "prix": 5.087,
+            "pnl_eur": 10.54,
+            "pnl_pct": 2.11
+          }
+        }
+      }
     },
     {
       "id": "2026-06-30_VCT.PA",
@@ -25,6 +50,59 @@
       "raisonnement": "Vicat (matériaux de construction, secteur distinct de l'auto) affiche un flux acheteur de fin de séance (clôt@0.67) sur un gain modéré de +1.76% et un volume soutenu (0.60x dans son contexte). Le repli de -4.07% sur 5j écarte le risque de prise de bénéfices d'un titre sur-étendu, et la tape US porteuse aide l'ouverture.",
       "risque": "Liquidité plus faible et absence de catalyseur propre ; momentum purement technique pouvant s'essouffler sans flux acheteur le lendemain.",
       "prix_decision_17h": 63.599998474121094,
+      "prix_entree": 63.5,
+      "evaluation": {
+        "date_evaluation": "2026-07-01",
+        "prix_entree": 63.5,
+        "scenarios": {
+          "ouverture": {
+            "prix": 63.7,
+            "pnl_eur": 1.57,
+            "pnl_pct": 0.31
+          },
+          "premiere_demi_heure": {
+            "prix": 63.6,
+            "pnl_eur": 0.79,
+            "pnl_pct": 0.16
+          },
+          "mi_journee": {
+            "prix": 63.3,
+            "pnl_eur": -1.57,
+            "pnl_pct": -0.31
+          },
+          "h17": {
+            "prix": 63.3,
+            "pnl_eur": -1.57,
+            "pnl_pct": -0.31
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-01_RF.PA",
+      "date_achat": "2026-07-01",
+      "ticker": "RF.PA",
+      "nom": "Eurazeo",
+      "allocation_eur": 500.0,
+      "conviction": 58,
+      "catalyseur": "Clôture au plus-haut du jour (clôt@0.98) avec flux acheteur soutenu, momentum à prolonger sur une tape US stable.",
+      "raisonnement": "Eurazeo affiche une hausse mesurée (+1.70%) et non étendue (5j quasi flat -0.39%), avec une clôture pile sur les plus hauts et un volume correct (0.77x) : profil de force tranquille idéal pour un gap haussier. La tape US verte et le VIX en repli soutiennent une ouverture parisienne positive. Pas de risque binaire de résultats identifié.",
+      "risque": "Contexte CAC lourd qui pourrait peser sur les holdings d'investissement si le sentiment se dégrade en fin de séance US.",
+      "prix_decision_17h": 40.68000030517578,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-01_ATE.PA",
+      "date_achat": "2026-07-01",
+      "ticker": "ATE.PA",
+      "nom": "Alten",
+      "allocation_eur": 500.0,
+      "conviction": 52,
+      "catalyseur": "Clôture au plus-haut absolu du jour (clôt@1.00), signal de flux acheteur en fin de séance à prolonger.",
+      "raisonnement": "Alten clôture exactement sur son plus-haut avec une hausse contenue (+3.77%) et un 5j positif mais raisonnable (+1.66%), donc pas sur-étendu. Secteur services IT, nettement distinct d'Eurazeo, ce qui assure la diversification. La stabilité du Nasdaq ce soir limite le vent contraire tech.",
+      "risque": "Volume faible (0.61x) qui affaiblit la conviction du signal de momentum, et sensibilité du secteur tech à un retournement du Nasdaq ce soir.",
+      "prix_decision_17h": 55.0,
       "prix_entree": null,
       "evaluation": null
     }
