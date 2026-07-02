@@ -89,8 +89,33 @@
       "raisonnement": "Eurazeo affiche une hausse mesurée (+1.70%) et non étendue (5j quasi flat -0.39%), avec une clôture pile sur les plus hauts et un volume correct (0.77x) : profil de force tranquille idéal pour un gap haussier. La tape US verte et le VIX en repli soutiennent une ouverture parisienne positive. Pas de risque binaire de résultats identifié.",
       "risque": "Contexte CAC lourd qui pourrait peser sur les holdings d'investissement si le sentiment se dégrade en fin de séance US.",
       "prix_decision_17h": 40.68000030517578,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 41.04,
+      "evaluation": {
+        "date_evaluation": "2026-07-02",
+        "prix_entree": 41.04,
+        "scenarios": {
+          "ouverture": {
+            "prix": 41.08,
+            "pnl_eur": 0.49,
+            "pnl_pct": 0.1
+          },
+          "premiere_demi_heure": {
+            "prix": 40.66,
+            "pnl_eur": -4.63,
+            "pnl_pct": -0.93
+          },
+          "mi_journee": {
+            "prix": 40.78,
+            "pnl_eur": -3.17,
+            "pnl_pct": -0.63
+          },
+          "h17": {
+            "prix": 41.2,
+            "pnl_eur": 1.95,
+            "pnl_pct": 0.39
+          }
+        }
+      }
     },
     {
       "id": "2026-07-01_ATE.PA",
@@ -103,6 +128,59 @@
       "raisonnement": "Alten clôture exactement sur son plus-haut avec une hausse contenue (+3.77%) et un 5j positif mais raisonnable (+1.66%), donc pas sur-étendu. Secteur services IT, nettement distinct d'Eurazeo, ce qui assure la diversification. La stabilité du Nasdaq ce soir limite le vent contraire tech.",
       "risque": "Volume faible (0.61x) qui affaiblit la conviction du signal de momentum, et sensibilité du secteur tech à un retournement du Nasdaq ce soir.",
       "prix_decision_17h": 55.0,
+      "prix_entree": 55.35,
+      "evaluation": {
+        "date_evaluation": "2026-07-02",
+        "prix_entree": 55.35,
+        "scenarios": {
+          "ouverture": {
+            "prix": 55.15,
+            "pnl_eur": -1.81,
+            "pnl_pct": -0.36
+          },
+          "premiere_demi_heure": {
+            "prix": 54.75,
+            "pnl_eur": -5.42,
+            "pnl_pct": -1.08
+          },
+          "mi_journee": {
+            "prix": 55.05,
+            "pnl_eur": -2.71,
+            "pnl_pct": -0.54
+          },
+          "h17": {
+            "prix": 55.5,
+            "pnl_eur": 1.36,
+            "pnl_pct": 0.27
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-02_DEC.PA",
+      "date_achat": "2026-07-02",
+      "ticker": "DEC.PA",
+      "nom": "JCDecaux",
+      "allocation_eur": 500.0,
+      "conviction": 58,
+      "catalyseur": "Momentum acheteur de fin de séance sur un flux publicitaire porteur, clôture proche du plus-haut avec volume plein (1.00x).",
+      "raisonnement": "C'est le meilleur compromis volume/momentum de la shortlist : clôture à 0.92 du range avec un volume confirmé à 1.00x, signe d'un flux acheteur réel qu'on cherche à prolonger. Hausse du jour (+2.90%) et sur 5j (+5.64%) restent mesurées, moins exposées à une prise de bénéfices qu'un ArcelorMittal ou Dassault (+5.5%/+5.7%). Le VIX en repli soutient l'appétit pour le risque à l'ouverture.",
+      "risque": "Tape US légèrement rouge sur le Nasdaq ce soir ; extension modérée sur 5j pouvant limiter le prolongement.",
+      "prix_decision_17h": 19.860000610351562,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-02_VRLA.PA",
+      "date_achat": "2026-07-02",
+      "ticker": "VRLA.PA",
+      "nom": "Verallia",
+      "allocation_eur": 500.0,
+      "conviction": 53,
+      "catalyseur": "Rotation vers les valeurs industrielles/emballage, clôture au plus-haut (0.92) sur volume correct (0.62x).",
+      "raisonnement": "Secteur nettement différent (emballage verre) pour diversifier. Clôture près du plus-haut avec un gain contenu (+3.01%, +4.67% sur 5j) et un volume décent, profil de force tranquille recherché. Complément défensif et non corrélé à JCDecaux dans un environnement de VIX baissier.",
+      "risque": "Volume plus léger que confirmé et sensibilité aux coûts énergie ; tape US fragile pourrait peser sur le gap.",
+      "prix_decision_17h": 19.489999771118164,
       "prix_entree": null,
       "evaluation": null
     }
