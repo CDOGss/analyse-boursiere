@@ -167,8 +167,33 @@
       "raisonnement": "C'est le meilleur compromis volume/momentum de la shortlist : clôture à 0.92 du range avec un volume confirmé à 1.00x, signe d'un flux acheteur réel qu'on cherche à prolonger. Hausse du jour (+2.90%) et sur 5j (+5.64%) restent mesurées, moins exposées à une prise de bénéfices qu'un ArcelorMittal ou Dassault (+5.5%/+5.7%). Le VIX en repli soutient l'appétit pour le risque à l'ouverture.",
       "risque": "Tape US légèrement rouge sur le Nasdaq ce soir ; extension modérée sur 5j pouvant limiter le prolongement.",
       "prix_decision_17h": 19.860000610351562,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 19.88,
+      "evaluation": {
+        "date_evaluation": "2026-07-03",
+        "prix_entree": 19.88,
+        "scenarios": {
+          "ouverture": {
+            "prix": 19.8,
+            "pnl_eur": -2.01,
+            "pnl_pct": -0.4
+          },
+          "premiere_demi_heure": {
+            "prix": 19.74,
+            "pnl_eur": -3.52,
+            "pnl_pct": -0.7
+          },
+          "mi_journee": {
+            "prix": 19.95,
+            "pnl_eur": 1.76,
+            "pnl_pct": 0.35
+          },
+          "h17": {
+            "prix": 19.91,
+            "pnl_eur": 0.75,
+            "pnl_pct": 0.15
+          }
+        }
+      }
     },
     {
       "id": "2026-07-02_VRLA.PA",
@@ -181,6 +206,59 @@
       "raisonnement": "Secteur nettement différent (emballage verre) pour diversifier. Clôture près du plus-haut avec un gain contenu (+3.01%, +4.67% sur 5j) et un volume décent, profil de force tranquille recherché. Complément défensif et non corrélé à JCDecaux dans un environnement de VIX baissier.",
       "risque": "Volume plus léger que confirmé et sensibilité aux coûts énergie ; tape US fragile pourrait peser sur le gap.",
       "prix_decision_17h": 19.489999771118164,
+      "prix_entree": 19.53,
+      "evaluation": {
+        "date_evaluation": "2026-07-03",
+        "prix_entree": 19.53,
+        "scenarios": {
+          "ouverture": {
+            "prix": 19.83,
+            "pnl_eur": 7.68,
+            "pnl_pct": 1.54
+          },
+          "premiere_demi_heure": {
+            "prix": 20.22,
+            "pnl_eur": 17.67,
+            "pnl_pct": 3.53
+          },
+          "mi_journee": {
+            "prix": 20.32,
+            "pnl_eur": 20.23,
+            "pnl_pct": 4.05
+          },
+          "h17": {
+            "prix": 20.44,
+            "pnl_eur": 23.3,
+            "pnl_pct": 4.66
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-03_FNAC.PA",
+      "date_achat": "2026-07-03",
+      "ticker": "FNAC.PA",
+      "nom": "Fnac Darty",
+      "allocation_eur": 500.0,
+      "conviction": 60,
+      "catalyseur": "Clôture pile au plus-haut du jour (clôt@1.00) sur volume massif (2.21x) alors que le cours est stable — signe d'accumulation en fin de séance à prolonger.",
+      "raisonnement": "Séance flat (+0.00%) mais volume 2.2x la normale avec clôture au sommet du range trahit un flux acheteur discret sans aucune extension (5j à -0.14%), donc peu de risque de prise de bénéfices à l'ouverture. Valeur retail domestique peu sensible à la faiblesse du Nasdaq, ce qui la protège d'un gap US négatif sur la tech. Profil de force 'tranquille' exactement recherché.",
+      "risque": "Absence de catalyseur daté : la hausse repose uniquement sur le flux technique, et une tape US qui vire nettement au rouge en soirée annulerait l'edge.",
+      "prix_decision_17h": 34.54999923706055,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-03_BB.PA",
+      "date_achat": "2026-07-03",
+      "ticker": "BB.PA",
+      "nom": "BIC",
+      "allocation_eur": 500.0,
+      "conviction": 53,
+      "catalyseur": "Clôture au plus-haut absolu du jour (clôt@1.00) avec une hausse mesurée (+3.48%) et non parabolique (5j +3.13%).",
+      "raisonnement": "Momentum de fin de séance solide, clôture au sommet du range sur un titre consommation de base peu corrélé à la tech US en repli, ce qui diversifie bien le pari face à Fnac Darty. Hausse contenue sur 5 jours donc peu de risque de dégagement. Volume plus modeste (0.55x) qui limite toutefois la conviction.",
+      "risque": "Volume faible qui fragilise la robustesse du signal, et pas de catalyseur concret pour soutenir la poursuite du mouvement.",
+      "prix_decision_17h": 59.400001525878906,
       "prix_entree": null,
       "evaluation": null
     }
