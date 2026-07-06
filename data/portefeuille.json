@@ -245,8 +245,33 @@
       "raisonnement": "Séance flat (+0.00%) mais volume 2.2x la normale avec clôture au sommet du range trahit un flux acheteur discret sans aucune extension (5j à -0.14%), donc peu de risque de prise de bénéfices à l'ouverture. Valeur retail domestique peu sensible à la faiblesse du Nasdaq, ce qui la protège d'un gap US négatif sur la tech. Profil de force 'tranquille' exactement recherché.",
       "risque": "Absence de catalyseur daté : la hausse repose uniquement sur le flux technique, et une tape US qui vire nettement au rouge en soirée annulerait l'edge.",
       "prix_decision_17h": 34.54999923706055,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 34.55,
+      "evaluation": {
+        "date_evaluation": "2026-07-06",
+        "prix_entree": 34.55,
+        "scenarios": {
+          "ouverture": {
+            "prix": 34.5,
+            "pnl_eur": -0.72,
+            "pnl_pct": -0.14
+          },
+          "premiere_demi_heure": {
+            "prix": 34.55,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 34.6,
+            "pnl_eur": 0.72,
+            "pnl_pct": 0.14
+          },
+          "h17": {
+            "prix": 34.55,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
     },
     {
       "id": "2026-07-03_BB.PA",
@@ -259,6 +284,59 @@
       "raisonnement": "Momentum de fin de séance solide, clôture au sommet du range sur un titre consommation de base peu corrélé à la tech US en repli, ce qui diversifie bien le pari face à Fnac Darty. Hausse contenue sur 5 jours donc peu de risque de dégagement. Volume plus modeste (0.55x) qui limite toutefois la conviction.",
       "risque": "Volume faible qui fragilise la robustesse du signal, et pas de catalyseur concret pour soutenir la poursuite du mouvement.",
       "prix_decision_17h": 59.400001525878906,
+      "prix_entree": 59.3,
+      "evaluation": {
+        "date_evaluation": "2026-07-06",
+        "prix_entree": 59.3,
+        "scenarios": {
+          "ouverture": {
+            "prix": 59.2,
+            "pnl_eur": -0.84,
+            "pnl_pct": -0.17
+          },
+          "premiere_demi_heure": {
+            "prix": 59.6,
+            "pnl_eur": 2.53,
+            "pnl_pct": 0.51
+          },
+          "mi_journee": {
+            "prix": 59.6,
+            "pnl_eur": 2.53,
+            "pnl_pct": 0.51
+          },
+          "h17": {
+            "prix": 59.7,
+            "pnl_eur": 3.37,
+            "pnl_pct": 0.67
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-06_STMPA.PA",
+      "date_achat": "2026-07-06",
+      "ticker": "STMPA.PA",
+      "nom": "STMicroelectronics",
+      "allocation_eur": 500.0,
+      "conviction": 63,
+      "catalyseur": "Prolongement de la force du Nasdaq (+1.19%) sur le compartiment semi-conducteurs à l'ouverture de demain.",
+      "raisonnement": "STM clôture quasiment au plus-haut du jour (clôt@0.97) sur +1.80%, avec un volume correct (0.80x), et surtout un 5j quasi plat (+0.52%) : pas de sur-extension, donc peu exposé à une prise de bénéfices. C'est exactement le type de valeur béta-tech qui capte un gap positif quand Wall Street verdit en soirée.",
+      "risque": "Sensibilité forte aux revirements du Nasdaq en fin de séance US ; un retournement des semis américains ce soir inverserait le gap.",
+      "prix_decision_17h": 63.90999984741211,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-06_ACA.PA",
+      "date_achat": "2026-07-06",
+      "ticker": "ACA.PA",
+      "nom": "Crédit Agricole",
+      "allocation_eur": 500.0,
+      "conviction": 55,
+      "catalyseur": "Clôture au plus-haut sur un flux acheteur bancaire, relayé par une tape US risk-on.",
+      "raisonnement": "Force tranquille : +0.54% sur la journée, 5j mesuré (+2.12%), clôture près du plus-haut (clôt@0.97) avec volume soutenu (0.84x). Secteur financier nettement distinct de la tech pour diversifier, et les banques suivent bien un environnement US risk-on / VIX en baisse.",
+      "risque": "Momentum modeste ; sensible aux taux et à tout stress macro overnight qui pénaliserait le secteur bancaire.",
+      "prix_decision_17h": 17.815000534057617,
       "prix_entree": null,
       "evaluation": null
     }
