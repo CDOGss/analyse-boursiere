@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analyse boursière — Résultats</title>
+<style>
+  :root{
+    --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f3f2ef;
+    --text:#0b0b0b; --text-2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+    --series-strat:#2a78d6; --series-cac:#8a8880;
+    --good:#0a8f0a; --good-ink:#006300; --bad:#d03b3b; --bad-ink:#c02a2a;
+    --shadow:0 1px 2px rgba(11,11,11,.04),0 4px 16px rgba(11,11,11,.05);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321;
+      --text:#fff; --text-2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+      --series-strat:#3987e5; --series-cac:#9a988e;
+      --good:#0ca30c; --good-ink:#26c026; --bad:#e05656; --bad-ink:#e66767;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 20px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"]{
+    --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f3f2ef;
+    --text:#0b0b0b; --text-2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+    --series-strat:#2a78d6; --series-cac:#8a8880;
+    --good:#0a8f0a; --good-ink:#006300; --bad:#d03b3b; --bad-ink:#c02a2a;
+    --shadow:0 1px 2px rgba(11,11,11,.04),0 4px 16px rgba(11,11,11,.05);
+  }
+  :root[data-theme="dark"]{
+    --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321;
+    --text:#fff; --text-2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+    --series-strat:#3987e5; --series-cac:#9a988e;
+    --good:#0ca30c; --good-ink:#26c026; --bad:#e05656; --bad-ink:#e66767;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 20px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--page); color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:28px 20px 64px}
+  a{color:var(--series-strat)}
+  /* Header */
+  header{display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:8px}
+  h1{font-size:26px; font-weight:700; letter-spacing:-.02em; margin:0}
+  .sub{color:var(--text-2); font-size:14px; margin-top:4px}
+  .badge{display:inline-block; font-size:11px; font-weight:600; letter-spacing:.03em;
+    text-transform:uppercase; color:var(--text-2); background:var(--surface-2);
+    border:1px solid var(--border); border-radius:999px; padding:3px 9px; vertical-align:middle; margin-left:8px}
+  .tools{display:flex; gap:8px; align-items:center}
+  .btn{font:inherit; font-size:13px; color:var(--text-2); background:var(--surface);
+    border:1px solid var(--border); border-radius:9px; padding:7px 11px; cursor:pointer; box-shadow:var(--shadow)}
+  .btn:hover{color:var(--text)}
+  .updated{color:var(--muted); font-size:12.5px; margin:14px 0 22px}
+  /* Cards */
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px;
+    box-shadow:var(--shadow); padding:20px}
+  .grid-kpi{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:16px}
+  .kpi .lbl{font-size:12.5px; color:var(--text-2); font-weight:500}
+  .kpi .val{font-size:30px; font-weight:700; letter-spacing:-.02em; margin-top:6px; line-height:1.1}
+  .kpi .hint{font-size:12px; color:var(--muted); margin-top:6px}
+  .pos{color:var(--good-ink)} .neg{color:var(--bad-ink)}
+  section{margin-top:16px}
+  .sec-h{display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:0 0 12px}
+  .sec-h h2{font-size:16px; font-weight:650; margin:0}
+  .sec-h .note{font-size:12.5px; color:var(--muted)}
+  /* Legend */
+  .legend{display:flex; gap:18px; flex-wrap:wrap; font-size:13px; color:var(--text-2); margin-bottom:6px}
+  .legend .k{display:inline-flex; align-items:center; gap:7px}
+  .swatch{width:22px; height:3px; border-radius:2px; display:inline-block}
+  /* Chart */
+  .chartbox{position:relative; width:100%}
+  svg{display:block; width:100%; height:auto; overflow:visible}
+  .tt{position:absolute; pointer-events:none; background:var(--surface); border:1px solid var(--border);
+    box-shadow:var(--shadow); border-radius:10px; padding:9px 11px; font-size:12.5px; min-width:150px;
+    opacity:0; transition:opacity .08s; transform:translate(-50%,-108%); z-index:5}
+  .tt .d{color:var(--muted); font-size:11.5px; margin-bottom:4px}
+  .tt .r{display:flex; justify-content:space-between; gap:14px}
+  .tt .r b{font-variant-numeric:tabular-nums}
+  /* Exit chips */
+  .chips{display:grid; grid-template-columns:repeat(5,1fr); gap:12px}
+  .chip{background:var(--surface-2); border:1px solid var(--border); border-radius:11px; padding:13px 14px}
+  .chip .t{font-size:12px; color:var(--text-2)}
+  .chip .v{font-size:20px; font-weight:700; margin-top:4px; font-variant-numeric:tabular-nums}
+  .chip.best{outline:2px solid var(--series-strat); outline-offset:-2px}
+  .chip .tag{font-size:10.5px; color:var(--series-strat); font-weight:600; text-transform:uppercase; letter-spacing:.03em}
+  /* Table */
+  .tablewrap{overflow-x:auto}
+  table{width:100%; border-collapse:collapse; font-size:13.5px}
+  th,td{text-align:right; padding:10px 12px; border-bottom:1px solid var(--border); white-space:nowrap; font-variant-numeric:tabular-nums}
+  th{font-size:11.5px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted); font-weight:600}
+  th:first-child,td:first-child{text-align:left}
+  th:nth-child(2),td:nth-child(2){text-align:left}
+  tbody tr:hover{background:var(--surface-2)}
+  .tk{font-weight:650} .nm{color:var(--text-2); font-size:12px}
+  .pill{display:inline-block; font-size:11px; font-weight:600; border-radius:999px; padding:2px 8px;
+    background:var(--surface-2); border:1px solid var(--border); color:var(--text-2)}
+  .pill.wait{color:var(--series-strat)}
+  /* Empty / error */
+  .empty{text-align:center; padding:44px 20px; color:var(--text-2)}
+  .empty .big{font-size:34px; margin-bottom:8px}
+  .empty h3{margin:0 0 6px; font-size:17px; color:var(--text)}
+  footer{margin-top:32px; padding-top:18px; border-top:1px solid var(--border); color:var(--muted); font-size:12.5px}
+  @media (max-width:760px){
+    .grid-kpi{grid-template-columns:repeat(2,1fr)}
+    .chips{grid-template-columns:repeat(2,1fr)}
+    h1{font-size:22px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Analyse boursière <span class="badge">Marche à blanc</span></h1>
+      <div class="sub">Paper trading CAC 40 / SBF 120 — sélection quotidienne pilotée par Claude, pari overnight.</div>
+    </div>
+    <div class="tools">
+      <button class="btn" id="theme" title="Thème clair / sombre">◐ Thème</button>
+      <button class="btn" id="refresh" title="Recharger les données">↻ Actualiser</button>
+    </div>
+  </header>
+  <div class="updated" id="updated">Chargement des données…</div>
+
+  <div id="content"></div>
+
+  <footer>
+    Simulation uniquement — aucun ordre réel n'est passé. Frais d'aller-retour estimés à 0,20 % par position (P&L net).
+    Données : <a id="repolink" href="https://github.com/CDOGss/analyse-boursiere" target="_blank" rel="noopener">github.com/CDOGss/analyse-boursiere</a>.
+    Le benchmark est « acheter le CAC 40 chaque soir » : l'<b>alpha</b> mesure le talent au-delà du marché.
+  </footer>
+</div>
+
+<script>
+const OWNER="CDOGss", REPO="analyse-boursiere", BRANCH="main";
+const RAW=`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}`;
+const ALLOC=500, FEE_PCT=0.20;
+const SCEN=[["ouverture","Ouverture"],["premiere_demi_heure","9h30"],["mi_journee","Midi"],["h17","17h"]];
+
+const $=s=>document.querySelector(s);
+const eur=x=>(x>=0?"+":"−")+Math.abs(x).toFixed(2).replace(".",",")+" €";
+const pct=x=>(x>=0?"+":"−")+Math.abs(x).toFixed(2).replace(".",",")+" %";
+const cls=x=>x>0?"pos":(x<0?"neg":"");
+const num2=x=>x.toFixed(2).replace(".",",");
+
+// ---- Thème ----
+(function(){
+  const saved=localStorage.getItem("theme");
+  if(saved) document.documentElement.setAttribute("data-theme",saved);
+  $("#theme").onclick=()=>{
+    const cur=document.documentElement.getAttribute("data-theme");
+    const mql=matchMedia("(prefers-color-scheme:dark)").matches;
+    const next=cur? (cur==="dark"?"light":"dark") : (mql?"light":"dark");
+    document.documentElement.setAttribute("data-theme",next);
+    localStorage.setItem("theme",next);
+    if(window.__redraw) window.__redraw();
+  };
+})();
+
+async function fetchJSON(path){
+  const r=await fetch(`${RAW}/${path}?_=${Date.now()}`,{cache:"no-store"});
+  if(r.status===404) return null;      // fichier pas encore créé
+  if(!r.ok) throw new Error(path+" : "+r.status);
+  return r.json();
+}
+
+async function lastCommit(){
+  try{
+    const r=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/commits?path=data/portefeuille.json&per_page=1`);
+    if(!r.ok) return null;
+    const j=await r.json();
+    return j&&j[0]? new Date(j[0].commit.committer.date) : null;
+  }catch(e){ return null; }
+}
+
+// ---- Agrégation (réplique app/bilan.py) ----
+function aggregate(positions, bench){
+  const evald=positions.filter(p=>p.evaluation && p.evaluation.date_evaluation);
+  const days={};
+  for(const p of evald){
+    const d=p.evaluation.date_evaluation;
+    const b=days[d]||(days[d]={date:d, n:0, tickers:[], s:{ouverture:null,premiere_demi_heure:null,mi_journee:null,h17:null}});
+    b.n++; b.tickers.push(p.ticker);
+    for(const [k] of SCEN){
+      const cell=p.evaluation.scenarios[k];
+      if(cell) b.s[k]=(b.s[k]||0)+cell.pnl_eur;
+    }
+  }
+  const dates=Object.keys(days).sort();
+  const rows=dates.map(d=>{
+    const b=days[d]; const capital=b.n*ALLOC; const fees=b.n*ALLOC*FEE_PCT/100;
+    const net17=b.s.h17!=null? b.s.h17-fees : null;
+    const ref=bench&&bench[d]? bench[d] : null;
+    const cacSession=ref? capital*ref.session_pct/100 : null;
+    const cacOvernight=ref? capital*ref.overnight_pct/100 : null;
+    return {...b, capital, fees, net17, cacSession, cacOvernight,
+            alpha17: (net17!=null&&cacSession!=null)? net17-cacSession : null,
+            r:(net17!=null&&capital>0)? net17/capital : null};
+  });
+  return {rows, evald};
+}
+
+function summarize(rows){
+  let net=0, wins=0, nDays=0, nTrades=0, alpha=0, alphaDays=0;
+  const scenTot={ouverture:0,premiere_demi_heure:0,mi_journee:0,h17:0};
+  const rs=[];
+  for(const r of rows){
+    nTrades+=r.n;
+    for(const [k] of SCEN) if(r.s[k]!=null) scenTot[k]+=r.s[k];
+    if(r.net17!=null){ net+=r.net17; nDays++; if(r.net17>0)wins++; if(r.r!=null)rs.push(r.r); }
+    if(r.alpha17!=null){ alpha+=r.alpha17; alphaDays++; }
+  }
+  let sharpe=null;
+  if(rs.length>=2){
+    const m=rs.reduce((a,b)=>a+b,0)/rs.length;
+    const sd=Math.sqrt(rs.reduce((a,b)=>a+(b-m)**2,0)/(rs.length-1));
+    sharpe= sd>0? m/sd*Math.sqrt(252):null;
+  }
+  return {net, wins, nDays, nTrades, alpha, alphaDays, scenTot, sharpe,
+          winRate:nDays? wins/nDays*100:null, scen17net:scenTot.h17 - nTrades*ALLOC*FEE_PCT/100};
+}
+
+// ---- Rendu ----
+function kpiCard(lbl,val,valClass,hint){
+  return `<div class="card kpi"><div class="lbl">${lbl}</div>
+    <div class="val ${valClass||''}">${val}</div><div class="hint">${hint||''}</div></div>`;
+}
+
+function render(positions, bench){
+  const {rows}=aggregate(positions,bench);
+  const S=summarize(rows);
+  const pending=positions.filter(p=>!p.evaluation);
+  const c=$("#content");
+
+  if(positions.length===0){
+    c.innerHTML=`<div class="card empty"><div class="big">🌱</div>
+      <h3>En attente de la première séance</h3>
+      <p>Le portefeuille est vide. Dès qu'un achat papier est enregistré (17 h 05, jours ouvrés),
+      les résultats, la courbe et les statistiques apparaîtront ici automatiquement.</p></div>`;
+    return;
+  }
+
+  // KPIs
+  const alphaTxt = S.alphaDays? eur(S.alpha) : "—";
+  const alphaHint = S.alphaDays? `sur ${S.alphaDays} séance(s) vs CAC 40` : "en attente du benchmark";
+  const sharpeTxt = S.sharpe!=null? num2(S.sharpe) : "—";
+  let html = `<div class="grid-kpi">
+    ${kpiCard("P&L net cumulé (17 h)", S.nDays?eur(S.net):"—", cls(S.net), S.nDays?`${S.nDays} séance(s) évaluée(s)`:"aucune séance évaluée")}
+    ${kpiCard("Alpha vs CAC 40", alphaTxt, S.alphaDays?cls(S.alpha):"", alphaHint)}
+    ${kpiCard("Taux de réussite", S.winRate!=null?S.winRate.toFixed(0)+" %":"—", "", S.nDays?`${S.wins}/${S.nDays} séances gagnantes`:"—")}
+    ${kpiCard("Sharpe annualisé", sharpeTxt, "", "&gt;1 bon · &gt;2 excellent")}
+  </div>`;
+
+  // Courbe d'équité
+  html += `<section class="card"><div class="sec-h">
+      <h2>Courbe de gains cumulés — Stratégie vs CAC 40</h2>
+      <span class="note">P&L net cumulé à la revente de 17 h (€)</span></div>
+      <div class="legend">
+        <span class="k"><span class="swatch" style="background:var(--series-strat)"></span>Stratégie (net)</span>
+        <span class="k"><span class="swatch" style="background:var(--series-cac)"></span>CAC 40 (même capital)</span>
+      </div>
+      <div class="chartbox" id="chartbox"></div></section>`;
+
+  // Chips par horizon de sortie
+  const best=SCEN.reduce((a,[k])=> (S.scenTot[k]>S.scenTot[a])?k:a, "ouverture");
+  html += `<section class="card"><div class="sec-h">
+      <h2>Quel moment de revente est le meilleur ?</h2>
+      <span class="note">P&L cumulé (brut) par horizon</span></div><div class="chips">`;
+  for(const [k,lbl] of SCEN){
+    const v=S.scenTot[k];
+    html+=`<div class="chip ${k===best?'best':''}">
+      <div class="t">${lbl}${k===best?' <span class="tag">meilleur</span>':''}</div>
+      <div class="v ${cls(v)}">${S.nDays?eur(v):"—"}</div></div>`;
+  }
+  html += `<div class="chip"><div class="t">17 h net de frais</div>
+      <div class="v ${cls(S.scen17net)}">${S.nDays?eur(S.scen17net):"—"}</div></div></div></section>`;
+
+  // Tableau des paris
+  html += `<section class="card"><div class="sec-h"><h2>Détail des paris</h2>
+      <span class="note">${positions.length} position(s)${pending.length?` · ${pending.length} en cours`:''}</span></div>
+      <div class="tablewrap"><table><thead><tr>
+      <th>Achat</th><th>Action</th><th>Conv.</th><th>Entrée</th>
+      <th>Ouv.</th><th>9h30</th><th>Midi</th><th>17 h</th></tr></thead><tbody>`;
+  const ordered=[...positions].sort((a,b)=> (b.date_achat).localeCompare(a.date_achat) || a.ticker.localeCompare(b.ticker));
+  for(const p of ordered){
+    const ev=p.evaluation;
+    const cellP=k=>{ if(!ev) return `<span class="pill wait">en cours</span>`;
+      const s=ev.scenarios[k]; if(!s) return `<span class="nm">n/d</span>`;
+      return `<span class="${cls(s.pnl_pct)}">${pct(s.pnl_pct)}</span>`; };
+    const entree = ev&&ev.prix_entree!=null? num2(ev.prix_entree)+" €"
+                  : (p.prix_decision_17h!=null? num2(p.prix_decision_17h)+" €" : "—");
+    html+=`<tr>
+      <td>${p.date_achat}</td>
+      <td><span class="tk">${p.ticker}</span> <span class="nm">${p.nom||""}</span></td>
+      <td>${p.conviction!=null?p.conviction:"—"}</td>
+      <td>${entree}</td>
+      <td>${ev?cellP("ouverture"):`<span class="pill wait">en cours</span>`}</td>
+      <td>${ev?cellP("premiere_demi_heure"):""}</td>
+      <td>${ev?cellP("mi_journee"):""}</td>
+      <td>${ev?cellP("h17"):""}</td></tr>`;
+  }
+  html += `</tbody></table></div></section>`;
+  c.innerHTML=html;
+
+  // Dessin de la courbe (cumul)
+  const series=[]; let cs=0, cc=0; const pts=[];
+  for(const r of rows){
+    if(r.net17==null) continue;
+    cs+=r.net17; cc+=(r.cacSession!=null?r.cacSession:0);
+    pts.push({date:r.date, strat:cs, cac:(r.cacSession!=null?cc:null)});
+  }
+  window.__pts=pts;
+  window.__redraw=()=>drawChart(pts);
+  drawChart(pts);
+}
+
+function drawChart(pts){
+  const box=$("#chartbox"); if(!box) return;
+  if(pts.length===0){
+    box.innerHTML=`<div class="empty" style="padding:30px"><h3>Pas encore de séance évaluée</h3>
+      <p class="nm">La courbe se trace dès la première revente (le lendemain d'un achat).</p></div>`;
+    return;
+  }
+  const W=1000, H=340, PL=52, PR=18, PT=18, PB=34;
+  const css=getComputedStyle(document.documentElement);
+  const col=n=>css.getPropertyValue(n).trim();
+  const xs=pts.map((_,i)=>i);
+  const ys=pts.flatMap(p=>[p.strat, p.cac]).filter(v=>v!=null);
+  let ymin=Math.min(0,...ys), ymax=Math.max(0,...ys);
+  if(ymin===ymax){ ymin-=1; ymax+=1; }
+  const pad=(ymax-ymin)*0.12; ymin-=pad; ymax+=pad;
+  const X=i=> PL + (pts.length<=1? (W-PL-PR)/2 : i/(pts.length-1)*(W-PL-PR));
+  const Y=v=> PT + (1-(v-ymin)/(ymax-ymin))*(H-PT-PB);
+
+  // ticks Y (5)
+  let grid="", ylab="";
+  for(let t=0;t<=4;t++){
+    const v=ymin+(ymax-ymin)*t/4, y=Y(v);
+    grid+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="${col('--grid')}" stroke-width="1"/>`;
+    ylab+=`<text x="${PL-8}" y="${y+4}" text-anchor="end" font-size="12" fill="${col('--muted')}">${Math.round(v)}</text>`;
+  }
+  const zeroY=Y(0);
+  const base=`<line x1="${PL}" y1="${zeroY}" x2="${W-PR}" y2="${zeroY}" stroke="${col('--axis')}" stroke-width="1.5"/>`;
+
+  // X labels (max ~7)
+  let xlab=""; const step=Math.ceil(pts.length/7);
+  pts.forEach((p,i)=>{ if(i%step===0||i===pts.length-1){
+    xlab+=`<text x="${X(i)}" y="${H-12}" text-anchor="middle" font-size="11.5" fill="${col('--muted')}">${p.date.slice(5)}</text>`; }});
+
+  const path=(key,color,dash)=>{
+    const seg=pts.map((p,i)=> p[key]==null?null:`${X(i)},${Y(p[key])}`);
+    // gère les trous
+    let d="", pen=false;
+    seg.forEach(s=>{ if(s==null){pen=false;return;} d+=(pen?"L":"M")+s+" "; pen=true; });
+    if(!d) return "";
+    return `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.5" ${dash?`stroke-dasharray="6 5"`:''}
+            stroke-linejoin="round" stroke-linecap="round"/>`;
+  };
+  const dots=(key,color)=> pts.map((p,i)=> p[key]==null?"":
+    `<circle cx="${X(i)}" cy="${Y(p[key])}" r="${pts.length<=1?4.5:3}" fill="${color}" stroke="${col('--surface')}" stroke-width="1.5"/>`).join("");
+
+  // labels de fin
+  const last=pts.length-1;
+  const endLbl=(key,color,txt)=> pts[last][key]==null?"":
+    `<text x="${X(last)+7}" y="${Y(pts[last][key])+4}" font-size="12.5" font-weight="600" fill="${color}">${txt}</text>`;
+
+  box.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Courbe de gains cumulés">
+    ${grid}${base}${ylab}${xlab}
+    ${path('cac',col('--series-cac'),true)}
+    ${path('strat',col('--series-strat'),false)}
+    ${dots('cac',col('--series-cac'))}${dots('strat',col('--series-strat'))}
+    ${endLbl('strat',col('--series-strat'),eur(pts[last].strat))}
+    <rect id="hit" x="${PL}" y="${PT}" width="${W-PL-PR}" height="${H-PT-PB}" fill="transparent"/>
+    <line id="cross" x1="0" y1="${PT}" x2="0" y2="${H-PB}" stroke="${col('--axis')}" stroke-width="1" opacity="0"/>
+  </svg><div class="tt" id="tt"></div>`;
+
+  const svg=box.querySelector("svg"), tt=$("#tt"), cross=box.querySelector("#cross");
+  const hit=box.querySelector("#hit");
+  hit.addEventListener("mousemove",e=>{
+    const r=svg.getBoundingClientRect(); const sx=(e.clientX-r.left)/r.width*W;
+    let i=0,dmin=1e9; pts.forEach((p,k)=>{const d=Math.abs(X(k)-sx); if(d<dmin){dmin=d;i=k;}});
+    const p=pts[i];
+    cross.setAttribute("x1",X(i)); cross.setAttribute("x2",X(i)); cross.setAttribute("opacity","1");
+    const px=X(i)/W*r.width, py=Y(p.strat)/H*r.height;
+    tt.style.left=px+"px"; tt.style.top=py+"px"; tt.style.opacity="1";
+    tt.innerHTML=`<div class="d">${p.date}</div>
+      <div class="r"><span style="color:var(--series-strat)">Stratégie</span><b class="${cls(p.strat)}">${eur(p.strat)}</b></div>
+      ${p.cac!=null?`<div class="r"><span style="color:var(--series-cac)">CAC 40</span><b class="${cls(p.cac)}">${eur(p.cac)}</b></div>`:''}`;
+  });
+  hit.addEventListener("mouseleave",()=>{ tt.style.opacity="0"; cross.setAttribute("opacity","0"); });
+}
+
+async function load(){
+  $("#updated").textContent="Chargement des données…";
+  $("#content").innerHTML="";
+  try{
+    const [pf,bench,commit]=await Promise.all([
+      fetchJSON("data/portefeuille.json"),
+      fetchJSON("data/benchmark.json"),
+      lastCommit(),
+    ]);
+    const positions=(pf&&pf.positions)||[];
+    render(positions, bench||{});
+    const when = commit? commit.toLocaleString("fr-FR",{dateStyle:"long",timeStyle:"short"})
+                       : new Date().toLocaleString("fr-FR",{dateStyle:"long",timeStyle:"short"});
+    $("#updated").innerHTML = (commit?"Dernière mise à jour : ":"Chargé le ") + when
+      + ` · ${positions.length} position(s)`;
+  }catch(e){
+    $("#content").innerHTML=`<div class="card empty"><div class="big">⚠️</div>
+      <h3>Impossible de charger les données</h3><p class="nm">${e.message}</p>
+      <p>Vérifie que le dépôt est public et que <code>data/portefeuille.json</code> existe.</p></div>`;
+    $("#updated").textContent="";
+  }
+}
+$("#refresh").onclick=load;
+load();
+</script>
+</body>
+</html>
