@@ -323,8 +323,33 @@
       "raisonnement": "STM clôture quasiment au plus-haut du jour (clôt@0.97) sur +1.80%, avec un volume correct (0.80x), et surtout un 5j quasi plat (+0.52%) : pas de sur-extension, donc peu exposé à une prise de bénéfices. C'est exactement le type de valeur béta-tech qui capte un gap positif quand Wall Street verdit en soirée.",
       "risque": "Sensibilité forte aux revirements du Nasdaq en fin de séance US ; un retournement des semis américains ce soir inverserait le gap.",
       "prix_decision_17h": 63.90999984741211,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 63.36,
+      "evaluation": {
+        "date_evaluation": "2026-07-07",
+        "prix_entree": 63.36,
+        "scenarios": {
+          "ouverture": {
+            "prix": 61.25,
+            "pnl_eur": -16.65,
+            "pnl_pct": -3.33
+          },
+          "premiere_demi_heure": {
+            "prix": 60.71,
+            "pnl_eur": -20.91,
+            "pnl_pct": -4.18
+          },
+          "mi_journee": {
+            "prix": 59.87,
+            "pnl_eur": -27.54,
+            "pnl_pct": -5.51
+          },
+          "h17": {
+            "prix": 58.64,
+            "pnl_eur": -37.25,
+            "pnl_pct": -7.45
+          }
+        }
+      }
     },
     {
       "id": "2026-07-06_ACA.PA",
@@ -337,6 +362,45 @@
       "raisonnement": "Force tranquille : +0.54% sur la journée, 5j mesuré (+2.12%), clôture près du plus-haut (clôt@0.97) avec volume soutenu (0.84x). Secteur financier nettement distinct de la tech pour diversifier, et les banques suivent bien un environnement US risk-on / VIX en baisse.",
       "risque": "Momentum modeste ; sensible aux taux et à tout stress macro overnight qui pénaliserait le secteur bancaire.",
       "prix_decision_17h": 17.815000534057617,
+      "prix_entree": 17.85,
+      "evaluation": {
+        "date_evaluation": "2026-07-07",
+        "prix_entree": 17.85,
+        "scenarios": {
+          "ouverture": {
+            "prix": 17.895,
+            "pnl_eur": 1.26,
+            "pnl_pct": 0.25
+          },
+          "premiere_demi_heure": {
+            "prix": 17.92,
+            "pnl_eur": 1.96,
+            "pnl_pct": 0.39
+          },
+          "mi_journee": {
+            "prix": 17.785,
+            "pnl_eur": -1.82,
+            "pnl_pct": -0.36
+          },
+          "h17": {
+            "prix": 17.615,
+            "pnl_eur": -6.58,
+            "pnl_pct": -1.32
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-07_CA.PA",
+      "date_achat": "2026-07-07",
+      "ticker": "CA.PA",
+      "nom": "Carrefour",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Rotation défensive vers la distribution alimentaire dans un contexte de tape US rouge, avec clôture au plus-haut (clôt@0.94) confirmant un flux acheteur en fin de séance.",
+      "raisonnement": "Dans un régime de prudence piloté par un Nasdaq en fort repli, une valeur de conso défensive comme Carrefour est le meilleur bouclier : elle est peu corrélée à la vente de la tech US. Le titre clôture tout près de son plus-haut du jour (0.94) avec un volume correct (0.69x), signe d'un flux acheteur qu'on cherche à prolonger, et la hausse cumulée sur 5j reste mesurée (+2.34%), donc peu de risque de prise de bénéfices massive.",
+      "risque": "Hausse du jour de +4.46% déjà notable qui peut inviter à quelques prises de profits ; l'aversion au risque US pourrait plomber l'ensemble de la cote à l'ouverture malgré le caractère défensif.",
+      "prix_decision_17h": 16.6299991607666,
       "prix_entree": null,
       "evaluation": null
     }
