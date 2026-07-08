@@ -401,6 +401,45 @@
       "raisonnement": "Dans un régime de prudence piloté par un Nasdaq en fort repli, une valeur de conso défensive comme Carrefour est le meilleur bouclier : elle est peu corrélée à la vente de la tech US. Le titre clôture tout près de son plus-haut du jour (0.94) avec un volume correct (0.69x), signe d'un flux acheteur qu'on cherche à prolonger, et la hausse cumulée sur 5j reste mesurée (+2.34%), donc peu de risque de prise de bénéfices massive.",
       "risque": "Hausse du jour de +4.46% déjà notable qui peut inviter à quelques prises de profits ; l'aversion au risque US pourrait plomber l'ensemble de la cote à l'ouverture malgré le caractère défensif.",
       "prix_decision_17h": 16.6299991607666,
+      "prix_entree": 16.51,
+      "evaluation": {
+        "date_evaluation": "2026-07-08",
+        "prix_entree": 16.51,
+        "scenarios": {
+          "ouverture": {
+            "prix": 16.41,
+            "pnl_eur": -3.03,
+            "pnl_pct": -0.61
+          },
+          "premiere_demi_heure": {
+            "prix": 16.37,
+            "pnl_eur": -4.24,
+            "pnl_pct": -0.85
+          },
+          "mi_journee": {
+            "prix": 16.375,
+            "pnl_eur": -4.09,
+            "pnl_pct": -0.82
+          },
+          "h17": {
+            "prix": 16.4,
+            "pnl_eur": -3.33,
+            "pnl_pct": -0.67
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-08_GTT.PA",
+      "date_achat": "2026-07-08",
+      "ticker": "GTT.PA",
+      "nom": "GTT (Gaztransport & Technigaz)",
+      "allocation_eur": 500.0,
+      "conviction": 57,
+      "catalyseur": "Momentum acheteur sur le thème GNL/gaz, clôture quasiment au plus-haut du jour (clôt@0.93) confirmant un flux net acheteur en fin de séance à contre-courant du marché.",
+      "raisonnement": "Alors que quasiment tout le CAC clôture dans le bas de son range, GTT termine à 0.93 de son range avec +3.80% sur la séance et +5.60% sur 5 jours, une force mesurée et non parabolique. Le thème gaz/GNL est défensif face aux tensions et le titre a montré une nette demande de dernière heure, ce qui augmente la probabilité d'une ouverture stable à haussière malgré la tape US rouge.",
+      "risque": "Tape US négative et VIX en forte hausse : le régime de prudence peut provoquer un gap baissier généralisé qui emporterait même les valeurs solides. Volume modéré (0.55x) limite la conviction.",
+      "prix_decision_17h": 194.10000610351562,
       "prix_entree": null,
       "evaluation": null
     }
