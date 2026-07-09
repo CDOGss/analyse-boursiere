@@ -14,7 +14,8 @@ Tu es un gérant actions spécialisé sur la place de Paris (Euronext, CAC 40 et
 SBF 120). On t'interroge environ 30 minutes avant la clôture (17h30). Objectif : \
 identifier la ou les actions de l'univers fourni qui ont la meilleure probabilité \
 d'OUVRIR EN HAUSSE demain matin, pour un achat ce soir (~5 min avant la clôture) \
-et une revente le lendemain matin.
+et une revente le lendemain. Vise un titre capable d'ouvrir en hausse ET de tenir \
+son gain en séance (le résultat est aussi mesuré à 17h).
 
 Mécanisme à exploiter (du plus important au moins important) :
 1. MOMENTUM DE FIN DE SÉANCE SPÉCIFIQUE AU TITRE : une clôture près du plus-haut \
@@ -33,8 +34,9 @@ la nuit US est imprévisible et peut se retourner après ta décision.
 
 Règles :
 - Choisis EXCLUSIVEMENT des tickers de la SHORTLIST « candidats prioritaires » \
-fournie (déjà filtrée : volume confirmé et hausses paraboliques écartées). \
-N'invente aucun chiffre.
+fournie (déjà filtrée : titres désertés et hausses paraboliques écartés — mais le \
+volume peut rester modeste : à signal égal, privilégie le ratio de volume le plus \
+élevé). N'invente aucun chiffre.
 - DIVERSIFICATION OBLIGATOIRE : si tu retiens 2 actions, elles doivent être de \
 SECTEURS NETTEMENT DIFFÉRENTS. Jamais deux valeurs du même secteur ou thème \
 (ex. deux banques, deux aériennes, deux du luxe, deux pétrolières, deux foncières).
@@ -49,12 +51,22 @@ marché pendant la nuit — un ETF le fait sans risque spécifique. Chaque choix
 reposer d'abord sur une force PROPRE au titre (flux de clôture, volume, catalyseur) \
 qui tiendrait même si la tape US se retournait.
 - Si une action publie ses RÉSULTATS d'ici demain matin (signalé), c'est un risque \
-binaire : évite-la, sauf si c'est explicitement et solidement ta thèse.
+binaire : évite-la, sauf si c'est explicitement et solidement ta thèse. Même \
+prudence si un événement macro majeur (Fed, CPI, BCE) tombe avant demain matin.
+- VENDREDI SOIR : le pari porte 3 nuits (tout le week-end) — bien plus de temps \
+pour qu'une mauvaise nouvelle tombe, sans espérance supplémentaire en face. \
+Monte d'un cran ton exigence ce soir-là.
 - Sois SÉLECTIF. Tu peux retenir 2 actions, mais si une seule est vraiment \
-convaincante, n'en retiens qu'UNE. La qualité prime sur la quantité.
+convaincante, n'en retiens qu'UNE. Et si AUCUN candidat ne montre un vrai flux \
+acheteur de clôture, ne retiens RIEN (sélection vide) : le cash vaut mieux qu'un \
+pari forcé, l'edge overnight récompense la qualité, pas l'activité. Le cash doit \
+rester l'exception (séance sans aucun flux net), pas la règle.
 - Chaque choix doit citer un mécanisme concret tiré des données (catalyseur, \
 momentum de clôture, tape US, sentiment). Si l'argument est faible, baisse la conviction.
-- Tiens compte de ton TRACK RECORD récent fourni : ajuste si un type de pari échoue.
+- Tiens compte de ton TRACK RECORD récent fourni, mais SANS sur-réagir : n'ajuste \
+que sur un MOTIF RÉPÉTÉ (le même type d'erreur 3 fois ou plus). Un pari bien \
+construit peut perdre sur un retournement nocturne imprévisible — ce n'est pas \
+une raison d'abandonner le type de pari.
 - Reste lucide : c'est une simulation, l'edge overnight est mince et bruité.
 """
 
@@ -67,13 +79,19 @@ SCHEMA = {
         },
         "selection": {
             "type": "array",
-            "description": "1 OU 2 actions retenues (au moins 1), de la plus à la moins convaincante.",
+            "description": "0, 1 ou 2 actions retenues (vide si aucun setup convaincant — le cash "
+                           "est un choix valide mais exceptionnel), de la plus à la moins convaincante.",
             "items": {
                 "type": "object",
                 "properties": {
                     "ticker": {"type": "string"},
                     "nom": {"type": "string"},
-                    "conviction": {"type": "integer", "description": "0 à 100."},
+                    "conviction": {
+                        "type": "integer",
+                        "description": "0 à 100 avec ancres : <45 = spéculatif faible (ne devrait "
+                                       "pas être retenu), 45-60 = correct, 60-75 = solide, "
+                                       ">75 = exceptionnel (rare, quelques fois par mois).",
+                    },
                     "catalyseur": {
                         "type": "string",
                         "description": "Le déclencheur concret attendu pour la hausse de demain matin.",
@@ -139,10 +157,11 @@ Date du jour : {jour.strftime('%A %d %B %Y')} (~17h, séance Euronext Paris bien
 {_bloc_marche(instantanes)}
 {section("SENTIMENT SOCIAL (StockTwits, ADR/US — signal d'appoint)", bloc_social)}\
 {section("RÉGIME DE MARCHÉ", consigne_regime)}\
-Sélectionne 1 ou 2 actions à acheter ce soir (≈5 min avant la clôture) pour
+Sélectionne 0, 1 ou 2 actions à acheter ce soir (≈5 min avant la clôture) pour
 profiter d'une probable hausse demain matin. Privilégie la qualité : une seule
-si une seule convainc. Respecte la consigne de régime ci-dessus. Réponds selon
-le schéma demandé.
+si une seule convainc, aucune si aucune ne convainc (cash = choix valide mais
+exceptionnel). Respecte la consigne de régime ci-dessus. Réponds selon le
+schéma demandé.
 """
 
     reponse = client.messages.create(
