@@ -440,6 +440,45 @@
       "raisonnement": "Alors que quasiment tout le CAC clôture dans le bas de son range, GTT termine à 0.93 de son range avec +3.80% sur la séance et +5.60% sur 5 jours, une force mesurée et non parabolique. Le thème gaz/GNL est défensif face aux tensions et le titre a montré une nette demande de dernière heure, ce qui augmente la probabilité d'une ouverture stable à haussière malgré la tape US rouge.",
       "risque": "Tape US négative et VIX en forte hausse : le régime de prudence peut provoquer un gap baissier généralisé qui emporterait même les valeurs solides. Volume modéré (0.55x) limite la conviction.",
       "prix_decision_17h": 194.10000610351562,
+      "prix_entree": 193.8,
+      "evaluation": {
+        "date_evaluation": "2026-07-09",
+        "prix_entree": 193.8,
+        "scenarios": {
+          "ouverture": {
+            "prix": 195.2,
+            "pnl_eur": 3.61,
+            "pnl_pct": 0.72
+          },
+          "premiere_demi_heure": {
+            "prix": 191.9,
+            "pnl_eur": -4.9,
+            "pnl_pct": -0.98
+          },
+          "mi_journee": {
+            "prix": 192.1,
+            "pnl_eur": -4.39,
+            "pnl_pct": -0.88
+          },
+          "h17": {
+            "prix": 192.1,
+            "pnl_eur": -4.39,
+            "pnl_pct": -0.88
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-09_SAN.PA",
+      "date_achat": "2026-07-09",
+      "ticker": "SAN.PA",
+      "nom": "Sanofi",
+      "allocation_eur": 500.0,
+      "conviction": 51,
+      "catalyseur": "Momentum acheteur défensif dans un marché risk-on, valeur santé avec le meilleur ratio de volume de la shortlist qualitative (0.81x) et clôture dans la partie haute du range.",
+      "raisonnement": "Sanofi progresse de +1.15% avec un volume soutenu et une clôture à 0.62 du range, signe d'un flux acheteur propre sans sur-extension (5j +1.32% seulement). Profil défensif santé qui tient bien même si la tape US se retourne cette nuit. Le sentiment social US est neutre, pas de catalyseur binaire signalé.",
+      "risque": "Clôture seulement en milieu-haut de range (pas au plus-haut), edge overnight faible ; une rotation sectorielle ou un affaiblissement de la tape US pourrait effacer le petit gain à l'ouverture.",
+      "prix_decision_17h": 76.23999786376953,
       "prix_entree": null,
       "evaluation": null
     }
