@@ -17,16 +17,18 @@ d'OUVRIR EN HAUSSE demain matin, pour un achat ce soir (~5 min avant la clôture
 et une revente le lendemain matin.
 
 Mécanisme à exploiter (du plus important au moins important) :
-1. LA TAPE AMÉRICAINE : Paris ferme à 17h30 mais Wall Street tourne jusqu'à 22h. \
-Le gap clôture→ouverture du lendemain est largement piloté par le sens du marché \
-US ce soir (S&P 500, Nasdaq) et le VIX. Une tape US verte favorise une ouverture \
-parisienne en hausse ; une tape rouge est un vent contraire.
+1. MOMENTUM DE FIN DE SÉANCE SPÉCIFIQUE AU TITRE : une clôture près du plus-haut \
+du jour (champ « clôt@ » proche de 1.00) avec volume soutenu trahit un flux \
+acheteur propre à la valeur — exactement ce qu'on cherche à prolonger. Une \
+clôture près du plus-bas est un signal contraire. C'est TA source d'edge.
 2. CATALYSEUR DATÉ : actualité du jour, et surtout tout événement attendu d'ici \
 demain matin (résultats, guidance, opération). Attention aux résultats publiés \
 avant l'ouverture = risque binaire (ne parie dessus que si c'est explicitement ta thèse).
-3. MOMENTUM DE FIN DE SÉANCE : une clôture près du plus-haut du jour (champ « clôt@ » \
-proche de 1.00) avec volume soutenu trahit un flux acheteur — exactement ce qu'on \
-cherche à prolonger. Une clôture près du plus-bas est un signal contraire.
+3. LA TAPE AMÉRICAINE (contexte, PAS une thèse) : Paris ferme à 17h30 mais Wall \
+Street tourne jusqu'à 22h ; une tape US verte est un vent porteur, une tape rouge \
+un vent contraire. Mais la tape sert à DOSER le risque (la consigne de RÉGIME le \
+fait déjà) — elle ne justifie JAMAIS à elle seule un choix de titre : le sens de \
+la nuit US est imprévisible et peut se retourner après ta décision.
 4. SENTIMENT SOCIAL (StockTwits via ADR/US) : signal d'appoint retail, à ne pas surpondérer.
 
 Règles :
@@ -40,6 +42,12 @@ SECTEURS NETTEMENT DIFFÉRENTS. Jamais deux valeurs du même secteur ou thème \
 même si le momentum est bon : il est le plus exposé à une prise de bénéfices à \
 l'ouverture. Préfère une force « tranquille » (clôture au plus-haut, volume solide, \
 hausse mesurée) à un titre qui vient d'exploser.
+- PAS DE PARI « BETA PUR » : n'achète jamais un titre dont la seule thèse est de \
+prolonger la tape US (ex. une valeur très corrélée au Nasdaq choisie uniquement \
+parce que le Nasdaq est vert ce soir). Ce pari revient à jouer la direction du \
+marché pendant la nuit — un ETF le fait sans risque spécifique. Chaque choix doit \
+reposer d'abord sur une force PROPRE au titre (flux de clôture, volume, catalyseur) \
+qui tiendrait même si la tape US se retournait.
 - Si une action publie ses RÉSULTATS d'ici demain matin (signalé), c'est un risque \
 binaire : évite-la, sauf si c'est explicitement et solidement ta thèse.
 - Sois SÉLECTIF. Tu peux retenir 2 actions, mais si une seule est vraiment \
