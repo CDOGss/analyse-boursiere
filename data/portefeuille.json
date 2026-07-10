@@ -479,6 +479,45 @@
       "raisonnement": "Sanofi progresse de +1.15% avec un volume soutenu et une clôture à 0.62 du range, signe d'un flux acheteur propre sans sur-extension (5j +1.32% seulement). Profil défensif santé qui tient bien même si la tape US se retourne cette nuit. Le sentiment social US est neutre, pas de catalyseur binaire signalé.",
       "risque": "Clôture seulement en milieu-haut de range (pas au plus-haut), edge overnight faible ; une rotation sectorielle ou un affaiblissement de la tape US pourrait effacer le petit gain à l'ouverture.",
       "prix_decision_17h": 76.23999786376953,
+      "prix_entree": 76.48,
+      "evaluation": {
+        "date_evaluation": "2026-07-10",
+        "prix_entree": 76.48,
+        "scenarios": {
+          "ouverture": {
+            "prix": 76.74,
+            "pnl_eur": 1.7,
+            "pnl_pct": 0.34
+          },
+          "premiere_demi_heure": {
+            "prix": 76.9,
+            "pnl_eur": 2.75,
+            "pnl_pct": 0.55
+          },
+          "mi_journee": {
+            "prix": 76.44,
+            "pnl_eur": -0.26,
+            "pnl_pct": -0.05
+          },
+          "h17": {
+            "prix": 76.28,
+            "pnl_eur": -1.31,
+            "pnl_pct": -0.26
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-10_COFA.PA",
+      "date_achat": "2026-07-10",
+      "ticker": "COFA.PA",
+      "nom": "Coface",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Flux acheteur de fin de séance sur l'assurance-crédit, clôture quasi au plus haut du jour.",
+      "raisonnement": "Coface affiche le meilleur combo de la shortlist : clôture à 0.97 du range (près du plus-haut), volume le plus élevé des candidats (0.80x) et une hausse mesurée (+2.73%) doublée d'un momentum 5j positif (+3.40%) sans être surétendue. C'est une force propre au titre, indépendante du beta US, qui a de bonnes chances de se prolonger à l'ouverture.",
+      "risque": "Pari sur 3 nuits (week-end) qui laisse plus de temps à une mauvaise nouvelle, et volume qui reste sous la moyenne (0.80x) ; tape US légèrement négative pouvant peser à l'ouverture.",
+      "prix_decision_17h": 15.819999694824219,
       "prix_entree": null,
       "evaluation": null
     }
