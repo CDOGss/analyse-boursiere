@@ -518,6 +518,45 @@
       "raisonnement": "Coface affiche le meilleur combo de la shortlist : clôture à 0.97 du range (près du plus-haut), volume le plus élevé des candidats (0.80x) et une hausse mesurée (+2.73%) doublée d'un momentum 5j positif (+3.40%) sans être surétendue. C'est une force propre au titre, indépendante du beta US, qui a de bonnes chances de se prolonger à l'ouverture.",
       "risque": "Pari sur 3 nuits (week-end) qui laisse plus de temps à une mauvaise nouvelle, et volume qui reste sous la moyenne (0.80x) ; tape US légèrement négative pouvant peser à l'ouverture.",
       "prix_decision_17h": 15.819999694824219,
+      "prix_entree": 15.7,
+      "evaluation": {
+        "date_evaluation": "2026-07-13",
+        "prix_entree": 15.7,
+        "scenarios": {
+          "ouverture": {
+            "prix": 15.77,
+            "pnl_eur": 2.23,
+            "pnl_pct": 0.45
+          },
+          "premiere_demi_heure": {
+            "prix": 15.77,
+            "pnl_eur": 2.23,
+            "pnl_pct": 0.45
+          },
+          "mi_journee": {
+            "prix": 15.71,
+            "pnl_eur": 0.32,
+            "pnl_pct": 0.06
+          },
+          "h17": {
+            "prix": 15.7,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-13_ATE.PA",
+      "date_achat": "2026-07-13",
+      "ticker": "ATE.PA",
+      "nom": "Alten",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Momentum de clôture : le titre finit exactement au plus-haut du jour (clôt@1.00) sur une hausse nette de +4,05%, signe d'un flux acheteur propre qui cherche à se prolonger.",
+      "raisonnement": "Alten clôture pile sur son plus-haut avec un gain solide mais non parabolique (+4% sur le jour, quasi stable sur 5j à -1,07%), ce qui traduit une force tranquille et non un emballement à risque de prise de bénéfices. Le flux est spécifique à la valeur (ingénierie/IT), donc indépendant de la direction nocturne de Wall Street. Le volume reste toutefois modéré (0,51x), ce qui plafonne la conviction.",
+      "risque": "Tape US rouge et VIX en hausse pouvant peser sur l'ouverture ; volume seulement moyen qui limite la robustesse du signal de flux.",
+      "prix_decision_17h": 55.25,
       "prix_entree": null,
       "evaluation": null
     }
