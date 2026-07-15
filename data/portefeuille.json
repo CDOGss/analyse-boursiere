@@ -596,8 +596,33 @@
       "raisonnement": "C'est le seul candidat de la shortlist alliant un vrai excès de volume (1.41x) à une clôture quasi au plus haut (clôt@0.95) avec une hausse mesurée (+0.99%, 5j +0.79%) — donc pas sur-étendu. Cette force tranquille de fin de séance est exactement le profil recherché pour un gap haussier, et la tape US verte ajoute un vent porteur.",
       "risque": "Valeur secondaire moins liquide ; un retournement de la tape US en soirée peut effacer un petit gain d'ouverture.",
       "prix_decision_17h": 20.3799991607666,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 20.38,
+      "evaluation": {
+        "date_evaluation": "2026-07-15",
+        "prix_entree": 20.38,
+        "scenarios": {
+          "ouverture": {
+            "prix": 20.26,
+            "pnl_eur": -2.94,
+            "pnl_pct": -0.59
+          },
+          "premiere_demi_heure": {
+            "prix": 20.18,
+            "pnl_eur": -4.91,
+            "pnl_pct": -0.98
+          },
+          "mi_journee": {
+            "prix": 19.96,
+            "pnl_eur": -10.3,
+            "pnl_pct": -2.06
+          },
+          "h17": {
+            "prix": 20.18,
+            "pnl_eur": -4.91,
+            "pnl_pct": -0.98
+          }
+        }
+      }
     },
     {
       "id": "2026-07-14_LR.PA",
@@ -610,6 +635,59 @@
       "raisonnement": "Legrand affiche une force propre nette (+1.62% sur la journée, clôture au haut du range) sur un volume correct (0.77x) et un secteur (équipement électrique) totalement distinct de Verallia, respectant la diversification. Le contexte US tech/industriel positif soutient le thème.",
       "risque": "5j quasi nul (-0.18%) : la hausse du jour est isolée et peut être rendue ; volume seulement moyen.",
       "prix_decision_17h": 141.5,
+      "prix_entree": 142.0,
+      "evaluation": {
+        "date_evaluation": "2026-07-15",
+        "prix_entree": 142.0,
+        "scenarios": {
+          "ouverture": {
+            "prix": 142.7,
+            "pnl_eur": 2.46,
+            "pnl_pct": 0.49
+          },
+          "premiere_demi_heure": {
+            "prix": 141.15,
+            "pnl_eur": -2.99,
+            "pnl_pct": -0.6
+          },
+          "mi_journee": {
+            "prix": 142.1,
+            "pnl_eur": 0.35,
+            "pnl_pct": 0.07
+          },
+          "h17": {
+            "prix": 141.05,
+            "pnl_eur": -3.35,
+            "pnl_pct": -0.67
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-15_S30.PA",
+      "date_achat": "2026-07-15",
+      "ticker": "S30.PA",
+      "nom": "Solutions 30",
+      "allocation_eur": 500.0,
+      "conviction": 54,
+      "catalyseur": "Prolongation d'un flux acheteur propre au titre matérialisé par la meilleure clôture près du plus-haut de la shortlist avec le ratio de volume le plus élevé.",
+      "raisonnement": "S30 affiche le meilleur ratio de volume relatif de la shortlist (0.88x) combiné à une clôture au plus-haut (0.89) et une hausse mesurée du jour (+2.28%), sans être sur-étendu (5j +6.2%). Ce profil de force tranquille avec flux net acheteur est exactement le mécanisme recherché, indépendamment de la tape US. Le vent porteur du Nasdaq ne fait qu'ajouter au décor.",
+      "risque": "Micro-cap très volatile (cours ~0.58€) où les mouvements overnight peuvent être erratiques ; le volume absolu reste modeste.",
+      "prix_decision_17h": 0.5820000171661377,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-15_NK.PA",
+      "date_achat": "2026-07-15",
+      "ticker": "NK.PA",
+      "nom": "Imerys",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Momentum de clôture au plus-haut (0.88) avec volume au-dessus de la médiane de la shortlist, dans un secteur matériaux distinct de S30.",
+      "raisonnement": "Imerys clôture près de son plus-haut (0.88) avec un volume relatif honorable (0.57x) et une progression saine (+2.03% jour, +6.54% sur 5j) sans excès parabolique. Le flux acheteur propre au titre est le principal argument, et le secteur matériaux offre une diversification nette par rapport à Solutions 30.",
+      "risque": "Volume seulement modéré et valeur cyclique sensible aux nouvelles macro/Chine ; le signal est plus faible que le premier choix.",
+      "prix_decision_17h": 22.139999389648438,
       "prix_entree": null,
       "evaluation": null
     }
