@@ -674,8 +674,33 @@
       "raisonnement": "S30 affiche le meilleur ratio de volume relatif de la shortlist (0.88x) combiné à une clôture au plus-haut (0.89) et une hausse mesurée du jour (+2.28%), sans être sur-étendu (5j +6.2%). Ce profil de force tranquille avec flux net acheteur est exactement le mécanisme recherché, indépendamment de la tape US. Le vent porteur du Nasdaq ne fait qu'ajouter au décor.",
       "risque": "Micro-cap très volatile (cours ~0.58€) où les mouvements overnight peuvent être erratiques ; le volume absolu reste modeste.",
       "prix_decision_17h": 0.5820000171661377,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 0.583,
+      "evaluation": {
+        "date_evaluation": "2026-07-16",
+        "prix_entree": 0.583,
+        "scenarios": {
+          "ouverture": {
+            "prix": 0.583,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "premiere_demi_heure": {
+            "prix": 0.584,
+            "pnl_eur": 0.86,
+            "pnl_pct": 0.17
+          },
+          "mi_journee": {
+            "prix": 0.565,
+            "pnl_eur": -15.44,
+            "pnl_pct": -3.09
+          },
+          "h17": {
+            "prix": 0.562,
+            "pnl_eur": -18.01,
+            "pnl_pct": -3.6
+          }
+        }
+      }
     },
     {
       "id": "2026-07-15_NK.PA",
@@ -688,6 +713,59 @@
       "raisonnement": "Imerys clôture près de son plus-haut (0.88) avec un volume relatif honorable (0.57x) et une progression saine (+2.03% jour, +6.54% sur 5j) sans excès parabolique. Le flux acheteur propre au titre est le principal argument, et le secteur matériaux offre une diversification nette par rapport à Solutions 30.",
       "risque": "Volume seulement modéré et valeur cyclique sensible aux nouvelles macro/Chine ; le signal est plus faible que le premier choix.",
       "prix_decision_17h": 22.139999389648438,
+      "prix_entree": 22.04,
+      "evaluation": {
+        "date_evaluation": "2026-07-16",
+        "prix_entree": 22.04,
+        "scenarios": {
+          "ouverture": {
+            "prix": 22.06,
+            "pnl_eur": 0.45,
+            "pnl_pct": 0.09
+          },
+          "premiere_demi_heure": {
+            "prix": 21.94,
+            "pnl_eur": -2.27,
+            "pnl_pct": -0.45
+          },
+          "mi_journee": {
+            "prix": 21.94,
+            "pnl_eur": -2.27,
+            "pnl_pct": -0.45
+          },
+          "h17": {
+            "prix": 22.04,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-16_IPS.PA",
+      "date_achat": "2026-07-16",
+      "ticker": "IPS.PA",
+      "nom": "Ipsos",
+      "allocation_eur": 500.0,
+      "conviction": 55,
+      "catalyseur": "Prolongation d'un flux acheteur propre au titre : clôture exactement au plus-haut du jour (clôt@1.00) avec le meilleur ratio de volume des candidats mesurés (0.75x).",
+      "raisonnement": "Ipsos combine une clôture pile sur son plus-haut, un volume soutenu et une hausse mesurée (+1.98% sur le jour, +6.75% sur 5j) qui n'est pas sur-étendue — profil de force tranquille recherché pour l'overnight. Le flux acheteur de fin de séance est le signal le plus fiable dont on dispose et il tiendrait même si la tape US se retourne.",
+      "risque": "Tape US et Nasdaq rouges ce soir peuvent peser sur l'ouverture ; volume seulement correct, pas exceptionnel.",
+      "prix_decision_17h": 36.060001373291016,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-16_VIRP.PA",
+      "date_achat": "2026-07-16",
+      "ticker": "VIRP.PA",
+      "nom": "Virbac",
+      "allocation_eur": 500.0,
+      "conviction": 50,
+      "catalyseur": "Clôture haute (clôt@0.81) avec volume solide (0.80x) sur une valeur santé animale défensive, décorrélée de la tech US.",
+      "raisonnement": "Virbac clôture dans le haut de son range avec un bon volume et une progression modérée (+1.09%), profil défensif qui offre une bonne diversification face à Ipsos (secteur pharma/santé animale vs études/publicité). Sa faible corrélation au Nasdaq la protège d'un retournement nocturne de la tape US.",
+      "risque": "Momentum moins net que le leader ; titre peu liquide qui peut ouvrir sans direction claire.",
+      "prix_decision_17h": 323.5,
       "prix_entree": null,
       "evaluation": null
     }

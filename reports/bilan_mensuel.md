@@ -1,4 +1,4 @@
-# Bilan mensuel — mis à jour le 2026-07-15 17:06
+# Bilan mensuel — mis à jour le 2026-07-16 17:06
 
 ## Tableau de bord mensuel
 
@@ -6,13 +6,13 @@ _Frais d'aller-retour estimés : 0.20% par position (P&L net au 17h)._
 
 | Mois | Jours | Ouverture | 9h30 | Midi | 17h (brut) | 17h (net) | Réussite 17h |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-07 | 11 | 🟢 +1.58€ | 🔴 -24.49€ | 🔴 -32.71€ | 🔴 -25.02€ | 🔴 -42.02€ | 36% |
+| 2026-07 | 12 | 🟢 +2.03€ | 🔴 -25.90€ | 🔴 -50.42€ | 🔴 -43.03€ | 🔴 -62.03€ | 33% |
 
 **Alpha vs CAC 40** (même capital « acheté chaque soir ») :
 
 | Mois | Stratégie (ouv.) | CAC overnight | Alpha ouv. | Stratégie (17h) | CAC séance | Alpha 17h |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-07 | +1.58€ | -1.32€ | 🟢 +2.91€ | -25.02€ | +2.13€ | 🔴 -27.15€ |
+| 2026-07 | +2.03€ | -1.51€ | 🟢 +3.55€ | -43.03€ | -3.71€ | 🔴 -39.32€ |
 
 _Alpha positif = la sélection bat « acheter le CAC chaque soir ». C'est le vrai juge de la stratégie._
 
@@ -34,3 +34,4 @@ _Alpha positif = la sélection bat « acheter le CAC chaque soir ». C'est le vr
 | 2026-07-13 | COFA.PA | 🟢 +2.23€ | 🟢 +2.23€ | 🟢 +0.32€ | 🟢 +0.00€ |
 | 2026-07-14 | ATE.PA | 🟢 +0.45€ | 🔴 -2.25€ | 🔴 -11.70€ | 🔴 -3.60€ |
 | 2026-07-15 | VRLA.PA+LR.PA | 🔴 -0.48€ | 🔴 -7.90€ | 🔴 -9.95€ | 🔴 -8.26€ |
+| 2026-07-16 | S30.PA+NK.PA | 🟢 +0.45€ | 🔴 -1.41€ | 🔴 -17.71€ | 🔴 -18.01€ |
