@@ -752,8 +752,33 @@
       "raisonnement": "Ipsos combine une clôture pile sur son plus-haut, un volume soutenu et une hausse mesurée (+1.98% sur le jour, +6.75% sur 5j) qui n'est pas sur-étendue — profil de force tranquille recherché pour l'overnight. Le flux acheteur de fin de séance est le signal le plus fiable dont on dispose et il tiendrait même si la tape US se retourne.",
       "risque": "Tape US et Nasdaq rouges ce soir peuvent peser sur l'ouverture ; volume seulement correct, pas exceptionnel.",
       "prix_decision_17h": 36.060001373291016,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 36.1,
+      "evaluation": {
+        "date_evaluation": "2026-07-17",
+        "prix_entree": 36.1,
+        "scenarios": {
+          "ouverture": {
+            "prix": 36.36,
+            "pnl_eur": 3.6,
+            "pnl_pct": 0.72
+          },
+          "premiere_demi_heure": {
+            "prix": 36.38,
+            "pnl_eur": 3.88,
+            "pnl_pct": 0.78
+          },
+          "mi_journee": {
+            "prix": 36.2,
+            "pnl_eur": 1.39,
+            "pnl_pct": 0.28
+          },
+          "h17": {
+            "prix": 35.64,
+            "pnl_eur": -6.37,
+            "pnl_pct": -1.27
+          }
+        }
+      }
     },
     {
       "id": "2026-07-16_VIRP.PA",
@@ -766,6 +791,45 @@
       "raisonnement": "Virbac clôture dans le haut de son range avec un bon volume et une progression modérée (+1.09%), profil défensif qui offre une bonne diversification face à Ipsos (secteur pharma/santé animale vs études/publicité). Sa faible corrélation au Nasdaq la protège d'un retournement nocturne de la tape US.",
       "risque": "Momentum moins net que le leader ; titre peu liquide qui peut ouvrir sans direction claire.",
       "prix_decision_17h": 323.5,
+      "prix_entree": 326.5,
+      "evaluation": {
+        "date_evaluation": "2026-07-17",
+        "prix_entree": 326.5,
+        "scenarios": {
+          "ouverture": {
+            "prix": 324.5,
+            "pnl_eur": -3.06,
+            "pnl_pct": -0.61
+          },
+          "premiere_demi_heure": {
+            "prix": 326.0,
+            "pnl_eur": -0.77,
+            "pnl_pct": -0.15
+          },
+          "mi_journee": {
+            "prix": 326.5,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "h17": {
+            "prix": 325.5,
+            "pnl_eur": -1.53,
+            "pnl_pct": -0.31
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-17_ORA.PA",
+      "date_achat": "2026-07-17",
+      "ticker": "ORA.PA",
+      "nom": "Orange",
+      "allocation_eur": 500.0,
+      "conviction": 48,
+      "catalyseur": "Momentum propre confirmé (+2.80% sur la séance, clôture dans le haut du range) sur fond de thème de consolidation télécom européen (Niel / Vodafone) porteur pour le secteur.",
+      "raisonnement": "Orange affiche une force propre nette dans une séance rouge : gain solide et clôture près du plus-haut avec un volume correct (0.59x), profil défensif peu corrélé au selloff tech US — ce qui limite l'exposition au vent contraire du Nasdaq pendant la nuit. Le newsflow télécom (mouvements de consolidation en Europe) entretient un intérêt acheteur propre au titre.",
+      "risque": "Léger sur-étirement à 5 jours (+4.28%) exposant à une prise de bénéfices, et pari porté sur 3 nuits (week-end) dans un contexte de VIX en forte hausse : la moindre nouvelle négative pèsera davantage.",
+      "prix_decision_17h": 16.549999237060547,
       "prix_entree": null,
       "evaluation": null
     }
