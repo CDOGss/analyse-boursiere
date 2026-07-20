@@ -830,6 +830,59 @@
       "raisonnement": "Orange affiche une force propre nette dans une séance rouge : gain solide et clôture près du plus-haut avec un volume correct (0.59x), profil défensif peu corrélé au selloff tech US — ce qui limite l'exposition au vent contraire du Nasdaq pendant la nuit. Le newsflow télécom (mouvements de consolidation en Europe) entretient un intérêt acheteur propre au titre.",
       "risque": "Léger sur-étirement à 5 jours (+4.28%) exposant à une prise de bénéfices, et pari porté sur 3 nuits (week-end) dans un contexte de VIX en forte hausse : la moindre nouvelle négative pèsera davantage.",
       "prix_decision_17h": 16.549999237060547,
+      "prix_entree": 16.465,
+      "evaluation": {
+        "date_evaluation": "2026-07-20",
+        "prix_entree": 16.465,
+        "scenarios": {
+          "ouverture": {
+            "prix": 16.39,
+            "pnl_eur": -2.28,
+            "pnl_pct": -0.46
+          },
+          "premiere_demi_heure": {
+            "prix": 16.375,
+            "pnl_eur": -2.73,
+            "pnl_pct": -0.55
+          },
+          "mi_journee": {
+            "prix": 16.385,
+            "pnl_eur": -2.43,
+            "pnl_pct": -0.49
+          },
+          "h17": {
+            "prix": 16.47,
+            "pnl_eur": 0.15,
+            "pnl_pct": 0.03
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-20_GFC.PA",
+      "date_achat": "2026-07-20",
+      "ticker": "GFC.PA",
+      "nom": "Gecina",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Clôture au plus-haut du jour (clôt@1.00) dans un contexte de rotation acheteuse marquée sur l'immobilier coté parisien.",
+      "raisonnement": "Gecina ferme pile sur son plus-haut avec le volume le plus solide de sa catégorie (0.57x) et une hausse mesurée (+0.87%, +4.72% sur 5j non parabolique). Le flux acheteur de clôture est propre au titre et s'inscrit dans un momentum sectoriel (Klépierre, Icade, Covivio également près de leurs sommets), ce qui augmente la probabilité d'une ouverture haussière.",
+      "risque": "Volume seulement moyen et titre sensible aux taux ; une remontée des taux longs ou un retournement de la tape US pourrait plafonner le gain.",
+      "prix_decision_17h": 75.4000015258789,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-20_PLX.PA",
+      "date_achat": "2026-07-20",
+      "ticker": "PLX.PA",
+      "nom": "Pluxee",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Clôture dans le haut du range (clôt@0.73) avec le meilleur ratio de volume des services (0.69x) et hausse de +1.11%.",
+      "raisonnement": "Pluxee montre une force propre avec un volume soutenu et une clôture dans le tiers supérieur, tout en restant sur un secteur (services aux entreprises / titres-restaurant) nettement distinct de l'immobilier. La progression sur 5 jours (+3.88%) reste saine, sans surextension.",
+      "risque": "Clôture pas au plus-haut absolu (0.73) et flux moins net que Gecina ; conviction limitée, à doser en second choix.",
+      "prix_decision_17h": 13.640000343322754,
       "prix_entree": null,
       "evaluation": null
     }
