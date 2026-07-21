@@ -869,8 +869,33 @@
       "raisonnement": "Gecina ferme pile sur son plus-haut avec le volume le plus solide de sa catégorie (0.57x) et une hausse mesurée (+0.87%, +4.72% sur 5j non parabolique). Le flux acheteur de clôture est propre au titre et s'inscrit dans un momentum sectoriel (Klépierre, Icade, Covivio également près de leurs sommets), ce qui augmente la probabilité d'une ouverture haussière.",
       "risque": "Volume seulement moyen et titre sensible aux taux ; une remontée des taux longs ou un retournement de la tape US pourrait plafonner le gain.",
       "prix_decision_17h": 75.4000015258789,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 75.5,
+      "evaluation": {
+        "date_evaluation": "2026-07-21",
+        "prix_entree": 75.5,
+        "scenarios": {
+          "ouverture": {
+            "prix": 75.3,
+            "pnl_eur": -1.32,
+            "pnl_pct": -0.26
+          },
+          "premiere_demi_heure": {
+            "prix": 74.85,
+            "pnl_eur": -4.3,
+            "pnl_pct": -0.86
+          },
+          "mi_journee": {
+            "prix": 74.9,
+            "pnl_eur": -3.97,
+            "pnl_pct": -0.79
+          },
+          "h17": {
+            "prix": 75.25,
+            "pnl_eur": -1.66,
+            "pnl_pct": -0.33
+          }
+        }
+      }
     },
     {
       "id": "2026-07-20_PLX.PA",
@@ -883,6 +908,45 @@
       "raisonnement": "Pluxee montre une force propre avec un volume soutenu et une clôture dans le tiers supérieur, tout en restant sur un secteur (services aux entreprises / titres-restaurant) nettement distinct de l'immobilier. La progression sur 5 jours (+3.88%) reste saine, sans surextension.",
       "risque": "Clôture pas au plus-haut absolu (0.73) et flux moins net que Gecina ; conviction limitée, à doser en second choix.",
       "prix_decision_17h": 13.640000343322754,
+      "prix_entree": 13.85,
+      "evaluation": {
+        "date_evaluation": "2026-07-21",
+        "prix_entree": 13.85,
+        "scenarios": {
+          "ouverture": {
+            "prix": 13.86,
+            "pnl_eur": 0.36,
+            "pnl_pct": 0.07
+          },
+          "premiere_demi_heure": {
+            "prix": 13.79,
+            "pnl_eur": -2.17,
+            "pnl_pct": -0.43
+          },
+          "mi_journee": {
+            "prix": 13.78,
+            "pnl_eur": -2.53,
+            "pnl_pct": -0.51
+          },
+          "h17": {
+            "prix": 13.7,
+            "pnl_eur": -5.42,
+            "pnl_pct": -1.08
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-21_MAU.PA",
+      "date_achat": "2026-07-21",
+      "ticker": "MAU.PA",
+      "nom": "Maurel & Prom",
+      "allocation_eur": 500.0,
+      "conviction": 57,
+      "catalyseur": "Craintes d'approvisionnement pétrolier (AIE : stocks OCDE au plus bas depuis un an, tensions détroit d'Ormuz) qui soutiennent le brut et les producteurs.",
+      "raisonnement": "Clôture à 0.85 du range avec +3.03% sur la journée et le meilleur ratio de volume de la shortlist (1.00x), signe d'un flux acheteur propre et non spéculatif (5j seulement +2.38%, pas de sur-extension). Le catalyseur pétrole est concret et daté, et la tape US verte ajoute un vent porteur.",
+      "risque": "Retournement du brut si les tensions Ormuz se détendent ; small cap plus volatile, gap d'ouverture possible.",
+      "prix_decision_17h": 8.164999961853027,
       "prix_entree": null,
       "evaluation": null
     }
