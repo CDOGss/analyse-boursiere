@@ -947,6 +947,59 @@
       "raisonnement": "Clôture à 0.85 du range avec +3.03% sur la journée et le meilleur ratio de volume de la shortlist (1.00x), signe d'un flux acheteur propre et non spéculatif (5j seulement +2.38%, pas de sur-extension). Le catalyseur pétrole est concret et daté, et la tape US verte ajoute un vent porteur.",
       "risque": "Retournement du brut si les tensions Ormuz se détendent ; small cap plus volatile, gap d'ouverture possible.",
       "prix_decision_17h": 8.164999961853027,
+      "prix_entree": 8.2,
+      "evaluation": {
+        "date_evaluation": "2026-07-22",
+        "prix_entree": 8.2,
+        "scenarios": {
+          "ouverture": {
+            "prix": 8.39,
+            "pnl_eur": 11.59,
+            "pnl_pct": 2.32
+          },
+          "premiere_demi_heure": {
+            "prix": 8.56,
+            "pnl_eur": 21.95,
+            "pnl_pct": 4.39
+          },
+          "mi_journee": {
+            "prix": 8.455,
+            "pnl_eur": 15.55,
+            "pnl_pct": 3.11
+          },
+          "h17": {
+            "prix": 8.415,
+            "pnl_eur": 13.11,
+            "pnl_pct": 2.62
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-22_NK.PA",
+      "date_achat": "2026-07-22",
+      "ticker": "NK.PA",
+      "nom": "Imerys",
+      "allocation_eur": 500.0,
+      "conviction": 55,
+      "catalyseur": "Prolongement du flux acheteur de fin de séance sur une valeur des matériaux/minéraux non surétendue.",
+      "raisonnement": "Clôture près du plus-haut du jour (clôt@0.84) avec un volume correct (0.60x) et une hausse mesurée de +1.93%, sans excès sur 5 jours (+0.64%) — profil de force tranquille recherché. Le flux est propre au titre et ne dépend pas d'une tape US ce soir atone. Pas de résultats binaires signalés.",
+      "risque": "Volume modeste et absence de catalyseur daté : le momentum peut s'essouffler si l'ouverture US se dégrade nettement.",
+      "prix_decision_17h": 22.18000030517578,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-22_VRLA.PA",
+      "date_achat": "2026-07-22",
+      "ticker": "VRLA.PA",
+      "nom": "Verallia",
+      "allocation_eur": 500.0,
+      "conviction": 48,
+      "catalyseur": "Rebond technique confirmé par une clôture haute sur l'emballage verre.",
+      "raisonnement": "Clôture dans le haut du range (clôt@0.74) avec le meilleur ratio de volume du groupe (0.66x) et +1.73% sur la séance, sur un titre qui reste en repli sur 5 jours (-4.38%) donc peu exposé à la prise de bénéfices. Secteur emballage/consommation, distinct d'Imerys pour la diversification.",
+      "risque": "Titre déjà pénalisé récemment et sans catalyseur ; déjà perdant dans un pari passé, conviction volontairement limitée.",
+      "prix_decision_17h": 19.43000030517578,
       "prix_entree": null,
       "evaluation": null
     }
