@@ -2,22 +2,22 @@
 
 ## Métriques ajustées du risque (scénario 17h, net de frais)
 
-_Basé sur 16 jour(s) évalué(s). Total net : -69.75€._
+_Basé sur 17 jour(s) évalué(s). Total net : -95.78€._
 
 | Métrique | Valeur | Lecture |
 |---|---:|---|
-| Sharpe (annualisé) | -4.71 | >1 bon, >2 excellent |
-| Sortino (annualisé) | -4.51 | pénalise la baisse |
-| Max drawdown | -113.56€ | pire creux cumulé |
-| Profit factor | 0.39 | gains/pertes, >1,5 solide |
-| Taux de réussite | 31% | jours gagnants |
-| Espérance / jour | -4.36€ | gain moyen par séance |
+| Sharpe (annualisé) | -5.83 | >1 bon, >2 excellent |
+| Sortino (annualisé) | -5.38 | pénalise la baisse |
+| Max drawdown | -127.48€ | pire creux cumulé |
+| Profit factor | 0.31 | gains/pertes, >1,5 solide |
+| Taux de réussite | 29% | jours gagnants |
+| Espérance / jour | -5.63€ | gain moyen par séance |
 | Gain moyen | 8.76€ | sur jours gagnants |
-| Perte moyenne | -10.32€ | sur jours perdants |
+| Perte moyenne | -11.63€ | sur jours perdants |
 
 **Significativité de l'alpha vs CAC 40 :**
 
-- Alpha moyen/jour : -0.442% (t-stat -1.14)
-- IC 95 % (bootstrap) : [-1.164% ; +0.237%]
+- Alpha moyen/jour : -0.471% (t-stat -1.29)
+- IC 95 % (bootstrap) : [-1.196% ; +0.195%]
 
-⚪ **Alpha non distinguable de zéro** (IC [-1.164% ; +0.237%] contient 0). Pas encore de preuve d'un edge — continue de mesurer.
+⚪ **Alpha non distinguable de zéro** (IC [-1.196% ; +0.195%] contient 0). Pas encore de preuve d'un edge — continue de mesurer.

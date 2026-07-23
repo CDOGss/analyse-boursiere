@@ -986,8 +986,33 @@
       "raisonnement": "Clôture près du plus-haut du jour (clôt@0.84) avec un volume correct (0.60x) et une hausse mesurée de +1.93%, sans excès sur 5 jours (+0.64%) — profil de force tranquille recherché. Le flux est propre au titre et ne dépend pas d'une tape US ce soir atone. Pas de résultats binaires signalés.",
       "risque": "Volume modeste et absence de catalyseur daté : le momentum peut s'essouffler si l'ouverture US se dégrade nettement.",
       "prix_decision_17h": 22.18000030517578,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 22.28,
+      "evaluation": {
+        "date_evaluation": "2026-07-23",
+        "prix_entree": 22.28,
+        "scenarios": {
+          "ouverture": {
+            "prix": 22.34,
+            "pnl_eur": 1.35,
+            "pnl_pct": 0.27
+          },
+          "premiere_demi_heure": {
+            "prix": 22.22,
+            "pnl_eur": -1.35,
+            "pnl_pct": -0.27
+          },
+          "mi_journee": {
+            "prix": 22.3,
+            "pnl_eur": 0.45,
+            "pnl_pct": 0.09
+          },
+          "h17": {
+            "prix": 22.2,
+            "pnl_eur": -1.8,
+            "pnl_pct": -0.36
+          }
+        }
+      }
     },
     {
       "id": "2026-07-22_VRLA.PA",
@@ -1000,6 +1025,45 @@
       "raisonnement": "Clôture dans le haut du range (clôt@0.74) avec le meilleur ratio de volume du groupe (0.66x) et +1.73% sur la séance, sur un titre qui reste en repli sur 5 jours (-4.38%) donc peu exposé à la prise de bénéfices. Secteur emballage/consommation, distinct d'Imerys pour la diversification.",
       "risque": "Titre déjà pénalisé récemment et sans catalyseur ; déjà perdant dans un pari passé, conviction volontairement limitée.",
       "prix_decision_17h": 19.43000030517578,
+      "prix_entree": 19.34,
+      "evaluation": {
+        "date_evaluation": "2026-07-23",
+        "prix_entree": 19.34,
+        "scenarios": {
+          "ouverture": {
+            "prix": 19.34,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "premiere_demi_heure": {
+            "prix": 19.28,
+            "pnl_eur": -1.55,
+            "pnl_pct": -0.31
+          },
+          "mi_journee": {
+            "prix": 18.73,
+            "pnl_eur": -15.77,
+            "pnl_pct": -3.15
+          },
+          "h17": {
+            "prix": 18.48,
+            "pnl_eur": -22.23,
+            "pnl_pct": -4.45
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-23_FR.PA",
+      "date_achat": "2026-07-23",
+      "ticker": "FR.PA",
+      "nom": "Valeo",
+      "allocation_eur": 500.0,
+      "conviction": 50,
+      "catalyseur": "Force relative propre : titre en hausse de +3.31% dans un marché en forte baisse, clôture dans le haut de son range (clôt@0.73) avec un volume correct (0.70x), sans résultats attendus dans la nuit.",
+      "raisonnement": "Dans une séance largement rouge, Valeo affiche un flux acheteur spécifique qui se distingue nettement du CAC (-1.65%) : monter à contre-courant et clôturer près du plus-haut trahit un intérêt propre à la valeur, pas un simple beta de marché. La hausse reste mesurée (+4.84% sur 5j), donc peu sur-étendue et moins exposée à une prise de bénéfices immédiate.",
+      "risque": "Valeur cyclique auto très sensible au risk-off : une tape US qui reste rouge cette nuit pourrait effacer le gain à l'ouverture. Conviction volontairement modérée vu le régime de prudence.",
+      "prix_decision_17h": 13.75,
       "prix_entree": null,
       "evaluation": null
     }
