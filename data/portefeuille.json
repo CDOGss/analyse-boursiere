@@ -1064,6 +1064,59 @@
       "raisonnement": "Dans une séance largement rouge, Valeo affiche un flux acheteur spécifique qui se distingue nettement du CAC (-1.65%) : monter à contre-courant et clôturer près du plus-haut trahit un intérêt propre à la valeur, pas un simple beta de marché. La hausse reste mesurée (+4.84% sur 5j), donc peu sur-étendue et moins exposée à une prise de bénéfices immédiate.",
       "risque": "Valeur cyclique auto très sensible au risk-off : une tape US qui reste rouge cette nuit pourrait effacer le gain à l'ouverture. Conviction volontairement modérée vu le régime de prudence.",
       "prix_decision_17h": 13.75,
+      "prix_entree": 14.055,
+      "evaluation": {
+        "date_evaluation": "2026-07-24",
+        "prix_entree": 14.055,
+        "scenarios": {
+          "ouverture": {
+            "prix": 13.875,
+            "pnl_eur": -6.4,
+            "pnl_pct": -1.28
+          },
+          "premiere_demi_heure": {
+            "prix": 14.1,
+            "pnl_eur": 1.6,
+            "pnl_pct": 0.32
+          },
+          "mi_journee": {
+            "prix": 14.01,
+            "pnl_eur": -1.6,
+            "pnl_pct": -0.32
+          },
+          "h17": {
+            "prix": 13.735,
+            "pnl_eur": -11.38,
+            "pnl_pct": -2.28
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-24_TTE.PA",
+      "date_achat": "2026-07-24",
+      "ticker": "TTE.PA",
+      "nom": "TotalEnergies",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Remontée du baril au-dessus de 100$ sur fond de tensions en mer Rouge / détroit d'Ormuz : catalyseur sectoriel propre au pétrole, indépendant du Nasdaq.",
+      "raisonnement": "Clôture à 0.81 du range avec un volume correct (0.55x) et un sentiment social US haussier (+1.00). Le moteur est le pétrole géopolitique, une force qui tiendrait même si la tape US se retournait cette nuit. Hausse du jour modeste (+0.28%) donc pas de sur-extension malgré +8.34% sur 5j.",
+      "risque": "Le risque géopolitique est à double tranchant sur 3 nuits : une désescalade au Moyen-Orient ferait rechuter le baril et la valeur.",
+      "prix_decision_17h": 76.38999938964844,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-24_ACA.PA",
+      "date_achat": "2026-07-24",
+      "ticker": "ACA.PA",
+      "nom": "Crédit Agricole",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Flux acheteur de fin de séance sur les bancaires (+2.11%), clôture quasi au plus-haut du jour (0.94).",
+      "raisonnement": "Une des clôtures les plus fermes de la shortlist, dans un secteur bancaire soutenu par la remontée des taux (OAT >4%). Momentum propre et hausse mesurée, pas de sur-extension (5j +3.54%). Diversifie le pari énergie avec un secteur nettement différent.",
+      "risque": "Volume modeste (0.58x) qui affaiblit la fiabilité du signal, et exposition à un week-end de 3 nuits sur un secteur sensible au macro/taux.",
+      "prix_decision_17h": 18.415000915527344,
       "prix_entree": null,
       "evaluation": null
     }
