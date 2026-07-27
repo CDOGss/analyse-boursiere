@@ -1103,8 +1103,33 @@
       "raisonnement": "Clôture à 0.81 du range avec un volume correct (0.55x) et un sentiment social US haussier (+1.00). Le moteur est le pétrole géopolitique, une force qui tiendrait même si la tape US se retournait cette nuit. Hausse du jour modeste (+0.28%) donc pas de sur-extension malgré +8.34% sur 5j.",
       "risque": "Le risque géopolitique est à double tranchant sur 3 nuits : une désescalade au Moyen-Orient ferait rechuter le baril et la valeur.",
       "prix_decision_17h": 76.38999938964844,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 75.9,
+      "evaluation": {
+        "date_evaluation": "2026-07-27",
+        "prix_entree": 75.9,
+        "scenarios": {
+          "ouverture": {
+            "prix": 73.72,
+            "pnl_eur": -14.36,
+            "pnl_pct": -2.87
+          },
+          "premiere_demi_heure": {
+            "prix": 73.86,
+            "pnl_eur": -13.44,
+            "pnl_pct": -2.69
+          },
+          "mi_journee": {
+            "prix": 73.56,
+            "pnl_eur": -15.42,
+            "pnl_pct": -3.08
+          },
+          "h17": {
+            "prix": 74.8,
+            "pnl_eur": -7.25,
+            "pnl_pct": -1.45
+          }
+        }
+      }
     },
     {
       "id": "2026-07-24_ACA.PA",
@@ -1117,6 +1142,45 @@
       "raisonnement": "Une des clôtures les plus fermes de la shortlist, dans un secteur bancaire soutenu par la remontée des taux (OAT >4%). Momentum propre et hausse mesurée, pas de sur-extension (5j +3.54%). Diversifie le pari énergie avec un secteur nettement différent.",
       "risque": "Volume modeste (0.58x) qui affaiblit la fiabilité du signal, et exposition à un week-end de 3 nuits sur un secteur sensible au macro/taux.",
       "prix_decision_17h": 18.415000915527344,
+      "prix_entree": 18.505,
+      "evaluation": {
+        "date_evaluation": "2026-07-27",
+        "prix_entree": 18.505,
+        "scenarios": {
+          "ouverture": {
+            "prix": 18.605,
+            "pnl_eur": 2.7,
+            "pnl_pct": 0.54
+          },
+          "premiere_demi_heure": {
+            "prix": 18.575,
+            "pnl_eur": 1.89,
+            "pnl_pct": 0.38
+          },
+          "mi_journee": {
+            "prix": 18.645,
+            "pnl_eur": 3.78,
+            "pnl_pct": 0.76
+          },
+          "h17": {
+            "prix": 18.635,
+            "pnl_eur": 3.51,
+            "pnl_pct": 0.7
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-27_TFI.PA",
+      "date_achat": "2026-07-27",
+      "ticker": "TFI.PA",
+      "nom": "TF1",
+      "allocation_eur": 500.0,
+      "conviction": 52,
+      "catalyseur": "Flux acheteur propre au titre avec volume nettement au-dessus de la normale (2.10x), sur une hausse mesurée du jour (+3.62%) non paraboliques.",
+      "raisonnement": "TF1 affiche de loin le meilleur ratio de volume de la shortlist (2.10x), signe d'un intérêt acheteur réel et spécifique, sur une hausse contenue (5j +2.94%) donc peu exposée à la prise de bénéfices. La clôture à 0.73 du range n'est pas au plus haut mais reste dans la moitié haute, et le titre est décorrélé de la tech US rouge ce soir — le flux tiendrait même si le Nasdaq se retournait.",
+      "risque": "Clôture pas franchement au plus-haut (0.73) : le volume élevé peut refléter des échanges à double sens plutôt qu'une pure pression acheteuse ; secteur média peu porté par un catalyseur daté.",
+      "prix_decision_17h": 7.005000114440918,
       "prix_entree": null,
       "evaluation": null
     }
