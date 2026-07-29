@@ -1220,8 +1220,33 @@
       "raisonnement": "Publicis termine collé à son plus-haut (+3.98% sur la séance) avec une hausse 5j mesurée (+9.22%, pas parabolique). Ce flux de clôture propre au titre est exactement le type de momentum que l'on cherche à prolonger, indépendamment de la direction US.",
       "risque": "Volume modeste (0.53x) qui affaiblit la conviction ; une tape US rouge cette nuit pourrait peser à l'ouverture.",
       "prix_decision_17h": 94.05999755859375,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 93.84,
+      "evaluation": {
+        "date_evaluation": "2026-07-29",
+        "prix_entree": 93.84,
+        "scenarios": {
+          "ouverture": {
+            "prix": 95.24,
+            "pnl_eur": 7.46,
+            "pnl_pct": 1.49
+          },
+          "premiere_demi_heure": {
+            "prix": 94.22,
+            "pnl_eur": 2.02,
+            "pnl_pct": 0.4
+          },
+          "mi_journee": {
+            "prix": 94.52,
+            "pnl_eur": 3.62,
+            "pnl_pct": 0.72
+          },
+          "h17": {
+            "prix": 94.54,
+            "pnl_eur": 3.73,
+            "pnl_pct": 0.75
+          }
+        }
+      }
     },
     {
       "id": "2026-07-28_SAF.PA",
@@ -1234,6 +1259,45 @@
       "raisonnement": "Safran clôture près de son plus-haut avec une progression 5j raisonnable (+6.50%), s'inscrivant dans une dynamique sectorielle aéronautique/défense claire à Paris. Secteur nettement distinct de Publicis, ce qui assure la diversification.",
       "risque": "Clôture pas totalement au plus-haut et volume moyen (0.64x) ; valeur sensible au sentiment de marché global si le Nasdaq accentue sa baisse.",
       "prix_decision_17h": 343.8999938964844,
+      "prix_entree": 343.0,
+      "evaluation": {
+        "date_evaluation": "2026-07-29",
+        "prix_entree": 343.0,
+        "scenarios": {
+          "ouverture": {
+            "prix": 346.1,
+            "pnl_eur": 4.52,
+            "pnl_pct": 0.9
+          },
+          "premiere_demi_heure": {
+            "prix": 343.5,
+            "pnl_eur": 0.73,
+            "pnl_pct": 0.15
+          },
+          "mi_journee": {
+            "prix": 344.5,
+            "pnl_eur": 2.19,
+            "pnl_pct": 0.44
+          },
+          "h17": {
+            "prix": 340.0,
+            "pnl_eur": -4.37,
+            "pnl_pct": -0.87
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-29_ELIOR.PA",
+      "date_achat": "2026-07-29",
+      "ticker": "ELIOR.PA",
+      "nom": "Elior",
+      "allocation_eur": 500.0,
+      "conviction": 50,
+      "catalyseur": "Flux acheteur propre à la valeur en clôture (clôt@0.78) confirmé par le meilleur ratio de volume de la shortlist (1.37x), sur un secteur services/restauration collective peu exposé aux résultats tech du jour.",
+      "raisonnement": "Elior affiche la force la plus 'tranquille' de l'univers : hausse mesurée (+1.70%), clôture dans le haut du range et volume nettement supérieur à la moyenne, signe d'un vrai flux net et non d'un simple beta de marché. Pas de publication binaire signalée d'ici demain, ce qui limite le risque overnight dans un régime de prudence. Le secteur est déconnecté du sell-off luxe/semi qui pèse sur le CAC.",
+      "risque": "Small cap peu liquide et momentum modeste : dans une tape US rouge avec VIX en hausse, l'ouverture peut être happée par un gap baissier de marché malgré le flux propre.",
+      "prix_decision_17h": 2.1519999504089355,
       "prix_entree": null,
       "evaluation": null
     }
