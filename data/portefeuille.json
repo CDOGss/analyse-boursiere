@@ -1298,6 +1298,59 @@
       "raisonnement": "Elior affiche la force la plus 'tranquille' de l'univers : hausse mesurée (+1.70%), clôture dans le haut du range et volume nettement supérieur à la moyenne, signe d'un vrai flux net et non d'un simple beta de marché. Pas de publication binaire signalée d'ici demain, ce qui limite le risque overnight dans un régime de prudence. Le secteur est déconnecté du sell-off luxe/semi qui pèse sur le CAC.",
       "risque": "Small cap peu liquide et momentum modeste : dans une tape US rouge avec VIX en hausse, l'ouverture peut être happée par un gap baissier de marché malgré le flux propre.",
       "prix_decision_17h": 2.1519999504089355,
+      "prix_entree": 2.152,
+      "evaluation": {
+        "date_evaluation": "2026-07-30",
+        "prix_entree": 2.152,
+        "scenarios": {
+          "ouverture": {
+            "prix": 2.128,
+            "pnl_eur": -5.58,
+            "pnl_pct": -1.12
+          },
+          "premiere_demi_heure": {
+            "prix": 2.148,
+            "pnl_eur": -0.93,
+            "pnl_pct": -0.19
+          },
+          "mi_journee": {
+            "prix": 2.148,
+            "pnl_eur": -0.93,
+            "pnl_pct": -0.19
+          },
+          "h17": {
+            "prix": 2.132,
+            "pnl_eur": -4.65,
+            "pnl_pct": -0.93
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-30_BEN.PA",
+      "date_achat": "2026-07-30",
+      "ticker": "BEN.PA",
+      "nom": "Bénéteau",
+      "allocation_eur": 500.0,
+      "conviction": 55,
+      "catalyseur": "Prolongation d'un flux acheteur propre : clôture près du plus-haut du jour (clôt@0.85) avec volume nettement au-dessus de la moyenne (1.35x).",
+      "raisonnement": "Force « tranquille » idéale : hausse mesurée du jour (+2.53%) et quasi plate sur 5 jours (+0.83%), donc peu de risque de prise de bénéfices, mais un vrai flux acheteur avec volume 1.35x et clôture haute. Le signal repose sur la demande spécifique au titre, pas sur la beta marché, et bénéficie en prime d'un environnement risk-on.",
+      "risque": "Volume modéré en valeur absolue et titre small/mid cap peu liquide : un retournement de la tape US pourrait effacer un gap d'ouverture faible.",
+      "prix_decision_17h": 6.070000171661377,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-30_NEX.PA",
+      "date_achat": "2026-07-30",
+      "ticker": "NEX.PA",
+      "nom": "Nexans",
+      "allocation_eur": 500.0,
+      "conviction": 51,
+      "catalyseur": "Clôture proche du plus-haut (clôt@0.92) sur le thème porteur de l'électrification, prolongeable demain.",
+      "raisonnement": "Momentum de clôture solide avec une hausse contenue du jour (+1.79%) et un cumul 5j négatif (-2.17%), donc absence de sur-extension et marge de rebond. Secteur câbles/électrification distinct de Bénéteau, ce qui assure la diversification, et l'environnement tech/industriel favorable ce soir soutient la thèse.",
+      "risque": "Volume sous la moyenne (0.80x) : flux acheteur réel mais modeste, edge overnight fragile si la tape US se retourne.",
+      "prix_decision_17h": 130.89999389648438,
       "prix_entree": null,
       "evaluation": null
     }
