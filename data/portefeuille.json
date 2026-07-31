@@ -1337,8 +1337,33 @@
       "raisonnement": "Force « tranquille » idéale : hausse mesurée du jour (+2.53%) et quasi plate sur 5 jours (+0.83%), donc peu de risque de prise de bénéfices, mais un vrai flux acheteur avec volume 1.35x et clôture haute. Le signal repose sur la demande spécifique au titre, pas sur la beta marché, et bénéficie en prime d'un environnement risk-on.",
       "risque": "Volume modéré en valeur absolue et titre small/mid cap peu liquide : un retournement de la tape US pourrait effacer un gap d'ouverture faible.",
       "prix_decision_17h": 6.070000171661377,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 6.02,
+      "evaluation": {
+        "date_evaluation": "2026-07-31",
+        "prix_entree": 6.02,
+        "scenarios": {
+          "ouverture": {
+            "prix": 6.02,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "premiere_demi_heure": {
+            "prix": 6.09,
+            "pnl_eur": 5.81,
+            "pnl_pct": 1.16
+          },
+          "mi_journee": {
+            "prix": 6.07,
+            "pnl_eur": 4.15,
+            "pnl_pct": 0.83
+          },
+          "h17": {
+            "prix": 6.03,
+            "pnl_eur": 0.83,
+            "pnl_pct": 0.17
+          }
+        }
+      }
     },
     {
       "id": "2026-07-30_NEX.PA",
@@ -1351,6 +1376,59 @@
       "raisonnement": "Momentum de clôture solide avec une hausse contenue du jour (+1.79%) et un cumul 5j négatif (-2.17%), donc absence de sur-extension et marge de rebond. Secteur câbles/électrification distinct de Bénéteau, ce qui assure la diversification, et l'environnement tech/industriel favorable ce soir soutient la thèse.",
       "risque": "Volume sous la moyenne (0.80x) : flux acheteur réel mais modeste, edge overnight fragile si la tape US se retourne.",
       "prix_decision_17h": 130.89999389648438,
+      "prix_entree": 131.6,
+      "evaluation": {
+        "date_evaluation": "2026-07-31",
+        "prix_entree": 131.6,
+        "scenarios": {
+          "ouverture": {
+            "prix": 135.0,
+            "pnl_eur": 12.92,
+            "pnl_pct": 2.58
+          },
+          "premiere_demi_heure": {
+            "prix": 135.2,
+            "pnl_eur": 13.68,
+            "pnl_pct": 2.74
+          },
+          "mi_journee": {
+            "prix": 134.8,
+            "pnl_eur": 12.16,
+            "pnl_pct": 2.43
+          },
+          "h17": {
+            "prix": 132.9,
+            "pnl_eur": 4.94,
+            "pnl_pct": 0.99
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-07-31_MT.AS",
+      "date_achat": "2026-07-31",
+      "ticker": "MT.AS",
+      "nom": "ArcelorMittal",
+      "allocation_eur": 500.0,
+      "conviction": 54,
+      "catalyseur": "Clôture quasiment sur le plus-haut du jour (clôt@0.99) avec hausse mesurée +2.52% et momentum 5j positif (+3.66%), flux acheteur propre à la valeur à prolonger.",
+      "raisonnement": "Le titre ferme collé à son plus-haut, signe d'un flux acheteur soutenu en fin de séance, sans être sur-étendu (hausse du jour raisonnable). Le secteur acier n'est pas dépendant du seul beta Nasdaq, ce qui donne une force propre au titre. La tape US verte apporte un léger vent porteur supplémentaire.",
+      "risque": "Volume seulement à 0.71x la moyenne (flux modéré) et pari qui court sur tout le week-end, exposé à toute nouvelle macro/tarifs sur l'acier.",
+      "prix_decision_17h": 61.099998474121094,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-07-31_MMT.PA",
+      "date_achat": "2026-07-31",
+      "ticker": "MMT.PA",
+      "nom": "Métropole Télévision (M6)",
+      "allocation_eur": 500.0,
+      "conviction": 48,
+      "catalyseur": "Clôture près du plus-haut (clôt@0.92) avec +1.84% et volume 0.72x, force tranquille dans un secteur média décorrélé.",
+      "raisonnement": "M6 ferme haut dans son range avec une hausse mesurée, signalant un flux acheteur de clôture propre, dans un secteur média sans lien avec la tape tech US — ce qui diversifie nettement par rapport à ArcelorMittal. Momentum 5j légèrement positif conforte la tenue.",
+      "risque": "Volume modeste et valeur peu liquide ; pari sur 3 nuits sans catalyseur daté, la force pourrait ne pas se prolonger lundi.",
+      "prix_decision_17h": 12.180000305175781,
       "prix_entree": null,
       "evaluation": null
     }
