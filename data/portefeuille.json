@@ -1415,8 +1415,33 @@
       "raisonnement": "Le titre ferme collé à son plus-haut, signe d'un flux acheteur soutenu en fin de séance, sans être sur-étendu (hausse du jour raisonnable). Le secteur acier n'est pas dépendant du seul beta Nasdaq, ce qui donne une force propre au titre. La tape US verte apporte un léger vent porteur supplémentaire.",
       "risque": "Volume seulement à 0.71x la moyenne (flux modéré) et pari qui court sur tout le week-end, exposé à toute nouvelle macro/tarifs sur l'acier.",
       "prix_decision_17h": 61.099998474121094,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": NaN,
+      "evaluation": {
+        "date_evaluation": "2026-08-03",
+        "prix_entree": NaN,
+        "scenarios": {
+          "ouverture": {
+            "prix": 62.4,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "premiere_demi_heure": {
+            "prix": 62.92,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "mi_journee": {
+            "prix": 62.36,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "h17": {
+            "prix": 61.94,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          }
+        }
+      }
     },
     {
       "id": "2026-07-31_MMT.PA",
@@ -1429,6 +1454,59 @@
       "raisonnement": "M6 ferme haut dans son range avec une hausse mesurée, signalant un flux acheteur de clôture propre, dans un secteur média sans lien avec la tape tech US — ce qui diversifie nettement par rapport à ArcelorMittal. Momentum 5j légèrement positif conforte la tenue.",
       "risque": "Volume modeste et valeur peu liquide ; pari sur 3 nuits sans catalyseur daté, la force pourrait ne pas se prolonger lundi.",
       "prix_decision_17h": 12.180000305175781,
+      "prix_entree": NaN,
+      "evaluation": {
+        "date_evaluation": "2026-08-03",
+        "prix_entree": NaN,
+        "scenarios": {
+          "ouverture": {
+            "prix": 12.18,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "premiere_demi_heure": {
+            "prix": 12.02,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "mi_journee": {
+            "prix": 12.02,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "h17": {
+            "prix": 11.98,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-03_DBG.PA",
+      "date_achat": "2026-08-03",
+      "ticker": "DBG.PA",
+      "nom": "Derichebourg",
+      "allocation_eur": 500.0,
+      "conviction": 57,
+      "catalyseur": "Clôture pile sur le plus-haut du jour (clôt@1.00) avec le meilleur ratio de volume du peloton des clôtures fortes (0.95x), sur un titre non étendu (5j quasi flat).",
+      "raisonnement": "C'est le profil de force « tranquille » recherché : flux acheteur net en fin de séance, volume soutenu et absence d'emballement sur 5 jours qui limite le risque de prise de bénéfices à l'ouverture. Le flux propre au titre tiendrait même si la tape US se retournait la nuit.",
+      "risque": "Small/mid cap au flottant modeste : mouvement facilement effacé si l'ouverture manque d'acheteurs de suite.",
+      "prix_decision_17h": 9.489999771118164,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-03_COFA.PA",
+      "date_achat": "2026-08-03",
+      "ticker": "COFA.PA",
+      "nom": "Coface",
+      "allocation_eur": 500.0,
+      "conviction": 52,
+      "catalyseur": "Clôture près du plus-haut (clôt@0.95) avec volume correct (0.59x), hausse mesurée du jour (+1.90%) et 5j strictement à plat — aucun signe de sur-extension.",
+      "raisonnement": "Secteur assurance-crédit nettement distinct de Derichebourg, ce qui respecte la diversification. Le titre affiche un flux de clôture net sans emballement préalable, un profil défensif qui bénéficie du contexte risk-on sans dépendre d'un beta pur.",
+      "risque": "Volume moyen et momentum modeste : l'edge overnight est mince, un simple retournement du sentiment financier suffirait à annuler le gain.",
+      "prix_decision_17h": 16.100000381469727,
       "prix_entree": null,
       "evaluation": null
     }
