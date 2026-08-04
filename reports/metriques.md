@@ -2,7 +2,7 @@
 
 ## Métriques ajustées du risque (scénario 17h, net de frais)
 
-_Basé sur 24 jour(s) évalué(s). Total net : +nan€._
+_Basé sur 25 jour(s) évalué(s). Total net : +nan€._
 
 | Métrique | Valeur | Lecture |
 |---|---:|---|
@@ -10,7 +10,7 @@ _Basé sur 24 jour(s) évalué(s). Total net : +nan€._
 | Sortino (annualisé) | nan | pénalise la baisse |
 | Max drawdown | nan€ | pire creux cumulé |
 | Profit factor | 0.29 | gains/pertes, >1,5 solide |
-| Taux de réussite | 25% | jours gagnants |
+| Taux de réussite | 24% | jours gagnants |
 | Espérance / jour | nan€ | gain moyen par séance |
 | Gain moyen | 7.93€ | sur jours gagnants |
 | Perte moyenne | -9.78€ | sur jours perdants |

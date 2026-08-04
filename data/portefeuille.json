@@ -1493,8 +1493,33 @@
       "raisonnement": "C'est le profil de force « tranquille » recherché : flux acheteur net en fin de séance, volume soutenu et absence d'emballement sur 5 jours qui limite le risque de prise de bénéfices à l'ouverture. Le flux propre au titre tiendrait même si la tape US se retournait la nuit.",
       "risque": "Small/mid cap au flottant modeste : mouvement facilement effacé si l'ouverture manque d'acheteurs de suite.",
       "prix_decision_17h": 9.489999771118164,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": NaN,
+      "evaluation": {
+        "date_evaluation": "2026-08-04",
+        "prix_entree": NaN,
+        "scenarios": {
+          "ouverture": {
+            "prix": 9.525,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "premiere_demi_heure": {
+            "prix": 9.575,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "mi_journee": {
+            "prix": 9.575,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "h17": {
+            "prix": 9.665,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          }
+        }
+      }
     },
     {
       "id": "2026-08-03_COFA.PA",
@@ -1507,6 +1532,59 @@
       "raisonnement": "Secteur assurance-crédit nettement distinct de Derichebourg, ce qui respecte la diversification. Le titre affiche un flux de clôture net sans emballement préalable, un profil défensif qui bénéficie du contexte risk-on sans dépendre d'un beta pur.",
       "risque": "Volume moyen et momentum modeste : l'edge overnight est mince, un simple retournement du sentiment financier suffirait à annuler le gain.",
       "prix_decision_17h": 16.100000381469727,
+      "prix_entree": NaN,
+      "evaluation": {
+        "date_evaluation": "2026-08-04",
+        "prix_entree": NaN,
+        "scenarios": {
+          "ouverture": {
+            "prix": 16.14,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "premiere_demi_heure": {
+            "prix": 16.15,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "mi_journee": {
+            "prix": 16.17,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          },
+          "h17": {
+            "prix": 16.13,
+            "pnl_eur": NaN,
+            "pnl_pct": NaN
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-04_EAPI.PA",
+      "date_achat": "2026-08-04",
+      "ticker": "EAPI.PA",
+      "nom": "Euroapi",
+      "allocation_eur": 500.0,
+      "conviction": 54,
+      "catalyseur": "Rebond avec volume exceptionnel (2.44x) et clôture haute (0.94) après une semaine massacrée (-18% sur 5j) — signature d'un afflux acheteur/capitulation inversée.",
+      "raisonnement": "C'est le seul candidat à combiner un volume nettement au-dessus de la moyenne (2.44x, de loin le plus élevé de la shortlist) avec une clôture proche du plus-haut du jour (+3.78%). Ce flux acheteur propre au titre, sur un dossier survendu, a de bonnes chances de se prolonger à l'ouverture dans un contexte US porteur.",
+      "risque": "Small cap pharma très volatile en tendance de fond baissière (5j -18%) : le rebond peut n'être qu'un sursaut technique et retomber.",
+      "prix_decision_17h": 1.0160000324249268,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-04_S30.PA",
+      "date_achat": "2026-08-04",
+      "ticker": "S30.PA",
+      "nom": "Solutions 30",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Clôture pile au plus-haut du jour (clôt@1.00) avec volume soutenu (1.26x) et momentum (+5% sur 1j, +12% sur 5j).",
+      "raisonnement": "Force de clôture nette et volume au-dessus de la moyenne, secteur services IT distinct d'Euroapi (diversification respectée). Le flux acheteur de fin de séance, appuyé par une tape US tech verte, favorise une ouverture en hausse.",
+      "risque": "Penny stock (0.59€) très volatil, spread large ; une prise de bénéfices matinale peut effacer le gain rapidement.",
+      "prix_decision_17h": 0.5920000076293945,
       "prix_entree": null,
       "evaluation": null
     }
