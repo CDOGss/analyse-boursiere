@@ -1571,8 +1571,33 @@
       "raisonnement": "C'est le seul candidat à combiner un volume nettement au-dessus de la moyenne (2.44x, de loin le plus élevé de la shortlist) avec une clôture proche du plus-haut du jour (+3.78%). Ce flux acheteur propre au titre, sur un dossier survendu, a de bonnes chances de se prolonger à l'ouverture dans un contexte US porteur.",
       "risque": "Small cap pharma très volatile en tendance de fond baissière (5j -18%) : le rebond peut n'être qu'un sursaut technique et retomber.",
       "prix_decision_17h": 1.0160000324249268,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 1.016,
+      "evaluation": {
+        "date_evaluation": "2026-08-05",
+        "prix_entree": 1.016,
+        "scenarios": {
+          "ouverture": {
+            "prix": 1.02,
+            "pnl_eur": 1.97,
+            "pnl_pct": 0.39
+          },
+          "premiere_demi_heure": {
+            "prix": 1.006,
+            "pnl_eur": -4.92,
+            "pnl_pct": -0.98
+          },
+          "mi_journee": {
+            "prix": 0.972,
+            "pnl_eur": -21.65,
+            "pnl_pct": -4.33
+          },
+          "h17": {
+            "prix": 0.981,
+            "pnl_eur": -17.22,
+            "pnl_pct": -3.44
+          }
+        }
+      }
     },
     {
       "id": "2026-08-04_S30.PA",
@@ -1585,6 +1610,59 @@
       "raisonnement": "Force de clôture nette et volume au-dessus de la moyenne, secteur services IT distinct d'Euroapi (diversification respectée). Le flux acheteur de fin de séance, appuyé par une tape US tech verte, favorise une ouverture en hausse.",
       "risque": "Penny stock (0.59€) très volatil, spread large ; une prise de bénéfices matinale peut effacer le gain rapidement.",
       "prix_decision_17h": 0.5920000076293945,
+      "prix_entree": 0.603,
+      "evaluation": {
+        "date_evaluation": "2026-08-05",
+        "prix_entree": 0.603,
+        "scenarios": {
+          "ouverture": {
+            "prix": 0.615,
+            "pnl_eur": 9.95,
+            "pnl_pct": 1.99
+          },
+          "premiere_demi_heure": {
+            "prix": 0.619,
+            "pnl_eur": 13.27,
+            "pnl_pct": 2.65
+          },
+          "mi_journee": {
+            "prix": 0.613,
+            "pnl_eur": 8.29,
+            "pnl_pct": 1.66
+          },
+          "h17": {
+            "prix": 0.591,
+            "pnl_eur": -9.95,
+            "pnl_pct": -1.99
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-05_FNAC.PA",
+      "date_achat": "2026-08-05",
+      "ticker": "FNAC.PA",
+      "nom": "Fnac Darty",
+      "allocation_eur": 500.0,
+      "conviction": 63,
+      "catalyseur": "Flux acheteur de clôture puissant : clôture au plus-haut absolu du jour (clôt@1.00) sur volume 2.24x la normale, de loin le plus fort de l'univers.",
+      "raisonnement": "La combinaison clôture au plus-haut + volume 2.24x trahit un flux acheteur institutionnel propre à la valeur, exactement le signal recherché pour prolonger le momentum à l'ouverture. Le titre n'est PAS sur-étendu (1j +0.14%, 5j 0.00%), donc peu exposé à une prise de bénéfices — c'est une force tranquille qui accumule. La tape US verte est un bonus mais la thèse tient sur le flux propre.",
+      "risque": "Volume élevé sans catalyseur identifié clairement : possible reflux si le flux acheteur était ponctuel (rééquilibrage). Pas de news datée pour confirmer.",
+      "prix_decision_17h": 34.599998474121094,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-05_SK.PA",
+      "date_achat": "2026-08-05",
+      "ticker": "SK.PA",
+      "nom": "SEB",
+      "allocation_eur": 500.0,
+      "conviction": 48,
+      "catalyseur": "Clôture dans le haut du range (clôt@0.84) avec gain mesuré (+1.00%), signe d'un flux acheteur ordonné en fin de séance.",
+      "raisonnement": "Valeur biens de consommation durables, secteur distinct de Fnac (distribution), ce qui assure la diversification. Clôture solide dans le haut du range sans sur-extension (5j +1.93%). Signal correct mais volume modeste (0.53x) qui limite la conviction — force réelle mais peu appuyée par le flux.",
+      "risque": "Volume sous la moyenne : le momentum de clôture est moins fiable, un simple gap-down d'ouverture reste possible si la tape US se retourne.",
+      "prix_decision_17h": 60.79999923706055,
       "prix_entree": null,
       "evaluation": null
     }
