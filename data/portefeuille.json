@@ -1649,8 +1649,33 @@
       "raisonnement": "La combinaison clôture au plus-haut + volume 2.24x trahit un flux acheteur institutionnel propre à la valeur, exactement le signal recherché pour prolonger le momentum à l'ouverture. Le titre n'est PAS sur-étendu (1j +0.14%, 5j 0.00%), donc peu exposé à une prise de bénéfices — c'est une force tranquille qui accumule. La tape US verte est un bonus mais la thèse tient sur le flux propre.",
       "risque": "Volume élevé sans catalyseur identifié clairement : possible reflux si le flux acheteur était ponctuel (rééquilibrage). Pas de news datée pour confirmer.",
       "prix_decision_17h": 34.599998474121094,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 34.55,
+      "evaluation": {
+        "date_evaluation": "2026-08-06",
+        "prix_entree": 34.55,
+        "scenarios": {
+          "ouverture": {
+            "prix": 34.55,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "premiere_demi_heure": {
+            "prix": 34.55,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 34.55,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "h17": {
+            "prix": 34.6,
+            "pnl_eur": 0.72,
+            "pnl_pct": 0.14
+          }
+        }
+      }
     },
     {
       "id": "2026-08-05_SK.PA",
@@ -1663,6 +1688,59 @@
       "raisonnement": "Valeur biens de consommation durables, secteur distinct de Fnac (distribution), ce qui assure la diversification. Clôture solide dans le haut du range sans sur-extension (5j +1.93%). Signal correct mais volume modeste (0.53x) qui limite la conviction — force réelle mais peu appuyée par le flux.",
       "risque": "Volume sous la moyenne : le momentum de clôture est moins fiable, un simple gap-down d'ouverture reste possible si la tape US se retourne.",
       "prix_decision_17h": 60.79999923706055,
+      "prix_entree": 60.95,
+      "evaluation": {
+        "date_evaluation": "2026-08-06",
+        "prix_entree": 60.95,
+        "scenarios": {
+          "ouverture": {
+            "prix": 61.7,
+            "pnl_eur": 6.15,
+            "pnl_pct": 1.23
+          },
+          "premiere_demi_heure": {
+            "prix": 61.35,
+            "pnl_eur": 3.28,
+            "pnl_pct": 0.66
+          },
+          "mi_journee": {
+            "prix": 61.1,
+            "pnl_eur": 1.23,
+            "pnl_pct": 0.25
+          },
+          "h17": {
+            "prix": 60.25,
+            "pnl_eur": -5.74,
+            "pnl_pct": -1.15
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-06_FNAC.PA",
+      "date_achat": "2026-08-06",
+      "ticker": "FNAC.PA",
+      "nom": "Fnac Darty",
+      "allocation_eur": 500.0,
+      "conviction": 58,
+      "catalyseur": "Clôture pile sur le plus-haut du jour (clôt@1.00) avec un volume massif (2.48x), signature d'un flux acheteur propre au titre en fin de séance.",
+      "raisonnement": "C'est le signal de flux de clôture le plus net de la shortlist : close au sommet du range ET volume 2.5x supérieur à la normale, exactement le type de momentum spécifique qu'on cherche à prolonger. Le titre n'est pas sur-étendu (1j +0.14%, 5j quasi plat), donc peu de risque de prise de bénéfices à l'ouverture. La force ne repose pas sur la tape US mais sur un acheteur identifié sur la valeur.",
+      "risque": "Le fort volume peut refléter un flux ponctuel (arbitrage/rebalancement) sans suite ; hier le même pari n'a rendu que +0.14%.",
+      "prix_decision_17h": 34.599998474121094,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-06_DG.PA",
+      "date_achat": "2026-08-06",
+      "ticker": "DG.PA",
+      "nom": "Vinci",
+      "allocation_eur": 500.0,
+      "conviction": 50,
+      "catalyseur": "Clôture dans le haut du range (clôt@0.72) avec volume supérieur à la moyenne (1.05x) et hausse mesurée de +1.03%.",
+      "raisonnement": "Force tranquille sur une valeur de qualité : clôture dans le tiers haut du range avec un volume au-dessus de la normale, sans excès de hausse (5j +2.62%). Secteur construction/concessions nettement distinct de la distribution, ce qui assure la diversification. Setup solide mais moins tranché que FNAC.",
+      "risque": "Volume à peine au-dessus de la moyenne et clôture pas au plus-haut : signal de flux modéré, sensible à un retournement de la tape US nocturne.",
+      "prix_decision_17h": 127.0999984741211,
       "prix_entree": null,
       "evaluation": null
     }
