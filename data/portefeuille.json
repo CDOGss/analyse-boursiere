@@ -1727,8 +1727,33 @@
       "raisonnement": "C'est le signal de flux de clôture le plus net de la shortlist : close au sommet du range ET volume 2.5x supérieur à la normale, exactement le type de momentum spécifique qu'on cherche à prolonger. Le titre n'est pas sur-étendu (1j +0.14%, 5j quasi plat), donc peu de risque de prise de bénéfices à l'ouverture. La force ne repose pas sur la tape US mais sur un acheteur identifié sur la valeur.",
       "risque": "Le fort volume peut refléter un flux ponctuel (arbitrage/rebalancement) sans suite ; hier le même pari n'a rendu que +0.14%.",
       "prix_decision_17h": 34.599998474121094,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 34.55,
+      "evaluation": {
+        "date_evaluation": "2026-08-07",
+        "prix_entree": 34.55,
+        "scenarios": {
+          "ouverture": {
+            "prix": 34.55,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "premiere_demi_heure": {
+            "prix": 34.55,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 34.55,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "h17": {
+            "prix": 34.6,
+            "pnl_eur": 0.72,
+            "pnl_pct": 0.14
+          }
+        }
+      }
     },
     {
       "id": "2026-08-06_DG.PA",
@@ -1741,6 +1766,59 @@
       "raisonnement": "Force tranquille sur une valeur de qualité : clôture dans le tiers haut du range avec un volume au-dessus de la normale, sans excès de hausse (5j +2.62%). Secteur construction/concessions nettement distinct de la distribution, ce qui assure la diversification. Setup solide mais moins tranché que FNAC.",
       "risque": "Volume à peine au-dessus de la moyenne et clôture pas au plus-haut : signal de flux modéré, sensible à un retournement de la tape US nocturne.",
       "prix_decision_17h": 127.0999984741211,
+      "prix_entree": 126.6,
+      "evaluation": {
+        "date_evaluation": "2026-08-07",
+        "prix_entree": 126.6,
+        "scenarios": {
+          "ouverture": {
+            "prix": 126.05,
+            "pnl_eur": -2.17,
+            "pnl_pct": -0.43
+          },
+          "premiere_demi_heure": {
+            "prix": 126.05,
+            "pnl_eur": -2.17,
+            "pnl_pct": -0.43
+          },
+          "mi_journee": {
+            "prix": 125.95,
+            "pnl_eur": -2.57,
+            "pnl_pct": -0.51
+          },
+          "h17": {
+            "prix": 125.85,
+            "pnl_eur": -2.96,
+            "pnl_pct": -0.59
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-07_VIV.PA",
+      "date_achat": "2026-08-07",
+      "ticker": "VIV.PA",
+      "nom": "Vivendi",
+      "allocation_eur": 500.0,
+      "conviction": 54,
+      "catalyseur": "Rebond technique après -13% sur 5 jours, clôture quasiment au plus-haut du jour avec le meilleur ratio de volume des candidats à forte clôture.",
+      "raisonnement": "Vivendi clôture à 0.96 du range avec un volume de 1.02x (le plus élevé parmi les valeurs qui ferment près de leur plus-haut), signe d'un flux acheteur propre au titre après une forte correction. La hausse du jour reste mesurée (+2.50%), donc peu de risque de prise de bénéfices immédiate, et le titre n'est pas sur-étendu.",
+      "risque": "Pari porté sur 3 nuits (week-end) : plus de temps pour qu'une mauvaise nouvelle tombe ; le rebond peut n'être qu'un mouvement de couverture.",
+      "prix_decision_17h": 1.7239999771118164,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-07_CLARI.PA",
+      "date_achat": "2026-08-07",
+      "ticker": "CLARI.PA",
+      "nom": "Clariane (ex-Korian)",
+      "allocation_eur": 500.0,
+      "conviction": 48,
+      "catalyseur": "Clôture solide au plus-haut de séance (0.86) avec volume proche de la normale, dans un secteur santé défensif décorrélé de la tape tech.",
+      "raisonnement": "Clariane ferme près de son plus-haut du jour avec un volume quasi normal (0.94x) et une hausse contenue (+1.13%), signe d'une force tranquille sans sur-extension. Le profil défensif (santé/EHPAD) offre une diversification sectorielle nette face à Vivendi et une moindre sensibilité à un retournement US nocturne.",
+      "risque": "Volume seulement moyen et titre peu liquide ; catalyseur faible, la thèse repose surtout sur le momentum de clôture qui peut s'essouffler sur le week-end.",
+      "prix_decision_17h": 4.110000133514404,
       "prix_entree": null,
       "evaluation": null
     }
