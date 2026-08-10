@@ -1805,8 +1805,33 @@
       "raisonnement": "Vivendi clôture à 0.96 du range avec un volume de 1.02x (le plus élevé parmi les valeurs qui ferment près de leur plus-haut), signe d'un flux acheteur propre au titre après une forte correction. La hausse du jour reste mesurée (+2.50%), donc peu de risque de prise de bénéfices immédiate, et le titre n'est pas sur-étendu.",
       "risque": "Pari porté sur 3 nuits (week-end) : plus de temps pour qu'une mauvaise nouvelle tombe ; le rebond peut n'être qu'un mouvement de couverture.",
       "prix_decision_17h": 1.7239999771118164,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 1.72,
+      "evaluation": {
+        "date_evaluation": "2026-08-10",
+        "prix_entree": 1.72,
+        "scenarios": {
+          "ouverture": {
+            "prix": 1.714,
+            "pnl_eur": -1.74,
+            "pnl_pct": -0.35
+          },
+          "premiere_demi_heure": {
+            "prix": 1.714,
+            "pnl_eur": -1.74,
+            "pnl_pct": -0.35
+          },
+          "mi_journee": {
+            "prix": 1.712,
+            "pnl_eur": -2.33,
+            "pnl_pct": -0.47
+          },
+          "h17": {
+            "prix": 1.685,
+            "pnl_eur": -10.17,
+            "pnl_pct": -2.03
+          }
+        }
+      }
     },
     {
       "id": "2026-08-07_CLARI.PA",
@@ -1819,6 +1844,59 @@
       "raisonnement": "Clariane ferme près de son plus-haut du jour avec un volume quasi normal (0.94x) et une hausse contenue (+1.13%), signe d'une force tranquille sans sur-extension. Le profil défensif (santé/EHPAD) offre une diversification sectorielle nette face à Vivendi et une moindre sensibilité à un retournement US nocturne.",
       "risque": "Volume seulement moyen et titre peu liquide ; catalyseur faible, la thèse repose surtout sur le momentum de clôture qui peut s'essouffler sur le week-end.",
       "prix_decision_17h": 4.110000133514404,
+      "prix_entree": 4.096,
+      "evaluation": {
+        "date_evaluation": "2026-08-10",
+        "prix_entree": 4.096,
+        "scenarios": {
+          "ouverture": {
+            "prix": 4.084,
+            "pnl_eur": -1.46,
+            "pnl_pct": -0.29
+          },
+          "premiere_demi_heure": {
+            "prix": 4.064,
+            "pnl_eur": -3.91,
+            "pnl_pct": -0.78
+          },
+          "mi_journee": {
+            "prix": 4.048,
+            "pnl_eur": -5.86,
+            "pnl_pct": -1.17
+          },
+          "h17": {
+            "prix": 4.026,
+            "pnl_eur": -8.54,
+            "pnl_pct": -1.71
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-10_OVH.PA",
+      "date_achat": "2026-08-10",
+      "ticker": "OVH.PA",
+      "nom": "OVHcloud",
+      "allocation_eur": 500.0,
+      "conviction": 57,
+      "catalyseur": "Prolongation du flux acheteur : clôture haute (0.81) après +4.53% sur la journée avec le volume le plus élevé de la shortlist (1.14x).",
+      "raisonnement": "OVH affiche la force propre la plus nette du jour : volume soutenu (1.14x), clôture dans le haut du range et momentum sur 5j (+7.78%). C'est un flux acheteur spécifique au titre, pas un simple bêta Nasdaq. La hausse mesurée du jour reste digestible et laisse un peu de marge avant une prise de bénéfices.",
+      "risque": "Titre déjà en hausse marquée (+4.53% jour, +7.78% 5j) : exposition à une prise de bénéfices à l'ouverture, et sensibilité à un Nasdaq légèrement rouge ce soir.",
+      "prix_decision_17h": 16.6299991607666,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-10_ACA.PA",
+      "date_achat": "2026-08-10",
+      "ticker": "ACA.PA",
+      "nom": "Crédit Agricole",
+      "allocation_eur": 500.0,
+      "conviction": 52,
+      "catalyseur": "Clôture au plus-haut absolu du jour (clôt@1.00) après +1.33%, signe d'un flux acheteur qui pousse jusqu'au coup de cloche.",
+      "raisonnement": "Clôture pile sur le plus-haut avec un volume correct (0.50x, dans le haut de fourchette pour une large cap) et une progression tranquille non sur-étendue — profil de force calme qu'on cherche à prolonger. Secteur bancaire, nettement distinct d'OVH (tech/cloud), ce qui respecte la diversification.",
+      "risque": "Volume seulement moyen et pas de catalyseur propre : la clôture au plus-haut peut s'essouffler si la tape US se dégrade dans la nuit.",
+      "prix_decision_17h": 19.864999771118164,
       "prix_entree": null,
       "evaluation": null
     }

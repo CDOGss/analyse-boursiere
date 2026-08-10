@@ -2,18 +2,18 @@
 
 ## Métriques ajustées du risque (scénario 17h, net de frais)
 
-_Basé sur 28 jour(s) évalué(s). Total net : +nan€._
+_Basé sur 29 jour(s) évalué(s). Total net : +nan€._
 
 | Métrique | Valeur | Lecture |
 |---|---:|---|
 | Sharpe (annualisé) | nan | >1 bon, >2 excellent |
 | Sortino (annualisé) | nan | pénalise la baisse |
 | Max drawdown | nan€ | pire creux cumulé |
-| Profit factor | 0.23 | gains/pertes, >1,5 solide |
+| Profit factor | 0.21 | gains/pertes, >1,5 solide |
 | Taux de réussite | 21% | jours gagnants |
 | Espérance / jour | nan€ | gain moyen par séance |
 | Gain moyen | 7.93€ | sur jours gagnants |
-| Perte moyenne | -10.34€ | sur jours perdants |
+| Perte moyenne | -10.83€ | sur jours perdants |
 
 **Significativité de l'alpha vs CAC 40 :**
 
