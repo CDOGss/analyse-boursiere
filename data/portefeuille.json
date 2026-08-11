@@ -1883,8 +1883,33 @@
       "raisonnement": "OVH affiche la force propre la plus nette du jour : volume soutenu (1.14x), clôture dans le haut du range et momentum sur 5j (+7.78%). C'est un flux acheteur spécifique au titre, pas un simple bêta Nasdaq. La hausse mesurée du jour reste digestible et laisse un peu de marge avant une prise de bénéfices.",
       "risque": "Titre déjà en hausse marquée (+4.53% jour, +7.78% 5j) : exposition à une prise de bénéfices à l'ouverture, et sensibilité à un Nasdaq légèrement rouge ce soir.",
       "prix_decision_17h": 16.6299991607666,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 16.18,
+      "evaluation": {
+        "date_evaluation": "2026-08-11",
+        "prix_entree": 16.18,
+        "scenarios": {
+          "ouverture": {
+            "prix": 16.15,
+            "pnl_eur": -0.93,
+            "pnl_pct": -0.19
+          },
+          "premiere_demi_heure": {
+            "prix": 16.35,
+            "pnl_eur": 5.25,
+            "pnl_pct": 1.05
+          },
+          "mi_journee": {
+            "prix": 16.5,
+            "pnl_eur": 9.89,
+            "pnl_pct": 1.98
+          },
+          "h17": {
+            "prix": 16.73,
+            "pnl_eur": 17.0,
+            "pnl_pct": 3.4
+          }
+        }
+      }
     },
     {
       "id": "2026-08-10_ACA.PA",
@@ -1897,6 +1922,59 @@
       "raisonnement": "Clôture pile sur le plus-haut avec un volume correct (0.50x, dans le haut de fourchette pour une large cap) et une progression tranquille non sur-étendue — profil de force calme qu'on cherche à prolonger. Secteur bancaire, nettement distinct d'OVH (tech/cloud), ce qui respecte la diversification.",
       "risque": "Volume seulement moyen et pas de catalyseur propre : la clôture au plus-haut peut s'essouffler si la tape US se dégrade dans la nuit.",
       "prix_decision_17h": 19.864999771118164,
+      "prix_entree": 19.93,
+      "evaluation": {
+        "date_evaluation": "2026-08-11",
+        "prix_entree": 19.93,
+        "scenarios": {
+          "ouverture": {
+            "prix": 19.965,
+            "pnl_eur": 0.88,
+            "pnl_pct": 0.18
+          },
+          "premiere_demi_heure": {
+            "prix": 20.06,
+            "pnl_eur": 3.26,
+            "pnl_pct": 0.65
+          },
+          "mi_journee": {
+            "prix": 19.94,
+            "pnl_eur": 0.25,
+            "pnl_pct": 0.05
+          },
+          "h17": {
+            "prix": 20.05,
+            "pnl_eur": 3.01,
+            "pnl_pct": 0.6
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-11_OVH.PA",
+      "date_achat": "2026-08-11",
+      "ticker": "OVH.PA",
+      "nom": "OVHcloud",
+      "allocation_eur": 500.0,
+      "conviction": 57,
+      "catalyseur": "Prolongation d'un momentum acheteur de deux séances consécutives, clôture dans le haut du range avec volume proche de la normale.",
+      "raisonnement": "OVH signe +3.40% sur la journée avec une clôture à 0.77 du range et un volume 0.90x, meilleur des flux 'tech' de la liste. La hausse cumulée 5j (+3.72%) reste mesurée, donc pas de sur-extension menaçant une prise de bénéfices immédiate. Le flux propre au titre tiendrait même si la tape US se retourne dans la nuit.",
+      "risque": "Titre volatil et corrélé au sentiment tech ; un retournement du Nasdaq cette nuit peut peser à l'ouverture. Attention aussi au risque de digestion après deux séances de hausse.",
+      "prix_decision_17h": 16.729999542236328,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-11_ELIOR.PA",
+      "date_achat": "2026-08-11",
+      "ticker": "ELIOR.PA",
+      "nom": "Elior",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Clôture au plus-haut du jour (0.86 du range) avec volume soutenu pour une small-cap (0.60x), signe d'un flux acheteur de fin de séance.",
+      "raisonnement": "Elior affiche une force tranquille (+1.74% sans excès, 5j quasi plat) et clôture près de son plus-haut avec un volume supérieur à sa moyenne récente — exactement le type de flux net qu'on cherche à prolonger. Secteur restauration/services collectifs nettement distinct d'OVH, ce qui respecte la diversification.",
+      "risque": "Small-cap peu liquide, l'edge overnight est mince ; un simple élargissement de spread à l'ouverture peut effacer le gain.",
+      "prix_decision_17h": 2.1019999980926514,
       "prix_entree": null,
       "evaluation": null
     }
