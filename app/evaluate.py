@@ -16,6 +16,9 @@ from app import benchmark, ledger, market
 
 
 def _gain(entree: float | None, sortie: float | None, allocation: float) -> dict | None:
+    # nombre_valide : un NaN est TRUTHY en Python, il franchirait un simple
+    # `if not entree` et produirait un P&L NaN irrécupérable.
+    entree, sortie = market.nombre_valide(entree), market.nombre_valide(sortie)
     if not entree or not sortie:
         return None
     parts = allocation / entree
@@ -36,8 +39,11 @@ def evaluer_positions(aujourd_hui: dt.date) -> list[dict]:
         date_achat = dt.date.fromisoformat(p["date_achat"])
         ticker = p["ticker"]
 
-        # Prix d'entrée = clôture de la séance d'achat (achat près de la clôture)
-        entree = p.get("prix_entree") or market.cloture_du_jour(ticker, date_achat)
+        # Prix d'entrée = clôture de la séance d'achat (achat près de la clôture).
+        # nombre_valide écarte un NaN déjà stocké : sans cela il serait considéré
+        # comme une valeur figée (NaN truthy) et jamais recalculé.
+        entree = (market.nombre_valide(p.get("prix_entree"))
+                  or market.cloture_du_jour(ticker, date_achat))
 
         # Séance suivante = aujourd'hui (jour de l'évaluation)
         prix = market.prix_intraday(ticker, aujourd_hui)

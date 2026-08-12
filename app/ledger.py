@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import math
 from typing import Any
 
 import config
@@ -15,9 +16,27 @@ def _charger() -> dict[str, Any]:
     return {"positions": []}
 
 
+def _assainir(x: Any) -> Any:
+    """Remplace récursivement NaN/Infini par None.
+
+    `json.dump` écrit sinon les littéraux `NaN`/`Infinity`, que Python relit
+    mais qui sont INVALIDES en JSON : tout autre consommateur (la page web,
+    `JSON.parse`) échoue sur la totalité du fichier. Dernier rempart : le
+    portefeuille reste lisible par tous, même si un NaN a franchi les filtres.
+    """
+    if isinstance(x, float):
+        return None if math.isnan(x) or math.isinf(x) else x
+    if isinstance(x, dict):
+        return {k: _assainir(v) for k, v in x.items()}
+    if isinstance(x, list):
+        return [_assainir(v) for v in x]
+    return x
+
+
 def _sauver(donnees: dict[str, Any]) -> None:
     with open(config.FICHIER_PORTEFEUILLE, "w", encoding="utf-8") as f:
-        json.dump(donnees, f, ensure_ascii=False, indent=2)
+        json.dump(_assainir(donnees), f, ensure_ascii=False, indent=2,
+                  allow_nan=False)
 
 
 def enregistrer_achats(jour: dt.date, selection: list[dict], prix_decision: dict[str, float | None]) -> list[dict]:

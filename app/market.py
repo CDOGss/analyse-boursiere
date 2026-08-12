@@ -2,12 +2,31 @@
 from __future__ import annotations
 
 import datetime as dt
+import math
 from dataclasses import dataclass
 
 import pandas as pd
 import yfinance as yf
 
 import config
+
+
+def nombre_valide(x) -> float | None:
+    """Convertit en float utilisable, ou None si absent/NaN/infini.
+
+    yfinance renvoie parfois une ligne présente mais à Close NaN (séance non
+    encore publiée, jour férié partiel). En Python `NaN` est TRUTHY et se
+    propage silencieusement dans tous les calculs : un seul NaN contamine le
+    portefeuille et rend le JSON invalide (`NaN` n'existe pas en JSON). On
+    normalise donc dès la lecture.
+    """
+    if x is None:
+        return None
+    try:
+        v = float(x)
+    except (TypeError, ValueError):
+        return None
+    return None if math.isnan(v) or math.isinf(v) else v
 
 
 @dataclass
@@ -136,7 +155,7 @@ def _prix_le_plus_proche(df: pd.DataFrame, cible: dt.datetime) -> float | None:
     pos = ecarts.argmin()
     if ecarts[pos] > pd.Timedelta(minutes=45):
         return None
-    return float(df["Close"].iloc[pos])
+    return nombre_valide(df["Close"].iloc[pos])
 
 
 def prix_intraday(ticker: str, jour: dt.date) -> dict[str, float | None]:
@@ -180,7 +199,7 @@ def prix_intraday(ticker: str, jour: dt.date) -> dict[str, float | None]:
     resultat["demi_heure"] = _prix_le_plus_proche(df, cible(*config.HEURE_DEMI_HEURE))
     resultat["mi_journee"] = _prix_le_plus_proche(df, cible(*config.HEURE_MI_JOURNEE))
     resultat["h17"] = _prix_le_plus_proche(df, cible(*config.HEURE_17H))
-    resultat["cloture"] = float(df["Close"].iloc[-1])
+    resultat["cloture"] = nombre_valide(df["Close"].iloc[-1])
     return resultat
 
 
@@ -267,6 +286,9 @@ def cloture_du_jour(ticker: str, jour: dt.date) -> float | None:
     if isinstance(df.columns, pd.MultiIndex):
         df.columns = df.columns.get_level_values(0)
     df = df[df.index.date <= jour]
+    # Écarte les séances dont la clôture n'est pas (encore) publiée : sinon on
+    # renverrait un NaN qui contaminerait le prix d'entrée de la position.
+    df = df[df["Close"].notna()]
     if df.empty:
         return None
-    return float(df["Close"].iloc[-1])
+    return nombre_valide(df["Close"].iloc[-1])
