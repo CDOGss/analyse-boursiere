@@ -32,7 +32,7 @@ def _series():
     """Construit les séries journalières (dates, P&L par scénario, frais, CAC€)."""
     jours = bilan._jours()
     refs = benchmark.references()
-    dates, pnl, frais, cac_session = [], {s: [] for s in bilan.SCENARIOS}, [], []
+    dates, pnl, frais, cac_ref = [], {s: [] for s in bilan.SCENARIOS}, [], []
     for date, b in jours.items():
         dates.append(date)
         for s in bilan.SCENARIOS:
@@ -40,8 +40,10 @@ def _series():
         frais.append(bilan._cout_jour(b["n"]))
         ref = refs.get(date)
         capital = b["n"] * config.ALLOCATION_PAR_ACTION
-        cac_session.append(capital * ref["session_pct"] / 100 if ref else 0.0)
-    return dates, pnl, frais, cac_session
+        # Benchmark comparable à la sortie de référence (overnight si l'on
+        # revend à l'ouverture, séance complète si l'on garde jusqu'à 17h).
+        cac_ref.append(capital * ref[config.BENCH_CLE_REFERENCE] / 100 if ref else 0.0)
+    return dates, pnl, frais, cac_ref
 
 
 def _style_dates(ax, dates):
@@ -52,18 +54,18 @@ def _style_dates(ax, dates):
 
 
 def generer() -> list[str]:
-    dates, pnl, frais, cac_session = _series()
+    dates, pnl, frais, cac_ref = _series()
     chemins: list[str] = []
     if not dates:
         return chemins
 
-    # 1) P&L cumulé net vs CAC 40
-    net17 = [p - f for p, f in zip(pnl["h17"], frais)]
-    cum_strat = _cumul(net17)
-    cum_cac = _cumul(cac_session)
+    # 1) P&L cumulé net vs CAC 40 (sortie de référence)
+    net_ref = [p - f for p, f in zip(pnl[bilan.REF], frais)]
+    cum_strat = _cumul(net_ref)
+    cum_cac = _cumul(cac_ref)
     fig, ax = plt.subplots(figsize=(9, 4.5))
     ax.plot(range(len(dates)), cum_strat, marker="o", color=BLEU,
-            linewidth=2, label="Stratégie (17h, net de frais)")
+            linewidth=2, label=f"Stratégie ({bilan.LIB_REF.lower()}, net de frais)")
     ax.plot(range(len(dates)), cum_cac, marker="s", color=GRIS,
             linewidth=1.6, linestyle="--", label="CAC 40 (acheté chaque soir)")
     ax.fill_between(range(len(dates)), cum_strat, cum_cac,
@@ -80,11 +82,12 @@ def generer() -> list[str]:
     c1 = config.DOSSIER_RAPPORTS / "graph_cumul.png"
     fig.savefig(c1, dpi=110); plt.close(fig); chemins.append(str(c1))
 
-    # 2) Plus/moins-values journalières au 17h
+    # 2) Plus/moins-values journalières à la sortie de référence
     fig, ax = plt.subplots(figsize=(9, 4))
-    couleurs = [VERT if v >= 0 else ROUGE for v in pnl["h17"]]
-    ax.bar(range(len(dates)), pnl["h17"], color=couleurs)
-    ax.set_title("Plus / moins-values par jour (revente à 17h)")
+    couleurs = [VERT if v >= 0 else ROUGE for v in pnl[bilan.REF]]
+    ax.bar(range(len(dates)), pnl[bilan.REF], color=couleurs)
+    ax.set_title(f"Plus / moins-values par jour "
+                 f"(revente à l'{bilan.LIB_REF.lower()})")
     ax.set_ylabel("€")
     ax.yaxis.set_major_locator(MaxNLocator(nbins=8))
     _style_dates(ax, dates)
@@ -112,16 +115,18 @@ def generer() -> list[str]:
 
 
 def _ecrire_md() -> None:
-    contenu = """# Graphiques — plus / moins-values
+    lib = bilan.LIB_REF.lower()
+    contenu = f"""# Graphiques — plus / moins-values
 
-_Mis à jour à chaque exécution. Apparaissent dès les premières positions évaluées._
+_Mis à jour à chaque exécution. Apparaissent dès les premières positions évaluées.
+Sortie de référence : **{lib}**._
 
 ## P&L cumulé : stratégie (net de frais) vs CAC 40
 ![P&L cumulé](graph_cumul.png)
 
 Zone verte = la stratégie bat le CAC 40 ; zone rouge = elle fait moins bien.
 
-## Plus / moins-values par jour (revente à 17h)
+## Plus / moins-values par jour (revente à l'{lib})
 ![Journalier](graph_journalier.png)
 
 ## Quel moment de revente est le meilleur ?

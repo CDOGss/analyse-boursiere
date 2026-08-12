@@ -124,6 +124,9 @@ const OWNER="CDOGss", REPO="analyse-boursiere", BRANCH="main";
 const RAW=`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}`;
 const ALLOC=500, FEE_PCT=0.20;
 const SCEN=[["ouverture","Ouverture"],["premiere_demi_heure","9h30"],["mi_journee","Midi"],["h17","17h"]];
+// Sortie de référence (cf. config.SCENARIO_REFERENCE) et clé de benchmark
+// comparable : overnight_pct = clôture→ouverture, session_pct = clôture→clôture.
+const REF="ouverture", LIB_REF="ouverture", BENCH_REF="overnight_pct";
 
 const $=s=>document.querySelector(s);
 const eur=x=>(x>=0?"+":"−")+Math.abs(x).toFixed(2).replace(".",",")+" €";
@@ -162,12 +165,12 @@ function aggregate(positions, bench){
   const dates=Object.keys(days).sort();
   const rows=dates.map(d=>{
     const b=days[d]; const capital=b.n*ALLOC; const fees=b.n*ALLOC*FEE_PCT/100;
-    const net17=b.s.h17!=null? b.s.h17-fees : null;
+    const netRef=b.s[REF]!=null? b.s[REF]-fees : null;
     const ref=bench&&bench[d]? bench[d] : null;
-    const cacSession=ref? capital*ref.session_pct/100 : null;
-    return {...b, capital, fees, net17, cacSession,
-            alpha17:(net17!=null&&cacSession!=null)? net17-cacSession : null,
-            r:(net17!=null&&capital>0)? net17/capital : null};
+    const cacRef=ref&&ref[BENCH_REF]!=null? capital*ref[BENCH_REF]/100 : null;
+    return {...b, capital, fees, netRef, cacRef,
+            alphaRef:(netRef!=null&&cacRef!=null)? netRef-cacRef : null,
+            r:(netRef!=null&&capital>0)? netRef/capital : null};
   });
   return {rows, evald};
 }
@@ -177,8 +180,8 @@ function summarize(rows){
   for(const r of rows){
     nTrades+=r.n;
     for(const [k] of SCEN) if(r.s[k]!=null) scenTot[k]+=r.s[k];
-    if(r.net17!=null){ net+=r.net17; nDays++; if(r.net17>0)wins++; if(r.r!=null)rs.push(r.r); }
-    if(r.alpha17!=null){ alpha+=r.alpha17; alphaDays++; }
+    if(r.netRef!=null){ net+=r.netRef; nDays++; if(r.netRef>0)wins++; if(r.r!=null)rs.push(r.r); }
+    if(r.alphaRef!=null){ alpha+=r.alphaRef; alphaDays++; }
   }
   let sharpe=null;
   if(rs.length>=2){
@@ -187,7 +190,8 @@ function summarize(rows){
     sharpe= sd>0? m/sd*Math.sqrt(252):null;
   }
   return {net, wins, nDays, nTrades, alpha, alphaDays, scenTot, sharpe,
-          winRate:nDays? wins/nDays*100:null, scen17net:scenTot.h17 - nTrades*ALLOC*FEE_PCT/100};
+          winRate:nDays? wins/nDays*100:null,
+          scenRefNet:scenTot[REF] - nTrades*ALLOC*FEE_PCT/100};
 }
 
 function kpiCard(lbl,val,valClass,hint){
@@ -213,7 +217,7 @@ function render(positions, bench){
   const alphaHint=S.alphaDays? `sur ${S.alphaDays} séance(s) vs CAC 40`:"en attente du benchmark";
   const sharpeTxt=S.sharpe!=null? num2(S.sharpe):"—";
   let html=`<div class="grid-kpi">
-    ${kpiCard("P&L net cumulé (17 h)", S.nDays?eur(S.net):"—", cls(S.net), S.nDays?`${S.nDays} séance(s) évaluée(s)`:"aucune séance évaluée")}
+    ${kpiCard(`P&L net cumulé (${LIB_REF})`, S.nDays?eur(S.net):"—", cls(S.net), S.nDays?`${S.nDays} séance(s) évaluée(s)`:"aucune séance évaluée")}
     ${kpiCard("Alpha vs CAC 40", alphaTxt, S.alphaDays?cls(S.alpha):"", alphaHint)}
     ${kpiCard("Taux de réussite", S.winRate!=null?S.winRate.toFixed(0)+" %":"—", "", S.nDays?`${S.wins}/${S.nDays} séances gagnantes`:"—")}
     ${kpiCard("Sharpe annualisé", sharpeTxt, "", "&gt;1 bon · &gt;2 excellent")}
@@ -221,30 +225,30 @@ function render(positions, bench){
 
   html+=`<section class="card"><div class="sec-h">
       <h2>Gains cumulés — Stratégie vs CAC 40</h2>
-      <span class="note">P&L net cumulé à la revente de 17 h (€)</span></div>
+      <span class="note">P&L net cumulé à la revente de référence (${LIB_REF}, €)</span></div>
       <div class="legend">
         <span class="k"><span class="swatch" style="background:var(--series-strat)"></span>Stratégie (net)</span>
         <span class="k"><span class="swatch" style="background:var(--series-cac)"></span>CAC 40 (même capital)</span>
       </div>
       <div class="chartbox" id="chartbox"></div></section>`;
 
-  const best=SCEN.reduce((a,[k])=>(S.scenTot[k]>S.scenTot[a])?k:a,"ouverture");
   html+=`<section class="card"><div class="sec-h">
-      <h2>Quel moment de revente est le meilleur ?</h2>
-      <span class="note">P&L cumulé (brut) par horizon</span></div><div class="chips">`;
+      <h2>Comparaison des moments de revente</h2>
+      <span class="note">P&L cumulé (brut) par horizon · ★ = sortie appliquée</span></div><div class="chips">`;
   for(const [k,lbl] of SCEN){
     const v=S.scenTot[k];
-    html+=`<div class="chip ${k===best?'best':''}"><div class="t">${lbl}${k===best?' <span class="tag">meilleur</span>':''}</div>
+    html+=`<div class="chip ${k===REF?'best':''}"><div class="t">${lbl}${k===REF?' <span class="tag">★ référence</span>':''}</div>
       <div class="v ${cls(v)}">${S.nDays?eur(v):"—"}</div></div>`;
   }
-  html+=`<div class="chip"><div class="t">17 h net de frais</div>
-      <div class="v ${cls(S.scen17net)}">${S.nDays?eur(S.scen17net):"—"}</div></div></div></section>`;
+  html+=`<div class="chip"><div class="t">${LIB_REF} net de frais</div>
+      <div class="v ${cls(S.scenRefNet)}">${S.nDays?eur(S.scenRefNet):"—"}</div></div></div></section>`;
 
   html+=`<section class="card"><div class="sec-h"><h2>Détail des paris</h2>
       <span class="note">${positions.length} position(s)${pending.length?` · ${pending.length} en cours`:''}</span></div>
       <div class="tablewrap"><table><thead><tr>
       <th>Achat</th><th>Action</th><th>Conv.</th><th>Entrée</th>
-      <th>Ouv.</th><th>9h30</th><th>Midi</th><th>17 h</th></tr></thead><tbody>`;
+      <th>Ouv.${REF==="ouverture"?" ★":""}</th><th>9h30</th><th>Midi</th>
+      <th>17 h${REF==="h17"?" ★":""}</th></tr></thead><tbody>`;
   const ordered=[...positions].sort((a,b)=>(b.date_achat).localeCompare(a.date_achat)||a.ticker.localeCompare(b.ticker));
   for(const p of ordered){
     const ev=p.evaluation;
@@ -267,9 +271,9 @@ function render(positions, bench){
 
   const pts=[]; let cs=0, cc=0;
   for(const r of rows){
-    if(r.net17==null) continue;
-    cs+=r.net17; cc+=(r.cacSession!=null?r.cacSession:0);
-    pts.push({date:r.date, strat:cs, cac:(r.cacSession!=null?cc:null)});
+    if(r.netRef==null) continue;
+    cs+=r.netRef; cc+=(r.cacRef!=null?r.cacRef:0);
+    pts.push({date:r.date, strat:cs, cac:(r.cacRef!=null?cc:null)});
   }
   drawChart(pts);
 }

@@ -26,6 +26,10 @@ LIBELLES = {
     "h17": "17h",
 }
 
+# Scénario servant de P&L « officiel » (les 4 restent suivis et comparés).
+REF = config.SCENARIO_REFERENCE
+LIB_REF = LIBELLES[REF]
+
 
 def _jours() -> "OrderedDict[str, dict]":
     """Agrège les positions évaluées par date d'évaluation.
@@ -66,16 +70,17 @@ def ecrire_csv() -> str:
         w = csv.writer(f, delimiter=";")
         w.writerow(["date", "nb_actions", "actions",
                     "pnl_ouverture_eur", "pnl_9h30_eur", "pnl_midi_eur",
-                    "pnl_17h_eur", "frais_estimes_eur", "pnl_17h_net_eur"])
+                    "pnl_17h_eur", "frais_estimes_eur",
+                    f"pnl_{REF}_net_eur"])
         for date, b in jours.items():
             s = b["sommes"]
             cout = _cout_jour(b["n"])
-            net17 = (s["h17"] - cout) if s["h17"] is not None else None
+            net_ref = (s[REF] - cout) if s[REF] is not None else None
             w.writerow([
                 date, b["n"], "+".join(b["tickers"]),
                 _r(s["ouverture"]), _r(s["premiere_demi_heure"]),
                 _r(s["mi_journee"]), _r(s["h17"]),
-                _r(cout), _r(net17),
+                _r(cout), _r(net_ref),
             ])
     return str(chemin)
 
@@ -93,7 +98,7 @@ def _bilan_par_mois() -> "OrderedDict[str, dict]":
         m = mois.setdefault(cle, {
             "jours": 0, "positions": 0,
             "sommes": {s: 0.0 for s in SCENARIOS},
-            "frais": 0.0, "jours_gagnants_17h": 0,
+            "frais": 0.0, "jours_gagnants": 0,
             "meilleur": None, "pire": None,
             "bench_overnight": 0.0, "bench_session": 0.0, "bench_jours": 0,
         })
@@ -111,14 +116,14 @@ def _bilan_par_mois() -> "OrderedDict[str, dict]":
             m["bench_overnight"] += capital * ref["overnight_pct"] / 100
             m["bench_session"] += capital * ref["session_pct"] / 100
             m["bench_jours"] += 1
-        pnl17 = b["sommes"]["h17"]
-        if pnl17 is not None:
-            if pnl17 > 0:
-                m["jours_gagnants_17h"] += 1
-            jour_info = {"date": date, "pnl": pnl17, "tickers": b["tickers"]}
-            if m["meilleur"] is None or pnl17 > m["meilleur"]["pnl"]:
+        pnl_ref = b["sommes"][REF]
+        if pnl_ref is not None:
+            if pnl_ref > 0:
+                m["jours_gagnants"] += 1
+            jour_info = {"date": date, "pnl": pnl_ref, "tickers": b["tickers"]}
+            if m["meilleur"] is None or pnl_ref > m["meilleur"]["pnl"]:
                 m["meilleur"] = jour_info
-            if m["pire"] is None or pnl17 < m["pire"]["pnl"]:
+            if m["pire"] is None or pnl_ref < m["pire"]["pnl"]:
                 m["pire"] = jour_info
     return OrderedDict(sorted(mois.items(), reverse=True))
 
@@ -134,16 +139,18 @@ def rendu_mensuel() -> str:
                 "l'instant. Reviens après quelques séances._\n")
 
     lignes = ["## Tableau de bord mensuel\n"]
-    lignes.append(f"_Frais d'aller-retour estimés : {config.COUT_TRANSACTION_PCT:.2f}% "
-                  f"par position (P&L net au 17h)._\n")
+    lignes.append(f"_Sortie de référence : **{LIB_REF}**. Frais d'aller-retour "
+                  f"estimés : {config.COUT_TRANSACTION_PCT:.2f}% par position "
+                  f"(P&L net)._\n")
 
     # Synthèse multi-mois
-    lignes.append("| Mois | Jours | Ouverture | 9h30 | Midi | 17h (brut) | 17h (net) | Réussite 17h |")
+    lignes.append(f"| Mois | Jours | Ouverture | 9h30 | Midi | 17h "
+                  f"| {LIB_REF} (net) | Réussite |")
     lignes.append("|---|---:|---:|---:|---:|---:|---:|---:|")
     for cle, m in mois.items():
         s = m["sommes"]
-        net = s["h17"] - m["frais"]
-        taux = m["jours_gagnants_17h"] / m["jours"] * 100 if m["jours"] else 0
+        net = s[REF] - m["frais"]
+        taux = m["jours_gagnants"] / m["jours"] * 100 if m["jours"] else 0
         lignes.append(
             f"| {cle} | {m['jours']} "
             f"| {_signe(s['ouverture'])} {s['ouverture']:+.2f}€ "
@@ -156,29 +163,38 @@ def rendu_mensuel() -> str:
     lignes.append("")
 
     # Comparaison vs CAC 40 (alpha = talent au-delà du marché)
-    lignes.append("**Alpha vs CAC 40** (même capital « acheté chaque soir ») :\n")
-    lignes.append("| Mois | Stratégie (ouv.) | CAC overnight | Alpha ouv. | Stratégie (17h) | CAC séance | Alpha 17h |")
+    lignes.append("**Alpha vs CAC 40** (même capital « acheté chaque soir », "
+                  "stratégie NETTE de frais) :\n")
+    marq = lambda c: " ★" if c == REF else ""   # ★ = sortie de référence
+    lignes.append(f"| Mois | Stratégie (ouv.){marq('ouverture')} | CAC overnight "
+                  f"| Alpha ouv.{marq('ouverture')} | Stratégie (17h){marq('h17')} "
+                  f"| CAC séance | Alpha 17h{marq('h17')} |")
     lignes.append("|---|---:|---:|---:|---:|---:|---:|")
     for cle, m in mois.items():
         if m["bench_jours"] == 0:
             continue
         s = m["sommes"]
-        a_ouv = s["ouverture"] - m["bench_overnight"]
-        a_17h = s["h17"] - m["bench_session"]
+        # Alpha NET de frais, cohérent avec metriques.py et la page web : c'est
+        # ce qui resterait réellement en poche face à un ETF CAC 40.
+        n_ouv, n_17h = s["ouverture"] - m["frais"], s["h17"] - m["frais"]
+        a_ouv = n_ouv - m["bench_overnight"]
+        a_17h = n_17h - m["bench_session"]
         lignes.append(
             f"| {cle} "
-            f"| {s['ouverture']:+.2f}€ | {m['bench_overnight']:+.2f}€ "
+            f"| {n_ouv:+.2f}€ | {m['bench_overnight']:+.2f}€ "
             f"| {_signe(a_ouv)} {a_ouv:+.2f}€ "
-            f"| {s['h17']:+.2f}€ | {m['bench_session']:+.2f}€ "
+            f"| {n_17h:+.2f}€ | {m['bench_session']:+.2f}€ "
             f"| {_signe(a_17h)} {a_17h:+.2f}€ |"
         )
-    lignes.append("\n_Alpha positif = la sélection bat « acheter le CAC chaque soir ». "
-                  "C'est le vrai juge de la stratégie._\n")
+    lignes.append(f"\n_★ = sortie de référence ({LIB_REF}). Alpha positif = la "
+                  "sélection bat « acheter le CAC chaque soir ». C'est le vrai "
+                  "juge de la stratégie._\n")
 
     # Détail du mois en cours (calendrier jour par jour)
     cle_courant = next(iter(mois))
     m = mois[cle_courant]
     lignes.append(f"### Détail du mois {cle_courant} (jour par jour)\n")
+    lignes.append(f"_Meilleur/pire jour au scénario de référence ({LIB_REF})._\n")
     if m["meilleur"]:
         lignes.append(f"- Meilleur jour : **{m['meilleur']['date']}** "
                       f"{m['meilleur']['pnl']:+.2f}€ ({'+'.join(m['meilleur']['tickers'])})")
@@ -186,7 +202,8 @@ def rendu_mensuel() -> str:
         lignes.append(f"- Pire jour : **{m['pire']['date']}** "
                       f"{m['pire']['pnl']:+.2f}€ ({'+'.join(m['pire']['tickers'])})")
     lignes.append("")
-    lignes.append("| Date | Actions | Ouverture | 9h30 | Midi | 17h |")
+    lignes.append(f"| Date | Actions | Ouverture{marq('ouverture')} | 9h30 "
+                  f"| Midi | 17h{marq('h17')} |")
     lignes.append("|---|---|---:|---:|---:|---:|")
     for date, b in _jours().items():
         if not date.startswith(cle_courant):
@@ -223,18 +240,19 @@ def historique_recent_texte(n: int = 10) -> str:
     gagnants = 0
     lignes = []
     for p in recent:
-        h17 = p["evaluation"]["scenarios"].get("h17")
-        if not h17:
+        ref = p["evaluation"]["scenarios"].get(REF)
+        if not ref:
             continue
-        if h17["pnl_pct"] > 0:
+        if ref["pnl_pct"] > 0:
             gagnants += 1
         lignes.append(
             f"- {p['date_achat']} {p['ticker']} ({p.get('nom', '')}): "
-            f"{h17['pnl_pct']:+.2f}% au 17h (conviction {p.get('conviction', '?')})"
+            f"{ref['pnl_pct']:+.2f}% à l'{LIB_REF.lower()} "
+            f"(conviction {p.get('conviction', '?')})"
         )
     if not lignes:
         return ""
     taux = gagnants / len(lignes) * 100
     entete = (f"Sur tes {len(lignes)} derniers paris évalués : {gagnants} gagnants "
-              f"au 17h ({taux:.0f}%). Détail :\n")
+              f"à la revente de référence ({LIB_REF.lower()}, {taux:.0f}%). Détail :\n")
     return entete + "\n".join(lignes)

@@ -1,6 +1,7 @@
 """Couche d'évaluation rigoureuse (statistiques ajustées du risque).
 
-Calcule, sur la série des rendements journaliers (scénario 17h, NET de frais) :
+Calcule, sur la série des rendements journaliers (scénario de sortie de
+référence — cf. config.SCENARIO_REFERENCE —, NET de frais) :
   - Sharpe et Sortino annualisés (rendement par unité de risque),
   - max drawdown (pire perte cumulée pic-à-creux),
   - profit factor, taux de réussite, gain/perte moyens, espérance,
@@ -26,18 +27,18 @@ def _series_rendements():
     refs = benchmark.references()
     strat, alpha, pnl_net = [], [], []
     for date, b in bilan._jours().items():
-        if b["sommes"]["h17"] is None:
+        if b["sommes"][bilan.REF] is None:
             continue
         capital = b["n"] * config.ALLOCATION_PAR_ACTION
         if capital <= 0:
             continue
-        net = b["sommes"]["h17"] - bilan._cout_jour(b["n"])
+        net = b["sommes"][bilan.REF] - bilan._cout_jour(b["n"])
         r = net / capital
         strat.append(r)
         pnl_net.append(net)
         ref = refs.get(date)
         if ref:
-            alpha.append(r - ref["session_pct"] / 100)
+            alpha.append(r - ref[config.BENCH_CLE_REFERENCE] / 100)
     return np.array(strat), np.array(alpha), np.array(pnl_net)
 
 
@@ -132,7 +133,8 @@ def rendu_texte() -> str:
     def f(x, suf="", dec=2):
         return f"{x:.{dec}f}{suf}" if x is not None else "n/d"
 
-    lignes = ["## Métriques ajustées du risque (scénario 17h, net de frais)\n"]
+    lignes = [f"## Métriques ajustées du risque "
+              f"(sortie {bilan.LIB_REF.lower()}, net de frais)\n"]
     lignes.append(f"_Basé sur {res['n']} jour(s) évalué(s). Total net : "
                   f"{res['total_net_eur']:+.2f}€._\n")
     lignes.append("| Métrique | Valeur | Lecture |")

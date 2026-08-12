@@ -41,6 +41,22 @@ MODELE = os.getenv("ANALYSE_MODEL", "claude-opus-4-8")
 ALLOCATION_PAR_ACTION = float(os.getenv("ALLOCATION_PAR_ACTION", "500"))
 NB_ACHATS_PAR_SOIR = 2
 
+# --- Scénario de sortie de référence ---------------------------------------
+# Moment de revente qui sert de P&L « officiel » (bilan, métriques, page web).
+# Les 4 scénarios restent enregistrés et comparés dans le tableau de bord.
+#
+# Passé de « h17 » à « ouverture » le 2026-08-12, sur 30 séances évaluées :
+# garder jusqu'à 17h détruisait de la valeur de façon SIGNIFICATIVE (alpha
+# -0.676%/j, IC 95% [-1.21%; -0.14%] entièrement sous zéro, Sharpe -5.45),
+# alors que sortir à l'ouverture était légèrement positif (+19.75€, Sharpe
+# +0.87). Mécanisme : la sélection achète une force de clôture, le gap du
+# lendemain la paie, puis la séance la rend (fade intraday après gap haussier).
+# C'est aussi conforme à l'intention du projet : un pari OVERNIGHT.
+SCENARIO_REFERENCE = "ouverture"
+# Clé du benchmark CAC 40 comparable à ce scénario (cf. app/benchmark.py) :
+# overnight_pct = clôture veille → ouverture ; session_pct = clôture → clôture.
+BENCH_CLE_REFERENCE = "overnight_pct"
+
 # Coût estimé d'un aller-retour (achat + vente) en % du montant investi.
 # Sert à afficher un P&L NET de frais dans le bilan mensuel (les frais rongent
 # l'edge overnight). ~0.20% est réaliste pour de grandes valeurs liquides chez
