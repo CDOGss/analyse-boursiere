@@ -1961,8 +1961,33 @@
       "raisonnement": "OVH signe +3.40% sur la journée avec une clôture à 0.77 du range et un volume 0.90x, meilleur des flux 'tech' de la liste. La hausse cumulée 5j (+3.72%) reste mesurée, donc pas de sur-extension menaçant une prise de bénéfices immédiate. Le flux propre au titre tiendrait même si la tape US se retourne dans la nuit.",
       "risque": "Titre volatil et corrélé au sentiment tech ; un retournement du Nasdaq cette nuit peut peser à l'ouverture. Attention aussi au risque de digestion après deux séances de hausse.",
       "prix_decision_17h": 16.729999542236328,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 16.63,
+      "evaluation": {
+        "date_evaluation": "2026-08-12",
+        "prix_entree": 16.63,
+        "scenarios": {
+          "ouverture": {
+            "prix": 16.59,
+            "pnl_eur": -1.2,
+            "pnl_pct": -0.24
+          },
+          "premiere_demi_heure": {
+            "prix": 16.27,
+            "pnl_eur": -10.82,
+            "pnl_pct": -2.16
+          },
+          "mi_journee": {
+            "prix": 15.97,
+            "pnl_eur": -19.84,
+            "pnl_pct": -3.97
+          },
+          "h17": {
+            "prix": 16.22,
+            "pnl_eur": -12.33,
+            "pnl_pct": -2.47
+          }
+        }
+      }
     },
     {
       "id": "2026-08-11_ELIOR.PA",
@@ -1975,6 +2000,59 @@
       "raisonnement": "Elior affiche une force tranquille (+1.74% sans excès, 5j quasi plat) et clôture près de son plus-haut avec un volume supérieur à sa moyenne récente — exactement le type de flux net qu'on cherche à prolonger. Secteur restauration/services collectifs nettement distinct d'OVH, ce qui respecte la diversification.",
       "risque": "Small-cap peu liquide, l'edge overnight est mince ; un simple élargissement de spread à l'ouverture peut effacer le gain.",
       "prix_decision_17h": 2.1019999980926514,
+      "prix_entree": 2.106,
+      "evaluation": {
+        "date_evaluation": "2026-08-12",
+        "prix_entree": 2.106,
+        "scenarios": {
+          "ouverture": {
+            "prix": 2.1,
+            "pnl_eur": -1.42,
+            "pnl_pct": -0.28
+          },
+          "premiere_demi_heure": {
+            "prix": 2.112,
+            "pnl_eur": 1.42,
+            "pnl_pct": 0.28
+          },
+          "mi_journee": {
+            "prix": 2.114,
+            "pnl_eur": 1.9,
+            "pnl_pct": 0.38
+          },
+          "h17": {
+            "prix": 2.134,
+            "pnl_eur": 6.65,
+            "pnl_pct": 1.33
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-12_ACA.PA",
+      "date_achat": "2026-08-12",
+      "ticker": "ACA.PA",
+      "nom": "Crédit Agricole",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Clôture pile au plus-haut du jour (clôt@1.00) sur un volume solide (0.62x), signe d'un flux acheteur propre qui domine la séance malgré un CAC rouge.",
+      "raisonnement": "Le titre finit exactement au sommet de son range avec le meilleur ratio de volume de la shortlist parmi les vraies forces, et une hausse mesurée (+0.55%, +4% sur 5j) sans excès parabolique. La tape US verte sur les financières et un VIX en baisse renforcent le contexte pour un gap d'ouverture positif.",
+      "risque": "Valeur bancaire sensible au sentiment de marché global : un retournement nocturne de Wall Street effacerait le petit avantage overnight.",
+      "prix_decision_17h": 20.1299991607666,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-12_ELIOR.PA",
+      "date_achat": "2026-08-12",
+      "ticker": "ELIOR.PA",
+      "nom": "Elior",
+      "allocation_eur": 500.0,
+      "conviction": 46,
+      "catalyseur": "Clôture proche du plus-haut (clôt@0.86) avec la meilleure hausse mesurée du jour (+1.33%) et un volume au-dessus de sa moyenne (0.67x).",
+      "raisonnement": "Force propre au titre dans un secteur (restauration collective) totalement décorrélé de Crédit Agricole, ce qui assure la diversification. Le flux acheteur de fin de séance et la progression maîtrisée sur 5j suggèrent un momentum sain plutôt qu'un emballement.",
+      "risque": "Historique récent défavorable à l'ouverture sur ce titre et volume qui reste modeste en absolu ; small cap plus volatile sur le gap.",
+      "prix_decision_17h": 2.134000062942505,
       "prix_entree": null,
       "evaluation": null
     }
