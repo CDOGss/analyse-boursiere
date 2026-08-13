@@ -2039,8 +2039,33 @@
       "raisonnement": "Le titre finit exactement au sommet de son range avec le meilleur ratio de volume de la shortlist parmi les vraies forces, et une hausse mesurée (+0.55%, +4% sur 5j) sans excès parabolique. La tape US verte sur les financières et un VIX en baisse renforcent le contexte pour un gap d'ouverture positif.",
       "risque": "Valeur bancaire sensible au sentiment de marché global : un retournement nocturne de Wall Street effacerait le petit avantage overnight.",
       "prix_decision_17h": 20.1299991607666,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 20.17,
+      "evaluation": {
+        "date_evaluation": "2026-08-13",
+        "prix_entree": 20.17,
+        "scenarios": {
+          "ouverture": {
+            "prix": 20.35,
+            "pnl_eur": 4.46,
+            "pnl_pct": 0.89
+          },
+          "premiere_demi_heure": {
+            "prix": 20.27,
+            "pnl_eur": 2.48,
+            "pnl_pct": 0.5
+          },
+          "mi_journee": {
+            "prix": 20.26,
+            "pnl_eur": 2.23,
+            "pnl_pct": 0.45
+          },
+          "h17": {
+            "prix": 20.17,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
     },
     {
       "id": "2026-08-12_ELIOR.PA",
@@ -2053,6 +2078,59 @@
       "raisonnement": "Force propre au titre dans un secteur (restauration collective) totalement décorrélé de Crédit Agricole, ce qui assure la diversification. Le flux acheteur de fin de séance et la progression maîtrisée sur 5j suggèrent un momentum sain plutôt qu'un emballement.",
       "risque": "Historique récent défavorable à l'ouverture sur ce titre et volume qui reste modeste en absolu ; small cap plus volatile sur le gap.",
       "prix_decision_17h": 2.134000062942505,
+      "prix_entree": 2.144,
+      "evaluation": {
+        "date_evaluation": "2026-08-13",
+        "prix_entree": 2.144,
+        "scenarios": {
+          "ouverture": {
+            "prix": 2.16,
+            "pnl_eur": 3.73,
+            "pnl_pct": 0.75
+          },
+          "premiere_demi_heure": {
+            "prix": 2.156,
+            "pnl_eur": 2.8,
+            "pnl_pct": 0.56
+          },
+          "mi_journee": {
+            "prix": 2.166,
+            "pnl_eur": 5.13,
+            "pnl_pct": 1.03
+          },
+          "h17": {
+            "prix": 2.156,
+            "pnl_eur": 2.8,
+            "pnl_pct": 0.56
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-13_NXI.PA",
+      "date_achat": "2026-08-13",
+      "ticker": "NXI.PA",
+      "nom": "Nexity",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Clôture pile sur le plus-haut du jour (clôt@1.00) avec hausse mesurée (+2.73%), flux acheteur propre à prolonger à l'ouverture.",
+      "raisonnement": "Nexity ferme exactement au plus-haut de séance avec un volume correct (0.80x) et une progression contenue qui n'est pas parabolique (5j +4.55%). Ce flux acheteur de fin de séance est le signal recherché pour un gap haussier, indépendant de la tape US qui reste néanmoins verte ce soir.",
+      "risque": "Volume seulement moyen et immobilier sensible aux taux ; un retournement nocturne US effacerait facilement un edge mince.",
+      "prix_decision_17h": 7.349999904632568,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-13_IPS.PA",
+      "date_achat": "2026-08-13",
+      "ticker": "IPS.PA",
+      "nom": "Ipsos",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Volume nettement au-dessus de la normale (1.49x) sur une séance verte (+2.05%), signe d'un intérêt acheteur réel.",
+      "raisonnement": "Ipsos affiche le meilleur ratio de volume de la shortlist (1.49x) avec une clôture dans le haut du range (0.69), sur un secteur (études de marché/media) distinct de Nexity, ce qui respecte la diversification. Le flux est réel mais la clôture n'est pas au plus-haut, d'où une conviction plus prudente.",
+      "risque": "Clôture seulement à 0.69 du range, pas au sommet ; le volume élevé peut aussi traduire des prises de bénéfices latentes.",
+      "prix_decision_17h": 38.7599983215332,
       "prix_entree": null,
       "evaluation": null
     }
