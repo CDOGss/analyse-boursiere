@@ -2117,8 +2117,33 @@
       "raisonnement": "Nexity ferme exactement au plus-haut de séance avec un volume correct (0.80x) et une progression contenue qui n'est pas parabolique (5j +4.55%). Ce flux acheteur de fin de séance est le signal recherché pour un gap haussier, indépendant de la tape US qui reste néanmoins verte ce soir.",
       "risque": "Volume seulement moyen et immobilier sensible aux taux ; un retournement nocturne US effacerait facilement un edge mince.",
       "prix_decision_17h": 7.349999904632568,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 7.335,
+      "evaluation": {
+        "date_evaluation": "2026-08-14",
+        "prix_entree": 7.335,
+        "scenarios": {
+          "ouverture": {
+            "prix": 7.35,
+            "pnl_eur": 1.02,
+            "pnl_pct": 0.2
+          },
+          "premiere_demi_heure": {
+            "prix": 7.335,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 7.425,
+            "pnl_eur": 6.13,
+            "pnl_pct": 1.23
+          },
+          "h17": {
+            "prix": 7.385,
+            "pnl_eur": 3.41,
+            "pnl_pct": 0.68
+          }
+        }
+      }
     },
     {
       "id": "2026-08-13_IPS.PA",
@@ -2131,6 +2156,59 @@
       "raisonnement": "Ipsos affiche le meilleur ratio de volume de la shortlist (1.49x) avec une clôture dans le haut du range (0.69), sur un secteur (études de marché/media) distinct de Nexity, ce qui respecte la diversification. Le flux est réel mais la clôture n'est pas au plus-haut, d'où une conviction plus prudente.",
       "risque": "Clôture seulement à 0.69 du range, pas au sommet ; le volume élevé peut aussi traduire des prises de bénéfices latentes.",
       "prix_decision_17h": 38.7599983215332,
+      "prix_entree": 38.7,
+      "evaluation": {
+        "date_evaluation": "2026-08-14",
+        "prix_entree": 38.7,
+        "scenarios": {
+          "ouverture": {
+            "prix": 38.8,
+            "pnl_eur": 1.29,
+            "pnl_pct": 0.26
+          },
+          "premiere_demi_heure": {
+            "prix": 39.06,
+            "pnl_eur": 4.65,
+            "pnl_pct": 0.93
+          },
+          "mi_journee": {
+            "prix": 39.48,
+            "pnl_eur": 10.08,
+            "pnl_pct": 2.02
+          },
+          "h17": {
+            "prix": 39.4,
+            "pnl_eur": 9.04,
+            "pnl_pct": 1.81
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-14_UBI.PA",
+      "date_achat": "2026-08-14",
+      "ticker": "UBI.PA",
+      "nom": "Ubisoft",
+      "allocation_eur": 500.0,
+      "conviction": 53,
+      "catalyseur": "Flux acheteur propre au titre : +4,34% sur la séance avec clôture tout près du plus-haut (clôt@0.91) et volume au-dessus de la médiane de la shortlist (0.53x).",
+      "raisonnement": "Ubisoft affiche le meilleur couple momentum/clôture-au-plus-haut de la shortlist, signe d'un flux acheteur spécifique qui a la meilleure chance de se prolonger au fixing d'ouverture. La force est portée par un intérêt propre au dossier et non par la seule beta marché, ce qui satisfait l'exigence de flux idiosyncratique.",
+      "risque": "Titre très volatil et spéculatif : sur 3 nuits de week-end, forte exposition à une prise de bénéfices ou à un flux news adverse. Hausse déjà significative du jour.",
+      "prix_decision_17h": 5.383999824523926,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-14_VRLA.PA",
+      "date_achat": "2026-08-14",
+      "ticker": "VRLA.PA",
+      "nom": "Verallia",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Hausse mesurée +2,12% avec clôture haute (clôt@0.79) et volume solide (0.51x), force tranquille sans sur-extension (5j -1,45%).",
+      "raisonnement": "Verallia offre une force propre plus tranquille que UBI : progression modérée, clôture dans le haut du range et volume correct, sans emballement sur 5 jours qui exposerait à une purge d'ouverture. Secteur emballage/verre nettement distinct du jeu vidéo, ce qui assure la diversification.",
+      "risque": "Volume et amplitude modestes : l'edge overnight est mince et une tape US rouge le week-end pourrait suffire à annuler le gap.",
+      "prix_decision_17h": 18.290000915527344,
       "prix_entree": null,
       "evaluation": null
     }
