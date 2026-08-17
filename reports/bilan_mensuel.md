@@ -1,4 +1,4 @@
-# Bilan mensuel — mis à jour le 2026-08-14 17:06
+# Bilan mensuel — mis à jour le 2026-08-17 17:06
 
 ## Tableau de bord mensuel
 
@@ -6,14 +6,14 @@ _Sortie de référence : **Ouverture**. Frais d'aller-retour estimés : 0.20% pa
 
 | Mois | Jours | Ouverture | 9h30 | Midi | 17h | Ouverture (net) | Réussite |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-08 | 10 | 🟢 +59.46€ | 🟢 +52.41€ | 🟢 +28.36€ | 🟢 +7.91€ | 🟢 +39.46€ | 60% |
+| 2026-08 | 11 | 🟢 +52.98€ | 🟢 +41.05€ | 🟢 +29.01€ | 🟢 +4.63€ | 🟢 +30.98€ | 55% |
 | 2026-07 | 23 | 🟢 +18.17€ | 🟢 +4.13€ | 🔴 -44.07€ | 🔴 -82.71€ | 🔴 -17.83€ | 57% |
 
 **Alpha vs CAC 40** (même capital « acheté chaque soir », stratégie NETTE de frais) :
 
 | Mois | Stratégie (ouv.) ★ | CAC overnight | Alpha ouv. ★ | Stratégie (17h) | CAC séance | Alpha 17h |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-08 | +39.46€ | +22.93€ | 🟢 +16.53€ | -12.09€ | +23.90€ | 🔴 -35.99€ |
+| 2026-08 | +30.98€ | +21.98€ | 🟢 +9.00€ | -17.37€ | +17.90€ | 🔴 -35.27€ |
 | 2026-07 | -17.83€ | +7.09€ | 🔴 -24.91€ | -118.71€ | +3.29€ | 🔴 -122.00€ |
 
 _★ = sortie de référence (Ouverture). Alpha positif = la sélection bat « acheter le CAC chaque soir ». C'est le vrai juge de la stratégie._
@@ -23,7 +23,7 @@ _★ = sortie de référence (Ouverture). Alpha positif = la sélection bat « a
 _Meilleur/pire jour au scénario de référence (Ouverture)._
 
 - Meilleur jour : **2026-08-03** +32.69€ (MT.AS+MMT.PA)
-- Pire jour : **2026-08-10** -3.20€ (VIV.PA+CLARI.PA)
+- Pire jour : **2026-08-17** -6.48€ (UBI.PA+VRLA.PA)
 
 | Date | Actions | Ouverture ★ | 9h30 | Midi | 17h |
 |---|---|---:|---:|---:|---:|
@@ -37,3 +37,4 @@ _Meilleur/pire jour au scénario de référence (Ouverture)._
 | 2026-08-12 | OVH.PA+ELIOR.PA | 🔴 -2.62€ | 🔴 -9.40€ | 🔴 -17.94€ | 🔴 -5.68€ |
 | 2026-08-13 | ACA.PA+ELIOR.PA | 🟢 +8.19€ | 🟢 +5.28€ | 🟢 +7.36€ | 🟢 +2.80€ |
 | 2026-08-14 | NXI.PA+IPS.PA | 🟢 +2.31€ | 🟢 +4.65€ | 🟢 +16.21€ | 🟢 +12.45€ |
+| 2026-08-17 | UBI.PA+VRLA.PA | 🔴 -6.48€ | 🔴 -11.36€ | 🟢 +0.65€ | 🔴 -3.28€ |
