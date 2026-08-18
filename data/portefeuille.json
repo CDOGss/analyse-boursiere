@@ -2273,6 +2273,45 @@
       "raisonnement": "Sur une séance globalement distributive, OVH surnage avec une hausse mesurée et un momentum 5j favorable (+5.93%), ce qui traduit un intérêt acheteur propre au titre plutôt qu'un simple bêta de marché. C'est cependant le seul argument solide : volume modeste (0.58x) et clôture pas franchement collée au plus-haut limitent la conviction.",
       "risque": "Volume faible et clôture seulement mi-haute de range ; tape US molle et VIX en hausse peuvent effacer le petit gap. Mon historique récent sur OVH est deux petites pertes à l'ouverture.",
       "prix_decision_17h": 17.139999389648438,
+      "prix_entree": 17.4,
+      "evaluation": {
+        "date_evaluation": "2026-08-18",
+        "prix_entree": 17.4,
+        "scenarios": {
+          "ouverture": {
+            "prix": 17.33,
+            "pnl_eur": -2.01,
+            "pnl_pct": -0.4
+          },
+          "premiere_demi_heure": {
+            "prix": 17.07,
+            "pnl_eur": -9.48,
+            "pnl_pct": -1.9
+          },
+          "mi_journee": {
+            "prix": 17.26,
+            "pnl_eur": -4.02,
+            "pnl_pct": -0.8
+          },
+          "h17": {
+            "prix": 16.93,
+            "pnl_eur": -13.51,
+            "pnl_pct": -2.7
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-18_PLX.PA",
+      "date_achat": "2026-08-18",
+      "ticker": "PLX.PA",
+      "nom": "Pluxee",
+      "allocation_eur": 500.0,
+      "conviction": 53,
+      "catalyseur": "Flux acheteur propre au titre : volume à 1.85x la moyenne (de loin le meilleur ratio de la shortlist), clôture positive (+0.81%) dans le haut du range (clôt@0.70) alors que le marché plongeait.",
+      "raisonnement": "Dans une séance largement rouge, Pluxee affiche une hausse à contre-courant portée par un volume nettement au-dessus de la normale, signe d'un flux acheteur spécifique et non d'un simple bêta de marché. Le modèle titres-restaurant est relativement défensif et peu corrélé au Nasdaq, ce qui protège partiellement d'un retournement nocturne US. La progression reste mesurée sur 5j (+2.20%), donc peu de risque de prise de bénéfices massive à l'ouverture.",
+      "risque": "Clôture seulement à 0.70 du range (pas au plus-haut) et régime de marché fragile : un prolongement de la baisse US ce soir peut effacer le petit gain et provoquer un gap d'ouverture négatif.",
+      "prix_decision_17h": 14.890000343322754,
       "prix_entree": null,
       "evaluation": null
     }
