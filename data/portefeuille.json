@@ -2312,6 +2312,59 @@
       "raisonnement": "Dans une séance largement rouge, Pluxee affiche une hausse à contre-courant portée par un volume nettement au-dessus de la normale, signe d'un flux acheteur spécifique et non d'un simple bêta de marché. Le modèle titres-restaurant est relativement défensif et peu corrélé au Nasdaq, ce qui protège partiellement d'un retournement nocturne US. La progression reste mesurée sur 5j (+2.20%), donc peu de risque de prise de bénéfices massive à l'ouverture.",
       "risque": "Clôture seulement à 0.70 du range (pas au plus-haut) et régime de marché fragile : un prolongement de la baisse US ce soir peut effacer le petit gain et provoquer un gap d'ouverture négatif.",
       "prix_decision_17h": 14.890000343322754,
+      "prix_entree": 14.88,
+      "evaluation": {
+        "date_evaluation": "2026-08-19",
+        "prix_entree": 14.88,
+        "scenarios": {
+          "ouverture": {
+            "prix": 15.03,
+            "pnl_eur": 5.04,
+            "pnl_pct": 1.01
+          },
+          "premiere_demi_heure": {
+            "prix": 15.04,
+            "pnl_eur": 5.38,
+            "pnl_pct": 1.08
+          },
+          "mi_journee": {
+            "prix": 14.99,
+            "pnl_eur": 3.7,
+            "pnl_pct": 0.74
+          },
+          "h17": {
+            "prix": 15.13,
+            "pnl_eur": 8.4,
+            "pnl_pct": 1.68
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-19_CLARI.PA",
+      "date_achat": "2026-08-19",
+      "ticker": "CLARI.PA",
+      "nom": "Clariane (ex-Korian)",
+      "allocation_eur": 500.0,
+      "conviction": 55,
+      "catalyseur": "Flux acheteur propre au titre en fin de séance, volume 1.32x nettement au-dessus de la normale sur une hausse mesurée.",
+      "raisonnement": "C'est le seul candidat combinant un ratio de volume élevé (1.32x) avec une clôture dans le haut du range (clôt@0.81) et une hausse contenue (+1.20%), signe d'un flux acheteur réel et non parabolique. La tape US verte et le VIX en baisse offrent un contexte porteur pour prolonger ce momentum à l'ouverture.",
+      "risque": "Small cap volatile au dossier de désendettement fragile ; le volume peut refléter un flux ponctuel sans suite.",
+      "prix_decision_17h": 4.058000087738037,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-19_OR.PA",
+      "date_achat": "2026-08-19",
+      "ticker": "OR.PA",
+      "nom": "L'Oréal",
+      "allocation_eur": 500.0,
+      "conviction": 51,
+      "catalyseur": "Momentum de fin de séance (+1.82%, clôture haut de range) appuyé par un sentiment social US haussier.",
+      "raisonnement": "L'Oréal ferme fort (+1.82%) près du plus-haut (clôt@0.79) avec un volume correct pour une méga-cap (0.50x) et un sentiment social US positif. Secteur consommation/beauté, nettement distinct de la santé de Clariane, ce qui assure la diversification.",
+      "risque": "Grande valeur dont le gap dépend surtout du sentiment luxe/beauté et de la tape US ; edge propre modeste.",
+      "prix_decision_17h": 382.25,
       "prix_entree": null,
       "evaluation": null
     }
