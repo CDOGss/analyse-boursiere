@@ -2351,8 +2351,33 @@
       "raisonnement": "C'est le seul candidat combinant un ratio de volume élevé (1.32x) avec une clôture dans le haut du range (clôt@0.81) et une hausse contenue (+1.20%), signe d'un flux acheteur réel et non parabolique. La tape US verte et le VIX en baisse offrent un contexte porteur pour prolonger ce momentum à l'ouverture.",
       "risque": "Small cap volatile au dossier de désendettement fragile ; le volume peut refléter un flux ponctuel sans suite.",
       "prix_decision_17h": 4.058000087738037,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 4.02,
+      "evaluation": {
+        "date_evaluation": "2026-08-20",
+        "prix_entree": 4.02,
+        "scenarios": {
+          "ouverture": {
+            "prix": 4.04,
+            "pnl_eur": 2.49,
+            "pnl_pct": 0.5
+          },
+          "premiere_demi_heure": {
+            "prix": 4.05,
+            "pnl_eur": 3.73,
+            "pnl_pct": 0.75
+          },
+          "mi_journee": {
+            "prix": 4.03,
+            "pnl_eur": 1.24,
+            "pnl_pct": 0.25
+          },
+          "h17": {
+            "prix": 4.002,
+            "pnl_eur": -2.24,
+            "pnl_pct": -0.45
+          }
+        }
+      }
     },
     {
       "id": "2026-08-19_OR.PA",
@@ -2365,6 +2390,59 @@
       "raisonnement": "L'Oréal ferme fort (+1.82%) près du plus-haut (clôt@0.79) avec un volume correct pour une méga-cap (0.50x) et un sentiment social US positif. Secteur consommation/beauté, nettement distinct de la santé de Clariane, ce qui assure la diversification.",
       "risque": "Grande valeur dont le gap dépend surtout du sentiment luxe/beauté et de la tape US ; edge propre modeste.",
       "prix_decision_17h": 382.25,
+      "prix_entree": 382.55,
+      "evaluation": {
+        "date_evaluation": "2026-08-20",
+        "prix_entree": 382.55,
+        "scenarios": {
+          "ouverture": {
+            "prix": 384.5,
+            "pnl_eur": 2.55,
+            "pnl_pct": 0.51
+          },
+          "premiere_demi_heure": {
+            "prix": 384.75,
+            "pnl_eur": 2.88,
+            "pnl_pct": 0.58
+          },
+          "mi_journee": {
+            "prix": 383.8,
+            "pnl_eur": 1.63,
+            "pnl_pct": 0.33
+          },
+          "h17": {
+            "prix": 384.4,
+            "pnl_eur": 2.42,
+            "pnl_pct": 0.48
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-20_ERF.PA",
+      "date_achat": "2026-08-20",
+      "ticker": "ERF.PA",
+      "nom": "Eurofins Scientific",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Flux acheteur propre au titre : +2.46% sur la séance avec clôture quasi au plus-haut (clôt@0.88) et volume soutenu (0.58x) sur une valeur défensive de tests/labo peu exposée au sentiment tech.",
+      "raisonnement": "La clôture près du plus-haut avec le meilleur volume relatif des candidats propres traduit un flux acheteur spécifique qui tend à se prolonger à l'ouverture. Profil défensif (santé/testing) qui résiste mieux si la tape US se dégrade dans la nuit. Hausse mesurée (5j +3.28%), donc pas de sur-extension menaçant une prise de bénéfices.",
+      "risque": "Tape US rouge ce soir pouvant peser sur l'ouverture européenne ; volume tout de même sous la moyenne.",
+      "prix_decision_17h": 72.4000015258789,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-20_MAU.PA",
+      "date_achat": "2026-08-20",
+      "ticker": "MAU.PA",
+      "nom": "Maurel & Prom",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Momentum énergie : +1.82% avec clôture haute (clôt@0.81) et le meilleur ratio de volume parmi les candidats propres (0.71x), porté par la fermeté du pétrole (TotalEnergies aussi verte).",
+      "raisonnement": "Clôture près du plus-haut avec volume solide, signe d'un flux acheteur propre au titre dans un secteur énergie découplé des tech américaines. Secteur nettement différent d'Eurofins (santé), ce qui respecte la diversification.",
+      "risque": "Titre plus volatil et dépendant du prix du brut, qui peut se retourner pendant la nuit ; 5j +7.64% commence à être étiré.",
+      "prix_decision_17h": 8.670000076293945,
       "prix_entree": null,
       "evaluation": null
     }
