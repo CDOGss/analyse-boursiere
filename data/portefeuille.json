@@ -2429,8 +2429,33 @@
       "raisonnement": "La clôture près du plus-haut avec le meilleur volume relatif des candidats propres traduit un flux acheteur spécifique qui tend à se prolonger à l'ouverture. Profil défensif (santé/testing) qui résiste mieux si la tape US se dégrade dans la nuit. Hausse mesurée (5j +3.28%), donc pas de sur-extension menaçant une prise de bénéfices.",
       "risque": "Tape US rouge ce soir pouvant peser sur l'ouverture européenne ; volume tout de même sous la moyenne.",
       "prix_decision_17h": 72.4000015258789,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 72.82,
+      "evaluation": {
+        "date_evaluation": "2026-08-21",
+        "prix_entree": 72.82,
+        "scenarios": {
+          "ouverture": {
+            "prix": 72.62,
+            "pnl_eur": -1.37,
+            "pnl_pct": -0.27
+          },
+          "premiere_demi_heure": {
+            "prix": 72.34,
+            "pnl_eur": -3.3,
+            "pnl_pct": -0.66
+          },
+          "mi_journee": {
+            "prix": 72.32,
+            "pnl_eur": -3.43,
+            "pnl_pct": -0.69
+          },
+          "h17": {
+            "prix": 72.68,
+            "pnl_eur": -0.96,
+            "pnl_pct": -0.19
+          }
+        }
+      }
     },
     {
       "id": "2026-08-20_MAU.PA",
@@ -2443,6 +2468,59 @@
       "raisonnement": "Clôture près du plus-haut avec volume solide, signe d'un flux acheteur propre au titre dans un secteur énergie découplé des tech américaines. Secteur nettement différent d'Eurofins (santé), ce qui respecte la diversification.",
       "risque": "Titre plus volatil et dépendant du prix du brut, qui peut se retourner pendant la nuit ; 5j +7.64% commence à être étiré.",
       "prix_decision_17h": 8.670000076293945,
+      "prix_entree": 8.65,
+      "evaluation": {
+        "date_evaluation": "2026-08-21",
+        "prix_entree": 8.65,
+        "scenarios": {
+          "ouverture": {
+            "prix": 8.635,
+            "pnl_eur": -0.87,
+            "pnl_pct": -0.17
+          },
+          "premiere_demi_heure": {
+            "prix": 8.675,
+            "pnl_eur": 1.45,
+            "pnl_pct": 0.29
+          },
+          "mi_journee": {
+            "prix": 8.625,
+            "pnl_eur": -1.45,
+            "pnl_pct": -0.29
+          },
+          "h17": {
+            "prix": 8.5,
+            "pnl_eur": -8.67,
+            "pnl_pct": -1.73
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-21_ALTA.PA",
+      "date_achat": "2026-08-21",
+      "ticker": "ALTA.PA",
+      "nom": "Altarea",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Flux acheteur de clôture propre au titre, clôture près du plus-haut avec le meilleur ratio de volume de la shortlist.",
+      "raisonnement": "Altarea clôture à 0.89 du range sur une hausse mesurée (+1.83% jour, +0.60% sur 5j) et surtout avec un volume de 1.15x — le seul candidat à dépasser sa moyenne, signe d'un flux réel et non d'un simple biais de marché. La force est 'tranquille' (pas de sur-extension) donc peu exposée à une prise de bénéfices brutale à l'ouverture.",
+      "risque": "Foncière sensible aux taux longs US qui remontent (crise de dette évoquée) ; le week-end de 3 nuits laisse le temps à une nouvelle obligataire de peser.",
+      "prix_decision_17h": 100.19999694824219,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-21_APAM.AS",
+      "date_achat": "2026-08-21",
+      "ticker": "APAM.AS",
+      "nom": "Aperam",
+      "allocation_eur": 500.0,
+      "conviction": 48,
+      "catalyseur": "Rebond sectoriel acier avec clôture dans le haut du range après une semaine négative.",
+      "raisonnement": "Aperam gagne +3.31% en clôturant à 0.76 du range, un rebond après -5.36% sur 5 jours, avec un volume moyen (0.50x). Secteur (acier) nettement distinct de la foncière Altarea, ce qui respecte la diversification. Le mouvement de fin de séance traduit un intérêt acheteur qui peut se prolonger sur un gap.",
+      "risque": "Volume seulement à 0.50x et hausse déjà forte du jour ; valeur cyclique exposée à un retournement de la tape US et au risque week-end.",
+      "prix_decision_17h": 44.880001068115234,
       "prix_entree": null,
       "evaluation": null
     }
