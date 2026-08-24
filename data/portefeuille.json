@@ -2507,8 +2507,33 @@
       "raisonnement": "Altarea clôture à 0.89 du range sur une hausse mesurée (+1.83% jour, +0.60% sur 5j) et surtout avec un volume de 1.15x — le seul candidat à dépasser sa moyenne, signe d'un flux réel et non d'un simple biais de marché. La force est 'tranquille' (pas de sur-extension) donc peu exposée à une prise de bénéfices brutale à l'ouverture.",
       "risque": "Foncière sensible aux taux longs US qui remontent (crise de dette évoquée) ; le week-end de 3 nuits laisse le temps à une nouvelle obligataire de peser.",
       "prix_decision_17h": 100.19999694824219,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 100.6,
+      "evaluation": {
+        "date_evaluation": "2026-08-24",
+        "prix_entree": 100.6,
+        "scenarios": {
+          "ouverture": {
+            "prix": 100.2,
+            "pnl_eur": -1.99,
+            "pnl_pct": -0.4
+          },
+          "premiere_demi_heure": {
+            "prix": 99.5,
+            "pnl_eur": -5.47,
+            "pnl_pct": -1.09
+          },
+          "mi_journee": {
+            "prix": 99.4,
+            "pnl_eur": -5.96,
+            "pnl_pct": -1.19
+          },
+          "h17": {
+            "prix": 99.2,
+            "pnl_eur": -6.96,
+            "pnl_pct": -1.39
+          }
+        }
+      }
     },
     {
       "id": "2026-08-21_APAM.AS",
@@ -2521,6 +2546,45 @@
       "raisonnement": "Aperam gagne +3.31% en clôturant à 0.76 du range, un rebond après -5.36% sur 5 jours, avec un volume moyen (0.50x). Secteur (acier) nettement distinct de la foncière Altarea, ce qui respecte la diversification. Le mouvement de fin de séance traduit un intérêt acheteur qui peut se prolonger sur un gap.",
       "risque": "Volume seulement à 0.50x et hausse déjà forte du jour ; valeur cyclique exposée à un retournement de la tape US et au risque week-end.",
       "prix_decision_17h": 44.880001068115234,
+      "prix_entree": 45.02,
+      "evaluation": {
+        "date_evaluation": "2026-08-24",
+        "prix_entree": 45.02,
+        "scenarios": {
+          "ouverture": {
+            "prix": 45.67,
+            "pnl_eur": 7.22,
+            "pnl_pct": 1.44
+          },
+          "premiere_demi_heure": {
+            "prix": 45.48,
+            "pnl_eur": 5.11,
+            "pnl_pct": 1.02
+          },
+          "mi_journee": {
+            "prix": 45.9,
+            "pnl_eur": 9.77,
+            "pnl_pct": 1.95
+          },
+          "h17": {
+            "prix": 45.62,
+            "pnl_eur": 6.66,
+            "pnl_pct": 1.33
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-24_CLARI.PA",
+      "date_achat": "2026-08-24",
+      "ticker": "CLARI.PA",
+      "nom": "Clariane (ex-Korian)",
+      "allocation_eur": 500.0,
+      "conviction": 50,
+      "catalyseur": "Momentum de clôture propre : titre défensif domestique qui finit près de ses plus-hauts du jour avec un volume relatif correct pour la valeur.",
+      "raisonnement": "Clariane clôture à 0.79 du range avec +0.85% et un ratio de volume (0.57x) supérieur au reste des candidats liquides, signe d'un flux acheteur net en fin de séance. Valeur santé/domestique peu corrélée au Nasdaq, donc la thèse tient même si la tape US se retourne dans la nuit. Hausse mesurée, pas de sur-extension (5j +0.25%).",
+      "risque": "Signal modeste et volume seulement moyen ; tape US rouge ce soir peut peser légèrement sur l'ouverture, gap espéré faible.",
+      "prix_decision_17h": 4.039999961853027,
       "prix_entree": null,
       "evaluation": null
     }
