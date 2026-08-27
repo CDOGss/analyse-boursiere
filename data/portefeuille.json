@@ -2624,8 +2624,33 @@
       "raisonnement": "Imerys ferme exactement sur son plus-haut avec un volume soutenu (0,74x, le meilleur des candidats momentum hors AF) et une hausse mesurée (+1,34% sur 5j, donc pas de sur-extension à purger). Le profil 'force tranquille' recherché : momentum de clôture net sans excès. Tape US verte en soutien.",
       "risque": "Titre matériaux cyclique sensible à un retournement macro nocturne ; volume seulement 0,74x, edge overnight mince.",
       "prix_decision_17h": 24.1200008392334,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 24.06,
+      "evaluation": {
+        "date_evaluation": "2026-08-27",
+        "prix_entree": 24.06,
+        "scenarios": {
+          "ouverture": {
+            "prix": 24.4,
+            "pnl_eur": 7.07,
+            "pnl_pct": 1.41
+          },
+          "premiere_demi_heure": {
+            "prix": 24.36,
+            "pnl_eur": 6.23,
+            "pnl_pct": 1.25
+          },
+          "mi_journee": {
+            "prix": 24.16,
+            "pnl_eur": 2.08,
+            "pnl_pct": 0.42
+          },
+          "h17": {
+            "prix": 23.94,
+            "pnl_eur": -2.49,
+            "pnl_pct": -0.5
+          }
+        }
+      }
     },
     {
       "id": "2026-08-25_VLTSA.PA",
@@ -2638,6 +2663,59 @@
       "raisonnement": "Voltalia affiche le meilleur ratio de volume des candidats momentum (1,08x) combiné à une clôture haute, ce qui prolonge souvent un flux le lendemain. Secteur énergie renouvelable, nettement distinct d'Imerys pour la diversification. Progression contenue (+3,80% sur 5j).",
       "risque": "Small cap volatile, sensible aux taux et à l'appétit pour le risque US ; la clôture n'est pas pile au plus-haut (0,89).",
       "prix_decision_17h": 6.829999923706055,
+      "prix_entree": 6.81,
+      "evaluation": {
+        "date_evaluation": "2026-08-27",
+        "prix_entree": 6.81,
+        "scenarios": {
+          "ouverture": {
+            "prix": 7.29,
+            "pnl_eur": 35.24,
+            "pnl_pct": 7.05
+          },
+          "premiere_demi_heure": {
+            "prix": 7.22,
+            "pnl_eur": 30.1,
+            "pnl_pct": 6.02
+          },
+          "mi_journee": {
+            "prix": 7.1,
+            "pnl_eur": 21.29,
+            "pnl_pct": 4.26
+          },
+          "h17": {
+            "prix": 6.99,
+            "pnl_eur": 13.22,
+            "pnl_pct": 2.64
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-27_ATE.PA",
+      "date_achat": "2026-08-27",
+      "ticker": "ATE.PA",
+      "nom": "Alten",
+      "allocation_eur": 500.0,
+      "conviction": 60,
+      "catalyseur": "Flux acheteur spécifique au titre : clôture près du plus-haut (0.81) sur volume exceptionnel (2.42x), à contre-courant d'un CAC à -1.62%.",
+      "raisonnement": "C'est le seul candidat combinant un ratio de volume vraiment élevé (2.42x) et une clôture haute avec un gain mesuré (+3.07%, pas surétendu à +2.66% sur 5j). Ce flux marqué en pleine séance rouge trahit un intérêt acheteur propre à la valeur, que la tape US verte peut prolonger à l'ouverture.",
+      "risque": "Le +3% du jour peut inviter à des prises de bénéfices matinales ; le rebond n'est pas confirmé par un catalyseur daté.",
+      "prix_decision_17h": 77.0999984741211,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-27_RNO.PA",
+      "date_achat": "2026-08-27",
+      "ticker": "RNO.PA",
+      "nom": "Renault",
+      "allocation_eur": 500.0,
+      "conviction": 54,
+      "catalyseur": "Clôture pile au plus-haut du jour (clôt@1.00) avec +2.94%, force nette dans un marché baissier.",
+      "raisonnement": "Renault termine exactement sur son plus-haut, signature d'un flux acheteur soutenu jusqu'au coup de cloche, dans un secteur auto épaulé par le sentiment social positif sur Stellantis et une tape US favorable. Secteur nettement différent d'Alten pour la diversification.",
+      "risque": "Volume seulement modéré (0.68x) donc conviction limitée ; l'auto reste sensible au sentiment macro et au retournement possible de la nuit US.",
+      "prix_decision_17h": 28.020000457763672,
       "prix_entree": null,
       "evaluation": null
     }
