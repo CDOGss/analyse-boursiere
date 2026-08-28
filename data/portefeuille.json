@@ -2702,8 +2702,33 @@
       "raisonnement": "C'est le seul candidat combinant un ratio de volume vraiment élevé (2.42x) et une clôture haute avec un gain mesuré (+3.07%, pas surétendu à +2.66% sur 5j). Ce flux marqué en pleine séance rouge trahit un intérêt acheteur propre à la valeur, que la tape US verte peut prolonger à l'ouverture.",
       "risque": "Le +3% du jour peut inviter à des prises de bénéfices matinales ; le rebond n'est pas confirmé par un catalyseur daté.",
       "prix_decision_17h": 77.0999984741211,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 76.9,
+      "evaluation": {
+        "date_evaluation": "2026-08-28",
+        "prix_entree": 76.9,
+        "scenarios": {
+          "ouverture": {
+            "prix": 77.275,
+            "pnl_eur": 2.44,
+            "pnl_pct": 0.49
+          },
+          "premiere_demi_heure": {
+            "prix": 76.75,
+            "pnl_eur": -0.98,
+            "pnl_pct": -0.2
+          },
+          "mi_journee": {
+            "prix": 75.5,
+            "pnl_eur": -9.1,
+            "pnl_pct": -1.82
+          },
+          "h17": {
+            "prix": 76.45,
+            "pnl_eur": -2.93,
+            "pnl_pct": -0.59
+          }
+        }
+      }
     },
     {
       "id": "2026-08-27_RNO.PA",
@@ -2716,6 +2741,59 @@
       "raisonnement": "Renault termine exactement sur son plus-haut, signature d'un flux acheteur soutenu jusqu'au coup de cloche, dans un secteur auto épaulé par le sentiment social positif sur Stellantis et une tape US favorable. Secteur nettement différent d'Alten pour la diversification.",
       "risque": "Volume seulement modéré (0.68x) donc conviction limitée ; l'auto reste sensible au sentiment macro et au retournement possible de la nuit US.",
       "prix_decision_17h": 28.020000457763672,
+      "prix_entree": 28.4,
+      "evaluation": {
+        "date_evaluation": "2026-08-28",
+        "prix_entree": 28.4,
+        "scenarios": {
+          "ouverture": {
+            "prix": 28.72,
+            "pnl_eur": 5.63,
+            "pnl_pct": 1.13
+          },
+          "premiere_demi_heure": {
+            "prix": 28.49,
+            "pnl_eur": 1.58,
+            "pnl_pct": 0.32
+          },
+          "mi_journee": {
+            "prix": 28.88,
+            "pnl_eur": 8.45,
+            "pnl_pct": 1.69
+          },
+          "h17": {
+            "prix": 29.15,
+            "pnl_eur": 13.2,
+            "pnl_pct": 2.64
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-28_ELIS.PA",
+      "date_achat": "2026-08-28",
+      "ticker": "ELIS.PA",
+      "nom": "Elis",
+      "allocation_eur": 500.0,
+      "conviction": 58,
+      "catalyseur": "Clôture exactement au plus haut du jour (clôt@1.00) avec volume soutenu, signe d'un flux acheteur propre au titre en fin de séance.",
+      "raisonnement": "Elis affiche la meilleure signature technique de la shortlist : clôture pile au plus haut (1.00) sur un volume correct (0.74x) et une hausse mesurée (+0.50%), donc pas de sur-extension à corriger à l'ouverture. Ce flux de clôture tranquille est exactement le type de force propre au titre recherché pour un gap haussier, indépendamment de la nuit US.",
+      "risque": "Pari sur 3 nuits (week-end) qui allonge l'exposition à un aléa ; volume seulement moyen et absence de catalyseur daté.",
+      "prix_decision_17h": 24.020000457763672,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-28_BNP.PA",
+      "date_achat": "2026-08-28",
+      "ticker": "BNP.PA",
+      "nom": "BNP Paribas",
+      "allocation_eur": 500.0,
+      "conviction": 49,
+      "catalyseur": "Clôture près du plus haut (clôt@0.88) sur le meilleur volume de la shortlist bancaire (0.67x), dans un secteur financier bien orienté ce vendredi.",
+      "raisonnement": "BNP referme près de ses plus hauts avec un flux acheteur visible dans le secteur bancaire porteur du jour. Le repli récent (5j -5%) laisse un potentiel de rebond technique et la valorisation reste attractive, offrant un profil différent d'Elis pour la diversification sectorielle.",
+      "risque": "Momentum 5 jours négatif, secteur bancaire sensible aux taux/actualité macro du week-end et clôture pas totalement au plus haut.",
+      "prix_decision_17h": 102.08000183105469,
       "prix_entree": null,
       "evaluation": null
     }
