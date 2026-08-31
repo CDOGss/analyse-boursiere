@@ -2780,8 +2780,33 @@
       "raisonnement": "Elis affiche la meilleure signature technique de la shortlist : clôture pile au plus haut (1.00) sur un volume correct (0.74x) et une hausse mesurée (+0.50%), donc pas de sur-extension à corriger à l'ouverture. Ce flux de clôture tranquille est exactement le type de force propre au titre recherché pour un gap haussier, indépendamment de la nuit US.",
       "risque": "Pari sur 3 nuits (week-end) qui allonge l'exposition à un aléa ; volume seulement moyen et absence de catalyseur daté.",
       "prix_decision_17h": 24.020000457763672,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 23.9,
+      "evaluation": {
+        "date_evaluation": "2026-08-31",
+        "prix_entree": 23.9,
+        "scenarios": {
+          "ouverture": {
+            "prix": 24.08,
+            "pnl_eur": 3.77,
+            "pnl_pct": 0.75
+          },
+          "premiere_demi_heure": {
+            "prix": 24.18,
+            "pnl_eur": 5.86,
+            "pnl_pct": 1.17
+          },
+          "mi_journee": {
+            "prix": 24.04,
+            "pnl_eur": 2.93,
+            "pnl_pct": 0.59
+          },
+          "h17": {
+            "prix": 23.9,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
     },
     {
       "id": "2026-08-28_BNP.PA",
@@ -2794,6 +2819,59 @@
       "raisonnement": "BNP referme près de ses plus hauts avec un flux acheteur visible dans le secteur bancaire porteur du jour. Le repli récent (5j -5%) laisse un potentiel de rebond technique et la valorisation reste attractive, offrant un profil différent d'Elis pour la diversification sectorielle.",
       "risque": "Momentum 5 jours négatif, secteur bancaire sensible aux taux/actualité macro du week-end et clôture pas totalement au plus haut.",
       "prix_decision_17h": 102.08000183105469,
+      "prix_entree": 100.66,
+      "evaluation": {
+        "date_evaluation": "2026-08-31",
+        "prix_entree": 100.66,
+        "scenarios": {
+          "ouverture": {
+            "prix": 103.14,
+            "pnl_eur": 12.32,
+            "pnl_pct": 2.46
+          },
+          "premiere_demi_heure": {
+            "prix": 103.32,
+            "pnl_eur": 13.21,
+            "pnl_pct": 2.64
+          },
+          "mi_journee": {
+            "prix": 103.42,
+            "pnl_eur": 13.71,
+            "pnl_pct": 2.74
+          },
+          "h17": {
+            "prix": 103.44,
+            "pnl_eur": 13.81,
+            "pnl_pct": 2.76
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-08-31_AYV.PA",
+      "date_achat": "2026-08-31",
+      "ticker": "AYV.PA",
+      "nom": "Ayvens (ex-ALD)",
+      "allocation_eur": 500.0,
+      "conviction": 57,
+      "catalyseur": "Poussée acheteuse marquée en fin de séance (+4.13% sur le jour, clôture à 0.89 du range) avec le meilleur ratio de volume des candidats de qualité (0.84x).",
+      "raisonnement": "Le titre clôture près de son plus-haut du jour sur volume relatif le plus élevé de la shortlist, signe d'un flux propre encore actif à la cloche. La hausse du jour est franche sans être parabolique (5j quasi plat à -0.70%), ce qui limite le risque de prise de bénéfices à l'ouverture. C'est exactement le profil de force 'tranquille' recherché pour prolonger le gap.",
+      "risque": "Tape US rouge ce soir qui pourrait plomber l'ouverture ; valeur de financement auto sensible au sentiment macro français dégradé.",
+      "prix_decision_17h": 11.350000381469727,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-08-31_NK.PA",
+      "date_achat": "2026-08-31",
+      "ticker": "NK.PA",
+      "nom": "Imerys",
+      "allocation_eur": 500.0,
+      "conviction": 51,
+      "catalyseur": "Clôture solide (+3.50% sur le jour, clôt@0.76) prolongeant une dynamique de 5 jours positive (+5.62%) sur volume correct (0.51x).",
+      "raisonnement": "Valeur des matériaux/minéraux industriels, secteur nettement distinct d'Ayvens, ce qui assure la diversification. Le flux de clôture reste orienté haut avec un volume au-dessus de la moyenne des grands caps, et le track record récent sur ce titre (+1.41% le 25/08) confirme sa capacité à gapper à la hausse.",
+      "risque": "Hausse cumulée sur 5 jours (+5.62%) commence à être étendue, exposant à une consolidation à l'ouverture ; contexte macro européen faible.",
+      "prix_decision_17h": 24.81999969482422,
       "prix_entree": null,
       "evaluation": null
     }
