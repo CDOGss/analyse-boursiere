@@ -2858,8 +2858,33 @@
       "raisonnement": "Le titre clôture près de son plus-haut du jour sur volume relatif le plus élevé de la shortlist, signe d'un flux propre encore actif à la cloche. La hausse du jour est franche sans être parabolique (5j quasi plat à -0.70%), ce qui limite le risque de prise de bénéfices à l'ouverture. C'est exactement le profil de force 'tranquille' recherché pour prolonger le gap.",
       "risque": "Tape US rouge ce soir qui pourrait plomber l'ouverture ; valeur de financement auto sensible au sentiment macro français dégradé.",
       "prix_decision_17h": 11.350000381469727,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 11.4,
+      "evaluation": {
+        "date_evaluation": "2026-09-01",
+        "prix_entree": 11.4,
+        "scenarios": {
+          "ouverture": {
+            "prix": 11.44,
+            "pnl_eur": 1.75,
+            "pnl_pct": 0.35
+          },
+          "premiere_demi_heure": {
+            "prix": 11.51,
+            "pnl_eur": 4.82,
+            "pnl_pct": 0.96
+          },
+          "mi_journee": {
+            "prix": 11.26,
+            "pnl_eur": -6.14,
+            "pnl_pct": -1.23
+          },
+          "h17": {
+            "prix": 11.25,
+            "pnl_eur": -6.58,
+            "pnl_pct": -1.32
+          }
+        }
+      }
     },
     {
       "id": "2026-08-31_NK.PA",
@@ -2872,6 +2897,45 @@
       "raisonnement": "Valeur des matériaux/minéraux industriels, secteur nettement distinct d'Ayvens, ce qui assure la diversification. Le flux de clôture reste orienté haut avec un volume au-dessus de la moyenne des grands caps, et le track record récent sur ce titre (+1.41% le 25/08) confirme sa capacité à gapper à la hausse.",
       "risque": "Hausse cumulée sur 5 jours (+5.62%) commence à être étendue, exposant à une consolidation à l'ouverture ; contexte macro européen faible.",
       "prix_decision_17h": 24.81999969482422,
+      "prix_entree": 24.9,
+      "evaluation": {
+        "date_evaluation": "2026-09-01",
+        "prix_entree": 24.9,
+        "scenarios": {
+          "ouverture": {
+            "prix": 24.94,
+            "pnl_eur": 0.8,
+            "pnl_pct": 0.16
+          },
+          "premiere_demi_heure": {
+            "prix": 24.91,
+            "pnl_eur": 0.2,
+            "pnl_pct": 0.04
+          },
+          "mi_journee": {
+            "prix": 24.7,
+            "pnl_eur": -4.02,
+            "pnl_pct": -0.8
+          },
+          "h17": {
+            "prix": 24.74,
+            "pnl_eur": -3.21,
+            "pnl_pct": -0.64
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-01_FNAC.PA",
+      "date_achat": "2026-09-01",
+      "ticker": "FNAC.PA",
+      "nom": "Fnac Darty",
+      "allocation_eur": 500.0,
+      "conviction": 54,
+      "catalyseur": "Clôture pile au plus-haut du jour (clôt@1.00) sur volume exceptionnel (2.83x la normale), signature d'un flux acheteur spécifique qui déborde la faiblesse générale du marché.",
+      "raisonnement": "Dans une séance largement rouge, Fnac Darty ressort comme le seul candidat combinant clôture au plus-haut ET volume nettement supérieur à la moyenne (2.83x) — le vrai signal d'edge overnight recherché. La hausse du jour reste mesurée (+0.29%, 5j +0.14%), donc pas de sur-extension ni de risque marqué de prise de bénéfices à l'ouverture. Le flux acheteur propre au titre peut se prolonger même si la tape US se retourne.",
+      "risque": "Tape US et CAC rouges ce soir : un environnement de marché dégradé peut peser sur l'ouverture malgré le flux acheteur propre au titre ; valeur peu liquide, gap parfois imprévisible.",
+      "prix_decision_17h": 34.650001525878906,
       "prix_entree": null,
       "evaluation": null
     }
