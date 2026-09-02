@@ -2936,6 +2936,59 @@
       "raisonnement": "Dans une séance largement rouge, Fnac Darty ressort comme le seul candidat combinant clôture au plus-haut ET volume nettement supérieur à la moyenne (2.83x) — le vrai signal d'edge overnight recherché. La hausse du jour reste mesurée (+0.29%, 5j +0.14%), donc pas de sur-extension ni de risque marqué de prise de bénéfices à l'ouverture. Le flux acheteur propre au titre peut se prolonger même si la tape US se retourne.",
       "risque": "Tape US et CAC rouges ce soir : un environnement de marché dégradé peut peser sur l'ouverture malgré le flux acheteur propre au titre ; valeur peu liquide, gap parfois imprévisible.",
       "prix_decision_17h": 34.650001525878906,
+      "prix_entree": 34.65,
+      "evaluation": {
+        "date_evaluation": "2026-09-02",
+        "prix_entree": 34.65,
+        "scenarios": {
+          "ouverture": {
+            "prix": 34.65,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "premiere_demi_heure": {
+            "prix": 34.65,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 34.55,
+            "pnl_eur": -1.44,
+            "pnl_pct": -0.29
+          },
+          "h17": {
+            "prix": 34.55,
+            "pnl_eur": -1.44,
+            "pnl_pct": -0.29
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-02_AMUN.PA",
+      "date_achat": "2026-09-02",
+      "ticker": "AMUN.PA",
+      "nom": "Amundi",
+      "allocation_eur": 500.0,
+      "conviction": 58,
+      "catalyseur": "Clôture au plus-haut du jour (clôt@0.95) sur volume soutenu (0.76x), flux acheteur net en fin de séance.",
+      "raisonnement": "Force « tranquille » idéale : hausse mesurée (+1.17%), 5j à plat (aucune sur-extension) et clôture collée au plus-haut avec un volume correct trahissant un flux acheteur propre au titre. Le contexte US vert et le VIX en baisse prolongent ce type de momentum overnight.",
+      "risque": "Valeur de gestion d'actifs sensible au sentiment de marché ; un retournement nocturne du Nasdaq pèserait sur l'ouverture.",
+      "prix_decision_17h": 94.8499984741211,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-09-02_NK.PA",
+      "date_achat": "2026-09-02",
+      "ticker": "NK.PA",
+      "nom": "Imerys",
+      "allocation_eur": 500.0,
+      "conviction": 53,
+      "catalyseur": "Clôture proche du plus-haut (clôt@0.88) avec le meilleur volume de ma sélection (0.77x) et un 5j positif (+2.79%) sans excès.",
+      "raisonnement": "Secteur des minéraux/matériaux, nettement distinct d'Amundi, ce qui assure la diversification. Le flux de clôture est solide et la hausse cumulée reste modérée, limitant le risque de prise de bénéfices à l'ouverture. A déjà gappé positivement lors de mes deux derniers paris récents.",
+      "risque": "Hausse du jour très faible (+0.08%) : le momentum intraday est plus mou, l'edge repose surtout sur la position dans le range.",
+      "prix_decision_17h": 25.020000457763672,
       "prix_entree": null,
       "evaluation": null
     }
