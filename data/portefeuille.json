@@ -2975,8 +2975,33 @@
       "raisonnement": "Force « tranquille » idéale : hausse mesurée (+1.17%), 5j à plat (aucune sur-extension) et clôture collée au plus-haut avec un volume correct trahissant un flux acheteur propre au titre. Le contexte US vert et le VIX en baisse prolongent ce type de momentum overnight.",
       "risque": "Valeur de gestion d'actifs sensible au sentiment de marché ; un retournement nocturne du Nasdaq pèserait sur l'ouverture.",
       "prix_decision_17h": 94.8499984741211,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 94.5,
+      "evaluation": {
+        "date_evaluation": "2026-09-03",
+        "prix_entree": 94.5,
+        "scenarios": {
+          "ouverture": {
+            "prix": 95.875,
+            "pnl_eur": 7.28,
+            "pnl_pct": 1.46
+          },
+          "premiere_demi_heure": {
+            "prix": 95.3,
+            "pnl_eur": 4.23,
+            "pnl_pct": 0.85
+          },
+          "mi_journee": {
+            "prix": 96.05,
+            "pnl_eur": 8.2,
+            "pnl_pct": 1.64
+          },
+          "h17": {
+            "prix": 96.7,
+            "pnl_eur": 11.64,
+            "pnl_pct": 2.33
+          }
+        }
+      }
     },
     {
       "id": "2026-09-02_NK.PA",
@@ -2989,6 +3014,59 @@
       "raisonnement": "Secteur des minéraux/matériaux, nettement distinct d'Amundi, ce qui assure la diversification. Le flux de clôture est solide et la hausse cumulée reste modérée, limitant le risque de prise de bénéfices à l'ouverture. A déjà gappé positivement lors de mes deux derniers paris récents.",
       "risque": "Hausse du jour très faible (+0.08%) : le momentum intraday est plus mou, l'edge repose surtout sur la position dans le range.",
       "prix_decision_17h": 25.020000457763672,
+      "prix_entree": 25.02,
+      "evaluation": {
+        "date_evaluation": "2026-09-03",
+        "prix_entree": 25.02,
+        "scenarios": {
+          "ouverture": {
+            "prix": 25.06,
+            "pnl_eur": 0.8,
+            "pnl_pct": 0.16
+          },
+          "premiere_demi_heure": {
+            "prix": 24.78,
+            "pnl_eur": -4.8,
+            "pnl_pct": -0.96
+          },
+          "mi_journee": {
+            "prix": 24.84,
+            "pnl_eur": -3.6,
+            "pnl_pct": -0.72
+          },
+          "h17": {
+            "prix": 24.72,
+            "pnl_eur": -6.0,
+            "pnl_pct": -1.2
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-03_MMT.PA",
+      "date_achat": "2026-09-03",
+      "ticker": "MMT.PA",
+      "nom": "Métropole Télévision (M6)",
+      "allocation_eur": 500.0,
+      "conviction": 57,
+      "catalyseur": "Flux acheteur de fin de séance confirmé par le meilleur ratio de volume de la shortlist des valeurs à clôture haute.",
+      "raisonnement": "M6 clôture à 0.83 du range avec un volume solide (0.91x, le plus élevé parmi les titres à clôture haute retenus) et une hausse mesurée (+1.16% jour, +1.83% 5j) : force propre et tranquille, pas de sur-extension à corriger. La tape US verte offre un vent porteur pour prolonger ce flux en gap.",
+      "risque": "Titre peu liquide/small cap, sensible à un retournement de la tape US pendant la nuit ; catalyseur propre limité.",
+      "prix_decision_17h": 12.220000267028809,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-09-03_RNO.PA",
+      "date_achat": "2026-09-03",
+      "ticker": "RNO.PA",
+      "nom": "Renault",
+      "allocation_eur": 500.0,
+      "conviction": 53,
+      "catalyseur": "Clôture quasi au plus-haut du jour (0.98) trahissant un flux acheteur puissant en fin de séance, secteur auto porté par le sentiment (Stellantis haussier).",
+      "raisonnement": "Renault ferme collé à son plus-haut (clôt@0.98), signe d'une pression acheteuse jusqu'au gong, dans un secteur auto porteur (Stellantis +3.30% et sentiment social haussier) et une tape US favorable. La hausse du jour (+3.36%) est notable mais pas parabolique et le cumul 5j reste modeste (+0.77%).",
+      "risque": "Hausse du jour un peu élevée exposant à une prise de bénéfices à l'ouverture ; volume modeste (0.50x) et titre très beta au marché.",
+      "prix_decision_17h": 28.6200008392334,
       "prix_entree": null,
       "evaluation": null
     }
