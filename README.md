@@ -1,7 +1,7 @@
 # Analyse boursière — marche à blanc (paper trading)
 
 Application qui, chaque jour vers **17h** (≈30 min avant la clôture d'Euronext
-Paris), demande à **Claude Opus 4.8** d'analyser :
+Paris), demande à **Gemini 3.8 Flash** d'analyser :
 
 - le **flux d'actualité du jour** (RSS Boursorama, Les Échos, Le Monde…),
 - un **instantané de marché** des actions du **CAC 40 et du SBF 120**,
@@ -24,7 +24,7 @@ de revente : ouverture (09:00), première demi-heure (09:30), mi-journée (13:00
 
 ```bash
 make install            # ou : python -m pip install -r requirements.txt
-cp .env.example .env    # puis renseigne ANTHROPIC_API_KEY dans .env
+cp .env.example .env    # puis renseigne GEMINI_API_KEY dans .env
 ```
 
 ## Utilisation
@@ -71,7 +71,7 @@ Mise en place (une seule fois) :
    git push -u origin main
    ```
 2. **Ajouter ta clé API en secret** : sur GitHub, *Settings → Secrets and
-   variables → Actions → New repository secret*. Nom : `ANTHROPIC_API_KEY`,
+   variables → Actions → New repository secret*. Nom : `GEMINI_API_KEY`,
    valeur : ta clé `sk-ant-...`. (Le `.env` n'est jamais poussé, il est ignoré.)
 3. **Tester** : onglet *Actions → Analyse boursière quotidienne → Run workflow*
    (le déclenchement manuel ignore le garde-fou horaire pour te permettre de
@@ -115,7 +115,7 @@ main.py              Orchestrateur (lancé par make / planificateur)
 dashboard.py         Tableau de bord récapitulatif (script autonome)
 app/news.py          Récupération des flux RSS du jour
 app/market.py        Données de marché (yfinance) : instantané + intraday
-app/analysis.py      Appel à Claude Opus 4.8 (sortie structurée JSON)
+app/analysis.py      Appel à Gemini 3.8 Flash (sortie structurée JSON)
 app/ledger.py        Registre du portefeuille papier (data/portefeuille.json)
 app/evaluate.py      Calcul des gains/pertes du lendemain
 app/report.py        Rapports console + markdown
@@ -140,7 +140,7 @@ Les résultats sont indexés par **date d'évaluation** (le jour où la position
 aurait été revendue). Frais d'aller-retour configurables via `COUT_TRANSACTION_PCT`
 dans `config.py` (défaut 0,20 %).
 
-## Signaux fournis à Claude (étape 2)
+## Signaux fournis au modèle (étape 2)
 
 Pour maximiser la probabilité d'ouverture en hausse le lendemain, le prompt reçoit :
 
@@ -152,13 +152,13 @@ Pour maximiser la probabilité d'ouverture en hausse le lendemain, le prompt re�
 - **Track record récent** réinjecté pour auto-correction.
 - **Présélection (shortlist)** : l'univers est classé (momentum de clôture +
   volume + variation) et les ~25 meilleurs candidats sont envoyés avec **données
-  enrichies** ; le reste sert de contexte. Claude privilégie la shortlist mais
+  enrichies** ; le reste sert de contexte. Le modèle privilégie la shortlist mais
   peut en sortir si un catalyseur le justifie.
 - **Calendrier de résultats** : pour chaque candidat, alerte si la société publie
   ses résultats d'ici demain (**risque binaire overnight**). *(Les révisions
   d'analystes ne sont pas disponibles gratuitement pour Euronext — non incluses.)*
 
-Claude peut retenir **1 ou 2 actions** (qualité > quantité) et fournit pour chacune
+Le modèle peut retenir **1 ou 2 actions** (qualité > quantité) et fournit pour chacune
 un catalyseur, un raisonnement et un **risque** explicite.
 
 ## Benchmark & alpha (le vrai juge)
@@ -178,7 +178,7 @@ côté des flux RSS. Limites importantes :
 - StockTwits **ne couvre pas** les tickers Euronext (`.PA`). On passe par les
   **ADR / cotations américaines**, donc seules ~21 grandes valeurs françaises
   sont couvertes (correspondance vérifiée dans `config.ADR_STOCKTWITS`).
-- Le signal est **retail, différé, partiel** — Claude reçoit la consigne de ne
+- Le signal est **retail, différé, partiel** — le modèle reçoit la consigne de ne
   pas le surpondérer. C'est un appoint, pas une preuve.
 - Le volume est faible le week-end / hors séance ; il monte quand le marché US
   est actif (les valeurs à vraie cotation US comme Stellantis, STM, TotalEnergies

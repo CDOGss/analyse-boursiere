@@ -1,10 +1,11 @@
-"""Analyse générative : Claude Opus 4.8 choisit la/les meilleure(s) action(s)."""
+"""Analyse générative : Gemini 3.8 Flash choisit la/les meilleure(s) action(s)."""
 from __future__ import annotations
 
 import datetime as dt
 import json
 
-import anthropic
+from google import genai
+from google.genai import types
 
 import config
 from app.market import Instantane
@@ -118,6 +119,20 @@ SCHEMA = {
 }
 
 
+def _schema_gemini(schema: dict) -> dict:
+    """Adapte le JSON Schema au sous-ensemble OpenAPI accepté par Gemini.
+
+    Gemini rejette `additionalProperties` ; le reste (type/properties/items/
+    required/description/enum) passe tel quel.
+    """
+    if isinstance(schema, dict):
+        return {k: _schema_gemini(v) for k, v in schema.items()
+                if k != "additionalProperties"}
+    if isinstance(schema, list):
+        return [_schema_gemini(v) for v in schema]
+    return schema
+
+
 def _bloc_marche(instantanes: list[Instantane]) -> str:
     lignes = [i.ligne() for i in instantanes if i.dernier is not None]
     return "\n".join(f"- {l}" for l in lignes)
@@ -133,17 +148,20 @@ def choisir_actions(
     bloc_shortlist: str = "",
     consigne_regime: str = "",
 ) -> dict:
-    """Interroge Claude et renvoie la sélection structurée (dict)."""
-    if not config.ANTHROPIC_API_KEY:
+    """Interroge le modèle et renvoie la sélection structurée (dict)."""
+    if not config.GEMINI_API_KEY:
         raise RuntimeError(
-            "ANTHROPIC_API_KEY manquante. Copie .env.example en .env et renseigne ta clé."
+            "GEMINI_API_KEY manquante. Copie .env.example en .env et renseigne ta clé."
         )
 
-    # Robustesse : aux heures de pointe l'API peut renvoyer un 529 « overloaded »
-    # transitoire (ou un 429/5xx). Le SDK réessaie automatiquement avec un backoff
-    # exponentiel ; on relève la limite à 8 pour encaisser un pic de charge plutôt
-    # que de faire planter tout le run sur un simple à-coup passager.
-    client = anthropic.Anthropic(api_key=config.ANTHROPIC_API_KEY, max_retries=8)
+    # Robustesse : aux heures de pointe l'API peut renvoyer un 429/5xx transitoire.
+    # Le SDK réessaie avec un backoff exponentiel ; on relève la limite à 8 pour
+    # encaisser un pic de charge plutôt que de faire planter tout le run sur un
+    # simple à-coup passager.
+    client = genai.Client(
+        api_key=config.GEMINI_API_KEY,
+        http_options=types.HttpOptions(retry_options=types.HttpRetryOptions(attempts=8)),
+    )
 
     def section(titre: str, contenu: str) -> str:
         return f"\n=== {titre} ===\n{contenu}\n" if contenu else ""
@@ -166,17 +184,18 @@ exceptionnel). Respecte la consigne de régime ci-dessus. Réponds selon le
 schéma demandé.
 """
 
-    reponse = client.messages.create(
+    reponse = client.models.generate_content(
         model=config.MODELE,
-        max_tokens=16000,
-        thinking={"type": "adaptive"},
-        output_config={
-            "effort": "high",
-            "format": {"type": "json_schema", "schema": SCHEMA},
-        },
-        system=SYSTEME,
-        messages=[{"role": "user", "content": invite}],
+        contents=invite,
+        config=types.GenerateContentConfig(
+            system_instruction=SYSTEME,
+            max_output_tokens=16000,
+            # Sélection de titres = raisonnement long : on garde le budget de
+            # réflexion maximal (équivalent de l'ancien effort « high »).
+            thinking_config=types.ThinkingConfig(thinking_level="high"),
+            response_mime_type="application/json",
+            response_schema=_schema_gemini(SCHEMA),
+        ),
     )
 
-    texte = next((b.text for b in reponse.content if b.type == "text"), "")
-    return json.loads(texte)
+    return json.loads(reponse.text)

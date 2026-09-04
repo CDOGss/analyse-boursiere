@@ -4,7 +4,7 @@
   4 moments de revente (ouverture, 9h30, midi, 17h). Ouvrable dans Excel/Sheets.
 - bilan_mensuel.md : récap par mois (brut ET net de frais), taux de réussite,
   meilleur/pire jour, cumul. Mis à jour à chaque exécution.
-- historique_recent_texte() : track record réinjecté dans le prompt Claude.
+- historique_recent_texte() : track record réinjecté dans le prompt du modèle.
 
 Les résultats sont indexés par DATE D'ÉVALUATION (le jour où la position aurait
 été revendue), pas par date d'achat.
@@ -228,9 +228,9 @@ def ecrire_bilan_mensuel() -> str:
     return str(chemin)
 
 
-# --- Feedback réinjecté dans le prompt Claude ------------------------------
+# --- Feedback réinjecté dans le prompt du modèle ------------------------------
 def historique_recent_texte(n: int = 10) -> str:
-    """Résumé des n dernières positions évaluées, pour auto-correction de Claude."""
+    """Résumé des n dernières positions évaluées, pour auto-correction du modèle."""
     evaluees = [p for p in ledger.toutes_positions() if p.get("evaluation")]
     if not evaluees:
         return ""

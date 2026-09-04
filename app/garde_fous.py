@@ -1,4 +1,4 @@
-"""Garde-fous de bon sens appliqués à la sélection finale de Claude.
+"""Garde-fous de bon sens appliqués à la sélection finale du modèle.
 
 Indépendants du P&L récent (donc pas de sur-optimisation) : ils corrigent trois
 travers classiques du momentum :
@@ -7,7 +7,7 @@ travers classiques du momentum :
   3. concentration sectorielle (deux paris corrélés le même soir).
 
 Les points 1 et 2 sont déjà filtrés en amont dans la shortlist (market.preselection) ;
-on les revérifie ici comme filet de sécurité (au cas où Claude choisit hors shortlist),
+on les revérifie ici comme filet de sécurité (au cas où le modèle choisit hors shortlist),
 et on applique le point 3 qui dépend de la combinaison des deux choix.
 """
 from __future__ import annotations
@@ -26,7 +26,7 @@ def secteur(ticker: str) -> str | None:
 
 def appliquer(selection: list[dict], instantanes: list[Instantane],
               nb_max: int) -> tuple[list[dict], list[str]]:
-    """Filtre la sélection de Claude selon les garde-fous.
+    """Filtre la sélection du modèle selon les garde-fous.
 
     Retourne (sélection retenue, notes expliquant les éventuels rejets).
     """

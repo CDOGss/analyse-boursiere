@@ -33,7 +33,7 @@ jobs:
 
       - name: Lancer l'analyse
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PYTHONUTF8: "1"
           TZ: Europe/Paris
         # Déclenché par cron-job.org à 17h05 Paris : run complet (pas de garde-fou

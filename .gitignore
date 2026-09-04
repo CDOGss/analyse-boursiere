@@ -10,3 +10,8 @@ venv/
 # Log du lanceur local (le portefeuille et les rapports, eux, SONT versionnés
 # pour persister entre les exécutions GitHub Actions)
 reports/journal.log
+
+# Secrets — toutes les variantes (.env, .env.txt créé par le Bloc-notes…)
+.env
+.env.*
+!.env.example

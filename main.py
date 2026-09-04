@@ -5,7 +5,7 @@ Déroulé d'une exécution :
      gain/perte théorique aux 4 moments de la séance du jour (ouverture, 1re
      demi-heure, mi-journée, 17h).
   2. ANALYSE : récupère le flux d'actualité du jour + un instantané du marché,
-     demande à Claude Opus 4.8 les 2 meilleures actions, et les « achète » à
+     demande à Gemini 3.8 Flash les 2 meilleures actions, et les « achète » à
      blanc (500€ chacune par défaut).
 
 C'est une MARCHE À BLANC : aucun ordre réel n'est passé.
@@ -100,7 +100,7 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
                 consigne = (f"Régime de PRUDENCE ({regime['raison']}). Ne retiens "
                             f"qu'UNE seule action, la plus convaincante.")
 
-            print("       Interrogation de Claude Opus 4.8…")
+            print("       Interrogation de Gemini 3.8 Flash…")
             analyse = analysis.choisir_actions(
                 instantanes, bloc_actu, jour, bloc_social, ctx_macro, bilan_recent,
                 bloc_shortlist, consigne,

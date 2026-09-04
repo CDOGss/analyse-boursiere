@@ -36,8 +36,8 @@ HEURE_EXEC_MIN = 17            # ne pas acheter avant ~la clôture
 HEURE_EXEC_MAX = 21            # filet de sécurité tardif (Wall Street ouvre jusqu'à 22h)
 
 # --- API / modèle ----------------------------------------------------------
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-MODELE = os.getenv("ANALYSE_MODEL", "claude-opus-4-8")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+MODELE = os.getenv("ANALYSE_MODEL", "gemini-3.8-flash")
 ALLOCATION_PAR_ACTION = float(os.getenv("ALLOCATION_PAR_ACTION", "500"))
 NB_ACHATS_PAR_SOIR = 2
 
@@ -63,7 +63,7 @@ BENCH_CLE_REFERENCE = "overnight_pct"
 # un courtier discount. Mets 0 pour ignorer les frais.
 COUT_TRANSACTION_PCT = float(os.getenv("COUT_TRANSACTION_PCT", "0.20"))
 
-# Présélection : nombre de candidats prioritaires (shortlist) envoyés à Claude
+# Présélection : nombre de candidats prioritaires (shortlist) envoyés au modèle
 # avec données enrichies (résultats à venir, momentum de clôture, social).
 SHORTLIST_N = 25
 # Fenêtre d'alerte « résultats imminents » (jours).
@@ -82,7 +82,7 @@ SP500_HOSTILE = -1.5      # tape US sous ce % : aucun pari (cash)
 
 # --- Garde-fous de sélection -----------------------------------------------
 # Principes de bon sens appliqués AVANT (filtrage de la shortlist) et APRÈS
-# (validation de la sélection de Claude) le choix, pour corriger trois travers
+# (validation de la sélection du modèle) le choix, pour corriger trois travers
 # classiques du momentum. Indépendants du P&L récent → pas de sur-optimisation.
 #
 # VOLUME : on écarte uniquement les titres DÉSERTÉS, pas ceux « sous la moyenne ».
