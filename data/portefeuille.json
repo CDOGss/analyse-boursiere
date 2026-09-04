@@ -3053,8 +3053,33 @@
       "raisonnement": "M6 clôture à 0.83 du range avec un volume solide (0.91x, le plus élevé parmi les titres à clôture haute retenus) et une hausse mesurée (+1.16% jour, +1.83% 5j) : force propre et tranquille, pas de sur-extension à corriger. La tape US verte offre un vent porteur pour prolonger ce flux en gap.",
       "risque": "Titre peu liquide/small cap, sensible à un retournement de la tape US pendant la nuit ; catalyseur propre limité.",
       "prix_decision_17h": 12.220000267028809,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 12.2,
+      "evaluation": {
+        "date_evaluation": "2026-09-04",
+        "prix_entree": 12.2,
+        "scenarios": {
+          "ouverture": {
+            "prix": 12.24,
+            "pnl_eur": 1.64,
+            "pnl_pct": 0.33
+          },
+          "premiere_demi_heure": {
+            "prix": 12.06,
+            "pnl_eur": -5.74,
+            "pnl_pct": -1.15
+          },
+          "mi_journee": {
+            "prix": 12.12,
+            "pnl_eur": -3.28,
+            "pnl_pct": -0.66
+          },
+          "h17": {
+            "prix": 12.02,
+            "pnl_eur": -7.38,
+            "pnl_pct": -1.48
+          }
+        }
+      }
     },
     {
       "id": "2026-09-03_RNO.PA",
@@ -3067,8 +3092,33 @@
       "raisonnement": "Renault ferme collé à son plus-haut (clôt@0.98), signe d'une pression acheteuse jusqu'au gong, dans un secteur auto porteur (Stellantis +3.30% et sentiment social haussier) et une tape US favorable. La hausse du jour (+3.36%) est notable mais pas parabolique et le cumul 5j reste modeste (+0.77%).",
       "risque": "Hausse du jour un peu élevée exposant à une prise de bénéfices à l'ouverture ; volume modeste (0.50x) et titre très beta au marché.",
       "prix_decision_17h": 28.6200008392334,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 28.85,
+      "evaluation": {
+        "date_evaluation": "2026-09-04",
+        "prix_entree": 28.85,
+        "scenarios": {
+          "ouverture": {
+            "prix": 29.19,
+            "pnl_eur": 5.89,
+            "pnl_pct": 1.18
+          },
+          "premiere_demi_heure": {
+            "prix": 29.25,
+            "pnl_eur": 6.93,
+            "pnl_pct": 1.39
+          },
+          "mi_journee": {
+            "prix": 29.37,
+            "pnl_eur": 9.01,
+            "pnl_pct": 1.8
+          },
+          "h17": {
+            "prix": 29.36,
+            "pnl_eur": 8.84,
+            "pnl_pct": 1.77
+          }
+        }
+      }
     }
   ]
 }
