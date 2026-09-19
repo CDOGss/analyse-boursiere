@@ -5,10 +5,11 @@ voire abandonné en cas de charge (c'est ce qui a fait rater le 1er jour). Pour 
 déclenchement **fiable sans laisser le PC allumé**, un service de cron externe
 appelle l'API GitHub chaque jour ouvré à heure fixe pour lancer le workflow.
 
-Le cron GitHub interne est **conservé en secours** (voir
-`.github/workflows/analyse.yml`). Si les deux se déclenchent le même jour,
-l'anti-doublon (`ledger.a_deja_achete`) garantit **un seul achat**, et le groupe
-de concurrence du workflow sérialise les exécutions : aucun risque de doublon.
+Le cron GitHub interne a été **retiré** : il se déclenchait avec des heures de
+retard. cron-job.org est donc le **seul** déclencheur — s'il s'arrête, plus
+rien ne tourne (voir « Dépannage » en bas). Le groupe de concurrence du workflow
+et l'anti-doublon (`ledger.a_deja_achete`) protègent quand même contre un
+double lancement le même jour.
 
 ## 1. Créer un jeton GitHub (fine-grained, portée minimale)
 
@@ -69,6 +70,40 @@ curl -i -X POST \
 
 Réponse attendue : `HTTP/2 204`. Ensuite, vérifie l'onglet **Actions** du dépôt :
 un run de type *workflow_dispatch* doit apparaître dans la minute.
+
+## Dépannage : « plus aucune analyse depuis le … »
+
+Symptôme : dans l'onglet **Actions** du dépôt, plus aucun run *workflow_dispatch*
+depuis plusieurs jours (ce n'est pas un run qui échoue : il n'y a **pas de run
+du tout**). C'est cron-job.org qui n'appelle plus GitHub. Arrivé le 11/09/2026.
+
+1. **Console cron-job.org** → ouvre le cronjob → onglet **History** (historique
+   des exécutions). Regarde le code HTTP des dernières tentatives :
+   - **401 Unauthorized** → le jeton GitHub a **expiré** ou a été révoqué
+     (cause la plus fréquente : les jetons fine-grained ont une date de fin).
+   - **404 Not Found** → dépôt renommé, ou jeton sans accès au dépôt.
+   - **403** → permission « Actions : Read and write » manquante.
+   - **Pas de tentative du tout** → le job est **désactivé** (cron-job.org
+     désactive un job après trop d'échecs consécutifs, et te l'envoie par mail).
+2. **Si 401 : régénère un jeton** (étape 1 ci-dessus), puis dans le cronjob
+   remplace la valeur du header `Authorization` par `Bearer <NOUVEAU_JETON>`.
+   Note la nouvelle date d'expiration dans ton agenda.
+3. **Réactive le job** (interrupteur *Enabled*) puis **Test run** : attends
+   `204`, et vérifie qu'un run apparaît dans **Actions** dans la minute.
+
+### Tester la configuration GitHub sans polluer les données
+
+Un jour **sans séance** (week-end, jour férié), ne lance pas le workflow en mode
+normal : il « achèterait » des actions datées d'un jour sans cotation (une garde
+week-end bloque désormais l'achat, mais autant ne pas compter dessus). Utilise
+le mode test :
+
+- **Actions** → *Analyse boursière quotidienne* → **Run workflow** → **mode :
+  `test-api`** → un ping minimal du modèle valide la clé `GEMINI_API_KEY` et le
+  nom du modèle, sans écrire aucune donnée.
+- En ligne de commande : `gh workflow run analyse.yml -f mode=test-api`.
+
+Résultat attendu dans le log : `Clé API et modèle valides.`
 
 ## Pourquoi 17:05 ?
 
