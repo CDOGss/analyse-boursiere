@@ -208,12 +208,23 @@ def tester_api() -> str:
     if not config.GEMINI_API_KEY:
         raise RuntimeError("GEMINI_API_KEY manquante (secret GitHub non défini ou vide).")
     client = genai.Client(api_key=config.GEMINI_API_KEY)
+    # Pas de plafond serré sur max_output_tokens : sur Gemini 3.x les jetons de
+    # RÉFLEXION (thinking) comptent dans ce budget ; un plafond de 16 laissait
+    # zéro jeton pour la réponse elle-même → texte vide.
     reponse = client.models.generate_content(
         model=config.MODELE,
         contents="Réponds uniquement par le mot : OK",
-        config=types.GenerateContentConfig(max_output_tokens=16),
+        config=types.GenerateContentConfig(max_output_tokens=1024),
     )
     texte = (reponse.text or "").strip()
     if not texte:
-        raise RuntimeError("Réponse vide du modèle.")
+        # Diagnostic : pourquoi vide ? (blocage sécurité, budget épuisé, etc.)
+        cand = (reponse.candidates or [None])[0]
+        fin = getattr(cand, "finish_reason", None) if cand else None
+        usage = getattr(reponse, "usage_metadata", None)
+        pf = getattr(reponse, "prompt_feedback", None)
+        raise RuntimeError(
+            f"Réponse vide du modèle. finish_reason={fin} ; "
+            f"prompt_feedback={pf} ; usage={usage}"
+        )
     return texte
