@@ -50,6 +50,14 @@ def run(jour: dt.date | None = None, sans_analyse: bool = False) -> None:
         print("Des achats existent déjà pour aujourd'hui — exécution en double, "
               "rien à refaire (anti-doublon). Rapports conservés tels quels.")
         return
+    # Garde week-end : pas de séance samedi/dimanche, donc pas d'« achat ce
+    # soir ». Un lancement manuel (bouton « Run workflow ») un week-end créerait
+    # une position fantôme datée d'un jour sans cotation, portée sur 2-3 nuits
+    # et évaluée sur le mauvais jour — ce qui polluerait le track record.
+    if not sans_analyse and jour.weekday() >= 5:
+        print(f"[2/2] {jour:%A} : pas de séance, aucun achat ce soir "
+              "(garde week-end). Évaluation seule.")
+        sans_analyse = True
     if not sans_analyse:
         print("[2/2] Récupération de l'actualité et du marché…")
         univers = config.univers()
@@ -160,7 +168,20 @@ def main() -> int:
     parseur.add_argument("--garde-cloture", action="store_true",
                          help="Ne s'exécute que dans la fenêtre du soir (17h–21h Paris), "
                               "robuste aux retards des crons UTC de GitHub Actions.")
+    parseur.add_argument("--test-api", action="store_true",
+                         help="Ping minimal du modèle pour valider la clé API et le nom "
+                              "du modèle, sans toucher aux données. Utile pour vérifier "
+                              "la configuration GitHub Actions un jour sans séance.")
     args = parseur.parse_args()
+
+    if args.test_api:
+        try:
+            print(f"Test API — modèle {config.MODELE} : réponse « {analysis.tester_api()} »")
+            print("Clé API et modèle valides.")
+            return 0
+        except Exception as e:  # noqa: BLE001
+            print(f"\n[ERREUR test API] {e}", file=sys.stderr)
+            return 1
 
     # Garde-fou horaire : les crons UTC de GitHub étant souvent retardés, on
     # accepte toute la fenêtre du soir (17h–21h Paris) au lieu de 17h pile. Le

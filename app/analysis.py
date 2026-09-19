@@ -199,3 +199,21 @@ schéma demandé.
     )
 
     return json.loads(reponse.text)
+
+
+def tester_api() -> str:
+    """Ping minimal du modèle : valide la clé et le nom du modèle sans toucher
+    aux données (aucun achat, aucun rapport). Sert à vérifier la configuration
+    GitHub Actions (secret GEMINI_API_KEY) hors des heures de séance."""
+    if not config.GEMINI_API_KEY:
+        raise RuntimeError("GEMINI_API_KEY manquante (secret GitHub non défini ou vide).")
+    client = genai.Client(api_key=config.GEMINI_API_KEY)
+    reponse = client.models.generate_content(
+        model=config.MODELE,
+        contents="Réponds uniquement par le mot : OK",
+        config=types.GenerateContentConfig(max_output_tokens=16),
+    )
+    texte = (reponse.text or "").strip()
+    if not texte:
+        raise RuntimeError("Réponse vide du modèle.")
+    return texte

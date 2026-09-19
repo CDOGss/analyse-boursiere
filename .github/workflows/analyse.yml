@@ -7,6 +7,12 @@ on:
   # secours) et, après une remise à zéro, pouvait racheter pour une journée déjà
   # clôturée. cron-job.org est le déclencheur fiable (voir docs/declenchement-externe.md).
   workflow_dispatch:          # appelé par cron-job.org (et bouton « Run workflow » manuel)
+    inputs:
+      mode:
+        description: "normal = séance complète ; test-api = ping du modèle sans toucher aux données"
+        type: choice
+        default: normal
+        options: [normal, test-api]
 
 permissions:
   contents: write             # nécessaire pour sauvegarder le portefeuille
@@ -38,12 +44,19 @@ jobs:
           TZ: Europe/Paris
         # Déclenché par cron-job.org à 17h05 Paris : run complet (pas de garde-fou
         # horaire, qui ne servait qu'aux crons internes désormais retirés).
-        run: python main.py
+        # cron-job.org n'envoie pas d'input → mode vide → traité comme « normal ».
+        run: |
+          if [ "${{ inputs.mode }}" = "test-api" ]; then
+            python main.py --test-api
+          else
+            python main.py
+          fi
 
       - name: Sauvegarder le portefeuille et les rapports
         # always() : on sauvegarde même si l'analyse a échoué (ex. API surchargée
         # après l'évaluation) pour ne pas perdre une évaluation déjà calculée.
-        if: always()
+        # Sauf en mode test-api, qui ne touche à aucune donnée.
+        if: always() && inputs.mode != 'test-api'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
