@@ -3119,6 +3119,34 @@
           }
         }
       }
+    },
+    {
+      "id": "2026-09-21_ELIOR.PA",
+      "date_achat": "2026-09-21",
+      "ticker": "ELIOR.PA",
+      "nom": "Elior Group",
+      "allocation_eur": 500.0,
+      "conviction": 63,
+      "catalyseur": "Accélération du flux acheteur en clôture (clôt@0.90) validée par un volume deux fois supérieur à la moyenne (2.02x).",
+      "raisonnement": "Elior signe une séance de rebond affirmée (+3.57%) tout en terminant sur les plus-hauts du jour avec un volume très étoffé de 2.02x la normale. Le titre n'est aucunement sur-étendu sur l'horizon hebdomadaire (+0.36% sur 5 jours), ce qui limite le risque de prises de bénéfices matinales. Ce flux acheteur institutionnel soutenu jusqu'au fixing offre la configuration idéale pour une prolongation au fixing d'ouverture.",
+      "risque": "Volatilité habituelle des valeurs de retournement et sensibilité aux coûts salariaux et de restructuration.",
+      "prix_decision_17h": 1.944000005722046,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-09-21_MRN.PA",
+      "date_achat": "2026-09-21",
+      "ticker": "MRN.PA",
+      "nom": "Mersen",
+      "allocation_eur": 500.0,
+      "conviction": 53,
+      "catalyseur": "Fin de séance ferme (clôt@0.83) adossée à l'élan mondial sur les valeurs technologiques et matériaux pour semi-conducteurs.",
+      "raisonnement": "Mersen a progressé avec constance (+2.74%) pour clore tout près de son zénith intraday (clôt@0.83). Le groupe, acteur clé des composants graphite et matériaux avancés pour l'électronique de puissance et les semi-conducteurs, bénéficie du vent porteur de la tech américaine (Nasdaq +1.57%) sans afficher la surchauffe excessive observée sur d'autres valeurs de la chaîne. Il offre en outre une diversification sectorielle nette par rapport à Elior.",
+      "risque": "Volume d'échange quotidien en deçà de la moyenne (0.68x), rendant le titre sensible à toute dégradation nocturne de la tape US.",
+      "prix_decision_17h": 38.220001220703125,
+      "prix_entree": null,
+      "evaluation": null
     }
   ]
 }
