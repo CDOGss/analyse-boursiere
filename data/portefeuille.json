@@ -3131,8 +3131,33 @@
       "raisonnement": "Elior signe une séance de rebond affirmée (+3.57%) tout en terminant sur les plus-hauts du jour avec un volume très étoffé de 2.02x la normale. Le titre n'est aucunement sur-étendu sur l'horizon hebdomadaire (+0.36% sur 5 jours), ce qui limite le risque de prises de bénéfices matinales. Ce flux acheteur institutionnel soutenu jusqu'au fixing offre la configuration idéale pour une prolongation au fixing d'ouverture.",
       "risque": "Volatilité habituelle des valeurs de retournement et sensibilité aux coûts salariaux et de restructuration.",
       "prix_decision_17h": 1.944000005722046,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 1.939,
+      "evaluation": {
+        "date_evaluation": "2026-09-22",
+        "prix_entree": 1.939,
+        "scenarios": {
+          "ouverture": {
+            "prix": 1.955,
+            "pnl_eur": 4.13,
+            "pnl_pct": 0.83
+          },
+          "premiere_demi_heure": {
+            "prix": 1.937,
+            "pnl_eur": -0.52,
+            "pnl_pct": -0.1
+          },
+          "mi_journee": {
+            "prix": 1.93,
+            "pnl_eur": -2.32,
+            "pnl_pct": -0.46
+          },
+          "h17": {
+            "prix": 1.903,
+            "pnl_eur": -9.28,
+            "pnl_pct": -1.86
+          }
+        }
+      }
     },
     {
       "id": "2026-09-21_MRN.PA",
@@ -3145,6 +3170,59 @@
       "raisonnement": "Mersen a progressé avec constance (+2.74%) pour clore tout près de son zénith intraday (clôt@0.83). Le groupe, acteur clé des composants graphite et matériaux avancés pour l'électronique de puissance et les semi-conducteurs, bénéficie du vent porteur de la tech américaine (Nasdaq +1.57%) sans afficher la surchauffe excessive observée sur d'autres valeurs de la chaîne. Il offre en outre une diversification sectorielle nette par rapport à Elior.",
       "risque": "Volume d'échange quotidien en deçà de la moyenne (0.68x), rendant le titre sensible à toute dégradation nocturne de la tape US.",
       "prix_decision_17h": 38.220001220703125,
+      "prix_entree": 38.06,
+      "evaluation": {
+        "date_evaluation": "2026-09-22",
+        "prix_entree": 38.06,
+        "scenarios": {
+          "ouverture": {
+            "prix": 38.1,
+            "pnl_eur": 0.53,
+            "pnl_pct": 0.11
+          },
+          "premiere_demi_heure": {
+            "prix": 38.76,
+            "pnl_eur": 9.2,
+            "pnl_pct": 1.84
+          },
+          "mi_journee": {
+            "prix": 40.56,
+            "pnl_eur": 32.84,
+            "pnl_pct": 6.57
+          },
+          "h17": {
+            "prix": 40.86,
+            "pnl_eur": 36.78,
+            "pnl_pct": 7.36
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-22_VCT.PA",
+      "date_achat": "2026-09-22",
+      "ticker": "VCT.PA",
+      "nom": "Vicat",
+      "allocation_eur": 500.0,
+      "conviction": 66,
+      "catalyseur": "Accélération acheteuse en fin de séance vers les plus-hauts du jour, signalant un flux institutionnel à prolonger à l'ouverture.",
+      "raisonnement": "Vicat incarne la force tranquille par excellence ce soir : le titre progresse de +2,53% en clôturant tout près de son plus-haut journalier (clôt@0,89) avec un volume soutenu (0,88x). N'étant absolument pas sur-étendu sur cinq jours (+1,00%), il ne subit aucune pression vendeuse de prise de bénéfices et maximise les probabilités d'une reconduction du flux à l'ouverture de demain.",
+      "risque": "Sensibilité à l'évolution des taux obligataires européens et liquidité modérée pouvant accentuer les écarts à l'ouverture.",
+      "prix_decision_17h": 60.900001525878906,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-09-22_AF.PA",
+      "date_achat": "2026-09-22",
+      "ticker": "AF.PA",
+      "nom": "Air France-KLM",
+      "allocation_eur": 500.0,
+      "conviction": 62,
+      "catalyseur": "Flux acheteur massif avec fort volume soutenu par l'actualité politique et macroéconomique plaidant pour une détente des cours pétroliers et des carburants.",
+      "raisonnement": "Air France-KLM a drainé un volume très élevé (1,50x la moyenne) pour s'adjuger +5,10%, tout en préservant l'essentiel de son gain en clôture (clôt@0,76). Les discussions diplomatiques et gouvernementales évoquant une accalmie sur les prix du brut soutiennent directement la valeur, qui bénéficie d'une dynamique d'achat appuyée susceptible de déborder en gap d'ouverture.",
+      "risque": "Prises de bénéfices possibles dès 9h00 après une performance de +7,06% sur cinq jours en cas de regain de tension sur le baril de pétrole pendant la nuit.",
+      "prix_decision_17h": 12.055000305175781,
       "prix_entree": null,
       "evaluation": null
     }
