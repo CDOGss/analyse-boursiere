@@ -3209,8 +3209,33 @@
       "raisonnement": "Vicat incarne la force tranquille par excellence ce soir : le titre progresse de +2,53% en clôturant tout près de son plus-haut journalier (clôt@0,89) avec un volume soutenu (0,88x). N'étant absolument pas sur-étendu sur cinq jours (+1,00%), il ne subit aucune pression vendeuse de prise de bénéfices et maximise les probabilités d'une reconduction du flux à l'ouverture de demain.",
       "risque": "Sensibilité à l'évolution des taux obligataires européens et liquidité modérée pouvant accentuer les écarts à l'ouverture.",
       "prix_decision_17h": 60.900001525878906,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 60.6,
+      "evaluation": {
+        "date_evaluation": "2026-09-23",
+        "prix_entree": 60.6,
+        "scenarios": {
+          "ouverture": {
+            "prix": 61.1,
+            "pnl_eur": 4.13,
+            "pnl_pct": 0.83
+          },
+          "premiere_demi_heure": {
+            "prix": 61.0,
+            "pnl_eur": 3.3,
+            "pnl_pct": 0.66
+          },
+          "mi_journee": {
+            "prix": 60.7,
+            "pnl_eur": 0.83,
+            "pnl_pct": 0.17
+          },
+          "h17": {
+            "prix": 60.1,
+            "pnl_eur": -4.13,
+            "pnl_pct": -0.83
+          }
+        }
+      }
     },
     {
       "id": "2026-09-22_AF.PA",
@@ -3223,6 +3248,59 @@
       "raisonnement": "Air France-KLM a drainé un volume très élevé (1,50x la moyenne) pour s'adjuger +5,10%, tout en préservant l'essentiel de son gain en clôture (clôt@0,76). Les discussions diplomatiques et gouvernementales évoquant une accalmie sur les prix du brut soutiennent directement la valeur, qui bénéficie d'une dynamique d'achat appuyée susceptible de déborder en gap d'ouverture.",
       "risque": "Prises de bénéfices possibles dès 9h00 après une performance de +7,06% sur cinq jours en cas de regain de tension sur le baril de pétrole pendant la nuit.",
       "prix_decision_17h": 12.055000305175781,
+      "prix_entree": 12.11,
+      "evaluation": {
+        "date_evaluation": "2026-09-23",
+        "prix_entree": 12.11,
+        "scenarios": {
+          "ouverture": {
+            "prix": 12.12,
+            "pnl_eur": 0.41,
+            "pnl_pct": 0.08
+          },
+          "premiere_demi_heure": {
+            "prix": 11.875,
+            "pnl_eur": -9.7,
+            "pnl_pct": -1.94
+          },
+          "mi_journee": {
+            "prix": 11.63,
+            "pnl_eur": -19.82,
+            "pnl_pct": -3.96
+          },
+          "h17": {
+            "prix": 11.52,
+            "pnl_eur": -24.36,
+            "pnl_pct": -4.87
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-23_FNAC.PA",
+      "date_achat": "2026-09-23",
+      "ticker": "FNAC.PA",
+      "nom": "Fnac Darty",
+      "allocation_eur": 500.0,
+      "conviction": 66,
+      "catalyseur": "Flux acheteur institutionnel constant en clôture sur les plus-hauts du jour, assurant un carnet favorable pour l'ouverture.",
+      "raisonnement": "Fnac Darty offre le profil idéal de la force tranquille : le titre termine sur l'extrême plus-haut de sa séance (clôt@1.00) avec un volume très nourri atteignant 1,88x sa moyenne quotidienne. Ne montrant aucune sur-extension (+0,14% aujourd'hui comme sur 5 jours), la valeur est à l'abri des prises de bénéfices brutales et bénéficie d'une pression acheteuse nette qui s'est maintenue malgré un marché parisien baissier.",
+      "risque": "Tassement possible du sentiment général si la clôture américaine s'alourdit d'ici 22h.",
+      "prix_decision_17h": 34.54999923706055,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-09-23_S30.PA",
+      "date_achat": "2026-09-23",
+      "ticker": "S30.PA",
+      "nom": "Solutions 30",
+      "allocation_eur": 500.0,
+      "conviction": 55,
+      "catalyseur": "Poursuite de la dynamique acheteuse de clôture sur les services numériques et télécoms.",
+      "raisonnement": "Le titre termine solidement ancré sur le haut de son range quotidien (clôt@0.86) avec un volume au-dessus de sa moyenne (1,25x). La hausse reste mesurée (+1,96% en séance, +0,77% sur 5 jours), garantissant un setup propre sans excès technique. Sa présence dans un secteur technologique et d'infrastructures assure par ailleurs une parfaite décorrélation sectorielle avec Fnac Darty.",
+      "risque": "Sensibilité accrue aux à-coups de liquidité en raison du faible niveau de cours unitaire.",
+      "prix_decision_17h": 0.5210000276565552,
       "prix_entree": null,
       "evaluation": null
     }
