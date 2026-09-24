@@ -3287,8 +3287,33 @@
       "raisonnement": "Fnac Darty offre le profil idéal de la force tranquille : le titre termine sur l'extrême plus-haut de sa séance (clôt@1.00) avec un volume très nourri atteignant 1,88x sa moyenne quotidienne. Ne montrant aucune sur-extension (+0,14% aujourd'hui comme sur 5 jours), la valeur est à l'abri des prises de bénéfices brutales et bénéficie d'une pression acheteuse nette qui s'est maintenue malgré un marché parisien baissier.",
       "risque": "Tassement possible du sentiment général si la clôture américaine s'alourdit d'ici 22h.",
       "prix_decision_17h": 34.54999923706055,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 34.5,
+      "evaluation": {
+        "date_evaluation": "2026-09-24",
+        "prix_entree": 34.5,
+        "scenarios": {
+          "ouverture": {
+            "prix": 34.5,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "premiere_demi_heure": {
+            "prix": 34.5,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 34.5,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "h17": {
+            "prix": 34.55,
+            "pnl_eur": 0.72,
+            "pnl_pct": 0.14
+          }
+        }
+      }
     },
     {
       "id": "2026-09-23_S30.PA",
@@ -3301,6 +3326,59 @@
       "raisonnement": "Le titre termine solidement ancré sur le haut de son range quotidien (clôt@0.86) avec un volume au-dessus de sa moyenne (1,25x). La hausse reste mesurée (+1,96% en séance, +0,77% sur 5 jours), garantissant un setup propre sans excès technique. Sa présence dans un secteur technologique et d'infrastructures assure par ailleurs une parfaite décorrélation sectorielle avec Fnac Darty.",
       "risque": "Sensibilité accrue aux à-coups de liquidité en raison du faible niveau de cours unitaire.",
       "prix_decision_17h": 0.5210000276565552,
+      "prix_entree": 0.521,
+      "evaluation": {
+        "date_evaluation": "2026-09-24",
+        "prix_entree": 0.521,
+        "scenarios": {
+          "ouverture": {
+            "prix": 0.516,
+            "pnl_eur": -4.8,
+            "pnl_pct": -0.96
+          },
+          "premiere_demi_heure": {
+            "prix": 0.518,
+            "pnl_eur": -2.88,
+            "pnl_pct": -0.58
+          },
+          "mi_journee": {
+            "prix": 0.512,
+            "pnl_eur": -8.64,
+            "pnl_pct": -1.73
+          },
+          "h17": {
+            "prix": 0.517,
+            "pnl_eur": -3.84,
+            "pnl_pct": -0.77
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-24_AM.PA",
+      "date_achat": "2026-09-24",
+      "ticker": "AM.PA",
+      "nom": "Dassault Aviation",
+      "allocation_eur": 500.0,
+      "conviction": 64,
+      "catalyseur": "Flux acheteur régulier de fin de séance sur le secteur aéronautique/défense et recherche de valeurs refuges peu corrélées au cycle court.",
+      "raisonnement": "Dassault Aviation affiche une remarquable force relative dans un marché rouge, finissant la séance tout près de ses plus-hauts (clôt@0,81) avec un volume bien orienté (0,61x). Le titre n'est absolument pas sur-étendu (+0,07% sur 5 jours), incarnant une force tranquille idéale pour prolonger cette pression acheteuse dès 9h00. Son statut défensif lui permet de résister même si la clôture américaine reste frileuse.",
+      "risque": "Accentuation des dégagements sur les indices US d'ici 22h susceptible de peser sur l'ambiance générale à l'ouverture européenne.",
+      "prix_decision_17h": 292.0,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-09-24_VK.PA",
+      "date_achat": "2026-09-24",
+      "ticker": "VK.PA",
+      "nom": "Vallourec",
+      "allocation_eur": 500.0,
+      "conviction": 60,
+      "catalyseur": "Surperformance marquée du compartiment pétrolier et parapétrolier sur fond de tensions persistantes sur les prix des carburants et de l'énergie.",
+      "raisonnement": "L'énergie est le rare secteur en surperformance ce jeudi à Paris (TotalEnergies à +1,78% au plus-haut, Vallourec à +4,91%). Vallourec réalise un breakout convaincant et conserve la quasi-totalité de ses gains en clôturant sur le haut de sa fourchette quotidienne (clôt@0,75). Le titre sortant d'une consolidation (seulement +3,15% sur 5 jours), ce flux directionnel net offre une probabilité solide de continuation sous forme de gap haussier demain matin.",
+      "risque": "Prises de bénéfices potentielles à l'ouverture après le gain journalier de près de 5% ou retournement baissier sur le brut cette nuit.",
+      "prix_decision_17h": 19.645000457763672,
       "prix_entree": null,
       "evaluation": null
     }

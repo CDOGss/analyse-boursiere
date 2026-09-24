@@ -1,4 +1,4 @@
-# Bilan mensuel — mis à jour le 2026-09-23 17:06
+# Bilan mensuel — mis à jour le 2026-09-24 17:06
 
 ## Tableau de bord mensuel
 
@@ -6,7 +6,7 @@ _Sortie de référence : **Ouverture**. Frais d'aller-retour estimés : 0.20% pa
 
 | Mois | Jours | Ouverture | 9h30 | Midi | 17h | Ouverture (net) | Réussite |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-09 | 6 | 🟢 +27.36€ | 🟢 +7.92€ | 🟢 +10.26€ | 🔴 -5.12€ | 🟢 +16.36€ | 83% |
+| 2026-09 | 7 | 🟢 +22.56€ | 🟢 +5.04€ | 🟢 +1.62€ | 🔴 -8.24€ | 🟢 +9.56€ | 71% |
 | 2026-08 | 20 | 🟢 +136.00€ | 🟢 +103.09€ | 🟢 +72.60€ | 🟢 +27.33€ | 🟢 +99.00€ | 65% |
 | 2026-07 | 23 | 🟢 +18.17€ | 🟢 +4.13€ | 🔴 -44.07€ | 🔴 -82.71€ | 🔴 -17.83€ | 57% |
 
@@ -14,7 +14,7 @@ _Sortie de référence : **Ouverture**. Frais d'aller-retour estimés : 0.20% pa
 
 | Mois | Stratégie (ouv.) ★ | CAC overnight | Alpha ouv. ★ | Stratégie (17h) | CAC séance | Alpha 17h |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-09 | +16.36€ | +7.00€ | 🟢 +9.35€ | -16.12€ | -10.07€ | 🔴 -6.05€ |
+| 2026-09 | +9.56€ | +2.75€ | 🟢 +6.81€ | -21.24€ | -13.24€ | 🔴 -8.00€ |
 | 2026-08 | +99.00€ | +31.59€ | 🟢 +67.41€ | -9.67€ | +0.94€ | 🔴 -10.61€ |
 | 2026-07 | -17.83€ | +7.09€ | 🔴 -24.91€ | -118.71€ | +3.29€ | 🔴 -122.00€ |
 
@@ -25,7 +25,7 @@ _★ = sortie de référence (Ouverture). Alpha positif = la sélection bat « a
 _Meilleur/pire jour au scénario de référence (Ouverture)._
 
 - Meilleur jour : **2026-09-03** +8.08€ (AMUN.PA+NK.PA)
-- Pire jour : **2026-09-02** +0.00€ (FNAC.PA)
+- Pire jour : **2026-09-24** -4.80€ (FNAC.PA+S30.PA)
 
 | Date | Actions | Ouverture ★ | 9h30 | Midi | 17h |
 |---|---|---:|---:|---:|---:|
@@ -35,3 +35,4 @@ _Meilleur/pire jour au scénario de référence (Ouverture)._
 | 2026-09-04 | MMT.PA+RNO.PA | 🟢 +7.53€ | 🟢 +1.19€ | 🟢 +5.73€ | 🟢 +1.46€ |
 | 2026-09-22 | ELIOR.PA+MRN.PA | 🟢 +4.66€ | 🟢 +8.68€ | 🟢 +30.52€ | 🟢 +27.50€ |
 | 2026-09-23 | VCT.PA+AF.PA | 🟢 +4.54€ | 🔴 -6.40€ | 🔴 -18.99€ | 🔴 -28.49€ |
+| 2026-09-24 | FNAC.PA+S30.PA | 🔴 -4.80€ | 🔴 -2.88€ | 🔴 -8.64€ | 🔴 -3.12€ |
