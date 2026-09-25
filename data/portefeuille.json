@@ -3365,8 +3365,33 @@
       "raisonnement": "Dassault Aviation affiche une remarquable force relative dans un marché rouge, finissant la séance tout près de ses plus-hauts (clôt@0,81) avec un volume bien orienté (0,61x). Le titre n'est absolument pas sur-étendu (+0,07% sur 5 jours), incarnant une force tranquille idéale pour prolonger cette pression acheteuse dès 9h00. Son statut défensif lui permet de résister même si la clôture américaine reste frileuse.",
       "risque": "Accentuation des dégagements sur les indices US d'ici 22h susceptible de peser sur l'ambiance générale à l'ouverture européenne.",
       "prix_decision_17h": 292.0,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 291.8,
+      "evaluation": {
+        "date_evaluation": "2026-09-25",
+        "prix_entree": 291.8,
+        "scenarios": {
+          "ouverture": {
+            "prix": 292.0,
+            "pnl_eur": 0.34,
+            "pnl_pct": 0.07
+          },
+          "premiere_demi_heure": {
+            "prix": 291.4,
+            "pnl_eur": -0.69,
+            "pnl_pct": -0.14
+          },
+          "mi_journee": {
+            "prix": 291.0,
+            "pnl_eur": -1.37,
+            "pnl_pct": -0.27
+          },
+          "h17": {
+            "prix": 291.8,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
     },
     {
       "id": "2026-09-24_VK.PA",
@@ -3379,6 +3404,45 @@
       "raisonnement": "L'énergie est le rare secteur en surperformance ce jeudi à Paris (TotalEnergies à +1,78% au plus-haut, Vallourec à +4,91%). Vallourec réalise un breakout convaincant et conserve la quasi-totalité de ses gains en clôturant sur le haut de sa fourchette quotidienne (clôt@0,75). Le titre sortant d'une consolidation (seulement +3,15% sur 5 jours), ce flux directionnel net offre une probabilité solide de continuation sous forme de gap haussier demain matin.",
       "risque": "Prises de bénéfices potentielles à l'ouverture après le gain journalier de près de 5% ou retournement baissier sur le brut cette nuit.",
       "prix_decision_17h": 19.645000457763672,
+      "prix_entree": 19.415,
+      "evaluation": {
+        "date_evaluation": "2026-09-25",
+        "prix_entree": 19.415,
+        "scenarios": {
+          "ouverture": {
+            "prix": 19.235,
+            "pnl_eur": -4.64,
+            "pnl_pct": -0.93
+          },
+          "premiere_demi_heure": {
+            "prix": 19.125,
+            "pnl_eur": -7.47,
+            "pnl_pct": -1.49
+          },
+          "mi_journee": {
+            "prix": 19.09,
+            "pnl_eur": -8.37,
+            "pnl_pct": -1.67
+          },
+          "h17": {
+            "prix": 18.94,
+            "pnl_eur": -12.23,
+            "pnl_pct": -2.45
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-25_ELIOR.PA",
+      "date_achat": "2026-09-25",
+      "ticker": "ELIOR.PA",
+      "nom": "Elior Group",
+      "allocation_eur": 500.0,
+      "conviction": 65,
+      "catalyseur": "Pression acheteuse continue en fin de séance menant à une clôture au plus-haut du jour (clôt@1.00) à contre-courant du marché.",
+      "raisonnement": "Elior se distingue nettement au sein de la shortlist en terminant exactement sur son plus-haut de la journée (+2,80%, clôt@1.00) avec un volume convenable (0,72x), traduisant une accumulation active propre au titre. La valeur n'est absolument pas sur-étendue après une consolidation sur 5 jours (-2,34%), réduisant le risque de prises de profit à l'ouverture lundi. Compte tenu du risque lié aux 3 nuits de week-end, aucune autre valeur ne présente un profil de clôture suffisamment affirmé pour justifier une prise de position.",
+      "risque": "Risque classique de portage sur l'ensemble du week-end (dégradation macroéconomique ou géopolitique globale d'ici lundi).",
+      "prix_decision_17h": 1.8329999446868896,
       "prix_entree": null,
       "evaluation": null
     }
