@@ -3443,6 +3443,45 @@
       "raisonnement": "Elior se distingue nettement au sein de la shortlist en terminant exactement sur son plus-haut de la journée (+2,80%, clôt@1.00) avec un volume convenable (0,72x), traduisant une accumulation active propre au titre. La valeur n'est absolument pas sur-étendue après une consolidation sur 5 jours (-2,34%), réduisant le risque de prises de profit à l'ouverture lundi. Compte tenu du risque lié aux 3 nuits de week-end, aucune autre valeur ne présente un profil de clôture suffisamment affirmé pour justifier une prise de position.",
       "risque": "Risque classique de portage sur l'ensemble du week-end (dégradation macroéconomique ou géopolitique globale d'ici lundi).",
       "prix_decision_17h": 1.8329999446868896,
+      "prix_entree": 1.823,
+      "evaluation": {
+        "date_evaluation": "2026-09-28",
+        "prix_entree": 1.823,
+        "scenarios": {
+          "ouverture": {
+            "prix": 1.838,
+            "pnl_eur": 4.11,
+            "pnl_pct": 0.82
+          },
+          "premiere_demi_heure": {
+            "prix": 1.836,
+            "pnl_eur": 3.57,
+            "pnl_pct": 0.71
+          },
+          "mi_journee": {
+            "prix": 1.824,
+            "pnl_eur": 0.27,
+            "pnl_pct": 0.05
+          },
+          "h17": {
+            "prix": 1.816,
+            "pnl_eur": -1.92,
+            "pnl_pct": -0.38
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-28_APAM.AS",
+      "date_achat": "2026-09-28",
+      "ticker": "APAM.AS",
+      "nom": "Aperam",
+      "allocation_eur": 500.0,
+      "conviction": 63,
+      "catalyseur": "Poursuite du flux acheteur institutionnel de clôture matérialisé par une fin de séance sur les plus-hauts du jour.",
+      "raisonnement": "Aperam affiche le profil le plus net de la shortlist avec une hausse saine de +1,08% et une clôture remarquable à 0,87 de son range quotidien, signe d'une accumulation active qui a ignoré le repli de Wall Street. Le volume est parmi les plus étoffés de la sélection (0,75x) sans que le titre ne soit sur-étendu (+0,27% sur 5 jours), offrant une base propre pour un gap d'ouverture haussier. Ce flux acheteur spécifique confère au titre une force relative indispensable face au vent contraire américain.",
+      "risque": "Accélération de la baisse des indices américains d'ici 22h pesant globalement sur les cycliques européennes demain dès 9h00.",
+      "prix_decision_17h": 44.97999954223633,
       "prix_entree": null,
       "evaluation": null
     }
