@@ -3521,8 +3521,33 @@
       "raisonnement": "Rexel profite d'une rotation sectorielle vigoureuse et affiche le meilleur ratio de volume de la shortlist (1,18x) avec une clôture nettement orientée sur les plus-hauts (clôt@0,81). Loin d'être sur-étendu sur 5 jours (-2,76%), le titre dispose d'une marge de progression appréciable pour prolonger ce flux d'inertie institutionnel dès l'ouverture. Ce déséquilibre acheteur en fin de journée offre une probabilité solide de gap haussier demain matin.",
       "risque": "Sensibilité au cycle industriel si les indices américains devaient fléchir plus lourdement d'ici la clôture de Wall Street.",
       "prix_decision_17h": 36.33000183105469,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 36.37,
+      "evaluation": {
+        "date_evaluation": "2026-09-30",
+        "prix_entree": 36.37,
+        "scenarios": {
+          "ouverture": {
+            "prix": 36.38,
+            "pnl_eur": 0.14,
+            "pnl_pct": 0.03
+          },
+          "premiere_demi_heure": {
+            "prix": 36.03,
+            "pnl_eur": -4.67,
+            "pnl_pct": -0.93
+          },
+          "mi_journee": {
+            "prix": 35.65,
+            "pnl_eur": -9.9,
+            "pnl_pct": -1.98
+          },
+          "h17": {
+            "prix": 35.62,
+            "pnl_eur": -10.31,
+            "pnl_pct": -2.06
+          }
+        }
+      }
     },
     {
       "id": "2026-09-29_BEN.PA",
@@ -3535,6 +3560,59 @@
       "raisonnement": "Après une phase de consolidation hebdomadaire (-3,23%), Bénéteau enregistre un retour net des flux acheteurs qui ont continué de porter le cours jusqu'au fixing (clôt@0,85). Ce profil de ramassage de fin de séance sur une valeur assainie et non sur-étendue reflète une pression acheteuse encore non soldée. La diversification sectorielle avec Rexel est parfaite, Bénéteau relevant de la consommation discrétionnaire et des loisirs.",
       "risque": "Titre mid-cap plus sensible aux variations de liquidité et au carnet d'ordres à l'ouverture de 9h00.",
       "prix_decision_17h": 5.090000152587891,
+      "prix_entree": 5.03,
+      "evaluation": {
+        "date_evaluation": "2026-09-30",
+        "prix_entree": 5.03,
+        "scenarios": {
+          "ouverture": {
+            "prix": 5.07,
+            "pnl_eur": 3.98,
+            "pnl_pct": 0.8
+          },
+          "premiere_demi_heure": {
+            "prix": 5.13,
+            "pnl_eur": 9.94,
+            "pnl_pct": 1.99
+          },
+          "mi_journee": {
+            "prix": 5.13,
+            "pnl_eur": 9.94,
+            "pnl_pct": 1.99
+          },
+          "h17": {
+            "prix": 5.11,
+            "pnl_eur": 7.95,
+            "pnl_pct": 1.59
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-09-30_ATO.PA",
+      "date_achat": "2026-09-30",
+      "ticker": "ATO.PA",
+      "nom": "Atos",
+      "allocation_eur": 500.0,
+      "conviction": 67,
+      "catalyseur": "Accumulation agressive de fin de séance avec volume institutionnel majeur (2,32x) sur rebond technique.",
+      "raisonnement": "Le titre termine précisément sur son plus-haut du jour (clôt@1.00) avec un volume lourd dépassant 2,3 fois la moyenne, traduisant un flux acheteur institutionnel soutenu qui s'est totalement affranchi de la baisse du CAC 40. Sortant d'une consolidation hebdomadaire (-10,90% sur 5 jours), cette impulsion nette est idéalement relayée par l'appétit pour le risque observé sur le secteur technologique américain ce soir.",
+      "risque": "Forte volatilité intrinsèque du dossier et sensibilité au contexte politique et obligataire français.",
+      "prix_decision_17h": 21.079999923706055,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-09-30_OPM.PA",
+      "date_achat": "2026-09-30",
+      "ticker": "OPM.PA",
+      "nom": "OPmobility",
+      "allocation_eur": 500.0,
+      "conviction": 64,
+      "catalyseur": "Inertie acheteuse de clôture (clôt@0.90) sur une progression modérée sans sur-extension.",
+      "raisonnement": "OPmobility réalise une séance solide (+2,72%) en terminant à 0,90 de son range quotidien sur un volume supérieur à la normale (1,04x). La valeur n'étant pas sur-étendue sur 5 jours (+0,75%), elle évite l'écueil des prises de bénéfices matinales et présente une dynamique de force tranquille bien diversifiée par rapport à la tech.",
+      "risque": "Secteur automobile européen exposé aux craintes macroéconomiques et de consommation.",
+      "prix_decision_17h": 12.09000015258789,
       "prix_entree": null,
       "evaluation": null
     }
