@@ -3599,8 +3599,33 @@
       "raisonnement": "Le titre termine précisément sur son plus-haut du jour (clôt@1.00) avec un volume lourd dépassant 2,3 fois la moyenne, traduisant un flux acheteur institutionnel soutenu qui s'est totalement affranchi de la baisse du CAC 40. Sortant d'une consolidation hebdomadaire (-10,90% sur 5 jours), cette impulsion nette est idéalement relayée par l'appétit pour le risque observé sur le secteur technologique américain ce soir.",
       "risque": "Forte volatilité intrinsèque du dossier et sensibilité au contexte politique et obligataire français.",
       "prix_decision_17h": 21.079999923706055,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 21.24,
+      "evaluation": {
+        "date_evaluation": "2026-10-01",
+        "prix_entree": 21.24,
+        "scenarios": {
+          "ouverture": {
+            "prix": 20.62,
+            "pnl_eur": -14.6,
+            "pnl_pct": -2.92
+          },
+          "premiere_demi_heure": {
+            "prix": 20.26,
+            "pnl_eur": -23.07,
+            "pnl_pct": -4.61
+          },
+          "mi_journee": {
+            "prix": 21.6,
+            "pnl_eur": 8.47,
+            "pnl_pct": 1.69
+          },
+          "h17": {
+            "prix": 22.16,
+            "pnl_eur": 21.66,
+            "pnl_pct": 4.33
+          }
+        }
+      }
     },
     {
       "id": "2026-09-30_OPM.PA",
@@ -3613,6 +3638,45 @@
       "raisonnement": "OPmobility réalise une séance solide (+2,72%) en terminant à 0,90 de son range quotidien sur un volume supérieur à la normale (1,04x). La valeur n'étant pas sur-étendue sur 5 jours (+0,75%), elle évite l'écueil des prises de bénéfices matinales et présente une dynamique de force tranquille bien diversifiée par rapport à la tech.",
       "risque": "Secteur automobile européen exposé aux craintes macroéconomiques et de consommation.",
       "prix_decision_17h": 12.09000015258789,
+      "prix_entree": 12.04,
+      "evaluation": {
+        "date_evaluation": "2026-10-01",
+        "prix_entree": 12.04,
+        "scenarios": {
+          "ouverture": {
+            "prix": 12.08,
+            "pnl_eur": 1.66,
+            "pnl_pct": 0.33
+          },
+          "premiere_demi_heure": {
+            "prix": 11.96,
+            "pnl_eur": -3.32,
+            "pnl_pct": -0.66
+          },
+          "mi_journee": {
+            "prix": 12.01,
+            "pnl_eur": -1.25,
+            "pnl_pct": -0.25
+          },
+          "h17": {
+            "prix": 11.75,
+            "pnl_eur": -12.04,
+            "pnl_pct": -2.41
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-10-01_MAU.PA",
+      "date_achat": "2026-10-01",
+      "ticker": "MAU.PA",
+      "nom": "Maurel & Prom",
+      "allocation_eur": 500.0,
+      "conviction": 66,
+      "catalyseur": "Poursuite du flux acheteur de clôture et soutien des cours pétroliers face aux tensions sur l'approvisionnement en carburants.",
+      "raisonnement": "Alors que le marché parisien subit d'importants dégagements, Maurel & Prom a affiché une remarquable résilience en clôturant sur l'extrême haut de son range quotidien (clôt@0,94). Ce redressement de fin de journée s'est fait sur un volume nourri représentant 1,40x sa moyenne habituelle, signalant une réelle accumulation institutionnelle jusqu'au fixing. Nullement sur-étendu (-4,96% sur 5 jours), le titre dispose du profil technique idéal pour transformer cette pression acheteuse en gap haussier dès l'ouverture demain.",
+      "risque": "Sensibilité à l'évolution des cours du baril de brut durant la séance américaine et risque d'alourdissement supplémentaire des indices US d'ici 22h.",
+      "prix_decision_17h": 7.755000114440918,
       "prix_entree": null,
       "evaluation": null
     }
