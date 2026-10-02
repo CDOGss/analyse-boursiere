@@ -3677,6 +3677,45 @@
       "raisonnement": "Alors que le marché parisien subit d'importants dégagements, Maurel & Prom a affiché une remarquable résilience en clôturant sur l'extrême haut de son range quotidien (clôt@0,94). Ce redressement de fin de journée s'est fait sur un volume nourri représentant 1,40x sa moyenne habituelle, signalant une réelle accumulation institutionnelle jusqu'au fixing. Nullement sur-étendu (-4,96% sur 5 jours), le titre dispose du profil technique idéal pour transformer cette pression acheteuse en gap haussier dès l'ouverture demain.",
       "risque": "Sensibilité à l'évolution des cours du baril de brut durant la séance américaine et risque d'alourdissement supplémentaire des indices US d'ici 22h.",
       "prix_decision_17h": 7.755000114440918,
+      "prix_entree": 7.745,
+      "evaluation": {
+        "date_evaluation": "2026-10-02",
+        "prix_entree": 7.745,
+        "scenarios": {
+          "ouverture": {
+            "prix": 7.775,
+            "pnl_eur": 1.94,
+            "pnl_pct": 0.39
+          },
+          "premiere_demi_heure": {
+            "prix": 7.745,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 7.78,
+            "pnl_eur": 2.26,
+            "pnl_pct": 0.45
+          },
+          "h17": {
+            "prix": 7.705,
+            "pnl_eur": -2.58,
+            "pnl_pct": -0.52
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-10-02_MRN.PA",
+      "date_achat": "2026-10-02",
+      "ticker": "MRN.PA",
+      "nom": "Mersen",
+      "allocation_eur": 500.0,
+      "conviction": 70,
+      "catalyseur": "Prolongation du flux acheteur institutionnel massif de clôture (clôt@0.99 avec volume de 1.47x) matérialisant une sortie de consolidation haussière.",
+      "raisonnement": "Mersen délivre le setup le plus propre de la séance en terminant sur son plus-haut du jour (clôt@0.99) avec un volume robuste de 1,47 fois sa moyenne quotidienne, preuve d'une accumulation institutionnelle agressive jusqu'au fixing. La progression du jour (+3,98%) amorce un déblocage technique sain sans être sur-étendue à l'échelle hebdomadaire (+4,39% sur 5 jours). Porté par le net rebond des valeurs technologiques et industrielles aux États-Unis, le titre bénéficie d'une forte inertie acheteuse susceptible de provoquer un gap favorable dès lundi matin.",
+      "risque": "Portage étendu sur l'ensemble du week-end (3 nuits de risque macroéconomique ou géopolitique) et sensibilité résiduelle à l'évolution des taux souverains.",
+      "prix_decision_17h": 42.81999969482422,
       "prix_entree": null,
       "evaluation": null
     }
