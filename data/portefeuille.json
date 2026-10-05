@@ -3716,6 +3716,59 @@
       "raisonnement": "Mersen délivre le setup le plus propre de la séance en terminant sur son plus-haut du jour (clôt@0.99) avec un volume robuste de 1,47 fois sa moyenne quotidienne, preuve d'une accumulation institutionnelle agressive jusqu'au fixing. La progression du jour (+3,98%) amorce un déblocage technique sain sans être sur-étendue à l'échelle hebdomadaire (+4,39% sur 5 jours). Porté par le net rebond des valeurs technologiques et industrielles aux États-Unis, le titre bénéficie d'une forte inertie acheteuse susceptible de provoquer un gap favorable dès lundi matin.",
       "risque": "Portage étendu sur l'ensemble du week-end (3 nuits de risque macroéconomique ou géopolitique) et sensibilité résiduelle à l'évolution des taux souverains.",
       "prix_decision_17h": 42.81999969482422,
+      "prix_entree": 42.6,
+      "evaluation": {
+        "date_evaluation": "2026-10-05",
+        "prix_entree": 42.6,
+        "scenarios": {
+          "ouverture": {
+            "prix": 42.37,
+            "pnl_eur": -2.7,
+            "pnl_pct": -0.54
+          },
+          "premiere_demi_heure": {
+            "prix": 41.98,
+            "pnl_eur": -7.28,
+            "pnl_pct": -1.46
+          },
+          "mi_journee": {
+            "prix": 42.52,
+            "pnl_eur": -0.94,
+            "pnl_pct": -0.19
+          },
+          "h17": {
+            "prix": 42.7,
+            "pnl_eur": 1.17,
+            "pnl_pct": 0.23
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-10-05_ACA.PA",
+      "date_achat": "2026-10-05",
+      "ticker": "ACA.PA",
+      "nom": "Crédit Agricole",
+      "allocation_eur": 500.0,
+      "conviction": 67,
+      "catalyseur": "Poursuite du flux acheteur institutionnel de clôture et rebond technique après une séquence de consolidation hebdomadaire.",
+      "raisonnement": "Dans un marché parisien déprimé, Crédit Agricole montre une force relative remarquable en terminant au contact direct de son plus-haut du jour (clôt@0.96) avec un ratio de volume très élevé de 0.90x. Après un recul de -5,66% sur 5 séances, ce ramassage soutenu en fin de journée signale un flux propre puissant qui ne doit rien au hasard. La bonne tenue des indices américains ce soir offre le contexte idéal pour prolonger cette dynamique par un gap haussier demain.",
+      "risque": "Sensibilité à l'évolution des rendements obligataires souverains et éventuel freinage si les valeurs financières européennes restent sous pression sectorielle.",
+      "prix_decision_17h": 16.920000076293945,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-10-05_MAU.PA",
+      "date_achat": "2026-10-05",
+      "ticker": "MAU.PA",
+      "nom": "Maurel & Prom",
+      "allocation_eur": 500.0,
+      "conviction": 64,
+      "catalyseur": "Soutien des cours du brut et regain d'intérêt sur les parapétrolières/producteurs liés aux tensions dans le détroit d'Ormuz.",
+      "raisonnement": "Le titre termine sa séance en progression de +2,81% sur les sommets du jour (clôt@0.90), confirmant une reprise en main nette des acheteurs. Après une baisse mesurée sur 5 jours (-3,02%), la valeur n'est pas sur-étendue et bénéficie d'un catalyseur sectoriel porteur avec les perturbations de transit pétrolier évoquées dans l'actualité. La structure de clôture favorise un prolongement d'achat dès l'ouverture.",
+      "risque": "Forte dépendance à la trajectoire nocturne des cours du baril de pétrole et volatilité naturelle du segment midcap énergie.",
+      "prix_decision_17h": 7.875,
       "prix_entree": null,
       "evaluation": null
     }
