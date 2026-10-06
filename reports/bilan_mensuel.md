@@ -1,4 +1,4 @@
-# Bilan mensuel — mis à jour le 2026-10-05 17:06
+# Bilan mensuel — mis à jour le 2026-10-06 17:06
 
 ## Tableau de bord mensuel
 
@@ -6,7 +6,7 @@ _Sortie de référence : **Ouverture**. Frais d'aller-retour estimés : 0.20% pa
 
 | Mois | Jours | Ouverture | 9h30 | Midi | 17h | Ouverture (net) | Réussite |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-10 | 3 | 🔴 -13.70€ | 🔴 -33.67€ | 🟢 +8.54€ | 🟢 +8.21€ | 🔴 -17.70€ | 33% |
+| 2026-10 | 4 | 🔴 -11.66€ | 🔴 -31.65€ | 🔴 -1.80€ | 🔴 -2.64€ | 🔴 -17.66€ | 50% |
 | 2026-09 | 11 | 🟢 +30.52€ | 🟢 +0.80€ | 🔴 -8.70€ | 🔴 -32.13€ | 🟢 +11.52€ | 73% |
 | 2026-08 | 20 | 🟢 +136.00€ | 🟢 +103.09€ | 🟢 +72.60€ | 🟢 +27.33€ | 🟢 +99.00€ | 65% |
 | 2026-07 | 23 | 🟢 +18.17€ | 🟢 +4.13€ | 🔴 -44.07€ | 🔴 -82.71€ | 🔴 -17.83€ | 57% |
@@ -15,7 +15,7 @@ _Sortie de référence : **Ouverture**. Frais d'aller-retour estimés : 0.20% pa
 
 | Mois | Stratégie (ouv.) ★ | CAC overnight | Alpha ouv. ★ | Stratégie (17h) | CAC séance | Alpha 17h |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-10 | -17.70€ | -8.70€ | 🔴 -9.00€ | +4.21€ | -11.89€ | 🟢 +16.10€ |
+| 2026-10 | -17.66€ | -5.66€ | 🔴 -12.00€ | -8.64€ | -9.75€ | 🟢 +1.11€ |
 | 2026-09 | +11.52€ | +11.57€ | 🔴 -0.05€ | -51.13€ | -23.27€ | 🔴 -27.86€ |
 | 2026-08 | +99.00€ | +31.59€ | 🟢 +67.41€ | -9.67€ | +0.94€ | 🔴 -10.61€ |
 | 2026-07 | -17.83€ | +7.09€ | 🔴 -24.91€ | -118.71€ | +3.29€ | 🔴 -122.00€ |
@@ -26,7 +26,7 @@ _★ = sortie de référence (Ouverture). Alpha positif = la sélection bat « a
 
 _Meilleur/pire jour au scénario de référence (Ouverture)._
 
-- Meilleur jour : **2026-10-02** +1.94€ (MAU.PA)
+- Meilleur jour : **2026-10-06** +2.04€ (ACA.PA+MAU.PA)
 - Pire jour : **2026-10-01** -12.94€ (ATO.PA+OPM.PA)
 
 | Date | Actions | Ouverture ★ | 9h30 | Midi | 17h |
@@ -34,3 +34,4 @@ _Meilleur/pire jour au scénario de référence (Ouverture)._
 | 2026-10-01 | ATO.PA+OPM.PA | 🔴 -12.94€ | 🔴 -26.39€ | 🟢 +7.22€ | 🟢 +9.62€ |
 | 2026-10-02 | MAU.PA | 🟢 +1.94€ | 🟢 +0.00€ | 🟢 +2.26€ | 🔴 -2.58€ |
 | 2026-10-05 | MRN.PA | 🔴 -2.70€ | 🔴 -7.28€ | 🔴 -0.94€ | 🟢 +1.17€ |
+| 2026-10-06 | ACA.PA+MAU.PA | 🟢 +2.04€ | 🟢 +2.02€ | 🔴 -10.34€ | 🔴 -10.85€ |

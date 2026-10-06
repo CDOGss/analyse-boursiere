@@ -3755,8 +3755,33 @@
       "raisonnement": "Dans un marché parisien déprimé, Crédit Agricole montre une force relative remarquable en terminant au contact direct de son plus-haut du jour (clôt@0.96) avec un ratio de volume très élevé de 0.90x. Après un recul de -5,66% sur 5 séances, ce ramassage soutenu en fin de journée signale un flux propre puissant qui ne doit rien au hasard. La bonne tenue des indices américains ce soir offre le contexte idéal pour prolonger cette dynamique par un gap haussier demain.",
       "risque": "Sensibilité à l'évolution des rendements obligataires souverains et éventuel freinage si les valeurs financières européennes restent sous pression sectorielle.",
       "prix_decision_17h": 16.920000076293945,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 16.93,
+      "evaluation": {
+        "date_evaluation": "2026-10-06",
+        "prix_entree": 16.93,
+        "scenarios": {
+          "ouverture": {
+            "prix": 17.01,
+            "pnl_eur": 2.36,
+            "pnl_pct": 0.47
+          },
+          "premiere_demi_heure": {
+            "prix": 17.095,
+            "pnl_eur": 4.87,
+            "pnl_pct": 0.97
+          },
+          "mi_journee": {
+            "prix": 17.185,
+            "pnl_eur": 7.53,
+            "pnl_pct": 1.51
+          },
+          "h17": {
+            "prix": 17.13,
+            "pnl_eur": 5.91,
+            "pnl_pct": 1.18
+          }
+        }
+      }
     },
     {
       "id": "2026-10-05_MAU.PA",
@@ -3769,6 +3794,59 @@
       "raisonnement": "Le titre termine sa séance en progression de +2,81% sur les sommets du jour (clôt@0.90), confirmant une reprise en main nette des acheteurs. Après une baisse mesurée sur 5 jours (-3,02%), la valeur n'est pas sur-étendue et bénéficie d'un catalyseur sectoriel porteur avec les perturbations de transit pétrolier évoquées dans l'actualité. La structure de clôture favorise un prolongement d'achat dès l'ouverture.",
       "risque": "Forte dépendance à la trajectoire nocturne des cours du baril de pétrole et volatilité naturelle du segment midcap énergie.",
       "prix_decision_17h": 7.875,
+      "prix_entree": 7.905,
+      "evaluation": {
+        "date_evaluation": "2026-10-06",
+        "prix_entree": 7.905,
+        "scenarios": {
+          "ouverture": {
+            "prix": 7.9,
+            "pnl_eur": -0.32,
+            "pnl_pct": -0.06
+          },
+          "premiere_demi_heure": {
+            "prix": 7.86,
+            "pnl_eur": -2.85,
+            "pnl_pct": -0.57
+          },
+          "mi_journee": {
+            "prix": 7.6225,
+            "pnl_eur": -17.87,
+            "pnl_pct": -3.57
+          },
+          "h17": {
+            "prix": 7.64,
+            "pnl_eur": -16.76,
+            "pnl_pct": -3.35
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-10-06_VRLA.PA",
+      "date_achat": "2026-10-06",
+      "ticker": "VRLA.PA",
+      "nom": "Verallia",
+      "allocation_eur": 500.0,
+      "conviction": 69,
+      "catalyseur": "Prolongement du flux acheteur institutionnel massif constate tout au long de la seance.",
+      "raisonnement": "Verallia presente le meilleur profil de la shortlist avec un volume tres etoffe de 1.64x et une cloture immediate sous les plus-hauts du jour (clot@ 0.89). N'etant nullement sur-etendue apres une consolidation sur 5 jours (-2.14%), l'action beneficie d'une dynamique propre tres robuste qui cree un avantage statistique net pour un gap haussier a l'ouverture.",
+      "risque": "Sensibilite a l'evolution des couts energetiques ou retournement soudain du sentiment de marche.",
+      "prix_decision_17h": 16.90999984741211,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-10-06_LR.PA",
+      "date_achat": "2026-10-06",
+      "ticker": "LR.PA",
+      "nom": "Legrand",
+      "allocation_eur": 500.0,
+      "conviction": 63,
+      "catalyseur": "Reallocation sectorielle favorable suite a la chute de Schneider Electric et portage par la tape americaine.",
+      "raisonnement": "Tandis que son grand rival Schneider Electric est sanctionne (-3.70%) pour une lourde acquisition americaine, Legrand capitalise sur son profil d'execution rigoureuse (+3.07%) en finissant proche de son sommet de seance (clot@ 0.87). La fermete des indices americains ce soir consolide cette force relative sur une grande valeur industrielle diversifiee.",
+      "risque": "Prise de benefices matinale apres une progression de plus de 3% sur la seance du jour.",
+      "prix_decision_17h": 147.5,
       "prix_entree": null,
       "evaluation": null
     }
