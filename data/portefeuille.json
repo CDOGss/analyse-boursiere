@@ -3833,8 +3833,33 @@
       "raisonnement": "Verallia presente le meilleur profil de la shortlist avec un volume tres etoffe de 1.64x et une cloture immediate sous les plus-hauts du jour (clot@ 0.89). N'etant nullement sur-etendue apres une consolidation sur 5 jours (-2.14%), l'action beneficie d'une dynamique propre tres robuste qui cree un avantage statistique net pour un gap haussier a l'ouverture.",
       "risque": "Sensibilite a l'evolution des couts energetiques ou retournement soudain du sentiment de marche.",
       "prix_decision_17h": 16.90999984741211,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 17.0,
+      "evaluation": {
+        "date_evaluation": "2026-10-07",
+        "prix_entree": 17.0,
+        "scenarios": {
+          "ouverture": {
+            "prix": 17.1,
+            "pnl_eur": 2.94,
+            "pnl_pct": 0.59
+          },
+          "premiere_demi_heure": {
+            "prix": 16.95,
+            "pnl_eur": -1.47,
+            "pnl_pct": -0.29
+          },
+          "mi_journee": {
+            "prix": 17.03,
+            "pnl_eur": 0.88,
+            "pnl_pct": 0.18
+          },
+          "h17": {
+            "prix": 17.0,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
     },
     {
       "id": "2026-10-06_LR.PA",
@@ -3847,8 +3872,33 @@
       "raisonnement": "Tandis que son grand rival Schneider Electric est sanctionne (-3.70%) pour une lourde acquisition americaine, Legrand capitalise sur son profil d'execution rigoureuse (+3.07%) en finissant proche de son sommet de seance (clot@ 0.87). La fermete des indices americains ce soir consolide cette force relative sur une grande valeur industrielle diversifiee.",
       "risque": "Prise de benefices matinale apres une progression de plus de 3% sur la seance du jour.",
       "prix_decision_17h": 147.5,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 148.4,
+      "evaluation": {
+        "date_evaluation": "2026-10-07",
+        "prix_entree": 148.4,
+        "scenarios": {
+          "ouverture": {
+            "prix": 145.75,
+            "pnl_eur": -8.93,
+            "pnl_pct": -1.79
+          },
+          "premiere_demi_heure": {
+            "prix": 144.8,
+            "pnl_eur": -12.13,
+            "pnl_pct": -2.43
+          },
+          "mi_journee": {
+            "prix": 143.8,
+            "pnl_eur": -15.5,
+            "pnl_pct": -3.1
+          },
+          "h17": {
+            "prix": 142.1,
+            "pnl_eur": -21.23,
+            "pnl_pct": -4.25
+          }
+        }
+      }
     }
   ]
 }
