@@ -26,10 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Récupérer le dépôt
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Installer Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -65,5 +65,14 @@ jobs:
             echo "Aucune modification à sauvegarder."
           else
             git commit -m "Analyse du $(date +%F)"
-            git push
+            # Push résilient : rebase si le dépôt a avancé, nouvel essai sur les erreurs
+            # passagères de GitHub (Internal Server Error constatée le 24/09 et le 07/10/2026).
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME"; then
+                break
+              fi
+              if [ "$i" = 5 ]; then echo "::error::push impossible après 5 tentatives"; exit 1; fi
+              echo "Push refusé (tentative $i), nouvel essai dans $((i * 15)) s..."
+              sleep $((i * 15))
+            done
           fi
