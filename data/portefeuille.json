@@ -3899,6 +3899,20 @@
           }
         }
       }
+    },
+    {
+      "id": "2026-10-08_MMT.PA",
+      "date_achat": "2026-10-08",
+      "ticker": "MMT.PA",
+      "nom": "Métropole Télévision (M6)",
+      "allocation_eur": 500.0,
+      "conviction": 66,
+      "catalyseur": "Flux acheteur sectoriel synchronisé sur l'audiovisuel et clôture sur les plus-hauts du jour.",
+      "raisonnement": "Le secteur des médias audiovisuels français a bénéficié d'un flux acheteur net et concerté tout au long de l'après-midi, visible également sur TF1 (+2,20%, clôt@0,89) et Vivendi (+2,95%). M6 termine au sommet de son range (clôt@0,95) avec une hausse de +2,98% qui matérialise un rebond technique sain après cinq séances de consolidation (-3,00%), excluant tout risque de sur-extension. Entièrement décorrélé des fluctuations nocturnes de Wall Street, ce momentum de clôture offre le profil idéal pour un gap d'inertie acheteuse dès 9h00.",
+      "risque": "Volumes globaux encore modérés (0,66x) et sensibilité aux arbitrages publicitaires en cas d'accès de faiblesse macroéconomique générale.",
+      "prix_decision_17h": 10.359999656677246,
+      "prix_entree": null,
+      "evaluation": null
     }
   ]
 }
