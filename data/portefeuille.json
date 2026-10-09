@@ -3911,6 +3911,45 @@
       "raisonnement": "Le secteur des médias audiovisuels français a bénéficié d'un flux acheteur net et concerté tout au long de l'après-midi, visible également sur TF1 (+2,20%, clôt@0,89) et Vivendi (+2,95%). M6 termine au sommet de son range (clôt@0,95) avec une hausse de +2,98% qui matérialise un rebond technique sain après cinq séances de consolidation (-3,00%), excluant tout risque de sur-extension. Entièrement décorrélé des fluctuations nocturnes de Wall Street, ce momentum de clôture offre le profil idéal pour un gap d'inertie acheteuse dès 9h00.",
       "risque": "Volumes globaux encore modérés (0,66x) et sensibilité aux arbitrages publicitaires en cas d'accès de faiblesse macroéconomique générale.",
       "prix_decision_17h": 10.359999656677246,
+      "prix_entree": 10.3,
+      "evaluation": {
+        "date_evaluation": "2026-10-09",
+        "prix_entree": 10.3,
+        "scenarios": {
+          "ouverture": {
+            "prix": 10.36,
+            "pnl_eur": 2.91,
+            "pnl_pct": 0.58
+          },
+          "premiere_demi_heure": {
+            "prix": 10.36,
+            "pnl_eur": 2.91,
+            "pnl_pct": 0.58
+          },
+          "mi_journee": {
+            "prix": 10.08,
+            "pnl_eur": -10.68,
+            "pnl_pct": -2.14
+          },
+          "h17": {
+            "prix": 10.06,
+            "pnl_eur": -11.65,
+            "pnl_pct": -2.33
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-10-09_MT.AS",
+      "date_achat": "2026-10-09",
+      "ticker": "MT.AS",
+      "nom": "ArcelorMittal",
+      "allocation_eur": 500.0,
+      "conviction": 68,
+      "catalyseur": "Anticipation de mesures protectionnistes et anti-dumping de l'UE contre les exportations d'acier chinoises (Conseil européen des 16-17 octobre), stimulant un flux acheteur institutionnel sur la sidérurgie.",
+      "raisonnement": "Le titre termine au sommet de son range journalier (clôt@0.85) sur une hausse de +5.61% portée par un volume solide de fin de séance. Loin d'être sur-étendu (-0.03% sur 5 jours), le cours sort d'une phase de consolidation sans excédent hebdomadaire, signalant une réelle force propre prête à se prolonger au fixing de lundi. Compte tenu du risque accru du week-end, il s'agit de la seule valeur présentant un setup asymétrique suffisamment net pour justifier un portage.",
+      "risque": "Période de détention étendue sur 3 nuits de week-end exposant aux cours des métaux et aux développements macroéconomiques internationaux d'ici lundi matin.",
+      "prix_decision_17h": 57.2599983215332,
       "prix_entree": null,
       "evaluation": null
     }
