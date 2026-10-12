@@ -3950,6 +3950,45 @@
       "raisonnement": "Le titre termine au sommet de son range journalier (clôt@0.85) sur une hausse de +5.61% portée par un volume solide de fin de séance. Loin d'être sur-étendu (-0.03% sur 5 jours), le cours sort d'une phase de consolidation sans excédent hebdomadaire, signalant une réelle force propre prête à se prolonger au fixing de lundi. Compte tenu du risque accru du week-end, il s'agit de la seule valeur présentant un setup asymétrique suffisamment net pour justifier un portage.",
       "risque": "Période de détention étendue sur 3 nuits de week-end exposant aux cours des métaux et aux développements macroéconomiques internationaux d'ici lundi matin.",
       "prix_decision_17h": 57.2599983215332,
+      "prix_entree": 57.28,
+      "evaluation": {
+        "date_evaluation": "2026-10-12",
+        "prix_entree": 57.28,
+        "scenarios": {
+          "ouverture": {
+            "prix": 57.22,
+            "pnl_eur": -0.52,
+            "pnl_pct": -0.1
+          },
+          "premiere_demi_heure": {
+            "prix": 57.12,
+            "pnl_eur": -1.4,
+            "pnl_pct": -0.28
+          },
+          "mi_journee": {
+            "prix": 56.58,
+            "pnl_eur": -6.11,
+            "pnl_pct": -1.22
+          },
+          "h17": {
+            "prix": 56.48,
+            "pnl_eur": -6.98,
+            "pnl_pct": -1.4
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-10-12_VLA.PA",
+      "date_achat": "2026-10-12",
+      "ticker": "VLA.PA",
+      "nom": "Valneva",
+      "allocation_eur": 500.0,
+      "conviction": 67,
+      "catalyseur": "Poursuite du flux acheteur autonome de fin de séance sur le compartiment biotechnologique, décorrélé de l'atonie des indices généraux.",
+      "raisonnement": "Valneva se distingue nettement de la shortlist avec une hausse de +3,59% et une clôture sur le haut de sa fourchette du jour (clôt@0,73), portée par une activité liquide (0,75x le volume moyen, parmi les plus élevés de la séance). Avec une progression cumulée sur 5 jours encore modérée (+2,78%), le titre n'est pas sur-étendu et évite ainsi le piège des prises de bénéfices matinales. Ce profil de momentum propre et résilient permet d'envisager une ouverture en gap haussier demain matin, indépendamment des légères hésitations des indices américains.",
+      "risque": "Volatilité structurelle des biotechs et risque de contagion si les marchés américains accéléraient leurs pertes d'ici 22h00.",
+      "prix_decision_17h": 2.624000072479248,
       "prix_entree": null,
       "evaluation": null
     }
