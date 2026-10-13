@@ -3989,6 +3989,59 @@
       "raisonnement": "Valneva se distingue nettement de la shortlist avec une hausse de +3,59% et une clôture sur le haut de sa fourchette du jour (clôt@0,73), portée par une activité liquide (0,75x le volume moyen, parmi les plus élevés de la séance). Avec une progression cumulée sur 5 jours encore modérée (+2,78%), le titre n'est pas sur-étendu et évite ainsi le piège des prises de bénéfices matinales. Ce profil de momentum propre et résilient permet d'envisager une ouverture en gap haussier demain matin, indépendamment des légères hésitations des indices américains.",
       "risque": "Volatilité structurelle des biotechs et risque de contagion si les marchés américains accéléraient leurs pertes d'ici 22h00.",
       "prix_decision_17h": 2.624000072479248,
+      "prix_entree": 2.533,
+      "evaluation": {
+        "date_evaluation": "2026-10-13",
+        "prix_entree": 2.533,
+        "scenarios": {
+          "ouverture": {
+            "prix": 2.629,
+            "pnl_eur": 18.95,
+            "pnl_pct": 3.79
+          },
+          "premiere_demi_heure": {
+            "prix": 2.623,
+            "pnl_eur": 17.77,
+            "pnl_pct": 3.55
+          },
+          "mi_journee": {
+            "prix": 2.626,
+            "pnl_eur": 18.36,
+            "pnl_pct": 3.67
+          },
+          "h17": {
+            "prix": 2.556,
+            "pnl_eur": 4.54,
+            "pnl_pct": 0.91
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-10-13_VIV.PA",
+      "date_achat": "2026-10-13",
+      "ticker": "VIV.PA",
+      "nom": "Vivendi",
+      "allocation_eur": 500.0,
+      "conviction": 68,
+      "catalyseur": "Flux acheteur dominant en fin de séance avec une clôture au sommet du range journalier (clôt@0.96).",
+      "raisonnement": "Vivendi termine la journée au contact direct de son plus-haut du jour (+3,92%, clôt@0.96), soutenu par un volume solide de 0,61x. Le titre ne présente pas de sur-extension excessive (+6,63% sur 5 jours), ce qui traduit une accumulation institutionnelle propre et régulière capable d'entraîner un gap haussier d'ouverture mécanique.",
+      "risque": "Absence d'annonce d'entreprise spécifique et dépendance à la stabilité générale des marchés européens au son de cloche.",
+      "prix_decision_17h": 1.5110000371932983,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-10-13_FRVIA.PA",
+      "date_achat": "2026-10-13",
+      "ticker": "FRVIA.PA",
+      "nom": "Forvia",
+      "allocation_eur": 500.0,
+      "conviction": 65,
+      "catalyseur": "Rebond technique solide en clôture (clôt@0.92) au sortir d'une phase de consolidation.",
+      "raisonnement": "Contrairement à d'autres dossiers déjà sur-étendus, Forvia amorce un rebond propre (+2,25% sur la séance, mais encore à -0,94% sur 5 jours) en verrouillant sa clôture tout près des plus-hauts (clôt@0.92). L'absence de gains accumulés récents réduit fortement le risque de prises de bénéfices dès 9h00 et offre une asymétrie favorable pour une poursuite du momentum.",
+      "risque": "Sensibilité du compartiment automobile aux fluctuations de taux et aux commentaires de marché sectoriels.",
+      "prix_decision_17h": 8.652000427246094,
       "prix_entree": null,
       "evaluation": null
     }
