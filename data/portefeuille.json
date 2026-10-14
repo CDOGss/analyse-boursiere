@@ -4028,8 +4028,33 @@
       "raisonnement": "Vivendi termine la journée au contact direct de son plus-haut du jour (+3,92%, clôt@0.96), soutenu par un volume solide de 0,61x. Le titre ne présente pas de sur-extension excessive (+6,63% sur 5 jours), ce qui traduit une accumulation institutionnelle propre et régulière capable d'entraîner un gap haussier d'ouverture mécanique.",
       "risque": "Absence d'annonce d'entreprise spécifique et dépendance à la stabilité générale des marchés européens au son de cloche.",
       "prix_decision_17h": 1.5110000371932983,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 1.509,
+      "evaluation": {
+        "date_evaluation": "2026-10-14",
+        "prix_entree": 1.509,
+        "scenarios": {
+          "ouverture": {
+            "prix": 1.514,
+            "pnl_eur": 1.66,
+            "pnl_pct": 0.33
+          },
+          "premiere_demi_heure": {
+            "prix": 1.515,
+            "pnl_eur": 1.99,
+            "pnl_pct": 0.4
+          },
+          "mi_journee": {
+            "prix": 1.524,
+            "pnl_eur": 4.97,
+            "pnl_pct": 0.99
+          },
+          "h17": {
+            "prix": 1.491,
+            "pnl_eur": -5.96,
+            "pnl_pct": -1.19
+          }
+        }
+      }
     },
     {
       "id": "2026-10-13_FRVIA.PA",
@@ -4042,6 +4067,45 @@
       "raisonnement": "Contrairement à d'autres dossiers déjà sur-étendus, Forvia amorce un rebond propre (+2,25% sur la séance, mais encore à -0,94% sur 5 jours) en verrouillant sa clôture tout près des plus-hauts (clôt@0.92). L'absence de gains accumulés récents réduit fortement le risque de prises de bénéfices dès 9h00 et offre une asymétrie favorable pour une poursuite du momentum.",
       "risque": "Sensibilité du compartiment automobile aux fluctuations de taux et aux commentaires de marché sectoriels.",
       "prix_decision_17h": 8.652000427246094,
+      "prix_entree": 8.738,
+      "evaluation": {
+        "date_evaluation": "2026-10-14",
+        "prix_entree": 8.738,
+        "scenarios": {
+          "ouverture": {
+            "prix": 8.814,
+            "pnl_eur": 4.35,
+            "pnl_pct": 0.87
+          },
+          "premiere_demi_heure": {
+            "prix": 8.78,
+            "pnl_eur": 2.4,
+            "pnl_pct": 0.48
+          },
+          "mi_journee": {
+            "prix": 8.976,
+            "pnl_eur": 13.62,
+            "pnl_pct": 2.72
+          },
+          "h17": {
+            "prix": 8.856,
+            "pnl_eur": 6.75,
+            "pnl_pct": 1.35
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-10-14_SAF.PA",
+      "date_achat": "2026-10-14",
+      "ticker": "SAF.PA",
+      "nom": "Safran",
+      "allocation_eur": 500.0,
+      "conviction": 67,
+      "catalyseur": "Poursuite du flux acheteur institutionnel sur le secteur Aeronautique & Defense europeen, insensible a la correction technologique americaine.",
+      "raisonnement": "Alors que la tape americaine recule nettement, Safran beneficie de la puissante rotation sectorielle a l'oeuvre a Paris sur l'Aeronautique & Defense, ou tous les pairs cloturent au plus haut (Dassault Aviation a 0.94, Thales a 0.90, Airbus a 0.83). Safran cloture elle-meme solidement sur le quart superieur de sa journee (clot@0.75) avec une avance mesuree (+1.28%, -0.81% sur 5 jours), constituant une 'force tranquille' non sur-etendue. Ce flux acheteur persistant de fin de seance cree un desequilibre favorable au carnet pour l'enchere d'ouverture de demain matin.",
+      "risque": "Alourdissement supplementaire des indices americains d'ici 22h00 pesant indirectement sur les arbitrages indiciels globaux a l'ouverture.",
+      "prix_decision_17h": 316.79998779296875,
       "prix_entree": null,
       "evaluation": null
     }
