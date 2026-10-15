@@ -4106,8 +4106,33 @@
       "raisonnement": "Alors que la tape americaine recule nettement, Safran beneficie de la puissante rotation sectorielle a l'oeuvre a Paris sur l'Aeronautique & Defense, ou tous les pairs cloturent au plus haut (Dassault Aviation a 0.94, Thales a 0.90, Airbus a 0.83). Safran cloture elle-meme solidement sur le quart superieur de sa journee (clot@0.75) avec une avance mesuree (+1.28%, -0.81% sur 5 jours), constituant une 'force tranquille' non sur-etendue. Ce flux acheteur persistant de fin de seance cree un desequilibre favorable au carnet pour l'enchere d'ouverture de demain matin.",
       "risque": "Alourdissement supplementaire des indices americains d'ici 22h00 pesant indirectement sur les arbitrages indiciels globaux a l'ouverture.",
       "prix_decision_17h": 316.79998779296875,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 314.9,
+      "evaluation": {
+        "date_evaluation": "2026-10-15",
+        "prix_entree": 314.9,
+        "scenarios": {
+          "ouverture": {
+            "prix": 310.5,
+            "pnl_eur": -6.99,
+            "pnl_pct": -1.4
+          },
+          "premiere_demi_heure": {
+            "prix": 313.2,
+            "pnl_eur": -2.7,
+            "pnl_pct": -0.54
+          },
+          "mi_journee": {
+            "prix": 314.6,
+            "pnl_eur": -0.48,
+            "pnl_pct": -0.1
+          },
+          "h17": {
+            "prix": 315.0,
+            "pnl_eur": 0.16,
+            "pnl_pct": 0.03
+          }
+        }
+      }
     }
   ]
 }
