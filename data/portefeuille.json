@@ -4133,6 +4133,34 @@
           }
         }
       }
+    },
+    {
+      "id": "2026-10-29_TRI.PA",
+      "date_achat": "2026-10-29",
+      "ticker": "TRI.PA",
+      "nom": "Trigano",
+      "allocation_eur": 500.0,
+      "conviction": 68,
+      "catalyseur": "Poursuite du flux acheteur de clôture confirmé par un volume supérieur à la moyenne et une terminaison sur les sommets du jour.",
+      "raisonnement": "Trigano présente une configuration idéale de 'force tranquille' : gain mesuré de +2,00% ce jour et de +1,11% sur 5 séances, ce qui écarte tout risque de sur-extension ou de prise de bénéfices immédiate. Avec un ratio de volume solide à 1,20x et une clôture sur les plus-hauts de séance (clôt@0,90), le titre matérialise une accumulation acheteuse propre et totalement insensible à la baisse du Nasdaq.",
+      "risque": "Tassement global de Wall Street d'ici 22h pouvant freiner l'appétit pour le risque sur les moyennes capitalisations européennes demain matin.",
+      "prix_decision_17h": 127.5,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-10-29_SGO.PA",
+      "date_achat": "2026-10-29",
+      "ticker": "SGO.PA",
+      "nom": "Saint-Gobain",
+      "allocation_eur": 500.0,
+      "conviction": 64,
+      "catalyseur": "Inertie du flux acheteur sur les cycliques européennes et clôture collée aux plus-hauts de séance.",
+      "raisonnement": "Saint-Gobain enregistre une progression saine de +2,25% (+2,62% sur 5 jours) dans des volumes soutenus (0,87x) et termine tout près de son plus-haut journalier (clôt@0,87). Totalement à l'abri des turbulences de la tech américaine et sans publication de résultats imminente, la valeur est idéalement positionnée pour prolonger son momentum acheteur à l'ouverture parisienne.",
+      "risque": "Sensibilité à l'ambiance macro générale si le S&P 500 venait à creuser ses pertes avant la clôture américaine.",
+      "prix_decision_17h": 68.13999938964844,
+      "prix_entree": null,
+      "evaluation": null
     }
   ]
 }
