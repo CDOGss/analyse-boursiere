@@ -4211,6 +4211,34 @@
           }
         }
       }
+    },
+    {
+      "id": "2026-11-02_SPIE.PA",
+      "date_achat": "2026-11-02",
+      "ticker": "SPIE.PA",
+      "nom": "SPIE",
+      "allocation_eur": 500.0,
+      "conviction": 68,
+      "catalyseur": "Flux acheteur institutionnel constant verrouillant la clôture sur les plus-hauts du jour.",
+      "raisonnement": "Le titre termine au plus haut absolu de sa séance (clôt@1.00) avec une progression de +3.28% et un volume relatif satisfaisant (0.69x). Cette pression acheteuse ininterrompue en fin de séance témoigne d'accumulations de fonds sur les services à l'énergie, configuration classique propice à une poursuite mécanique sous forme de gap haussier demain matin.",
+      "risque": "Prise de bénéfices si les indices américains consolident leurs gains en deuxième partie de soirée.",
+      "prix_decision_17h": 44.65999984741211,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-11-02_MERY.PA",
+      "date_achat": "2026-11-02",
+      "ticker": "MERY.PA",
+      "nom": "Mercialys",
+      "allocation_eur": 500.0,
+      "conviction": 65,
+      "catalyseur": "Rebond technique solide clôturant au tick le plus haut sans sur-extension préalable.",
+      "raisonnement": "La foncière commerciale affiche une clôture impeccable au plus-haut de la journée (clôt@1.00) avec une hausse de +2.24% et un volume de 0.73x. Sa performance 5 jours quasi neutre (+0.84%) écarte le risque de sur-achat et de prise de profit matinale, offrant un profil défensif complémentaire et décorrélé du cycle industriel.",
+      "risque": "Sensibilité aux variations des rendements obligataires overnight susceptibles d'affecter le secteur immobilier.",
+      "prix_decision_17h": 9.569999694824219,
+      "prix_entree": null,
+      "evaluation": null
     }
   ]
 }
