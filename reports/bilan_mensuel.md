@@ -1,4 +1,4 @@
-# Bilan mensuel — mis à jour le 2026-11-02 17:06
+# Bilan mensuel — mis à jour le 2026-11-03 17:07
 
 ## Tableau de bord mensuel
 
@@ -6,6 +6,7 @@ _Sortie de référence : **Ouverture**. Frais d'aller-retour estimés : 0.20% pa
 
 | Mois | Jours | Ouverture | 9h30 | Midi | 17h | Ouverture (net) | Réussite |
 |---|---:|---:|---:|---:|---:|---:|---:|
+| 2026-11 | 1 | 🔴 -7.28€ | 🔴 -5.40€ | 🟢 +0.36€ | 🟢 +11.66€ | 🔴 -9.28€ | 0% |
 | 2026-10 | 11 | 🔴 -0.81€ | 🔴 -23.35€ | 🔴 -0.95€ | 🔴 -43.46€ | 🔴 -16.81€ | 45% |
 | 2026-09 | 11 | 🟢 +30.52€ | 🟢 +0.80€ | 🔴 -8.70€ | 🔴 -32.13€ | 🟢 +11.52€ | 73% |
 | 2026-08 | 20 | 🟢 +136.00€ | 🟢 +103.09€ | 🟢 +72.60€ | 🟢 +27.33€ | 🟢 +99.00€ | 65% |
@@ -15,6 +16,7 @@ _Sortie de référence : **Ouverture**. Frais d'aller-retour estimés : 0.20% pa
 
 | Mois | Stratégie (ouv.) ★ | CAC overnight | Alpha ouv. ★ | Stratégie (17h) | CAC séance | Alpha 17h |
 |---|---:|---:|---:|---:|---:|---:|
+| 2026-11 | -9.28€ | -6.19€ | 🔴 -3.09€ | +9.66€ | +0.36€ | 🟢 +9.30€ |
 | 2026-10 | -16.81€ | -3.01€ | 🔴 -13.80€ | -59.46€ | -10.23€ | 🔴 -49.23€ |
 | 2026-09 | +11.52€ | +11.57€ | 🔴 -0.05€ | -51.13€ | -23.27€ | 🔴 -27.86€ |
 | 2026-08 | +99.00€ | +31.59€ | 🟢 +67.41€ | -9.67€ | +0.94€ | 🔴 -10.61€ |
@@ -22,23 +24,13 @@ _Sortie de référence : **Ouverture**. Frais d'aller-retour estimés : 0.20% pa
 
 _★ = sortie de référence (Ouverture). Alpha positif = la sélection bat « acheter le CAC chaque soir ». C'est le vrai juge de la stratégie._
 
-### Détail du mois 2026-10 (jour par jour)
+### Détail du mois 2026-11 (jour par jour)
 
 _Meilleur/pire jour au scénario de référence (Ouverture)._
 
-- Meilleur jour : **2026-10-13** +18.95€ (VLA.PA)
-- Pire jour : **2026-10-01** -12.94€ (ATO.PA+OPM.PA)
+- Meilleur jour : **2026-11-03** -7.28€ (SPIE.PA+MERY.PA)
+- Pire jour : **2026-11-03** -7.28€ (SPIE.PA+MERY.PA)
 
 | Date | Actions | Ouverture ★ | 9h30 | Midi | 17h |
 |---|---|---:|---:|---:|---:|
-| 2026-10-01 | ATO.PA+OPM.PA | 🔴 -12.94€ | 🔴 -26.39€ | 🟢 +7.22€ | 🟢 +9.62€ |
-| 2026-10-02 | MAU.PA | 🟢 +1.94€ | 🟢 +0.00€ | 🟢 +2.26€ | 🔴 -2.58€ |
-| 2026-10-05 | MRN.PA | 🔴 -2.70€ | 🔴 -7.28€ | 🔴 -0.94€ | 🟢 +1.17€ |
-| 2026-10-06 | ACA.PA+MAU.PA | 🟢 +2.04€ | 🟢 +2.02€ | 🔴 -10.34€ | 🔴 -10.85€ |
-| 2026-10-07 | VRLA.PA+LR.PA | 🔴 -5.99€ | 🔴 -13.60€ | 🔴 -14.62€ | 🔴 -21.23€ |
-| 2026-10-09 | MMT.PA | 🟢 +2.91€ | 🟢 +2.91€ | 🔴 -10.68€ | 🔴 -11.65€ |
-| 2026-10-12 | MT.AS | 🔴 -0.52€ | 🔴 -1.40€ | 🔴 -6.11€ | 🔴 -6.98€ |
-| 2026-10-13 | VLA.PA | 🟢 +18.95€ | 🟢 +17.77€ | 🟢 +18.36€ | 🟢 +4.54€ |
-| 2026-10-14 | VIV.PA+FRVIA.PA | 🟢 +6.01€ | 🟢 +4.39€ | 🟢 +18.59€ | 🟢 +0.79€ |
-| 2026-10-15 | SAF.PA | 🔴 -6.99€ | 🔴 -2.70€ | 🔴 -0.48€ | 🟢 +0.16€ |
-| 2026-10-30 | TRI.PA+SGO.PA | 🔴 -3.52€ | 🟢 +0.93€ | 🔴 -4.21€ | 🔴 -6.45€ |
+| 2026-11-03 | SPIE.PA+MERY.PA | 🔴 -7.28€ | 🔴 -5.40€ | 🟢 +0.36€ | 🟢 +11.66€ |

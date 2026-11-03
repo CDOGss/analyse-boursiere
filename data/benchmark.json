@@ -323,5 +323,10 @@
     "date_achat": "2026-10-29",
     "overnight_pct": 0.048,
     "session_pct": -0.139
+  },
+  "2026-11-03": {
+    "date_achat": "2026-11-02",
+    "overnight_pct": -0.619,
+    "session_pct": 0.036
   }
 }
