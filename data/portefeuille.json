@@ -4340,8 +4340,33 @@
       "raisonnement": "Le titre termine la journée pile sur son plus-haut de séance (clôt@ 1.00) avec un volume soutenu (0,85x). L'engouement manifeste pour le secteur des médias en France a généré un flux acheteur directionnel net sans tomber dans la surchauffe (+7,8% sur 5 jours), configurant idéalement la valeur pour prolonger ce momentum dès l'ouverture.",
       "risque": "Tendance tirée en sympathie de M6 sans annonce spécifique propre à TF1, exposée à une normalisation rapide si l'appétit sectoriel retombe.",
       "prix_decision_17h": 6.360000133514404,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 6.36,
+      "evaluation": {
+        "date_evaluation": "2026-11-06",
+        "prix_entree": 6.36,
+        "scenarios": {
+          "ouverture": {
+            "prix": 6.4,
+            "pnl_eur": 3.14,
+            "pnl_pct": 0.63
+          },
+          "premiere_demi_heure": {
+            "prix": 6.395,
+            "pnl_eur": 2.75,
+            "pnl_pct": 0.55
+          },
+          "mi_journee": {
+            "prix": 6.385,
+            "pnl_eur": 1.97,
+            "pnl_pct": 0.39
+          },
+          "h17": {
+            "prix": 6.445,
+            "pnl_eur": 6.68,
+            "pnl_pct": 1.34
+          }
+        }
+      }
     },
     {
       "id": "2026-11-04_ALTA.PA",
@@ -4354,6 +4379,59 @@
       "raisonnement": "Altarea signe une progression propre de +3,05% en clôturant au plus-haut absolu du jour (clôt@ 1.00) accompagnée d'un volume de 0,85x. Le titre présente l'avantage clé de n'être absolument pas sur-étendu (+0,27% sur 5 jours), réduisant le risque de prises de bénéfices à 9h00 et offrant une force tranquille prête à gap-up.",
       "risque": "Valeur mid-cap dont le carnet d'ordres à l'ouverture peut manquer de profondeur si le marché global temporise.",
       "prix_decision_17h": 74.4000015258789,
+      "prix_entree": 74.6,
+      "evaluation": {
+        "date_evaluation": "2026-11-06",
+        "prix_entree": 74.6,
+        "scenarios": {
+          "ouverture": {
+            "prix": 73.7,
+            "pnl_eur": -6.03,
+            "pnl_pct": -1.21
+          },
+          "premiere_demi_heure": {
+            "prix": 74.6,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 74.0,
+            "pnl_eur": -4.02,
+            "pnl_pct": -0.8
+          },
+          "h17": {
+            "prix": 74.6,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-11-06_NEX.PA",
+      "date_achat": "2026-11-06",
+      "ticker": "NEX.PA",
+      "nom": "Nexans",
+      "allocation_eur": 500.0,
+      "conviction": 68,
+      "catalyseur": "Poursuite du flux acheteur institutionnel sur l'électrification et rattrapage à l'ouverture parisienne du net rebond américain.",
+      "raisonnement": "Nexans affiche une force relative exceptionnelle dans un marché parisien vendeur, clôturant sur son plus-haut de séance (clôt@0,99 avec +4,40%). La progression sur 5 jours demeure très saine (+4,13%), écartant le risque d'un titre sur-étendu et traduisant une accumulation régulière. Ce profil industriel robuste présente un excellent rempart pour traverser le week-end.",
+      "risque": "Portage sur trois nuits exposant le titre à d'éventuelles annonces macroéconomiques défavorables avant l'ouverture de lundi.",
+      "prix_decision_17h": 123.5,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-11-06_VLTSA.PA",
+      "date_achat": "2026-11-06",
+      "ticker": "VLTSA.PA",
+      "nom": "Voltalia",
+      "allocation_eur": 500.0,
+      "conviction": 64,
+      "catalyseur": "Inertie du flux acheteur de fin de séance sur les énergies renouvelables appuyé par un volume supérieur à la normale.",
+      "raisonnement": "Voltalia termine sur le plus-haut absolu du jour (clôt@1,00 avec +4,68%) avec un volume confirmé (1,13x), matérialisant une pression acheteuse continue jusqu'au fixing. Totalement décorrélée de la morosité de la cote parisienne, la valeur offre une dynamique sectorielle propre et parfaitement diversifiée face à Nexans.",
+      "risque": "Bêta plus élevé propre aux petites capitalisations sur un week-end et gain sur 5 jours (+9,83%) susceptible de tenter quelques vendeurs matinaux.",
+      "prix_decision_17h": 4.135000228881836,
       "prix_entree": null,
       "evaluation": null
     }
