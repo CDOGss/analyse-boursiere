@@ -4418,8 +4418,33 @@
       "raisonnement": "Nexans affiche une force relative exceptionnelle dans un marché parisien vendeur, clôturant sur son plus-haut de séance (clôt@0,99 avec +4,40%). La progression sur 5 jours demeure très saine (+4,13%), écartant le risque d'un titre sur-étendu et traduisant une accumulation régulière. Ce profil industriel robuste présente un excellent rempart pour traverser le week-end.",
       "risque": "Portage sur trois nuits exposant le titre à d'éventuelles annonces macroéconomiques défavorables avant l'ouverture de lundi.",
       "prix_decision_17h": 123.5,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 123.5,
+      "evaluation": {
+        "date_evaluation": "2026-11-09",
+        "prix_entree": 123.5,
+        "scenarios": {
+          "ouverture": {
+            "prix": 124.9,
+            "pnl_eur": 5.67,
+            "pnl_pct": 1.13
+          },
+          "premiere_demi_heure": {
+            "prix": 123.9,
+            "pnl_eur": 1.62,
+            "pnl_pct": 0.32
+          },
+          "mi_journee": {
+            "prix": 124.6,
+            "pnl_eur": 4.45,
+            "pnl_pct": 0.89
+          },
+          "h17": {
+            "prix": 126.9,
+            "pnl_eur": 13.77,
+            "pnl_pct": 2.75
+          }
+        }
+      }
     },
     {
       "id": "2026-11-06_VLTSA.PA",
@@ -4432,6 +4457,59 @@
       "raisonnement": "Voltalia termine sur le plus-haut absolu du jour (clôt@1,00 avec +4,68%) avec un volume confirmé (1,13x), matérialisant une pression acheteuse continue jusqu'au fixing. Totalement décorrélée de la morosité de la cote parisienne, la valeur offre une dynamique sectorielle propre et parfaitement diversifiée face à Nexans.",
       "risque": "Bêta plus élevé propre aux petites capitalisations sur un week-end et gain sur 5 jours (+9,83%) susceptible de tenter quelques vendeurs matinaux.",
       "prix_decision_17h": 4.135000228881836,
+      "prix_entree": 4.09,
+      "evaluation": {
+        "date_evaluation": "2026-11-09",
+        "prix_entree": 4.09,
+        "scenarios": {
+          "ouverture": {
+            "prix": 4.075,
+            "pnl_eur": -1.83,
+            "pnl_pct": -0.37
+          },
+          "premiere_demi_heure": {
+            "prix": 4.105,
+            "pnl_eur": 1.83,
+            "pnl_pct": 0.37
+          },
+          "mi_journee": {
+            "prix": 4.17,
+            "pnl_eur": 9.78,
+            "pnl_pct": 1.96
+          },
+          "h17": {
+            "prix": 4.09,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-11-09_APAM.AS",
+      "date_achat": "2026-11-09",
+      "ticker": "APAM.AS",
+      "nom": "Aperam",
+      "allocation_eur": 500.0,
+      "conviction": 67,
+      "catalyseur": "Poursuite du flux acheteur continu de fin de séance au sein des valeurs de matériaux de base, favorisé par la décrue de la volatilité globale.",
+      "raisonnement": "Aperam présente le profil type de la force tranquille : hausse modérée de +1,94% accompagnée d'un volume solide (0,88x la moyenne, nettement au-dessus de la cote parisienne) et d'une clôture au quasi-sommet du jour (clôt@0,94). Ayant consolidé sur 5 jours (-4,86%), le titre n'est pas sur-étendu et offre une asymétrie favorable contre les prises de bénéfices matinales.",
+      "risque": "Sensibilité aux cours des matières premières et aux variations des contrats à terme industriels pendant la nuit.",
+      "prix_decision_17h": 33.63999938964844,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-11-09_AIR.PA",
+      "date_achat": "2026-11-09",
+      "ticker": "AIR.PA",
+      "nom": "Airbus",
+      "allocation_eur": 500.0,
+      "conviction": 66,
+      "catalyseur": "Flux de rachat institutionnel massif en fin de séance se matérialisant par une clôture au plus-haut du jour (clôt@0,99).",
+      "raisonnement": "Airbus tire parti d'un mouvement d'ensemble porteur sur l'aéronautique européenne pour imprimer une clôture quasi parfaite à 205,35 € (+4,56%), tout en haut de son range quotidien. L'avancée sur 5 jours restant très mesurée (+4,73%), le risque de saturation technique est minime, maximisant la probabilité d'un débouclage haussier au fixing d'ouverture.",
+      "risque": "Poids de la valeur dans les indices exposant le titre à un retournement macro imprévu de Wall Street en fin de session US.",
+      "prix_decision_17h": 205.35000610351562,
       "prix_entree": null,
       "evaluation": null
     }
