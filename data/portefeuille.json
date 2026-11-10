@@ -4496,8 +4496,33 @@
       "raisonnement": "Aperam présente le profil type de la force tranquille : hausse modérée de +1,94% accompagnée d'un volume solide (0,88x la moyenne, nettement au-dessus de la cote parisienne) et d'une clôture au quasi-sommet du jour (clôt@0,94). Ayant consolidé sur 5 jours (-4,86%), le titre n'est pas sur-étendu et offre une asymétrie favorable contre les prises de bénéfices matinales.",
       "risque": "Sensibilité aux cours des matières premières et aux variations des contrats à terme industriels pendant la nuit.",
       "prix_decision_17h": 33.63999938964844,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 33.6,
+      "evaluation": {
+        "date_evaluation": "2026-11-10",
+        "prix_entree": 33.6,
+        "scenarios": {
+          "ouverture": {
+            "prix": 34.08,
+            "pnl_eur": 7.14,
+            "pnl_pct": 1.43
+          },
+          "premiere_demi_heure": {
+            "prix": 34.22,
+            "pnl_eur": 9.23,
+            "pnl_pct": 1.85
+          },
+          "mi_journee": {
+            "prix": 34.1,
+            "pnl_eur": 7.44,
+            "pnl_pct": 1.49
+          },
+          "h17": {
+            "prix": 34.76,
+            "pnl_eur": 17.26,
+            "pnl_pct": 3.45
+          }
+        }
+      }
     },
     {
       "id": "2026-11-09_AIR.PA",
@@ -4510,6 +4535,45 @@
       "raisonnement": "Airbus tire parti d'un mouvement d'ensemble porteur sur l'aéronautique européenne pour imprimer une clôture quasi parfaite à 205,35 € (+4,56%), tout en haut de son range quotidien. L'avancée sur 5 jours restant très mesurée (+4,73%), le risque de saturation technique est minime, maximisant la probabilité d'un débouclage haussier au fixing d'ouverture.",
       "risque": "Poids de la valeur dans les indices exposant le titre à un retournement macro imprévu de Wall Street en fin de session US.",
       "prix_decision_17h": 205.35000610351562,
+      "prix_entree": 206.0,
+      "evaluation": {
+        "date_evaluation": "2026-11-10",
+        "prix_entree": 206.0,
+        "scenarios": {
+          "ouverture": {
+            "prix": 209.35,
+            "pnl_eur": 8.13,
+            "pnl_pct": 1.63
+          },
+          "premiere_demi_heure": {
+            "prix": 209.1,
+            "pnl_eur": 7.52,
+            "pnl_pct": 1.5
+          },
+          "mi_journee": {
+            "prix": 210.55,
+            "pnl_eur": 11.04,
+            "pnl_pct": 2.21
+          },
+          "h17": {
+            "prix": 210.05,
+            "pnl_eur": 9.83,
+            "pnl_pct": 1.97
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-11-10_AI.PA",
+      "date_achat": "2026-11-10",
+      "ticker": "AI.PA",
+      "nom": "Air Liquide",
+      "allocation_eur": 500.0,
+      "conviction": 67,
+      "catalyseur": "Poursuite du flux acheteur institutionnel visible sur le fixing et rotation de marché vers les grandes valeurs défensives de qualité.",
+      "raisonnement": "Air Liquide offre le profil parfait de la 'force tranquille' : une hausse mesurée de +0,79% sans sur-extension (+4,60% sur 5 jours) et une clôture positionnée quasiment sur le plus-haut de la séance (clôt@ 0,98). Ce ramassage obstiné jusqu'au fixing témoigne d'un flux acheteur spécifique et résilient face à la baisse de Wall Street. Son statut défensif à fort pricing power protège le titre contre la contagion de la tech américaine et favorise une ouverture ferme demain matin.",
+      "risque": "Accélération des ventes sur les indices américains d'ici 22h susceptible de peser mécaniquement sur la cote européenne demain à 9h00, combinée à des volumes du jour modérés (0,53x).",
+      "prix_decision_17h": 190.9600067138672,
       "prix_entree": null,
       "evaluation": null
     }
