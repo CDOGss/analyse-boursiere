@@ -4574,6 +4574,59 @@
       "raisonnement": "Air Liquide offre le profil parfait de la 'force tranquille' : une hausse mesurée de +0,79% sans sur-extension (+4,60% sur 5 jours) et une clôture positionnée quasiment sur le plus-haut de la séance (clôt@ 0,98). Ce ramassage obstiné jusqu'au fixing témoigne d'un flux acheteur spécifique et résilient face à la baisse de Wall Street. Son statut défensif à fort pricing power protège le titre contre la contagion de la tech américaine et favorise une ouverture ferme demain matin.",
       "risque": "Accélération des ventes sur les indices américains d'ici 22h susceptible de peser mécaniquement sur la cote européenne demain à 9h00, combinée à des volumes du jour modérés (0,53x).",
       "prix_decision_17h": 190.9600067138672,
+      "prix_entree": 190.34,
+      "evaluation": {
+        "date_evaluation": "2026-11-11",
+        "prix_entree": 190.34,
+        "scenarios": {
+          "ouverture": {
+            "prix": 190.94,
+            "pnl_eur": 1.58,
+            "pnl_pct": 0.32
+          },
+          "premiere_demi_heure": {
+            "prix": 191.94,
+            "pnl_eur": 4.2,
+            "pnl_pct": 0.84
+          },
+          "mi_journee": {
+            "prix": 191.76,
+            "pnl_eur": 3.73,
+            "pnl_pct": 0.75
+          },
+          "h17": {
+            "prix": 192.42,
+            "pnl_eur": 5.46,
+            "pnl_pct": 1.09
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-11-11_NEX.PA",
+      "date_achat": "2026-11-11",
+      "ticker": "NEX.PA",
+      "nom": "Nexans",
+      "allocation_eur": 500.0,
+      "conviction": 68,
+      "catalyseur": "Inertie du flux acheteur institutionnel sur l'électrification et clôture sur les plus-hauts du jour.",
+      "raisonnement": "Nexans affiche une belle vigueur relative (+3,53%) avec une clôture positionnée tout près du plus-haut de séance (clôt@0,86) et un volume soutenu (0,61x, parmi les plus forts du jour). L'environnement américain très haussier et sans stress sur la volatilité sécurise la transmission du momentum vers un gap haussier demain matin.",
+      "risque": "Performance déjà marquée sur 5 séances (+11,48%) pouvant inciter certains intervenants à concrétiser des profits dès l'ouverture.",
+      "prix_decision_17h": 132.10000610351562,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-11-11_VLA.PA",
+      "date_achat": "2026-11-11",
+      "ticker": "VLA.PA",
+      "nom": "Valneva",
+      "allocation_eur": 500.0,
+      "conviction": 63,
+      "catalyseur": "Poursuite de l'accumulation acheteuse régulière observée en fin de séance sur le secteur santé.",
+      "raisonnement": "Le titre affiche une progression mesurée (+2,66%) et termine bien orienté dans son range quotidien (clôt@0,73) avec le ratio de volume le plus dynamique des dossiers haussiers (0,63x). N'étant pas sur-étendu sur 5 jours (+5,06%), il offre un profil de force tranquille idéal pour prolonger le flux à l'open sans risque de retournement sectoriel immédiat.",
+      "risque": "Volatilité spécifique inhérente au compartiment des biotechnologies en cas de flux vendeur erratique à l'ouverture.",
+      "prix_decision_17h": 2.6600000858306885,
       "prix_entree": null,
       "evaluation": null
     }
