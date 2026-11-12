@@ -4613,8 +4613,33 @@
       "raisonnement": "Nexans affiche une belle vigueur relative (+3,53%) avec une clôture positionnée tout près du plus-haut de séance (clôt@0,86) et un volume soutenu (0,61x, parmi les plus forts du jour). L'environnement américain très haussier et sans stress sur la volatilité sécurise la transmission du momentum vers un gap haussier demain matin.",
       "risque": "Performance déjà marquée sur 5 séances (+11,48%) pouvant inciter certains intervenants à concrétiser des profits dès l'ouverture.",
       "prix_decision_17h": 132.10000610351562,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 132.9,
+      "evaluation": {
+        "date_evaluation": "2026-11-12",
+        "prix_entree": 132.9,
+        "scenarios": {
+          "ouverture": {
+            "prix": 131.4,
+            "pnl_eur": -5.64,
+            "pnl_pct": -1.13
+          },
+          "premiere_demi_heure": {
+            "prix": 132.4,
+            "pnl_eur": -1.88,
+            "pnl_pct": -0.38
+          },
+          "mi_journee": {
+            "prix": 133.2,
+            "pnl_eur": 1.13,
+            "pnl_pct": 0.23
+          },
+          "h17": {
+            "prix": 131.0,
+            "pnl_eur": -7.15,
+            "pnl_pct": -1.43
+          }
+        }
+      }
     },
     {
       "id": "2026-11-11_VLA.PA",
@@ -4627,6 +4652,59 @@
       "raisonnement": "Le titre affiche une progression mesurée (+2,66%) et termine bien orienté dans son range quotidien (clôt@0,73) avec le ratio de volume le plus dynamique des dossiers haussiers (0,63x). N'étant pas sur-étendu sur 5 jours (+5,06%), il offre un profil de force tranquille idéal pour prolonger le flux à l'open sans risque de retournement sectoriel immédiat.",
       "risque": "Volatilité spécifique inhérente au compartiment des biotechnologies en cas de flux vendeur erratique à l'ouverture.",
       "prix_decision_17h": 2.6600000858306885,
+      "prix_entree": 2.677,
+      "evaluation": {
+        "date_evaluation": "2026-11-12",
+        "prix_entree": 2.677,
+        "scenarios": {
+          "ouverture": {
+            "prix": 2.717,
+            "pnl_eur": 7.47,
+            "pnl_pct": 1.49
+          },
+          "premiere_demi_heure": {
+            "prix": 2.67,
+            "pnl_eur": -1.31,
+            "pnl_pct": -0.26
+          },
+          "mi_journee": {
+            "prix": 2.703,
+            "pnl_eur": 4.86,
+            "pnl_pct": 0.97
+          },
+          "h17": {
+            "prix": 2.652,
+            "pnl_eur": -4.67,
+            "pnl_pct": -0.93
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-11-12_CS.PA",
+      "date_achat": "2026-11-12",
+      "ticker": "CS.PA",
+      "nom": "AXA",
+      "allocation_eur": 500.0,
+      "conviction": 68,
+      "catalyseur": "Flux acheteur regulier culminant au plus-haut du jour (clot@0.95) revelant une nette surperformance sectorielle.",
+      "raisonnement": "AXA signe une seance robuste (+1.71%) en cloturant quasiment sur son sommet de seance (clot@0.95), temoignant d'un puissant ramassage de fin de journee. Le titre n'est absolument pas sur-etendu sur 5 jours (+2.63%), ce qui limite le risque de prises de benefices matinales et favorise la poursuite mecanique du flux acheteur a l'ouverture de demain.",
+      "risque": "Retournement nocturne des indices americains ou mouvement abrupt sur les taux longs.",
+      "prix_decision_17h": 46.90999984741211,
+      "prix_entree": null,
+      "evaluation": null
+    },
+    {
+      "id": "2026-11-12_BB.PA",
+      "date_achat": "2026-11-12",
+      "ticker": "BB.PA",
+      "nom": "BIC",
+      "allocation_eur": 500.0,
+      "conviction": 61,
+      "catalyseur": "Cloture en haut de range (clot@0.83) avec volume relatif superieur a la moyenne du panier.",
+      "raisonnement": "BIC temoigne d'une force tranquille avec une progression mesignee (+0.62% sur le jour comme sur 5 jours) et une cloture tres bien orientee (clot@0.83) sur un volume de 0.60x. Son profil defensif et decorele du secteur financier d'AXA apporte une diversification ideale pour capter un gap d'ouverture positif meme en cas de tape US hesitante.",
+      "risque": "Volume absolu parfois etroit a 9h00 pouvant brider l'ecart d'ouverture.",
+      "prix_decision_17h": 65.4000015258789,
       "prix_entree": null,
       "evaluation": null
     }
