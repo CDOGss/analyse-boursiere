@@ -4691,8 +4691,33 @@
       "raisonnement": "AXA signe une seance robuste (+1.71%) en cloturant quasiment sur son sommet de seance (clot@0.95), temoignant d'un puissant ramassage de fin de journee. Le titre n'est absolument pas sur-etendu sur 5 jours (+2.63%), ce qui limite le risque de prises de benefices matinales et favorise la poursuite mecanique du flux acheteur a l'ouverture de demain.",
       "risque": "Retournement nocturne des indices americains ou mouvement abrupt sur les taux longs.",
       "prix_decision_17h": 46.90999984741211,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 46.58,
+      "evaluation": {
+        "date_evaluation": "2026-11-13",
+        "prix_entree": 46.58,
+        "scenarios": {
+          "ouverture": {
+            "prix": 46.68,
+            "pnl_eur": 1.07,
+            "pnl_pct": 0.21
+          },
+          "premiere_demi_heure": {
+            "prix": 46.7,
+            "pnl_eur": 1.29,
+            "pnl_pct": 0.26
+          },
+          "mi_journee": {
+            "prix": 46.67,
+            "pnl_eur": 0.97,
+            "pnl_pct": 0.19
+          },
+          "h17": {
+            "prix": 47.15,
+            "pnl_eur": 6.12,
+            "pnl_pct": 1.22
+          }
+        }
+      }
     },
     {
       "id": "2026-11-12_BB.PA",
@@ -4705,6 +4730,45 @@
       "raisonnement": "BIC temoigne d'une force tranquille avec une progression mesignee (+0.62% sur le jour comme sur 5 jours) et une cloture tres bien orientee (clot@0.83) sur un volume de 0.60x. Son profil defensif et decorele du secteur financier d'AXA apporte une diversification ideale pour capter un gap d'ouverture positif meme en cas de tape US hesitante.",
       "risque": "Volume absolu parfois etroit a 9h00 pouvant brider l'ecart d'ouverture.",
       "prix_decision_17h": 65.4000015258789,
+      "prix_entree": 65.2,
+      "evaluation": {
+        "date_evaluation": "2026-11-13",
+        "prix_entree": 65.2,
+        "scenarios": {
+          "ouverture": {
+            "prix": 65.0,
+            "pnl_eur": -1.53,
+            "pnl_pct": -0.31
+          },
+          "premiere_demi_heure": {
+            "prix": 64.7,
+            "pnl_eur": -3.83,
+            "pnl_pct": -0.77
+          },
+          "mi_journee": {
+            "prix": 64.9,
+            "pnl_eur": -2.3,
+            "pnl_pct": -0.46
+          },
+          "h17": {
+            "prix": 65.3,
+            "pnl_eur": 0.77,
+            "pnl_pct": 0.15
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-11-13_GFC.PA",
+      "date_achat": "2026-11-13",
+      "ticker": "GFC.PA",
+      "nom": "Gecina",
+      "allocation_eur": 500.0,
+      "conviction": 58,
+      "catalyseur": "Flux acheteur de fin de séance clôturant au plus-haut absolu (clôt@1.00) et rotation défensive vers les foncières de rendement.",
+      "raisonnement": "En pleine tempête sur les valeurs de croissance et la tech américaine (Nasdaq -1,84%), Gecina illustre une nette résilience grâce à sa nature défensive et décorrélée. Le titre signe une clôture parfaite au plus-haut du jour (clôt@1.00) avec une progression calme (+0,70%), sans être sur-étendu (-1,36% sur 5 jours). Ce profil de force tranquille bénéficiant d'un flux d'achat jusqu'à la clôture offre le meilleur rempart pour ouvrir sur un gap favorable lundi matin.",
+      "risque": "Volume d'échange limité (0,55x la moyenne) et aléas macroéconomiques liés au portage de 3 nuits sur le week-end.",
+      "prix_decision_17h": 65.05000305175781,
       "prix_entree": null,
       "evaluation": null
     }
