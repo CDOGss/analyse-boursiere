@@ -37,7 +37,7 @@ HEURE_EXEC_MAX = 21            # filet de sécurité tardif (Wall Street ouvre j
 
 # --- API / modèle ----------------------------------------------------------
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-MODELE = os.getenv("ANALYSE_MODEL", "gemini-3.8-flash")
+MODELE = os.getenv("ANALYSE_MODEL", "gemini-4-hydrogen")
 ALLOCATION_PAR_ACTION = float(os.getenv("ALLOCATION_PAR_ACTION", "500"))
 NB_ACHATS_PAR_SOIR = 2
 
