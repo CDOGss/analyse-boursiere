@@ -4769,8 +4769,33 @@
       "raisonnement": "En pleine tempête sur les valeurs de croissance et la tech américaine (Nasdaq -1,84%), Gecina illustre une nette résilience grâce à sa nature défensive et décorrélée. Le titre signe une clôture parfaite au plus-haut du jour (clôt@1.00) avec une progression calme (+0,70%), sans être sur-étendu (-1,36% sur 5 jours). Ce profil de force tranquille bénéficiant d'un flux d'achat jusqu'à la clôture offre le meilleur rempart pour ouvrir sur un gap favorable lundi matin.",
       "risque": "Volume d'échange limité (0,55x la moyenne) et aléas macroéconomiques liés au portage de 3 nuits sur le week-end.",
       "prix_decision_17h": 65.05000305175781,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 65.2,
+      "evaluation": {
+        "date_evaluation": "2026-11-16",
+        "prix_entree": 65.2,
+        "scenarios": {
+          "ouverture": {
+            "prix": 65.25,
+            "pnl_eur": 0.38,
+            "pnl_pct": 0.08
+          },
+          "premiere_demi_heure": {
+            "prix": 65.05,
+            "pnl_eur": -1.15,
+            "pnl_pct": -0.23
+          },
+          "mi_journee": {
+            "prix": 65.3,
+            "pnl_eur": 0.77,
+            "pnl_pct": 0.15
+          },
+          "h17": {
+            "prix": 65.7,
+            "pnl_eur": 3.83,
+            "pnl_pct": 0.77
+          }
+        }
+      }
     }
   ]
 }
