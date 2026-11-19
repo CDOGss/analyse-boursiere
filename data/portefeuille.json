@@ -4796,6 +4796,20 @@
           }
         }
       }
+    },
+    {
+      "id": "2026-11-19_ERF.PA",
+      "date_achat": "2026-11-19",
+      "ticker": "ERF.PA",
+      "nom": "Eurofins Scientific",
+      "allocation_eur": 500.0,
+      "conviction": 59,
+      "catalyseur": "Poursuite du flux acheteur de fin de séance et rotation défensive sur une valeur de santé en sortie de consolidation.",
+      "raisonnement": "Dans une séance parisienne lourde où la quasi-totalité des valeurs terminent dans le bas de leur range, Eurofins Scientific se distingue nettement avec une clôture proche du plus haut du jour (clôt@0.88) et un volume soutenu (0.80x à 30 minutes de la clôture). Sa hausse du jour reste mesurée (+0.80% après -2.52% sur 5 jours), offrant un profil de force tranquille sans risque de sur-extension ni dépendance directe à la volatilité tech américaine.",
+      "risque": "VIX élevé à 25.73 rendant les ouvertures européennes sensibles à un éventuel décrochage nocturne de Wall Street.",
+      "prix_decision_17h": 85.73999786376953,
+      "prix_entree": null,
+      "evaluation": null
     }
   ]
 }
