@@ -4808,8 +4808,33 @@
       "raisonnement": "Dans une séance parisienne lourde où la quasi-totalité des valeurs terminent dans le bas de leur range, Eurofins Scientific se distingue nettement avec une clôture proche du plus haut du jour (clôt@0.88) et un volume soutenu (0.80x à 30 minutes de la clôture). Sa hausse du jour reste mesurée (+0.80% après -2.52% sur 5 jours), offrant un profil de force tranquille sans risque de sur-extension ni dépendance directe à la volatilité tech américaine.",
       "risque": "VIX élevé à 25.73 rendant les ouvertures européennes sensibles à un éventuel décrochage nocturne de Wall Street.",
       "prix_decision_17h": 85.73999786376953,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 85.66,
+      "evaluation": {
+        "date_evaluation": "2026-11-20",
+        "prix_entree": 85.66,
+        "scenarios": {
+          "ouverture": {
+            "prix": 85.44,
+            "pnl_eur": -1.28,
+            "pnl_pct": -0.26
+          },
+          "premiere_demi_heure": {
+            "prix": 85.66,
+            "pnl_eur": 0.0,
+            "pnl_pct": 0.0
+          },
+          "mi_journee": {
+            "prix": 85.48,
+            "pnl_eur": -1.05,
+            "pnl_pct": -0.21
+          },
+          "h17": {
+            "prix": 84.96,
+            "pnl_eur": -4.09,
+            "pnl_pct": -0.82
+          }
+        }
+      }
     }
   ]
 }
