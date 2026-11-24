@@ -4847,6 +4847,45 @@
       "raisonnement": "Airbus combine un catalyseur spécifique daté du jour avec un flux acheteur propre de fin de séance (clôture à 89 % du range du jour) tout en restant sur une hausse journalière mesurée (+2,73 %) après une semaine en retrait (-4,41 % sur 5 jours). Ce profil de force tranquille évite les titres déjà sur-étendus de la séance (+5 % et plus) exposés aux prises de bénéfices, tout en bénéficiant d'un vent porteur américain exceptionnel sans dépendre uniquement du bêta de marché. Le volume relatif reste modéré (0,51x), mais demeure supérieur à la majorité des grandes capitalisations du CAC 40 sur la séance.",
       "risque": "Volume journalier modeste (0,51x) et volatilité persistante (VIX à 27,06) avec un risque de consolidation partielle de Wall Street avant la clôture de 22h après un rebond intraday hors norme.",
       "prix_decision_17h": 195.13999938964844,
+      "prix_entree": 195.72,
+      "evaluation": {
+        "date_evaluation": "2026-11-24",
+        "prix_entree": 195.72,
+        "scenarios": {
+          "ouverture": {
+            "prix": 196.14,
+            "pnl_eur": 1.07,
+            "pnl_pct": 0.21
+          },
+          "premiere_demi_heure": {
+            "prix": 195.1,
+            "pnl_eur": -1.58,
+            "pnl_pct": -0.32
+          },
+          "mi_journee": {
+            "prix": 194.96,
+            "pnl_eur": -1.94,
+            "pnl_pct": -0.39
+          },
+          "h17": {
+            "prix": 193.84,
+            "pnl_eur": -4.8,
+            "pnl_pct": -0.96
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-11-24_VRLA.PA",
+      "date_achat": "2026-11-24",
+      "ticker": "VRLA.PA",
+      "nom": "Verallia",
+      "allocation_eur": 500.0,
+      "conviction": 61,
+      "catalyseur": "Prolongation du flux acheteur de fin de séance sur un titre en rebond technique modéré et décorrélé du repli technologique américain.",
+      "raisonnement": "Verallia affiche un profil de force tranquille idéal dans un marché nerveux : le titre termine exactement sur son plus haut du jour (clôt@ 1.00) avec un volume particulièrement soutenu (1.49x la moyenne, l'un des plus élevés de la shortlist). Sa hausse du jour reste mesurée (+0.78%) après une consolidation de -3.76% sur 5 jours, ce qui limite le risque de prise de bénéfices à l'ouverture. Son profil industriel défensif européen offre une bonne isolation face à la correction du Nasdaq.",
+      "risque": "Un creusement supplémentaire de la baisse sur les indices américains ce soir avec un VIX proche de 29 pourrait peser globalement sur l'appétit pour le risque à l'ouverture européenne.",
+      "prix_decision_17h": 16.8799991607666,
       "prix_entree": null,
       "evaluation": null
     }
