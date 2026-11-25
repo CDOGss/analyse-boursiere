@@ -4886,8 +4886,33 @@
       "raisonnement": "Verallia affiche un profil de force tranquille idéal dans un marché nerveux : le titre termine exactement sur son plus haut du jour (clôt@ 1.00) avec un volume particulièrement soutenu (1.49x la moyenne, l'un des plus élevés de la shortlist). Sa hausse du jour reste mesurée (+0.78%) après une consolidation de -3.76% sur 5 jours, ce qui limite le risque de prise de bénéfices à l'ouverture. Son profil industriel défensif européen offre une bonne isolation face à la correction du Nasdaq.",
       "risque": "Un creusement supplémentaire de la baisse sur les indices américains ce soir avec un VIX proche de 29 pourrait peser globalement sur l'appétit pour le risque à l'ouverture européenne.",
       "prix_decision_17h": 16.8799991607666,
-      "prix_entree": null,
-      "evaluation": null
+      "prix_entree": 17.0,
+      "evaluation": {
+        "date_evaluation": "2026-11-25",
+        "prix_entree": 17.0,
+        "scenarios": {
+          "ouverture": {
+            "prix": 17.14,
+            "pnl_eur": 4.12,
+            "pnl_pct": 0.82
+          },
+          "premiere_demi_heure": {
+            "prix": 17.19,
+            "pnl_eur": 5.59,
+            "pnl_pct": 1.12
+          },
+          "mi_journee": {
+            "prix": 17.5,
+            "pnl_eur": 14.71,
+            "pnl_pct": 2.94
+          },
+          "h17": {
+            "prix": 17.45,
+            "pnl_eur": 13.24,
+            "pnl_pct": 2.65
+          }
+        }
+      }
     }
   ]
 }
