@@ -4913,6 +4913,20 @@
           }
         }
       }
+    },
+    {
+      "id": "2026-11-26_VRLA.PA",
+      "date_achat": "2026-11-26",
+      "ticker": "VRLA.PA",
+      "nom": "Verallia",
+      "allocation_eur": 500.0,
+      "conviction": 60,
+      "catalyseur": "Prolongation du flux acheteur de fin de séance (clôture au plus haut du jour sur un volume quasi plein de 0,99x).",
+      "raisonnement": "Dans une séance parisienne vigoureuse mais face à une tape américaine légèrement négative, Verallia se distingue par le meilleur couple flux/volume de la shortlist avec une clôture à 1,01 du range journalier et un volume de 0,99x la moyenne. Sa hausse du jour (+3,64 %) reste mesurée au regard du CAC 40 (+1,82 %) et témoigne d'une accumulation régulière propre au titre plutôt que d'un pari directionnel lié au Nasdaq. En régime de prudence (VIX à 26,69), ce profil défensif industriel offre la meilleure probabilité de poursuite haussière à l'ouverture.",
+      "risque": "Prise de bénéfices matinale après un cumul de +7,44 % sur 5 jours, ou accentuation du repli des indices américains en soirée.",
+      "prix_decision_17h": 18.200000762939453,
+      "prix_entree": null,
+      "evaluation": null
     }
   ]
 }
