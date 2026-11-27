@@ -4925,6 +4925,45 @@
       "raisonnement": "Dans une séance parisienne vigoureuse mais face à une tape américaine légèrement négative, Verallia se distingue par le meilleur couple flux/volume de la shortlist avec une clôture à 1,01 du range journalier et un volume de 0,99x la moyenne. Sa hausse du jour (+3,64 %) reste mesurée au regard du CAC 40 (+1,82 %) et témoigne d'une accumulation régulière propre au titre plutôt que d'un pari directionnel lié au Nasdaq. En régime de prudence (VIX à 26,69), ce profil défensif industriel offre la meilleure probabilité de poursuite haussière à l'ouverture.",
       "risque": "Prise de bénéfices matinale après un cumul de +7,44 % sur 5 jours, ou accentuation du repli des indices américains en soirée.",
       "prix_decision_17h": 18.200000762939453,
+      "prix_entree": 18.26,
+      "evaluation": {
+        "date_evaluation": "2026-11-27",
+        "prix_entree": 18.26,
+        "scenarios": {
+          "ouverture": {
+            "prix": 18.29,
+            "pnl_eur": 0.82,
+            "pnl_pct": 0.16
+          },
+          "premiere_demi_heure": {
+            "prix": 18.21,
+            "pnl_eur": -1.37,
+            "pnl_pct": -0.27
+          },
+          "mi_journee": {
+            "prix": 18.32,
+            "pnl_eur": 1.64,
+            "pnl_pct": 0.33
+          },
+          "h17": {
+            "prix": 18.7,
+            "pnl_eur": 12.05,
+            "pnl_pct": 2.41
+          }
+        }
+      }
+    },
+    {
+      "id": "2026-11-27_VCT.PA",
+      "date_achat": "2026-11-27",
+      "ticker": "VCT.PA",
+      "nom": "Vicat",
+      "allocation_eur": 500.0,
+      "conviction": 56,
+      "catalyseur": "Poursuite du flux acheteur de fin de séance observé sur la valeur (clôture à 0.83 du range journalier sur un volume supérieur à la moyenne à 1.11x).",
+      "raisonnement": "Dans une shortlist marquée par des titres déjà sur-étendus ou à faible volume, Vicat présente le profil le plus sain de force tranquille avec une hausse mesurée (+0.77% ce jour, +3.97% sur 5 jours). C'est la seule valeur haussière prioritaire affichant un réel soutien en volume (1.11x) tout en terminant proche de ses plus hauts du jour (clôt@0.83). Le vent porteur de la séance américaine et la détente du VIX complètent favorablement ce flux spécifique sans dépendre d'un pur pari bêta.",
+      "risque": "Exposition à un gap de week-end (trois nuits jusqu'à lundi matin) dans un contexte de VIX élevé (25.60) et de morosité macroéconomique sur la construction et le logement en France.",
+      "prix_decision_17h": 65.4000015258789,
       "prix_entree": null,
       "evaluation": null
     }
